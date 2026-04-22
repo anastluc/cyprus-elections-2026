@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-04-22T16:34:55.840413Z",
+  "total_candidates": 294,
+  "total_sources": 889,
+  "last_ingest_at": "2026-04-21T12:19:37.479242",
+  "disclaimer": "Some of this data was collected and enriched using automated web scraping and AI language models. Individual values may be incomplete or inaccurate. Every field shows its source URL — please verify before citing.",
+  "election_date": "2026-05-24",
+  "field_order": [
+    "gender",
+    "age",
+    "date_of_birth",
+    "profession",
+    "sector",
+    "profession_cluster",
+    "education",
+    "career_previous",
+    "bio_text",
+    "highlights",
+    "photo_url",
+    "cv_url",
+    "cv_text",
+    "facebook",
+    "twitter",
+    "instagram",
+    "linkedin",
+    "website",
+    "wikipedia",
+    "wikidata_qid"
+  ],
+  "party_codes": [
+    "ADEM",
+    "AKEL",
+    "ALMA",
+    "DIKO",
+    "DIPA",
+    "DISY",
+    "ELAM",
+    "KOSP",
+    "VOLT"
+  ],
+  "district_codes": [
+    "FAM",
+    "KYR",
+    "LAR",
+    "LIM",
+    "NIC",
+    "PAF"
+  ]
+}

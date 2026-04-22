@@ -1,0 +1,136 @@
+# Parties contesting the 24 May 2026 parliamentary election.
+# `scraper` names the module under src/cyprus_elections/scrapers/.
+#   - `volt`, `akel`: custom DOM parsers (no LLM needed).
+#   - `llm_generic` and party-code aliases (disy/diko/dipa/elam/edek/kosp/alma/
+#     direct_democracy): route to the generic LLM extractor in llm_generic.py —
+#     requires OPENROUTER_API_KEY.
+#   - `news`: aggregator scraper; extracts candidates across multiple parties
+#     from a news page (also uses the LLM extractor).
+# `enabled: false` → ingest skips this scraper.
+
+parties:
+  - code: DISY
+    name_gr: Δημοκρατικός Συναγερμός
+    name_en: Democratic Rally
+    website: https://disy.org.cy
+    scraper: disy
+    # JS-rendered: the candidate list is hydrated client-side, so we fetch
+    # via Playwright (`js_render: true`) and hand the rendered DOM to the
+    # generic LLM extractor.
+    enabled: true
+    js_render: true
+    seed_urls:
+      - https://disy.org.cy/vouleftikes2026/
+
+  - code: AKEL
+    name_gr: ΑΚΕΛ - Αριστερά - Νέες Δυνάμεις
+    name_en: AKEL – Left – Social Alliance
+    website: https://akel.org.cy
+    scraper: akel
+    enabled: true
+    seed_urls:
+      - https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en
+
+  - code: DIKO
+    name_gr: Δημοκρατικό Κόμμα
+    name_en: Democratic Party
+    website: https://democraticparty.org.cy
+    scraper: diko
+    enabled: true
+    seed_urls:
+      - https://democraticparty.org.cy/voyleytikes-ekloges-2026-ypopsifioi-voyleytes-diko-stin-eparchia-leykosias/
+      - https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/
+
+  - code: DIPA
+    name_gr: Δημοκρατική Παράταξη
+    name_en: Democratic Front
+    website: https://depa.cy
+    scraper: dipa
+    enabled: true
+    seed_urls:
+      - https://depa.cy/vouleftikes-ekloges-2026/
+      - https://depa.cy/vouleftikes-ekloges-2026/%cf%85%cf%80%ce%bf%cf%88%ce%ae%cf%86%ce%b9%ce%bf%ce%b9-%ce%b2%ce%bf%cf%85%ce%bb%ce%b5%cf%85%cf%84%ce%ad%cf%82-%ce%bb%ce%b5%ce%bc%ce%b5%cf%83%ce%bf%cf%8d/
+      - https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-kerinias/
+      - https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-larnakas/
+
+  - code: ELAM
+    name_gr: Εθνικό Λαϊκό Μέτωπο
+    name_en: National Popular Front
+    website: https://elamcy.com
+    scraper: elam
+    enabled: true
+    seed_urls:
+      - https://elamcy.com/category/anakoinoseis/
+
+  - code: EDEK
+    name_gr: Κίνημα Σοσιαλδημοκρατών
+    name_en: Movement for Social Democracy
+    website: https://www.edek.org.cy
+    scraper: edek
+    # Enabled as best-effort — the LLM extractor returns zero candidates
+    # gracefully if the homepage does not list a roster yet.
+    enabled: true
+    seed_urls:
+      - https://www.edek.org.cy/
+
+  - code: KOSP
+    name_gr: Κίνημα Οικολόγων - Συνεργασία Πολιτών
+    name_en: Movement of Ecologists – Citizens' Cooperation
+    website: https://ecologistes.org.cy
+    scraper: kosp
+    enabled: true
+    seed_urls:
+      - https://ecologistes.org.cy/
+
+  - code: VOLT
+    name_gr: Volt Κύπρος
+    name_en: Volt Cyprus
+    website: https://voltcyprus.org
+    scraper: volt
+    enabled: true
+    seed_urls:
+      - https://voltcyprus.org/people/ypopsifioi-vouleftes-volt-2026
+
+  - code: ALMA
+    name_gr: ΑΛΜΑ - Πολίτες για την Κύπρο
+    name_en: ALMA – Citizens for Cyprus
+    website: https://alma.org.cy
+    scraper: alma
+    enabled: true
+    seed_urls:
+      - https://alma.org.cy/
+
+  - code: ADEM
+    name_gr: Άμεση Δημοκρατία
+    name_en: Direct Democracy
+    website: null
+    scraper: direct_democracy
+    enabled: true
+    seed_urls:
+      - https://www.offsite.com.cy/eidiseis/politiki/amesi-dimokratia-aytoi-einai-oi-56-ypopsifioi-boyleytes-gia-tis-ekloges
+
+  # Pseudo-party covering anyone we miss: a news aggregator that LLM-extracts
+  # candidates across parties. Trust is lower (source_kind=news) so party-site
+  # values still win in merge.
+  - code: NEWS
+    name_gr: Ειδησεογραφικές πηγές
+    name_en: News aggregators
+    website: null
+    scraper: news
+    enabled: true
+    # Secondary news URLs below are best-effort and may 404; the LLM extractor
+    # returns zero candidates gracefully if the page doesn't list any.
+    # Update these as outlets publish consolidated candidate rosters.
+    seed_urls:
+      - https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata
+      - https://politis.com.cy/politiki/
+      - https://www.philenews.com/politiki/
+      - https://cyprus-mail.com/tag/parliamentary-elections/
+      - https://www.sigmalive.com/news/politics
+
+  - code: OFFICIAL
+    name_gr: Κεντρική Υπηρεσία Εκλογών
+    name_en: Ministry of Interior — Elections
+    website: https://www.gov.cy/moi-elections/
+    scraper: official_moi
+    enabled: false  # enable after 2026-05-06 when nominations are submitted

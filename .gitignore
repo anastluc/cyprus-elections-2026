@@ -1,0 +1,21 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+
+# Data outputs — keep directories but ignore contents
+data/raw/**
+data/processed/**
+data/exports/**
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/exports/.gitkeep

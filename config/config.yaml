@@ -1,0 +1,65 @@
+database:
+  path: data/candidates.db
+
+paths:
+  raw: data/raw
+  processed: data/processed
+  exports: data/exports
+
+fetch:
+  timeout_seconds: 30
+  max_retries: 3
+  per_host_rate_limit_per_second: 1.0
+  user_agent: "cyprus-elections-research/0.1 (+contact: anastluc@gmail.com)"
+  cache_ttl_days: 7
+
+llm:
+  provider: openrouter
+  base_url: https://openrouter.ai/api/v1
+  model_env: OPENROUTER_MODEL
+  api_key_env: OPENROUTER_API_KEY
+  search_model_env: OPENROUTER_SEARCH_MODEL
+  temperature: 0.0
+  max_calls_per_run: 500
+  cache_dir: data/raw/enrichment/llm
+
+linkedin:
+  enabled: true
+  per_host_rate_limit_per_second: 0.1
+  max_profiles_per_run: 200
+
+confidence:
+  source_trust:
+    official: 1.0
+    party_site: 0.9
+    wikipedia: 0.85
+    wikidata: 0.85
+    news: 0.7
+    llm_from_bio: 0.6
+    linkedin: 0.75
+    linkedin_snippet: 0.55
+    search_snippet: 0.45
+    heuristic: 0.5
+  agreement_boost_step: 0.05
+  row_weights:
+    name: 3
+    party: 3
+    district: 3
+    gender: 1
+    age: 2
+    education: 2
+    career: 2
+    sector: 1
+    cv: 1
+    facebook: 0.5
+    twitter: 0.5
+    instagram: 0.5
+    linkedin: 0.5
+    website: 0.5
+    wikipedia: 0.5
+  low_confidence_threshold: 0.6
+
+airtable:
+  enabled: true
+  table_candidates_env: AIRTABLE_TABLE_CANDIDATES
+  table_fields_env: AIRTABLE_TABLE_FIELDS

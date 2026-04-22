@@ -1,0 +1,46 @@
+districts:
+  - code: NIC
+    name_gr: Λευκωσία
+    name_en: Nicosia
+    seats: 20
+  - code: LIM
+    name_gr: Λεμεσός
+    name_en: Limassol
+    seats: 12
+  - code: FAM
+    name_gr: Αμμόχωστος
+    name_en: Famagusta
+    seats: 11
+  - code: LAR
+    name_gr: Λάρνακα
+    name_en: Larnaca
+    seats: 6
+  - code: PAF
+    name_gr: Πάφος
+    name_en: Paphos
+    seats: 4
+  - code: KYR
+    name_gr: Κερύνεια
+    name_en: Kyrenia
+    seats: 3
+
+aliases:
+  # Greek/English/alternate spellings → code
+  Λευκωσία: NIC
+  Λευκωσίας: NIC
+  Nicosia: NIC
+  Λεμεσός: LIM
+  Λεμεσού: LIM
+  Limassol: LIM
+  Αμμόχωστος: FAM
+  Αμμοχώστου: FAM
+  Famagusta: FAM
+  Λάρνακα: LAR
+  Λάρνακας: LAR
+  Larnaca: LAR
+  Πάφος: PAF
+  Πάφου: PAF
+  Paphos: PAF
+  Κερύνεια: KYR
+  Κερύνειας: KYR
+  Kyrenia: KYR

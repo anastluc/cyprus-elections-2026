@@ -45,13 +45,19 @@ def _find_or_create_candidate(
         raise ValueError("Cannot merge record with no name")
     fkey = fuzzy_name_key(name_gr, name_en)
 
-    # Blocking: same party + district (district may be None on one side).
+    # Blocking: same party + (same district OR either side NULL).
+    # The NULL-side match lets a district-less raw (e.g. a party post that
+    # didn't announce by district) merge into an existing district-tagged
+    # candidate, instead of spawning a duplicate.
     rows = conn.execute(
-        """SELECT id, canonical_name_gr, canonical_name_en
+        """SELECT id, canonical_name_gr, canonical_name_en, district_code
            FROM candidates
            WHERE party_code = ?
-             AND (district_code IS ? OR district_code = ?)""",
-        (party_code, district_code, district_code),
+             AND (district_code IS ?
+                  OR district_code = ?
+                  OR district_code IS NULL
+                  OR ? IS NULL)""",
+        (party_code, district_code, district_code, district_code),
     ).fetchall()
     fuzzy_match = None
     for row in rows:
@@ -65,7 +71,7 @@ def _find_or_create_candidate(
         if fuzzy and fuzzy_match is None:
             fuzzy_match = row
         if exact:
-            # Backfill the missing language where possible.
+            # Backfill the missing language and district where possible.
             updates = []
             params: list[object] = []
             if name_gr and not row["canonical_name_gr"]:
@@ -74,6 +80,9 @@ def _find_or_create_candidate(
             if name_en and not row["canonical_name_en"]:
                 updates.append("canonical_name_en = ?")
                 params.append(name_en)
+            if district_code and not row["district_code"]:
+                updates.append("district_code = ?")
+                params.append(district_code)
             if updates:
                 params.extend([datetime.utcnow().isoformat(), row["id"]])
                 conn.execute(
@@ -92,6 +101,9 @@ def _find_or_create_candidate(
         if name_en and not row["canonical_name_en"]:
             updates.append("canonical_name_en = ?")
             params.append(name_en)
+        if district_code and not row["district_code"]:
+            updates.append("district_code = ?")
+            params.append(district_code)
         if updates:
             params.extend([datetime.utcnow().isoformat(), row["id"]])
             conn.execute(
@@ -159,10 +171,11 @@ def _consolidate_duplicates(conn: sqlite3.Connection) -> int:
         """SELECT id, canonical_name_gr, canonical_name_en, party_code, district_code
            FROM candidates"""
     ).fetchall()
-    # Group by (party, district).
-    groups: dict[tuple[str, str | None], list[sqlite3.Row]] = {}
+    # Group by party only; allow cross-district merges when at least one
+    # side has NULL district (the other side wins as the authoritative row).
+    groups: dict[str, list[sqlite3.Row]] = {}
     for r in rows:
-        groups.setdefault((r["party_code"], r["district_code"]), []).append(r)
+        groups.setdefault(r["party_code"], []).append(r)
 
     seen: set[int] = set()
     for _, members in groups.items():
@@ -177,17 +190,25 @@ def _consolidate_duplicates(conn: sqlite3.Connection) -> int:
             for b in members[i + 1 :]:
                 if int(b["id"]) in seen:
                     continue
+                da, db = a["district_code"], b["district_code"]
+                # Merge only if districts agree or one side is unknown.
+                if da and db and da != db:
+                    continue
                 ka = keys[int(a["id"])]
                 kb = keys[int(b["id"])]
                 if not ka or not kb:
                     continue
                 if ka == kb or similar_name_keys(ka, kb, max_edits=2):
                     keep, drop = a, b
-                    # Prefer the one that already has both languages.
-                    ab_langs = bool(a["canonical_name_gr"]) + bool(a["canonical_name_en"])
-                    bb_langs = bool(b["canonical_name_gr"]) + bool(b["canonical_name_en"])
-                    if bb_langs > ab_langs:
+                    # Prefer the row that has a district set, then the one
+                    # that has both languages — else default to `a`.
+                    if not da and db:
                         keep, drop = b, a
+                    elif bool(da) == bool(db):
+                        ab_langs = bool(a["canonical_name_gr"]) + bool(a["canonical_name_en"])
+                        bb_langs = bool(b["canonical_name_gr"]) + bool(b["canonical_name_en"])
+                        if bb_langs > ab_langs:
+                            keep, drop = b, a
                     _merge_candidates(conn, keep_id=int(keep["id"]), drop_id=int(drop["id"]))
                     seen.add(int(drop["id"]))
                     merges += 1
@@ -197,11 +218,11 @@ def _consolidate_duplicates(conn: sqlite3.Connection) -> int:
 def _merge_candidates(conn: sqlite3.Connection, *, keep_id: int, drop_id: int) -> None:
     # Backfill missing languages on the keeper.
     keep = conn.execute(
-        "SELECT canonical_name_gr, canonical_name_en FROM candidates WHERE id=?",
+        "SELECT canonical_name_gr, canonical_name_en, district_code FROM candidates WHERE id=?",
         (keep_id,),
     ).fetchone()
     drop = conn.execute(
-        "SELECT canonical_name_gr, canonical_name_en FROM candidates WHERE id=?",
+        "SELECT canonical_name_gr, canonical_name_en, district_code FROM candidates WHERE id=?",
         (drop_id,),
     ).fetchone()
     updates, params = [], []
@@ -211,6 +232,9 @@ def _merge_candidates(conn: sqlite3.Connection, *, keep_id: int, drop_id: int) -
     if drop["canonical_name_en"] and not keep["canonical_name_en"]:
         updates.append("canonical_name_en=?")
         params.append(drop["canonical_name_en"])
+    if drop["district_code"] and not keep["district_code"]:
+        updates.append("district_code=?")
+        params.append(drop["district_code"])
     if updates:
         params.extend([datetime.utcnow().isoformat(), keep_id])
         conn.execute(

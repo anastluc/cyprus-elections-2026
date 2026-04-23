@@ -97,6 +97,39 @@ def transliterate_gr_to_en(name: str) -> str:
 
 
 _NAME_NOISE = {"dr", "dr.", "mr", "mrs", "ms", "prof", "prof."}
+
+# Canonical first-name equivalences (post-transliteration, lowercase, no tonos).
+# Each group collapses to the first entry. Covers common Cypriot nicknames.
+_NAME_EQUIVALENCE_GROUPS: tuple[tuple[str, ...], ...] = (
+    ("konstantinos", "ntinos", "kostas", "kostis", "kostakis", "dinos"),
+    ("aikaterini", "katerina", "katia", "katerini", "katina"),
+    ("stamatis", "stamos"),
+    ("dimitrios", "dimitris", "ntimos", "takis", "mitsos", "dimitrakis"),
+    ("ioannis", "giannis", "giannakis", "yiannis", "yiannakis"),
+    ("christos", "christakis"),
+    ("eleni", "elena", "lena", "eleana"),
+    ("antonios", "antonis", "tonis", "tonys"),
+    ("nikolaos", "nikos", "nikolas", "nikolakis"),
+    ("michail", "michalis", "michalakis", "michalos"),
+    ("vasileios", "vasilis", "vasos", "vasilakis"),
+    ("georgios", "giorgos", "yiorgos", "giorgakis"),
+    ("andreas", "antreas", "antrikos"),
+    ("andri", "andriana", "andriani"),
+    ("panagiotis", "panagis", "panos", "panikos", "panicos"),
+    ("savvas", "savvakis"),
+    ("charalampos", "charis", "harris", "charalambos"),
+    ("chrysanthos", "chrysis"),
+    ("stylianos", "stelios", "stelis"),
+    ("zacharias", "zakos"),
+    ("fotios", "fotis"),
+    ("petros", "petrakis"),
+    ("marios", "marakis"),
+)
+_NAME_EQUIVALENCE: dict[str, str] = {
+    alias: group[0]
+    for group in _NAME_EQUIVALENCE_GROUPS
+    for alias in group
+}
 # Vowel and near-equivalent consonant collapses — tolerates Cypriot
 # transliteration variance (mb/mp, b/v, es/is, ou/u, d/nt, …).
 _FUZZY_COLLAPSE = str.maketrans({
@@ -161,14 +194,24 @@ def _levenshtein(a: str, b: str) -> int:
 
 
 def similar_name_keys(key_a: str, key_b: str, max_edits: int = 2) -> bool:
-    """Token-order-tolerant edit-distance check, used as a last-ditch dedupe."""
+    """Token-order-tolerant edit-distance check, used as a last-ditch dedupe.
+
+    Also treats one key as matching the other when it is a strict subset —
+    common when one source records a patronym ("Stavros Ilia Stavrou") and
+    another omits it ("Stavros Stavrou").
+    """
     if not key_a or not key_b:
         return False
     if key_a == key_b:
         return True
     toks_a = sorted(key_a.split())
     toks_b = sorted(key_b.split())
+    # Subset match: the shorter key's tokens all appear in the longer key,
+    # and both share at least two tokens (to avoid single-surname collisions).
     if len(toks_a) != len(toks_b):
+        shorter, longer = (toks_a, toks_b) if len(toks_a) < len(toks_b) else (toks_b, toks_a)
+        if len(shorter) >= 2 and set(shorter).issubset(set(longer)):
+            return True
         return False
     total = 0
     for ta, tb in zip(toks_a, toks_b):
@@ -193,8 +236,13 @@ def name_key(name_gr: str | None, name_en: str | None) -> str:
     else:
         return ""
     base = re.sub(r"\([^)]*\)", " ", base)
+    base = re.sub(r"[-/]", " ", base)
     normalized = normalize_name(base)
-    tokens = [t for t in normalized.split() if t and t not in _NAME_NOISE and len(t) > 1]
+    # Drop punctuation inside tokens so "p." becomes "p" (then filtered as a
+    # single-letter middle initial).
+    tokens = [re.sub(r"[^a-z0-9]", "", t) for t in normalized.split()]
+    tokens = [t for t in tokens if t and t not in _NAME_NOISE and len(t) > 1]
+    tokens = [_NAME_EQUIVALENCE.get(t, t) for t in tokens]
     return " ".join(sorted(tokens))
 
 

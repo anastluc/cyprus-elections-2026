@@ -19,3 +19,5 @@ data/*.db-shm
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/exports/.gitkeep
+
+.certs

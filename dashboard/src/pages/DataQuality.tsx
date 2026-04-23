@@ -4,6 +4,7 @@ import { SectionHeader } from '../components/SectionHeader';
 import { CoverageBar } from '../components/CoverageBar';
 import { NIVO_THEME } from '../lib/theme';
 import type { Dataset } from '../data/types';
+import { CorrectionCTA } from '../components/CorrectionCTA';
 
 const KIND_COLOURS: Record<string, string> = {
   official: '#6366f1',
@@ -128,6 +129,10 @@ export function DataQuality({ data }: { data: Dataset }) {
             />
           ))}
         </div>
+      </div>
+
+      <div className="mt-6">
+        <CorrectionCTA variant="card" />
       </div>
     </div>
   );

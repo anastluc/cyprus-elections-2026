@@ -11,7 +11,8 @@ export type Section =
   | 'timeline'
   | 'explorer'
   | 'quality'
-  | 'profile';
+  | 'profile'
+  | 'correction';
 
 export interface FilterState {
   party: string | null;
@@ -65,6 +66,8 @@ export const useFilters = create<FilterState>((set) => ({
     }),
 }));
 
+export type Locale = 'en' | 'gr';
+
 export interface UIState {
   disclaimerDismissed: boolean;
   dismissDisclaimer: () => void;
@@ -74,9 +77,20 @@ export interface UIState {
   profileCandidateId: number | null;
   openProfile: (id: number) => void;
   closeProfile: () => void;
+  locale: Locale;
+  setLocale: (l: Locale) => void;
 }
 
 const DISCLAIMER_KEY = 'cy2026-disclaimer-dismissed';
+const LOCALE_KEY = 'cy2026-locale';
+
+function initialLocale(): Locale {
+  if (typeof window === 'undefined') return 'en';
+  const stored = window.localStorage.getItem(LOCALE_KEY);
+  if (stored === 'en' || stored === 'gr') return stored;
+  const nav = window.navigator.language?.toLowerCase() ?? '';
+  return nav.startsWith('el') ? 'gr' : 'en';
+}
 
 export const useUI = create<UIState>((set) => ({
   disclaimerDismissed:
@@ -100,4 +114,11 @@ export const useUI = create<UIState>((set) => ({
   openProfile: (profileCandidateId) =>
     set({ profileCandidateId, activeSection: 'profile' }),
   closeProfile: () => set({ profileCandidateId: null }),
+  locale: initialLocale(),
+  setLocale: (locale) => {
+    try {
+      window.localStorage.setItem(LOCALE_KEY, locale);
+    } catch {}
+    set({ locale });
+  },
 }));

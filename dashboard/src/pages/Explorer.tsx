@@ -15,6 +15,7 @@ import { districtLabel, PARTY_ORDER, partyLabel } from '../lib/theme';
 import type { Candidate, Dataset } from '../data/types';
 import { isFemale, isMale } from '../lib/utils';
 import { useFilters, useUI } from '../lib/store';
+import { CorrectionCTA } from '../components/CorrectionCTA';
 
 const DISTRICTS = ['NIC', 'LIM', 'LAR', 'FAM', 'PAF', 'KYR'];
 const PLATFORM_OPTIONS = ['facebook', 'twitter', 'instagram', 'linkedin', 'website', 'wikipedia'];
@@ -309,6 +310,10 @@ export function Explorer({ data }: { data: Dataset }) {
             </tbody>
           </table>
         </div>
+      </div>
+
+      <div className="mt-6">
+        <CorrectionCTA variant="card" />
       </div>
     </div>
   );

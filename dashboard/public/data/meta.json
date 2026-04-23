@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-22T16:34:55.840413Z",
-  "total_candidates": 294,
-  "total_sources": 889,
-  "last_ingest_at": "2026-04-21T12:19:37.479242",
+  "generated_at": "2026-04-23T08:03:29.261625Z",
+  "total_candidates": 325,
+  "total_sources": 1164,
+  "last_ingest_at": "2026-04-23T07:54:22.953517",
   "disclaimer": "Some of this data was collected and enriched using automated web scraping and AI language models. Individual values may be incomplete or inaccurate. Every field shows its source URL — please verify before citing.",
   "election_date": "2026-05-24",
   "field_order": [
@@ -45,5 +45,6 @@
     "LIM",
     "NIC",
     "PAF"
-  ]
+  ],
+  "correction_sheet_url": "https://docs.google.com/spreadsheets/d/1zExhR66btvDfec3md0qkUQ_7qpSY212LvtKMpj5hkdI/edit"
 }

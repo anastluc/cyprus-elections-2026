@@ -262,6 +262,10 @@ def export(cfg: AppConfig, conn: sqlite3.Connection) -> Path:
         "party_codes": sorted(by_party.keys()),
         "district_codes": sorted(set(by_district.keys()) - {"UNKNOWN"}),
     }
+    if cfg.google_sheets.enabled and cfg.google_sheets.sheet_id:
+        meta["correction_sheet_url"] = (
+            f"https://docs.google.com/spreadsheets/d/{cfg.google_sheets.sheet_id}/edit"
+        )
 
     payloads = {
         "candidates.json": json.dumps(candidates, ensure_ascii=False, indent=1),

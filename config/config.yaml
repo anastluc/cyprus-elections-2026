@@ -40,6 +40,7 @@ confidence:
     linkedin_snippet: 0.55
     search_snippet: 0.45
     heuristic: 0.5
+    curator: 1.0
   agreement_boost_step: 0.05
   row_weights:
     name: 3
@@ -63,3 +64,11 @@ airtable:
   enabled: true
   table_candidates_env: AIRTABLE_TABLE_CANDIDATES
   table_fields_env: AIRTABLE_TABLE_FIELDS
+
+google_sheets:
+  enabled: true
+  # Copy from the sheet URL: docs.google.com/spreadsheets/d/<SHEET_ID>/edit
+  sheet_id: "1zExhR66btvDfec3md0qkUQ_7qpSY212LvtKMpj5hkdI"
+  candidates_tab: Candidates
+  # Env var that holds the path to the service-account JSON key file.
+  service_account_env: GOOGLE_SERVICE_ACCOUNT_JSON

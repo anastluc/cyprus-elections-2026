@@ -31,6 +31,35 @@ uv run cyprus-elections run --airtable         # end-to-end
 uv run cyprus-elections status                 # counts + run_state
 ```
 
+## Curation sync scripts
+
+Standalone scripts that push the candidate table to a shared surface (Airtable
+or Google Sheets) and pull reviewed edits back into SQLite. Re-running the
+dashboard export afterwards publishes the changes to the frontend.
+
+**Airtable (suggestion-row workflow)** — humans file rows in a `Suggestions`
+table, a curator flips `status=approved`:
+
+```bash
+uv run python scripts/sync_airtable_suggestions.py setup   # one-time: create Suggestions fields
+uv run python scripts/sync_airtable_suggestions.py pull    # apply approved rows → SQLite + exports
+```
+
+**Google Sheets (cell-comment workflow)** — the Candidates tab is the source
+of truth. Humans leave comments; a curator edits cell values to approve.
+Requires `google_sheets.sheet_id` in `config/config.yaml`, `enabled: true`,
+and a service-account JSON key at `$GOOGLE_SERVICE_ACCOUNT_JSON` with the
+sheet shared to it as Editor.
+
+```bash
+uv run python scripts/export_to_google_sheet.py             # SQLite → Candidates tab (clears + rewrites)
+uv run python scripts/sync_google_sheet_suggestions.py      # Candidates tab → SQLite + regenerate exports
+uv run python scripts/sync_google_sheet_suggestions.py --skip-exports   # DB only
+```
+
+The sync script is designed for a nightly cron: re-push the sheet, pull any
+curator edits, regenerate `dashboard/public/data/*.json`, and redeploy.
+
 ## Configuration
 
 - `config/config.yaml` — paths, fetch rate limits, LLM settings, confidence model.

@@ -7,6 +7,7 @@ import {
   Globe2,
   GraduationCap,
   LayoutDashboard,
+  MessageSquarePlus,
   ShieldCheck,
   Sparkles,
   Timer,
@@ -14,11 +15,13 @@ import {
   Vote,
 } from 'lucide-react';
 import { Disclaimer } from './components/Disclaimer';
+import { LocaleSwitch } from './components/LocaleSwitch';
 import { loadDataset } from './data/load';
 import type { Dataset } from './data/types';
 import { cn } from './lib/utils';
 import { useUI, type Section } from './lib/store';
 import { useDataset } from './data/store';
+import { useT, type TKey } from './lib/i18n';
 import { Overview } from './pages/Overview';
 import { Demographics } from './pages/Demographics';
 import { Parties } from './pages/Parties';
@@ -30,18 +33,20 @@ import { Timeline } from './pages/Timeline';
 import { Explorer } from './pages/Explorer';
 import { DataQuality } from './pages/DataQuality';
 import { CandidateProfile } from './pages/CandidateProfile';
+import { SubmitCorrection } from './pages/SubmitCorrection';
 
-const NAV: { id: Section; label: string; icon: typeof Activity }[] = [
-  { id: 'overview', label: 'Overview', icon: LayoutDashboard },
-  { id: 'demographics', label: 'Demographics', icon: Users },
-  { id: 'parties', label: 'Parties', icon: Vote },
-  { id: 'professions', label: 'Professions', icon: Briefcase },
-  { id: 'education', label: 'Education', icon: GraduationCap },
-  { id: 'digital', label: 'Digital', icon: Globe2 },
-  { id: 'highlights', label: 'Highlights', icon: Sparkles },
-  { id: 'timeline', label: 'Timeline', icon: Timer },
-  { id: 'explorer', label: 'Explorer', icon: Database },
-  { id: 'quality', label: 'Data quality', icon: ShieldCheck },
+const NAV: { id: Section; labelKey: TKey; icon: typeof Activity }[] = [
+  { id: 'overview', labelKey: 'nav_overview', icon: LayoutDashboard },
+  { id: 'demographics', labelKey: 'nav_demographics', icon: Users },
+  { id: 'parties', labelKey: 'nav_parties', icon: Vote },
+  { id: 'professions', labelKey: 'nav_professions', icon: Briefcase },
+  { id: 'education', labelKey: 'nav_education', icon: GraduationCap },
+  { id: 'digital', labelKey: 'nav_digital', icon: Globe2 },
+  { id: 'highlights', labelKey: 'nav_highlights', icon: Sparkles },
+  { id: 'timeline', labelKey: 'nav_timeline', icon: Timer },
+  { id: 'explorer', labelKey: 'nav_explorer', icon: Database },
+  { id: 'quality', labelKey: 'nav_quality', icon: ShieldCheck },
+  { id: 'correction', labelKey: 'nav_correction', icon: MessageSquarePlus },
 ];
 
 export default function App() {
@@ -51,6 +56,7 @@ export default function App() {
   const setError = useDataset((s) => s.setError);
   const section = useUI((s) => s.activeSection);
   const setSection = useUI((s) => s.setActiveSection);
+  const t = useT();
 
   useEffect(() => {
     loadDataset()
@@ -63,11 +69,11 @@ export default function App() {
       <div className="flex h-full items-center justify-center p-10">
         <div className="max-w-md rounded-2xl border border-rose-500/30 bg-rose-500/10 p-6 text-center">
           <h1 className="text-lg font-semibold text-rose-200">
-            Could not load dataset
+            {t('error_title')}
           </h1>
           <p className="mt-2 text-sm text-rose-100/80">{error}</p>
           <p className="mt-3 font-mono text-xs text-rose-200/70">
-            Run <code>uv run cyprus-elections export --format dashboard</code>
+            {t('error_hint')} <code>uv run cyprus-elections export --format dashboard</code>
           </p>
         </div>
       </div>
@@ -94,6 +100,7 @@ export default function App() {
           <Panel active={section === 'explorer'}><Explorer data={data} /></Panel>
           <Panel active={section === 'quality'}><DataQuality data={data} /></Panel>
           <Panel active={section === 'profile'}><CandidateProfile data={data} /></Panel>
+          <Panel active={section === 'correction'}><SubmitCorrection data={data} /></Panel>
           <Footer meta={data.meta} />
         </main>
       </div>
@@ -129,12 +136,13 @@ function SideNav({
   section: Section;
   setSection: (s: Section) => void;
 }) {
+  const t = useT();
   return (
     <aside className="sticky top-24 hidden h-fit w-56 flex-none lg:block">
       <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-2 backdrop-blur-md">
         <div className="px-3 py-2">
           <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-            Navigate
+            {t('sidebar_label')}
           </div>
         </div>
         <nav className="flex flex-col gap-0.5">
@@ -153,7 +161,7 @@ function SideNav({
                 )}
               >
                 <Icon className={cn('h-4 w-4', on ? 'text-brand-200' : '')} />
-                {n.label}
+                {t(n.labelKey) as string}
               </button>
             );
           })}
@@ -161,11 +169,9 @@ function SideNav({
       </div>
       <div className="mt-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-xs text-slate-400">
         <div className="mb-1 text-[10px] uppercase tracking-[0.18em] text-slate-500">
-          Keyboard
+          {t('sidebar_kbd_title')}
         </div>
-        <p className="leading-relaxed">
-          Use <span className="kbd">1–9</span> to jump between sections.
-        </p>
+        <p className="leading-relaxed">{t('sidebar_kbd_body')}</p>
       </div>
     </aside>
   );
@@ -178,6 +184,7 @@ function MobileNav({
   section: Section;
   setSection: (s: Section) => void;
 }) {
+  const t = useT();
   return (
     <div className="fixed bottom-0 left-0 right-0 z-30 border-t border-white/10 bg-slate-950/85 backdrop-blur-md lg:hidden">
       <div className="flex overflow-x-auto px-2">
@@ -194,7 +201,7 @@ function MobileNav({
               )}
             >
               <Icon className="h-4 w-4" />
-              {n.label}
+              {t(n.labelKey) as string}
             </button>
           );
         })}
@@ -204,11 +211,14 @@ function MobileNav({
 }
 
 function TopHeader({ meta }: { meta: Dataset['meta'] }) {
+  const t = useT();
   const election = new Date(meta.election_date);
   const days = Math.max(
     0,
     Math.ceil((election.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
   );
+  const title = t('header_title_html');
+  const [titleHead, titleTail] = splitHeaderTitle(title);
   return (
     <header className="space-y-4">
       <div className="flex flex-wrap items-center justify-between gap-3">
@@ -218,21 +228,31 @@ function TopHeader({ meta }: { meta: Dataset['meta'] }) {
           </div>
           <div>
             <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-300">
-              Cyprus · Parliamentary Election
+              {t('header_eyebrow')}
             </div>
             <h1 className="text-2xl font-bold tracking-tight text-white">
-              <span className="gradient-text">May 24, 2026</span> — Candidate Atlas
+              <span className="gradient-text">{titleHead}</span>
+              {titleTail}
             </h1>
           </div>
         </div>
-        <div className="flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs text-brand-200">
-          <Activity className="h-3.5 w-3.5 animate-pulse" />
-          {days} days to election day
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs text-brand-200">
+            <Activity className="h-3.5 w-3.5 animate-pulse" />
+            {t('header_countdown')(days)}
+          </div>
+          <LocaleSwitch />
         </div>
       </div>
       <div className="hairline" />
     </header>
   );
+}
+
+function splitHeaderTitle(title: string): [string, string] {
+  const dashIndex = title.indexOf('—');
+  if (dashIndex === -1) return [title, ''];
+  return [title.slice(0, dashIndex).trim(), ' ' + title.slice(dashIndex)];
 }
 
 function Footer({ meta }: { meta: Dataset['meta'] }) {

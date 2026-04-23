@@ -4,6 +4,7 @@ import { PartyBadge } from '../components/PartyBadge';
 import { ProvenancePill } from '../components/ProvenancePill';
 import { districtLabel } from '../lib/theme';
 import { useUI } from '../lib/store';
+import { CorrectionCTA } from '../components/CorrectionCTA';
 
 const SOCIAL_FIELDS: { key: string; label: string }[] = [
   { key: 'facebook', label: 'Facebook' },
@@ -96,6 +97,8 @@ export function CandidateProfile({ data }: { data: Dataset }) {
             <span>{candidate.district ? districtLabel(candidate.district) : 'District unknown'}</span>
             {candidate.age ? <span>· {candidate.age} yrs</span> : null}
             <span>· row conf. {(candidate.row_confidence * 100).toFixed(0)}%</span>
+            <span>·</span>
+            <CorrectionCTA variant="inline" />
           </div>
         </div>
       </header>

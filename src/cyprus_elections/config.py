@@ -69,6 +69,13 @@ class AirtableConfig(BaseModel):
     table_fields_env: str = "AIRTABLE_TABLE_FIELDS"
 
 
+class GoogleSheetsConfig(BaseModel):
+    enabled: bool = False
+    sheet_id: str = ""
+    candidates_tab: str = "Candidates"
+    service_account_env: str = "GOOGLE_SERVICE_ACCOUNT_JSON"
+
+
 class PathsConfig(BaseModel):
     raw: str = "data/raw"
     processed: str = "data/processed"
@@ -87,6 +94,7 @@ class AppConfig(BaseModel):
     linkedin: LinkedInConfig
     confidence: ConfidenceConfig
     airtable: AirtableConfig
+    google_sheets: GoogleSheetsConfig = Field(default_factory=GoogleSheetsConfig)
 
     parties: list[PartyConfig] = Field(default_factory=list)
     districts: list[DistrictConfig] = Field(default_factory=list)
@@ -152,6 +160,7 @@ def load_config() -> AppConfig:
         linkedin=LinkedInConfig(**main["linkedin"]),
         confidence=ConfidenceConfig(**main["confidence"]),
         airtable=AirtableConfig(**main["airtable"]),
+        google_sheets=GoogleSheetsConfig(**main.get("google_sheets", {})),
         parties=[PartyConfig(**p) for p in parties],
         districts=[DistrictConfig(**d) for d in districts_doc.get("districts", [])],
         district_aliases=districts_doc.get("aliases", {}),

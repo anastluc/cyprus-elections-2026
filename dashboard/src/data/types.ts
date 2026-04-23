@@ -82,6 +82,7 @@ export interface Meta {
   field_order: string[];
   party_codes: string[];
   district_codes: string[];
+  correction_sheet_url?: string;
 }
 
 export interface Dataset {

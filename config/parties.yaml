@@ -37,7 +37,16 @@ parties:
     website: https://democraticparty.org.cy
     scraper: diko
     enabled: true
+    # DIKO publishes a clean per-district roster under /elections/city/<name>/.
+    # Keep the two legacy posts too — they carry richer bio text that the
+    # district pages don't repeat.
     seed_urls:
+      - https://democraticparty.org.cy/elections/city/nicosia/
+      - https://democraticparty.org.cy/elections/city/limassol/
+      - https://democraticparty.org.cy/elections/city/larnaca/
+      - https://democraticparty.org.cy/elections/city/famagusta/
+      - https://democraticparty.org.cy/elections/city/paphos/
+      - https://democraticparty.org.cy/elections/city/kyrenia/
       - https://democraticparty.org.cy/voyleytikes-ekloges-2026-ypopsifioi-voyleytes-diko-stin-eparchia-leykosias/
       - https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/
 
@@ -48,10 +57,12 @@ parties:
     scraper: dipa
     enabled: true
     seed_urls:
-      - https://depa.cy/vouleftikes-ekloges-2026/
+      - https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-lefkosias/
       - https://depa.cy/vouleftikes-ekloges-2026/%cf%85%cf%80%ce%bf%cf%88%ce%ae%cf%86%ce%b9%ce%bf%ce%b9-%ce%b2%ce%bf%cf%85%ce%bb%ce%b5%cf%85%cf%84%ce%ad%cf%82-%ce%bb%ce%b5%ce%bc%ce%b5%cf%83%ce%bf%cf%8d/
-      - https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-kerinias/
       - https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-larnakas/
+      - https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-ammochostou/
+      - https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-pafou/
+      - https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-kerinias/
 
   - code: ELAM
     name_gr: Εθνικό Λαϊκό Μέτωπο
@@ -59,28 +70,37 @@ parties:
     website: https://elamcy.com
     scraper: elam
     enabled: true
+    # ELAM's homepage redirects to /ypopsifioi/ which lists the full slate
+    # grouped by district headings — clean text survives the boilerplate scrub.
     seed_urls:
-      - https://elamcy.com/category/anakoinoseis/
+      - https://elamcy.com/ypopsifioi/
 
   - code: EDEK
     name_gr: Κίνημα Σοσιαλδημοκρατών
     name_en: Movement for Social Democracy
     website: https://www.edek.org.cy
     scraper: edek
-    # Enabled as best-effort — the LLM extractor returns zero candidates
-    # gracefully if the homepage does not list a roster yet.
     enabled: true
+    # EDEK announces candidates as individual news posts, one per district.
+    # Larnaca was not yet announced as of ingestion; rely on NEWS aggregator
+    # to backfill when it publishes.
     seed_urls:
-      - https://www.edek.org.cy/
+      - https://www.edek.org.cy/PostsContent/53134/
+      - https://www.edek.org.cy/PostsContent/53135/
+      - https://www.edek.org.cy/PostsContent/53145/
+      - https://www.edek.org.cy/PostsContent/53151/
 
   - code: KOSP
     name_gr: Κίνημα Οικολόγων - Συνεργασία Πολιτών
     name_en: Movement of Ecologists – Citizens' Cooperation
-    website: https://ecologistes.org.cy
+    website: https://cyprusgreens.org
     scraper: kosp
     enabled: true
+    # The consolidated ratification article lists all 56 candidates in plain
+    # text grouped by district heading — ideal for the LLM extractor.
     seed_urls:
-      - https://ecologistes.org.cy/
+      - https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/
+      - https://cyprusgreens.org/voyleytikes-2026/
 
   - code: VOLT
     name_gr: Volt Κύπρος
@@ -94,11 +114,12 @@ parties:
   - code: ALMA
     name_gr: ΑΛΜΑ - Πολίτες για την Κύπρο
     name_en: ALMA – Citizens for Cyprus
-    website: https://alma.org.cy
+    website: https://almacy.org
     scraper: alma
     enabled: true
+    # The /ekloges/ page lists the full slate with Greek name pairs and bios.
     seed_urls:
-      - https://alma.org.cy/
+      - https://almacy.org/ekloges/
 
   - code: ADEM
     name_gr: Άμεση Δημοκρατία

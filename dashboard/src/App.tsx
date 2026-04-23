@@ -4,6 +4,7 @@ import {
   Activity,
   Briefcase,
   Database,
+  Github,
   Globe2,
   GraduationCap,
   LayoutDashboard,
@@ -241,6 +242,15 @@ function TopHeader({ meta }: { meta: Dataset['meta'] }) {
             <Activity className="h-3.5 w-3.5 animate-pulse" />
             {t('header_countdown')(days)}
           </div>
+          <a
+            href="https://github.com/anastluc/cyprus-elections-2026"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View source on GitHub"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-slate-400 transition hover:border-white/20 hover:bg-white/10 hover:text-white"
+          >
+            <Github className="h-4 w-4" />
+          </a>
           <LocaleSwitch />
         </div>
       </div>
@@ -265,7 +275,15 @@ function Footer({ meta }: { meta: Dataset['meta'] }) {
           <span className="text-slate-300">{new Date(meta.generated_at).toLocaleString()}</span>
         </span>
         <span>{t('footer_counts')(meta.total_candidates, meta.total_sources)}</span>
-        <span className="ml-auto text-slate-600">{t('footer_note')}</span>
+        <a
+          href="https://github.com/anastluc/cyprus-elections-2026"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-auto flex items-center gap-1.5 text-slate-500 transition hover:text-slate-300"
+        >
+          <Github className="h-3.5 w-3.5" />
+          anastluc/cyprus-elections-2026
+        </a>
       </div>
     </footer>
   );

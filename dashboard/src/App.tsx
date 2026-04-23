@@ -256,28 +256,27 @@ function splitHeaderTitle(title: string): [string, string] {
 }
 
 function Footer({ meta }: { meta: Dataset['meta'] }) {
+  const t = useT();
   return (
     <footer className="border-t border-white/5 pt-6 text-xs text-slate-500">
       <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
         <span>
-          Dataset generated <span className="text-slate-300">{new Date(meta.generated_at).toLocaleString()}</span>
+          {t('footer_generated')}{' '}
+          <span className="text-slate-300">{new Date(meta.generated_at).toLocaleString()}</span>
         </span>
-        <span>
-          {meta.total_candidates} candidates · {meta.total_sources} sources
-        </span>
-        <span className="ml-auto text-slate-600">
-          Independent visualisation · Not affiliated with any party or the Cyprus Ministry of Interior
-        </span>
+        <span>{t('footer_counts')(meta.total_candidates, meta.total_sources)}</span>
+        <span className="ml-auto text-slate-600">{t('footer_note')}</span>
       </div>
     </footer>
   );
 }
 
 function Loading() {
+  const t = useT();
   return (
     <div className="flex h-full flex-col items-center justify-center gap-4">
       <div className="h-12 w-12 animate-spin rounded-full border-2 border-brand-500/20 border-t-brand-400" />
-      <div className="text-sm text-slate-400">Loading dataset…</div>
+      <div className="text-sm text-slate-400">{t('loading')}</div>
     </div>
   );
 }

@@ -26,6 +26,30 @@ def is_greek(s: str) -> bool:
     return False
 
 
+def detect_lang(value: str | None) -> str | None:
+    """Return 'gr', 'en', or None for a free-text field value.
+
+    Counts alphabetic characters (ignoring whitespace, digits, punctuation,
+    emoji) and classifies by which script dominates. Returns None when the
+    letter count is below 3 — too short to tell (e.g. "MD", "45").
+    """
+    if not value:
+        return None
+    gr = 0
+    en = 0
+    for ch in value:
+        if "\u0370" <= ch <= "\u03ff" or "\u1f00" <= ch <= "\u1fff":
+            gr += 1
+        elif ("a" <= ch <= "z") or ("A" <= ch <= "Z"):
+            en += 1
+    total = gr + en
+    if total < 3:
+        return None
+    if gr >= en:
+        return "gr"
+    return "en"
+
+
 def normalize_name(name: str) -> str:
     """Canonical form used only for dedupe/matching: lowercase, no accents."""
     name = unicodedata.normalize("NFC", name).strip()

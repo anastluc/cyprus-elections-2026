@@ -6,15 +6,17 @@ import { CyprusMap } from '../components/CyprusMap';
 import { NIVO_THEME, partyColour, partyLabel, PARTY_ORDER } from '../lib/theme';
 import type { Dataset } from '../data/types';
 import { fmtInt, pct, womenCount } from '../lib/utils';
+import { useUI } from '../lib/store';
 
 export function Overview({ data }: { data: Dataset }) {
   const { stats } = data;
+  const locale = useUI((s) => s.locale);
   const women = womenCount(stats.by_gender);
   const total = stats.total_candidates;
   const avgAge = stats.age_histogram.mean ?? 0;
   const partyPie = PARTY_ORDER.filter((p) => stats.by_party[p]).map((p) => ({
     id: p,
-    label: partyLabel(p),
+    label: partyLabel(p, locale),
     value: stats.by_party[p] ?? 0,
     color: partyColour(p),
   }));

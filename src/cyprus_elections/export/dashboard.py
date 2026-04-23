@@ -46,19 +46,22 @@ DISCLAIMER = (
 def _current_fields(conn: sqlite3.Connection, candidate_id: int) -> dict[str, dict]:
     out: dict[str, dict] = {}
     for r in conn.execute(
-        """SELECT cc.field, cc.best_value, cc.field_confidence,
+        """SELECT cc.field, cc.best_value, cc.field_confidence, cc.best_lang,
                   s.url AS source_url, s.kind AS source_kind
              FROM candidate_current cc
              JOIN sources s ON s.id = cc.best_source_id
             WHERE cc.candidate_id = ?""",
         (candidate_id,),
     ):
-        out[r["field"]] = {
+        entry: dict[str, Any] = {
             "value": r["best_value"],
             "confidence": round(r["field_confidence"], 3),
             "source_url": r["source_url"],
             "source_kind": r["source_kind"],
         }
+        if r["best_lang"]:
+            entry["lang"] = r["best_lang"]
+        out[r["field"]] = entry
     return out
 
 
@@ -251,6 +254,13 @@ def export(cfg: AppConfig, conn: sqlite3.Connection) -> Path:
         "SELECT MAX(fetched_at) AS f FROM sources"
     ).fetchone()["f"]
 
+    party_labels = {
+        p.code: {"en": p.name_en, "gr": p.name_gr} for p in cfg.parties
+    }
+    district_labels = {
+        d.code: {"en": d.name_en, "gr": d.name_gr} for d in cfg.districts
+    }
+
     meta = {
         "generated_at": datetime.utcnow().isoformat() + "Z",
         "total_candidates": len(candidates),
@@ -261,6 +271,8 @@ def export(cfg: AppConfig, conn: sqlite3.Connection) -> Path:
         "field_order": _FIELD_ORDER,
         "party_codes": sorted(by_party.keys()),
         "district_codes": sorted(set(by_district.keys()) - {"UNKNOWN"}),
+        "party_labels": party_labels,
+        "district_labels": district_labels,
     }
     if cfg.google_sheets.enabled and cfg.google_sheets.sheet_id:
         meta["correction_sheet_url"] = (

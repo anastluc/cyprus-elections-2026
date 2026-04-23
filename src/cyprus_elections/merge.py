@@ -8,12 +8,24 @@ from datetime import datetime
 from cyprus_elections.config import AppConfig
 from cyprus_elections.db import transaction
 from cyprus_elections.normalize import (
+    detect_lang,
     fuzzy_name_key,
     infer_gender_from_greek,
     name_key,
     similar_name_keys,
     transliterate_gr_to_en,
 )
+
+# Fields where we never try to detect language from the value itself:
+# - Structured identifiers (party/district codes, URLs, numbers, booleans).
+# - "_gr" / "_en" name fields where the language is implied by the field name.
+# Callers can still override by passing an explicit `lang` argument.
+_STRUCTURED_FIELDS = {
+    "party", "district", "age", "date_of_birth", "gender",
+    "photo_url", "cv_url", "wikidata_qid",
+    "facebook", "twitter", "instagram", "linkedin", "website", "wikipedia",
+    "highlights",  # JSON blob; localize at extraction time, not here.
+}
 from cyprus_elections.state import set_status
 
 log = logging.getLogger(__name__)
@@ -112,15 +124,23 @@ def _write_field(
     value: str,
     source_id: int,
     confidence: float,
+    lang: str | None = None,
 ) -> None:
     if value is None or value == "":
         return
+    if lang is None:
+        if field == "name_gr":
+            lang = "gr"
+        elif field == "name_en":
+            lang = "en"
+        elif field not in _STRUCTURED_FIELDS:
+            lang = detect_lang(str(value))
     now = datetime.utcnow().isoformat()
     conn.execute(
         """INSERT OR IGNORE INTO field_values
-           (candidate_id, field, value, source_id, extracted_at, confidence)
-           VALUES (?, ?, ?, ?, ?, ?)""",
-        (candidate_id, field, str(value), source_id, now, confidence),
+           (candidate_id, field, value, source_id, extracted_at, confidence, lang)
+           VALUES (?, ?, ?, ?, ?, ?, ?)""",
+        (candidate_id, field, str(value), source_id, now, confidence, lang),
     )
 
 
@@ -330,11 +350,13 @@ def _rebuild_current(conn: sqlite3.Connection) -> None:
     """
     conn.execute("DELETE FROM candidate_current")
     conn.execute(
-        """INSERT INTO candidate_current (candidate_id, field, best_value, best_source_id, field_confidence)
+        """INSERT INTO candidate_current
+               (candidate_id, field, best_value, best_source_id, field_confidence, best_lang)
            SELECT t.candidate_id, t.field, t.value, t.source_id,
-                  MIN(1.0, t.confidence * (1.0 + 0.05 * (COALESCE(a.agreement, 1) - 1)))
+                  MIN(1.0, t.confidence * (1.0 + 0.05 * (COALESCE(a.agreement, 1) - 1))),
+                  t.lang
            FROM (
-               SELECT candidate_id, field, value, source_id, confidence,
+               SELECT candidate_id, field, value, source_id, confidence, lang,
                       ROW_NUMBER() OVER (
                           PARTITION BY candidate_id, field
                           ORDER BY confidence DESC, extracted_at DESC

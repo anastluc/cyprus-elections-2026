@@ -54,6 +54,7 @@ CREATE TABLE IF NOT EXISTS field_values (
     source_id INTEGER NOT NULL REFERENCES sources(id),
     extracted_at TEXT NOT NULL,
     confidence REAL NOT NULL,
+    lang TEXT,
     UNIQUE (candidate_id, field, value, source_id)
 );
 
@@ -66,6 +67,7 @@ CREATE TABLE IF NOT EXISTS candidate_current (
     best_value TEXT NOT NULL,
     best_source_id INTEGER NOT NULL REFERENCES sources(id),
     field_confidence REAL NOT NULL,
+    best_lang TEXT,
     PRIMARY KEY (candidate_id, field)
 );
 
@@ -128,7 +130,22 @@ def connect(db_path: Path) -> sqlite3.Connection:
 def init_db(db_path: Path) -> None:
     with connect(db_path) as conn:
         conn.executescript(SCHEMA)
+        _migrate(conn)
         conn.commit()
+
+
+def _migrate(conn: sqlite3.Connection) -> None:
+    """Apply in-place schema migrations that can't be expressed as CREATE IF NOT EXISTS.
+
+    Each block is idempotent: it checks the current shape first and only adds
+    what's missing. Safe to run on every init_db() call.
+    """
+    cols = {r["name"] for r in conn.execute("PRAGMA table_info(field_values)")}
+    if "lang" not in cols:
+        conn.execute("ALTER TABLE field_values ADD COLUMN lang TEXT")
+    cols = {r["name"] for r in conn.execute("PRAGMA table_info(candidate_current)")}
+    if "best_lang" not in cols:
+        conn.execute("ALTER TABLE candidate_current ADD COLUMN best_lang TEXT")
 
 
 @contextmanager

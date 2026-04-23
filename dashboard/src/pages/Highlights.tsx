@@ -7,11 +7,13 @@ import { districtLabel, PARTY_ORDER, partyLabel } from '../lib/theme';
 import type { Dataset } from '../data/types';
 import { useUI } from '../lib/store';
 import { hostOf } from '../lib/utils';
+import { translateName } from '../lib/i18n';
 
 export function Highlights({ data }: { data: Dataset }) {
   const [party, setParty] = useState<string | null>(null);
   const [q, setQ] = useState('');
   const openProfile = useUI((s) => s.openProfile);
+  const locale = useUI((s) => s.locale);
 
   const cards = useMemo(() => {
     return data.candidates
@@ -67,7 +69,7 @@ export function Highlights({ data }: { data: Dataset }) {
                 : 'border-white/10 bg-white/5 text-slate-300 hover:bg-white/10'
             }`}
           >
-            {partyLabel(p)}
+            {partyLabel(p, locale)}
           </button>
         ))}
         <input
@@ -98,14 +100,16 @@ export function Highlights({ data }: { data: Dataset }) {
                 <div className="mb-3 flex items-start justify-between gap-2">
                   <div className="min-w-0">
                     <div className="truncate text-base font-semibold text-white">
-                      {c.name_en}
+                      {translateName(locale, c.name_en, c.name_gr)}
                     </div>
-                    <div className="truncate text-xs text-slate-500">{c.name_gr}</div>
+                    <div className="truncate text-xs text-slate-500">
+                      {locale === 'gr' ? c.name_en : c.name_gr}
+                    </div>
                   </div>
                   <PartyBadge code={c.party} size="sm" />
                 </div>
                 <div className="mb-3 flex items-center gap-2 text-[11px] text-slate-400">
-                  <span>{c.district ? districtLabel(c.district) : '—'}</span>
+                  <span>{c.district ? districtLabel(c.district, locale) : '—'}</span>
                   {c.fields.profession_cluster?.value ? (
                     <>
                       <span>·</span>

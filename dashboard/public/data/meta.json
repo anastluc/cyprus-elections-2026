@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T08:03:29.261625Z",
+  "generated_at": "2026-04-23T12:25:53.386618Z",
   "total_candidates": 325,
   "total_sources": 1164,
   "last_ingest_at": "2026-04-23T07:54:22.953517",
@@ -46,5 +46,81 @@
     "NIC",
     "PAF"
   ],
+  "party_labels": {
+    "DISY": {
+      "en": "Democratic Rally",
+      "gr": "Δημοκρατικός Συναγερμός"
+    },
+    "AKEL": {
+      "en": "AKEL – Left – Social Alliance",
+      "gr": "ΑΚΕΛ - Αριστερά - Νέες Δυνάμεις"
+    },
+    "DIKO": {
+      "en": "Democratic Party",
+      "gr": "Δημοκρατικό Κόμμα"
+    },
+    "DIPA": {
+      "en": "Democratic Front",
+      "gr": "Δημοκρατική Παράταξη"
+    },
+    "ELAM": {
+      "en": "National Popular Front",
+      "gr": "Εθνικό Λαϊκό Μέτωπο"
+    },
+    "EDEK": {
+      "en": "Movement for Social Democracy",
+      "gr": "Κίνημα Σοσιαλδημοκρατών"
+    },
+    "KOSP": {
+      "en": "Movement of Ecologists – Citizens' Cooperation",
+      "gr": "Κίνημα Οικολόγων - Συνεργασία Πολιτών"
+    },
+    "VOLT": {
+      "en": "Volt Cyprus",
+      "gr": "Volt Κύπρος"
+    },
+    "ALMA": {
+      "en": "ALMA – Citizens for Cyprus",
+      "gr": "ΑΛΜΑ - Πολίτες για την Κύπρο"
+    },
+    "ADEM": {
+      "en": "Direct Democracy",
+      "gr": "Άμεση Δημοκρατία"
+    },
+    "NEWS": {
+      "en": "News aggregators",
+      "gr": "Ειδησεογραφικές πηγές"
+    },
+    "OFFICIAL": {
+      "en": "Ministry of Interior — Elections",
+      "gr": "Κεντρική Υπηρεσία Εκλογών"
+    }
+  },
+  "district_labels": {
+    "NIC": {
+      "en": "Nicosia",
+      "gr": "Λευκωσία"
+    },
+    "LIM": {
+      "en": "Limassol",
+      "gr": "Λεμεσός"
+    },
+    "FAM": {
+      "en": "Famagusta",
+      "gr": "Αμμόχωστος"
+    },
+    "LAR": {
+      "en": "Larnaca",
+      "gr": "Λάρνακα"
+    },
+    "PAF": {
+      "en": "Paphos",
+      "gr": "Πάφος"
+    },
+    "KYR": {
+      "en": "Kyrenia",
+      "gr": "Κερύνεια"
+    }
+  },
   "correction_sheet_url": "https://docs.google.com/spreadsheets/d/1zExhR66btvDfec3md0qkUQ_7qpSY212LvtKMpj5hkdI/edit"
 }

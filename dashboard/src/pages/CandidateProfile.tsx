@@ -5,6 +5,8 @@ import { ProvenancePill } from '../components/ProvenancePill';
 import { districtLabel } from '../lib/theme';
 import { useUI } from '../lib/store';
 import { CorrectionCTA } from '../components/CorrectionCTA';
+import { LangBadge } from '../components/LangBadge';
+import { translateName } from '../lib/i18n';
 
 const SOCIAL_FIELDS: { key: string; label: string }[] = [
   { key: 'facebook', label: 'Facebook' },
@@ -30,6 +32,7 @@ export function CandidateProfile({ data }: { data: Dataset }) {
   const profileId = useUI((s) => s.profileCandidateId);
   const closeProfile = useUI((s) => s.closeProfile);
   const setSection = useUI((s) => s.setActiveSection);
+  const locale = useUI((s) => s.locale);
 
   const candidate: Candidate | undefined = data.candidates.find((c) => c.id === profileId);
 
@@ -77,7 +80,7 @@ export function CandidateProfile({ data }: { data: Dataset }) {
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={candidate.fields.photo_url.value}
-            alt={candidate.name_en}
+            alt={translateName(locale, candidate.name_en, candidate.name_gr)}
             className="h-28 w-28 flex-none rounded-2xl border border-white/10 object-cover"
             loading="lazy"
           />
@@ -86,15 +89,19 @@ export function CandidateProfile({ data }: { data: Dataset }) {
             className="flex h-28 w-28 flex-none items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-3xl text-slate-400"
             aria-hidden
           >
-            {initials(candidate.name_en || candidate.name_gr)}
+            {initials(translateName(locale, candidate.name_en, candidate.name_gr))}
           </div>
         )}
         <div className="min-w-0 flex-1">
           <PartyBadge code={candidate.party} />
-          <h1 className="mt-2 text-3xl font-bold text-white">{candidate.name_en || '—'}</h1>
-          <p className="text-slate-400">{candidate.name_gr}</p>
+          <h1 className="mt-2 text-3xl font-bold text-white">
+            {translateName(locale, candidate.name_en, candidate.name_gr) || '—'}
+          </h1>
+          <p className="text-slate-400">
+            {locale === 'gr' ? candidate.name_en : candidate.name_gr}
+          </p>
           <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-400">
-            <span>{candidate.district ? districtLabel(candidate.district) : 'District unknown'}</span>
+            <span>{candidate.district ? districtLabel(candidate.district, locale) : 'District unknown'}</span>
             {candidate.age ? <span>· {candidate.age} yrs</span> : null}
             <span>· row conf. {(candidate.row_confidence * 100).toFixed(0)}%</span>
             <span>·</span>
@@ -143,7 +150,10 @@ export function CandidateProfile({ data }: { data: Dataset }) {
               return (
                 <div key={key}>
                   <dt className="text-[11px] uppercase tracking-wider text-slate-500">{label}</dt>
-                  <dd className="mt-0.5 break-words text-sm text-slate-100">{v.value}</dd>
+                  <dd className="mt-0.5 break-words text-sm text-slate-100">
+                    {v.value}
+                    <LangBadge value={v} />
+                  </dd>
                   <div className="mt-1">
                     <ProvenancePill value={v} />
                   </div>
@@ -153,7 +163,10 @@ export function CandidateProfile({ data }: { data: Dataset }) {
           </dl>
           {candidate.fields.bio_text?.value ? (
             <div className="mt-6 border-t border-white/5 pt-4">
-              <h3 className="mb-2 text-[11px] uppercase tracking-wider text-slate-500">Bio</h3>
+              <h3 className="mb-2 flex items-center text-[11px] uppercase tracking-wider text-slate-500">
+                Bio
+                <LangBadge value={candidate.fields.bio_text} />
+              </h3>
               <p className="whitespace-pre-wrap text-sm leading-relaxed text-slate-200">
                 {candidate.fields.bio_text.value}
               </p>

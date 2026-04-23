@@ -3,6 +3,12 @@ export interface FieldValue {
   confidence: number;
   source_url: string;
   source_kind: string;
+  lang?: string;
+}
+
+export interface BilingualLabel {
+  en: string;
+  gr: string;
 }
 
 export interface Candidate {
@@ -82,6 +88,8 @@ export interface Meta {
   field_order: string[];
   party_codes: string[];
   district_codes: string[];
+  party_labels?: Record<string, BilingualLabel>;
+  district_labels?: Record<string, BilingualLabel>;
   correction_sheet_url?: string;
 }
 

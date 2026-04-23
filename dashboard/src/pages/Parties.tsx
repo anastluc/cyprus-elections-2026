@@ -20,6 +20,7 @@ export function Parties({ data }: { data: Dataset }) {
   const setFilters = useFilters((s) => s.setMany);
   const resetFilters = useFilters((s) => s.reset);
   const setSection = useUI((s) => s.setActiveSection);
+  const locale = useUI((s) => s.locale);
 
   function openExplorer(patch: { party?: string | null; gender?: string | null; district?: string | null }) {
     resetFilters();
@@ -35,7 +36,7 @@ export function Parties({ data }: { data: Dataset }) {
   });
 
   const heat = DISTRICT_ORDER.map((d) => ({
-    id: districtLabel(d),
+    id: districtLabel(d, locale),
     data: partyCodes.map((p) => ({
       x: p,
       y: stats.district_party_matrix[p]?.[d] ?? 0,
@@ -119,7 +120,7 @@ export function Parties({ data }: { data: Dataset }) {
               axisBottom={{
                 tickSize: 0,
                 tickPadding: 6,
-                format: (d) => partyLabel(String(d)),
+                format: (d) => partyLabel(String(d), locale),
               }}
               axisLeft={{ tickSize: 0, tickPadding: 6 }}
               onClick={(node) => {
@@ -161,7 +162,7 @@ export function Parties({ data }: { data: Dataset }) {
               axisTop={{
                 tickSize: 0,
                 tickPadding: 6,
-                format: (d) => partyLabel(String(d)),
+                format: (d) => partyLabel(String(d), locale),
               }}
               axisLeft={{ tickSize: 0, tickPadding: 6 }}
               axisBottom={null}
@@ -180,7 +181,7 @@ export function Parties({ data }: { data: Dataset }) {
                 const party = String((cell as { serieId?: unknown }).serieId ?? '');
                 const x = String((cell as { data?: { x?: unknown } }).data?.x ?? '');
                 // serieId is district label, x is party code — we swap to match openExplorer shape.
-                const districtCode = DISTRICT_ORDER.find((d) => districtLabel(d) === party) ?? null;
+                const districtCode = DISTRICT_ORDER.find((d) => districtLabel(d, locale) === party) ?? null;
                 if (districtCode && x) openExplorer({ party: x, district: districtCode });
               }}
             />

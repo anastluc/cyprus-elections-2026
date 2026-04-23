@@ -11,9 +11,11 @@ import {
 } from '../lib/theme';
 import type { Dataset } from '../data/types';
 import { menCount, pct, womenCount } from '../lib/utils';
+import { useUI } from '../lib/store';
 
 export function Demographics({ data }: { data: Dataset }) {
   const { stats } = data;
+  const locale = useUI((s) => s.locale);
   const total = stats.total_candidates;
   const women = womenCount(stats.by_gender);
   const men = menCount(stats.by_gender);
@@ -29,7 +31,7 @@ export function Demographics({ data }: { data: Dataset }) {
   }));
 
   const districtBars = DISTRICT_ORDER.map((d) => ({
-    district: districtLabel(d),
+    district: districtLabel(d, locale),
     count: stats.by_district[d] ?? 0,
   }));
 
@@ -158,7 +160,7 @@ export function Demographics({ data }: { data: Dataset }) {
               axisBottom={{
                 tickSize: 0,
                 tickPadding: 6,
-                format: (d) => partyLabel(String(d)),
+                format: (d) => partyLabel(String(d), locale),
               }}
               axisLeft={{ tickSize: 0, tickPadding: 6 }}
             />

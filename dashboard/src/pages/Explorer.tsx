@@ -16,6 +16,7 @@ import type { Candidate, Dataset } from '../data/types';
 import { isFemale, isMale } from '../lib/utils';
 import { useFilters, useUI } from '../lib/store';
 import { CorrectionCTA } from '../components/CorrectionCTA';
+import { translateName } from '../lib/i18n';
 
 const DISTRICTS = ['NIC', 'LIM', 'LAR', 'FAM', 'PAF', 'KYR'];
 const PLATFORM_OPTIONS = ['facebook', 'twitter', 'instagram', 'linkedin', 'website', 'wikipedia'];
@@ -50,6 +51,7 @@ export function Explorer({ data }: { data: Dataset }) {
   }, [localSearch, setSearch]);
 
   const openProfile = useUI((s) => s.openProfile);
+  const locale = useUI((s) => s.locale);
   const [sorting, setSorting] = useState<SortingState>([]);
 
   const fuse = useMemo(
@@ -102,12 +104,17 @@ export function Explorer({ data }: { data: Dataset }) {
   const cols = [
     h.accessor('name_en', {
       header: 'Name',
-      cell: (info) => (
-        <div>
-          <div className="text-slate-100">{info.getValue()}</div>
-          <div className="text-[10px] text-slate-500">{info.row.original.name_gr}</div>
-        </div>
-      ),
+      cell: (info) => {
+        const c = info.row.original;
+        const primary = translateName(locale, c.name_en, c.name_gr);
+        const secondary = locale === 'gr' ? c.name_en : c.name_gr;
+        return (
+          <div>
+            <div className="text-slate-100">{primary}</div>
+            <div className="text-[10px] text-slate-500">{secondary}</div>
+          </div>
+        );
+      },
     }),
     h.accessor('party', {
       header: 'Party',
@@ -116,7 +123,7 @@ export function Explorer({ data }: { data: Dataset }) {
     h.accessor('district', {
       header: 'District',
       cell: (info) =>
-        info.getValue() ? districtLabel(info.getValue() as string) : '—',
+        info.getValue() ? districtLabel(info.getValue() as string, locale) : '—',
     }),
     h.accessor((c) => c.fields.gender?.value ?? '', {
       id: 'gender',
@@ -166,8 +173,8 @@ export function Explorer({ data }: { data: Dataset }) {
   });
 
   const activeFilters: { label: string; clear: () => void }[] = [];
-  if (party) activeFilters.push({ label: `Party: ${partyLabel(party)}`, clear: () => setParty(null) });
-  if (district) activeFilters.push({ label: `District: ${districtLabel(district)}`, clear: () => setDistrict(null) });
+  if (party) activeFilters.push({ label: `Party: ${partyLabel(party, locale)}`, clear: () => setParty(null) });
+  if (district) activeFilters.push({ label: `District: ${districtLabel(district, locale)}`, clear: () => setDistrict(null) });
   if (gender) activeFilters.push({ label: `Gender: ${gender}`, clear: () => setGender(null) });
   if (cluster) activeFilters.push({ label: `Cluster: ${cluster}`, clear: () => setCluster(null) });
   if (profession) activeFilters.push({ label: `Profession: ${profession}`, clear: () => setProfession(null) });
@@ -203,13 +210,13 @@ export function Explorer({ data }: { data: Dataset }) {
         <Select
           value={party}
           onChange={setParty}
-          options={PARTY_ORDER.map((p) => ({ v: p, label: partyLabel(p) }))}
+          options={PARTY_ORDER.map((p) => ({ v: p, label: partyLabel(p, locale) }))}
           placeholder="All parties"
         />
         <Select
           value={district}
           onChange={setDistrict}
-          options={DISTRICTS.map((d) => ({ v: d, label: districtLabel(d) }))}
+          options={DISTRICTS.map((d) => ({ v: d, label: districtLabel(d, locale) }))}
           placeholder="All districts"
         />
         <Select

@@ -21,6 +21,7 @@ export function Digital({ data }: { data: Dataset }) {
   const setFilters = useFilters((s) => s.setMany);
   const resetFilters = useFilters((s) => s.reset);
   const setSection = useUI((s) => s.setActiveSection);
+  const locale = useUI((s) => s.locale);
 
   function openExplorer(patch: { platform?: string | null; party?: string | null }) {
     resetFilters();
@@ -38,7 +39,7 @@ export function Digital({ data }: { data: Dataset }) {
     footprint.parties.includes(p) || (stats.by_party[p] ?? 0) > 0
   );
   const heat = heatParties.map((p) => ({
-    id: partyLabel(p),
+    id: partyLabel(p, locale),
     partyCode: p,
     data: PLATFORMS.map((pl) => ({
       x: pl,

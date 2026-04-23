@@ -32,6 +32,23 @@ export const PARTY_LABELS: Record<string, string> = {
   IND: 'Independent',
 };
 
+export const PARTY_LABELS_GR: Record<string, string> = {
+  AKEL: 'ΑΚΕΛ',
+  DISY: 'ΔΗΣΥ',
+  DIKO: 'ΔΗΚΟ',
+  EDEK: 'ΕΔΕΚ',
+  ELAM: 'ΕΛΑΜ',
+  KOSP: 'Οικολόγοι',
+  DIPA: 'ΔΗΠΑ',
+  VOLT: 'Volt',
+  ALMA: 'ΑΛΜΑ',
+  ADEM: 'ΑΝΔΗΜ',
+  EVROKO: 'ΕΥΡΩΚΟ',
+  SP: 'Αλληλεγγύη',
+  ALLIL: 'Συμμαχία',
+  IND: 'Ανεξάρτητος',
+};
+
 export const PARTY_ORDER = [
   'AKEL',
   'DISY',
@@ -56,6 +73,15 @@ export const DISTRICT_LABELS: Record<string, string> = {
   LAR: 'Larnaca',
   PAF: 'Paphos',
   KYR: 'Kyrenia',
+};
+
+export const DISTRICT_LABELS_GR: Record<string, string> = {
+  NIC: 'Λευκωσία',
+  LIM: 'Λεμεσός',
+  FAM: 'Αμμόχωστος',
+  LAR: 'Λάρνακα',
+  PAF: 'Πάφος',
+  KYR: 'Κερύνεια',
 };
 
 export const DISTRICT_ORDER = ['NIC', 'LIM', 'LAR', 'FAM', 'PAF', 'KYR'];
@@ -100,11 +126,17 @@ export function partyColour(code: string): string {
   return PARTY_COLOURS[code] ?? '#94a3b8';
 }
 
-export function partyLabel(code: string): string {
+export function partyLabel(code: string, locale: 'en' | 'gr' = 'en'): string {
+  if (locale === 'gr') {
+    return PARTY_LABELS_GR[code] ?? PARTY_LABELS[code] ?? code;
+  }
   return PARTY_LABELS[code] ?? code;
 }
 
-export function districtLabel(code: string): string {
+export function districtLabel(code: string, locale: 'en' | 'gr' = 'en'): string {
+  if (locale === 'gr') {
+    return DISTRICT_LABELS_GR[code] ?? DISTRICT_LABELS[code] ?? code;
+  }
   return DISTRICT_LABELS[code] ?? code;
 }
 

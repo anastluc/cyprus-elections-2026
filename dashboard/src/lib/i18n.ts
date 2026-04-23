@@ -80,6 +80,37 @@ const EN = {
     'Suggest a correction in our shared Google Sheet — a curator will review it and publish the fix overnight.',
   cta_card_button: 'Suggest a correction',
   cta_inline: 'Suggest a correction',
+
+  // Overview page
+  overview_eyebrow: 'Overview',
+  overview_title: (candidates: number, parties: number) =>
+    `${candidates} candidates. ${parties} parties. One island.`,
+  overview_subtitle:
+    "Every candidate standing for the 56 parliamentary seats across Cyprus's six districts. Data collected from official party lists, ministry notices, Wikipedia, LinkedIn and AI-assisted enrichment — each value here is traceable to a source.",
+  kpi_candidates: 'Candidates',
+  kpi_parties: 'Parties',
+  kpi_districts: 'Districts',
+  kpi_women: 'Women',
+  kpi_avg_age: 'Avg. age',
+  kpi_avg_age_suffix: 'yrs',
+  overview_geo_eyebrow: 'Geography',
+  overview_geo_title: 'Candidate density by district',
+  overview_geo_hint: 'Click a district to filter',
+  overview_party_eyebrow: 'Party mix',
+  overview_party_title: 'Candidates per party',
+  overview_party_largest: (code: string, n: string) =>
+    `Largest slate: ${code} · ${n} candidates`,
+  overview_story_women_headline: (p: string) => `${p} women`,
+  overview_story_women_body: (total: number) =>
+    `Across the full slate of ${total} candidates. Gender balance varies sharply by party — see the Demographics section for the breakdown.`,
+  overview_story_prof_headline: (p: number) =>
+    `${p}% have a listed profession`,
+  overview_story_prof_body:
+    'LLM-clustered into 15 categories. Law, Education and Business dominate; the Professions section shows the full treemap.',
+  overview_story_twitter_headline: (p: number) =>
+    `Only ${p}% have a public X/Twitter handle`,
+  overview_story_twitter_body:
+    'Digital footprint is patchy — Facebook leads at ~19%, Wikipedia under 3%. Explore the Digital page for per-party heatmap.',
 };
 
 const GR: typeof EN = {
@@ -154,6 +185,36 @@ const GR: typeof EN = {
     'Προτείνετε μια διόρθωση στο κοινόχρηστο Google Sheet — θα εξεταστεί από επιμελητή και θα εφαρμοστεί τη νύχτα.',
   cta_card_button: 'Πρόταση διόρθωσης',
   cta_inline: 'Πρόταση διόρθωσης',
+
+  overview_eyebrow: 'Επισκόπηση',
+  overview_title: (candidates: number, parties: number) =>
+    `${candidates} υποψήφιοι. ${parties} κόμματα. Ένα νησί.`,
+  overview_subtitle:
+    'Όλοι οι υποψήφιοι που διεκδικούν τις 56 βουλευτικές έδρες στις έξι επαρχίες της Κύπρου. Τα δεδομένα συλλέγονται από επίσημες λίστες κομμάτων, ανακοινώσεις υπουργείου, Wikipedia, LinkedIn και εμπλουτισμό με βοήθεια AI — κάθε τιμή εδώ είναι ανιχνεύσιμη σε πηγή.',
+  kpi_candidates: 'Υποψήφιοι',
+  kpi_parties: 'Κόμματα',
+  kpi_districts: 'Επαρχίες',
+  kpi_women: 'Γυναίκες',
+  kpi_avg_age: 'Μέση ηλικία',
+  kpi_avg_age_suffix: 'ετών',
+  overview_geo_eyebrow: 'Γεωγραφία',
+  overview_geo_title: 'Πυκνότητα υποψηφίων ανά επαρχία',
+  overview_geo_hint: 'Πατήστε μια επαρχία για φιλτράρισμα',
+  overview_party_eyebrow: 'Κατανομή κομμάτων',
+  overview_party_title: 'Υποψήφιοι ανά κόμμα',
+  overview_party_largest: (code: string, n: string) =>
+    `Μεγαλύτερο ψηφοδέλτιο: ${code} · ${n} υποψήφιοι`,
+  overview_story_women_headline: (p: string) => `${p} γυναίκες`,
+  overview_story_women_body: (total: number) =>
+    `Στο σύνολο των ${total} υποψηφίων. Η ισορροπία φύλων διαφέρει σημαντικά ανά κόμμα — δείτε την ενότητα «Δημογραφικά» για την πλήρη ανάλυση.`,
+  overview_story_prof_headline: (p: number) =>
+    `${p}% έχουν καταγεγραμμένο επάγγελμα`,
+  overview_story_prof_body:
+    'Ομαδοποιημένα με LLM σε 15 κατηγορίες. Νομικά, Εκπαίδευση και Επιχειρήσεις κυριαρχούν· η ενότητα «Επαγγέλματα» δείχνει το πλήρες treemap.',
+  overview_story_twitter_headline: (p: number) =>
+    `Μόνο ${p}% έχουν δημόσιο λογαριασμό X/Twitter`,
+  overview_story_twitter_body:
+    'Η ψηφιακή παρουσία είναι ασταθής — το Facebook προηγείται με ~19%, το Wikipedia κάτω από 3%. Εξερευνήστε την ενότητα «Ψηφιακή παρουσία» για heatmap ανά κόμμα.',
 };
 
 const DICT: Record<Locale, typeof EN> = { en: EN, gr: GR };

@@ -7,12 +7,15 @@ import { NIVO_THEME, partyColour, partyLabel, PARTY_ORDER } from '../lib/theme';
 import type { Dataset } from '../data/types';
 import { fmtInt, pct, womenCount } from '../lib/utils';
 import { useUI } from '../lib/store';
+import { useT } from '../lib/i18n';
 
 export function Overview({ data }: { data: Dataset }) {
   const { stats } = data;
   const locale = useUI((s) => s.locale);
+  const t = useT();
   const women = womenCount(stats.by_gender);
   const total = stats.total_candidates;
+  const partyCount = Object.keys(stats.by_party).length;
   const avgAge = stats.age_histogram.mean ?? 0;
   const partyPie = PARTY_ORDER.filter((p) => stats.by_party[p]).map((p) => ({
     id: p,
@@ -21,27 +24,24 @@ export function Overview({ data }: { data: Dataset }) {
     color: partyColour(p),
   }));
 
+  const largestEntry = [...Object.entries(stats.by_party)].sort((a, b) => b[1] - a[1])[0];
+  const largestCode = largestEntry?.[0] ?? '';
+  const largestCount = largestEntry?.[1] ?? 0;
+
   return (
     <div>
       <SectionHeader
-        eyebrow="Overview"
-        title="297 candidates. 9 parties. One island."
-        subtitle={
-          <>
-            Every candidate standing for the 56 parliamentary seats across Cyprus's six
-            districts. Data collected from official party lists, ministry notices,
-            Wikipedia, LinkedIn and AI-assisted enrichment — each value here is
-            traceable to a source.
-          </>
-        }
+        eyebrow={t('overview_eyebrow')}
+        title={t('overview_title')(total, partyCount)}
+        subtitle={<>{t('overview_subtitle')}</>}
       />
 
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-5">
-        <KPICard label="Candidates" value={total} icon={<Users className="h-5 w-5" />} accent="brand" />
-        <KPICard label="Parties" value={Object.keys(stats.by_party).length} icon={<Vote className="h-5 w-5" />} accent="rose" />
-        <KPICard label="Districts" value={Object.keys(stats.by_district).length} icon={<MapPin className="h-5 w-5" />} accent="amber" />
-        <KPICard label="Women" value={women} suffix={`· ${pct(women, total)}`} icon={<Sparkles className="h-5 w-5" />} accent="emerald" />
-        <KPICard label="Avg. age" value={Math.round(avgAge)} suffix="yrs" icon={<Clock className="h-5 w-5" />} hint={`n=${stats.age_histogram.n}`} />
+        <KPICard label={t('kpi_candidates')} value={total} icon={<Users className="h-5 w-5" />} accent="brand" />
+        <KPICard label={t('kpi_parties')} value={partyCount} icon={<Vote className="h-5 w-5" />} accent="rose" />
+        <KPICard label={t('kpi_districts')} value={data.meta.district_codes.length} icon={<MapPin className="h-5 w-5" />} accent="amber" />
+        <KPICard label={t('kpi_women')} value={women} suffix={`· ${pct(women, total)}`} icon={<Sparkles className="h-5 w-5" />} accent="emerald" />
+        <KPICard label={t('kpi_avg_age')} value={Math.round(avgAge)} suffix={t('kpi_avg_age_suffix')} icon={<Clock className="h-5 w-5" />} hint={`n=${stats.age_histogram.n}`} />
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-5">
@@ -49,15 +49,15 @@ export function Overview({ data }: { data: Dataset }) {
           <div className="mb-3 flex items-center justify-between">
             <div>
               <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-                Geography
+                {t('overview_geo_eyebrow')}
               </div>
               <h3 className="mt-0.5 text-lg font-semibold text-white">
-                Candidate density by district
+                {t('overview_geo_title')}
               </h3>
             </div>
             <div className="flex items-center gap-1 text-[11px] text-slate-500">
               <BadgeCheck className="h-3 w-3 text-brand-400" />
-              Click a district to filter
+              {t('overview_geo_hint')}
             </div>
           </div>
           <CyprusMap byDistrict={stats.by_district} />
@@ -65,10 +65,10 @@ export function Overview({ data }: { data: Dataset }) {
 
         <div className="card lg:col-span-2">
           <div className="mb-1 text-[11px] uppercase tracking-[0.18em] text-slate-500">
-            Party mix
+            {t('overview_party_eyebrow')}
           </div>
           <h3 className="mb-2 text-lg font-semibold text-white">
-            Candidates per party
+            {t('overview_party_title')}
           </h3>
           <div className="h-[360px]">
             <ResponsivePie
@@ -90,25 +90,23 @@ export function Overview({ data }: { data: Dataset }) {
             />
           </div>
           <div className="mt-2 text-center text-xs text-slate-400">
-            Largest slate: <span className="text-white">{
-              [...Object.entries(stats.by_party)].sort((a, b) => b[1] - a[1])[0]?.[0]
-            }</span> · {fmtInt(Math.max(...Object.values(stats.by_party)))} candidates
+            {t('overview_party_largest')(largestCode, fmtInt(largestCount))}
           </div>
         </div>
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
         <StoryCard
-          headline={`${pct(women, total)} women`}
-          body="Across the full slate of 297 candidates. Gender balance varies sharply by party — see the Demographics section for the breakdown."
+          headline={t('overview_story_women_headline')(pct(women, total))}
+          body={t('overview_story_women_body')(total)}
         />
         <StoryCard
-          headline={`${Math.round(stats.coverage.profession?.percentage ?? 0)}% have a listed profession`}
-          body="LLM-clustered into 15 categories. Law, Education and Business dominate; the Professions section shows the full treemap."
+          headline={t('overview_story_prof_headline')(Math.round(stats.coverage.profession?.percentage ?? 0))}
+          body={t('overview_story_prof_body')}
         />
         <StoryCard
-          headline={`Only ${Math.round(stats.coverage.twitter?.percentage ?? 0)}% have a public X/Twitter handle`}
-          body="Digital footprint is patchy — Facebook leads at ~19%, Wikipedia under 3%. Explore the Digital page for per-party heatmap."
+          headline={t('overview_story_twitter_headline')(Math.round(stats.coverage.twitter?.percentage ?? 0))}
+          body={t('overview_story_twitter_body')}
         />
       </div>
     </div>

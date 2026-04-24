@@ -28,10 +28,28 @@ export function SubmitCorrection({ data }: { data: Dataset }) {
             <ExternalLink className="h-3.5 w-3.5 opacity-80" />
           </a>
           <p className="mt-3 text-xs text-slate-400">{t('sc_button_note')}</p>
+          <p className="mt-2 text-xs text-slate-400">
+            {t('sc_contact').split('polismetrics365@gmail.com')[0]}
+            <a
+              href="mailto:polismetrics365@gmail.com"
+              className="text-brand-300 underline decoration-dotted underline-offset-2 hover:text-brand-200"
+            >
+              polismetrics365@gmail.com
+            </a>
+            {t('sc_contact').split('polismetrics365@gmail.com')[1]}
+          </p>
         </div>
       ) : (
         <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-6 text-sm text-amber-100">
           {t('sc_not_ready')}
+          <p className="mt-2 text-sm">
+            <a
+              href="mailto:polismetrics365@gmail.com"
+              className="underline decoration-dotted underline-offset-2"
+            >
+              polismetrics365@gmail.com
+            </a>
+          </p>
         </div>
       )}
 

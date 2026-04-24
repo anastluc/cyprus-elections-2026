@@ -1,93 +1,93 @@
 {
-  "total_candidates": 538,
+  "total_candidates": 544,
   "coverage": {
-    "website": {
-      "count": 224,
-      "percentage": 41.6
+    "photo_url": {
+      "count": 57,
+      "percentage": 10.5
     },
-    "linkedin": {
-      "count": 41,
-      "percentage": 7.6
+    "sector": {
+      "count": 375,
+      "percentage": 68.9
+    },
+    "highlights": {
+      "count": 252,
+      "percentage": 46.3
+    },
+    "age": {
+      "count": 99,
+      "percentage": 18.2
+    },
+    "bio_text": {
+      "count": 346,
+      "percentage": 63.6
+    },
+    "instagram": {
+      "count": 52,
+      "percentage": 9.6
+    },
+    "date_of_birth": {
+      "count": 130,
+      "percentage": 23.9
+    },
+    "facebook": {
+      "count": 58,
+      "percentage": 10.7
+    },
+    "career_previous": {
+      "count": 263,
+      "percentage": 48.3
+    },
+    "profession": {
+      "count": 371,
+      "percentage": 68.2
+    },
+    "cv_url": {
+      "count": 4,
+      "percentage": 0.7
+    },
+    "website": {
+      "count": 255,
+      "percentage": 46.9
+    },
+    "twitter": {
+      "count": 31,
+      "percentage": 5.7
+    },
+    "profession_cluster": {
+      "count": 268,
+      "percentage": 49.3
+    },
+    "gender": {
+      "count": 543,
+      "percentage": 99.8
     },
     "name_gr": {
       "count": 0,
       "percentage": 0.0
     },
-    "photo_url": {
-      "count": 57,
-      "percentage": 10.6
-    },
-    "name_en": {
-      "count": 0,
-      "percentage": 0.0
-    },
-    "age": {
-      "count": 99,
-      "percentage": 18.4
+    "linkedin": {
+      "count": 41,
+      "percentage": 7.5
     },
     "cv_text": {
       "count": 2,
       "percentage": 0.4
     },
-    "gender": {
-      "count": 537,
-      "percentage": 99.8
+    "name_en": {
+      "count": 0,
+      "percentage": 0.0
     },
-    "twitter": {
-      "count": 31,
-      "percentage": 5.8
-    },
-    "bio_text": {
-      "count": 346,
-      "percentage": 64.3
-    },
-    "profession_cluster": {
-      "count": 268,
-      "percentage": 49.8
+    "education": {
+      "count": 187,
+      "percentage": 34.4
     },
     "wikipedia": {
       "count": 7,
       "percentage": 1.3
     },
-    "highlights": {
-      "count": 252,
-      "percentage": 46.8
-    },
-    "instagram": {
-      "count": 52,
-      "percentage": 9.7
-    },
-    "career_previous": {
-      "count": 262,
-      "percentage": 48.7
-    },
-    "profession": {
-      "count": 371,
-      "percentage": 69.0
-    },
-    "date_of_birth": {
-      "count": 130,
-      "percentage": 24.2
-    },
     "wikidata_qid": {
       "count": 6,
       "percentage": 1.1
-    },
-    "cv_url": {
-      "count": 3,
-      "percentage": 0.6
-    },
-    "education": {
-      "count": 187,
-      "percentage": 34.8
-    },
-    "sector": {
-      "count": 375,
-      "percentage": 69.7
-    },
-    "facebook": {
-      "count": 58,
-      "percentage": 10.8
     }
   },
   "by_party": {
@@ -96,7 +96,7 @@
     "ALMA": 51,
     "DIKO": 56,
     "DIPA": 58,
-    "DISY": 51,
+    "DISY": 57,
     "EDEK": 50,
     "ELAM": 47,
     "KOSP": 57,
@@ -105,13 +105,13 @@
   "by_district": {
     "FAM": 103,
     "KYR": 29,
-    "LAR": 53,
-    "LIM": 119,
-    "NIC": 187,
-    "PAF": 47
+    "LAR": 55,
+    "LIM": 120,
+    "NIC": 188,
+    "PAF": 49
   },
   "by_gender": {
-    "M": 366,
+    "M": 372,
     "F": 171,
     "?": 1
   },
@@ -209,7 +209,7 @@
         "wikipedia": 1
       },
       "DISY": {
-        "website": 12,
+        "website": 43,
         "twitter": 1,
         "instagram": 2
       },
@@ -235,7 +235,7 @@
       "ALMA": 51,
       "DIKO": 56,
       "DIPA": 58,
-      "DISY": 51,
+      "DISY": 57,
       "EDEK": 50,
       "ELAM": 47,
       "KOSP": 57,
@@ -296,10 +296,10 @@
     "DISY": {
       "FAM": 11,
       "KYR": 3,
-      "LAR": 4,
-      "LIM": 12,
-      "NIC": 18,
-      "PAF": 3
+      "LAR": 6,
+      "LIM": 13,
+      "NIC": 19,
+      "PAF": 5
     },
     "EDEK": {
       "FAM": 11,
@@ -334,7 +334,7 @@
     }
   },
   "source_kinds": {
-    "party_site": 3841,
+    "party_site": 4404,
     "llm_from_bio": 1740,
     "search_snippet": 1278,
     "news": 564,
@@ -352,12 +352,12 @@
     {
       "label": "mid",
       "range": "0.3–0.6",
-      "count": 362
+      "count": 336
     },
     {
       "label": "good",
       "range": "0.6–0.85",
-      "count": 176
+      "count": 208
     },
     {
       "label": "high",

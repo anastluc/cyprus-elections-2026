@@ -15271,13 +15271,13 @@
   "name_gr": "Ανδρέας Σιάμαρος",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.479,
+  "row_confidence": 0.631,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Electrical Engineer / Researcher",
@@ -15326,9 +15326,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/siamaros-andreas/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/ammoxostos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/ammoxostos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -15345,16 +15353,24 @@
   "name_gr": "Χρήστος Μιχαήλ",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.333,
+  "row_confidence": 0.486,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.7,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/michael-xristos/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/ammoxostos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/ammoxostos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ]
  },
@@ -15364,16 +15380,24 @@
   "name_gr": "Δημήτρης Κουμής",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.333,
+  "row_confidence": 0.486,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.7,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/koumi-dimitris/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/ammoxostos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/ammoxostos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ]
  },
@@ -15383,13 +15407,13 @@
   "name_gr": "Γιώργος Χατζηγεωργίου",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.476,
+  "row_confidence": 0.617,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Διευθυντής γραφείου Προέδρου ΔΗΣΥ",
@@ -15440,13 +15464,15 @@
     "source_kind": "llm_from_bio"
    },
    "website": {
-    "value": "https://www.chatzigeorgioucy.com",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=226",
-    "source_kind": "search_snippet"
+    "value": "https://ekloges.disy.cy/hadjigeorgiou-giorgos/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/ammoxostos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/ammoxostos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -15462,13 +15488,13 @@
   "name_gr": "Γιώργος Κάρουλας",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.521,
+  "row_confidence": 0.673,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "age": {
     "value": "53",
@@ -15529,9 +15555,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/karoullas_giorgos/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/ammoxostos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/ammoxostos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -15546,13 +15580,13 @@
   "name_gr": "Γιώργος Λυσανδρίδης",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.49,
+  "row_confidence": 0.63,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Director of Organization and Administration, DISY",
@@ -15603,13 +15637,15 @@
     "source_kind": "llm_from_bio"
    },
    "website": {
-    "value": "https://www.lysandrides.com",
-    "confidence": 0.525,
-    "source_url": "social_discovery_active:candidate=228",
-    "source_kind": "search_snippet"
+    "value": "https://ekloges.disy.cy/lysandrides_giorgos/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/ammoxostos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/ammoxostos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -15624,13 +15660,13 @@
   "name_gr": "Μαργαρίτα Καϊμακλιώτου",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.465,
+  "row_confidence": 0.617,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "null",
@@ -15671,9 +15707,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/kaimaklioti_margarita/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/ammoxostos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/ammoxostos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -15688,13 +15732,13 @@
   "name_gr": "Νίκος Γεωργίου",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.531,
+  "row_confidence": 0.672,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1983-01-01",
@@ -15752,12 +15796,14 @@
    },
    "website": {
     "value": "https://ekloges.disy.cy/georgiou_nicos/",
-    "confidence": 0.5,
-    "source_url": "social_discovery_active:candidate=225",
-    "source_kind": "search_snippet"
+    "confidence": 0.945,
+    "source_url": "https://ekloges.disy.cy/ammoxostos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/ammoxostos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -15771,13 +15817,13 @@
   "name_gr": "Παναγιώτης Μαούρης",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.539,
+  "row_confidence": 0.691,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1981-01-02",
@@ -15832,9 +15878,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/maouris_panagiotis/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/ammoxostos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/ammoxostos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -15851,13 +15905,13 @@
   "name_gr": "Πάρις Μάρκου",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.442,
+  "row_confidence": 0.594,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Ταξίαρχος ε.α.[3]",
@@ -15900,9 +15954,17 @@
     "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
     "source_kind": "news",
     "lang": "gr"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/markou-paris/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/ammoxostos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/ammoxostos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ]
  },
@@ -15912,13 +15974,13 @@
   "name_gr": "Παύλος Λιασίδης",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.356,
+  "row_confidence": 0.508,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "sector": {
     "value": "public sector",
@@ -15946,9 +16008,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/liasides_paulos/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/ammoxostos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/ammoxostos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -15962,13 +16032,13 @@
   "name_gr": "Δήμος Γεωργιάδης",
   "party": "DISY",
   "district": "KYR",
-  "row_confidence": 0.568,
+  "row_confidence": 0.679,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "age": {
     "value": "30",
@@ -16040,6 +16110,7 @@
   },
   "sources": [
    "https://ekloges.disy.cy/georgiades_dimos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -16057,13 +16128,13 @@
   "name_gr": "Ρίτα Σούπερμαν",
   "party": "DISY",
   "district": "KYR",
-  "row_confidence": 0.521,
+  "row_confidence": 0.631,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1966-12-23",
@@ -16115,6 +16186,7 @@
    }
   },
   "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ]
  },
@@ -16124,13 +16196,13 @@
   "name_gr": "Βασίλης Κουμέττος",
   "party": "DISY",
   "district": "KYR",
-  "row_confidence": 0.49,
+  "row_confidence": 0.601,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Parliamentary Associate",
@@ -16188,6 +16260,7 @@
    }
   },
   "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -16204,16 +16277,17 @@
   "name_gr": "Άντρεα Μανώλη",
   "party": "DISY",
   "district": "LAR",
-  "row_confidence": 0.333,
+  "row_confidence": 0.444,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.7,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.945,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ]
  },
@@ -16223,13 +16297,13 @@
   "name_gr": "Αννίτα Δημητρίου",
   "party": "DISY",
   "district": "LAR",
-  "row_confidence": 0.409,
+  "row_confidence": 0.569,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.7,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.945,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Πρόεδρος του ΔΗΣΥ",
@@ -16252,6 +16326,13 @@
     "source_kind": "llm_from_bio",
     "lang": "en"
    },
+   "career_previous": {
+    "value": "Πρόεδρος ΔΗΣΥ",
+    "confidence": 0.9,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
    "twitter": {
     "value": "https://twitter.com/AnnitaDemetriou",
     "confidence": 0.5,
@@ -16260,7 +16341,46 @@
    }
   },
   "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
+  ]
+ },
+ {
+  "id": 568,
+  "name_en": "Evangelou Argyros",
+  "name_gr": "Ευαγγέλου Αργυρός",
+  "party": "DISY",
+  "district": "LAR",
+  "row_confidence": 0.429,
+  "fields": {
+   "gender": {
+    "value": "M",
+    "confidence": 0.9,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
+   }
+  },
+  "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana"
+  ]
+ },
+ {
+  "id": 569,
+  "name_en": "Fragkos Evripidis",
+  "name_gr": "Φράγκος Ευριπίδης",
+  "party": "DISY",
+  "district": "LAR",
+  "row_confidence": 0.429,
+  "fields": {
+   "gender": {
+    "value": "M",
+    "confidence": 0.9,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
+   }
+  },
+  "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana"
   ]
  },
  {
@@ -16269,13 +16389,13 @@
   "name_gr": "Πρόδρομος Αλαμπρίτης",
   "party": "DISY",
   "district": "LAR",
-  "row_confidence": 0.536,
+  "row_confidence": 0.647,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1982-01-01",
@@ -16333,6 +16453,7 @@
    }
   },
   "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -16349,13 +16470,13 @@
   "name_gr": "Στάλω Βωνιάτη",
   "party": "DISY",
   "district": "LAR",
-  "row_confidence": 0.347,
+  "row_confidence": 0.458,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "bio_text": {
     "value": "Αριστίνδην υποψήφια ΔΗΣΥ στη Λάρνακα",
@@ -16372,6 +16493,7 @@
    }
   },
   "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ]
  },
@@ -16381,16 +16503,24 @@
   "name_gr": "Ανδρέας Νικολάου Κόκκινος",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.333,
+  "row_confidence": 0.486,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.7,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/nikolaoou_kokkinos_andreas/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lemesos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ]
  },
@@ -16400,13 +16530,13 @@
   "name_gr": "Αγγελική Ριαλά",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.399,
+  "row_confidence": 0.551,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "εκπαιδευτικός",
@@ -16442,9 +16572,17 @@
     "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
     "source_kind": "news",
     "lang": "gr"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/riala_aggeliki/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lemesos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ]
  },
@@ -16454,13 +16592,13 @@
   "name_gr": "Αντώνης Στυλιανού",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.522,
+  "row_confidence": 0.674,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "age": {
     "value": "46",
@@ -16521,9 +16659,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/stylianou_antonis/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lemesos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -16539,13 +16685,13 @@
   "name_gr": "Αντώνης Τσολάκης",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.422,
+  "row_confidence": 0.617,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Κοινοτάρχης Αγρού, Πρόεδρος σχολικής εφορείας",
@@ -16587,9 +16733,23 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "cv_url": {
+    "value": "https://ekloges.disy.cy/wp-content/uploads/2025/09/ΑΝΤΩΝΗΣ-Α.-ΤΣΟΛΑΚΗΣ-CV-RESUME-Σάβ-06.09.2025-2.pdf",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/tsolakis_antonis/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lemesos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -16605,16 +16765,24 @@
   "name_gr": "Ελευθέριος Τσιάκκιρος",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.333,
+  "row_confidence": 0.486,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.7,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/tsiakkiros_eleutherios/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lemesos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ]
  },
@@ -16624,13 +16792,13 @@
   "name_gr": "Φωτεινή Τσιρίδου",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.465,
+  "row_confidence": 0.617,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Lawyer, Vice President of the Cyprus Stock Exchange",
@@ -16679,9 +16847,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/tsiridou_foteini/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lemesos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -16696,13 +16872,13 @@
   "name_gr": "Γιώργος Καραϊσκάκης",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.422,
+  "row_confidence": 0.574,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Διευθυντής Πολιτικού Γραφείου βουλευτή Ευθύμιου Δίπλαρου",
@@ -16744,9 +16920,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/karaiskakis_giorgos/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lemesos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -16763,17 +16947,51 @@
   "name_gr": "Λευτέρης Περικλή",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.333,
+  "row_confidence": 0.486,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.7,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/perikli_leuteris/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lemesos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
+  ]
+ },
+ {
+  "id": 564,
+  "name_en": "Michaelides Andreas",
+  "name_gr": "Μιχαηλίδης Ανδρέας",
+  "party": "DISY",
+  "district": "LIM",
+  "row_confidence": 0.465,
+  "fields": {
+   "gender": {
+    "value": "M",
+    "confidence": 0.945,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/michaelides_andreas/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
+   }
+  },
+  "sources": [
+   "https://ekloges.disy.cy/lemesos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana"
   ]
  },
  {
@@ -16782,13 +17000,13 @@
   "name_gr": "Μιχάλης Φελλάς",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.525,
+  "row_confidence": 0.677,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "age": {
     "value": "46",
@@ -16849,9 +17067,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/fellas_michalis/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lemesos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -16868,13 +17094,13 @@
   "name_gr": "Μιχάλης Κουνούνης",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.399,
+  "row_confidence": 0.551,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "προπονητής (basketball coach)",
@@ -16910,9 +17136,17 @@
     "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
     "source_kind": "news",
     "lang": "gr"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/kounouni_michalis/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lemesos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ]
  },
@@ -16995,13 +17229,13 @@
   "name_gr": "Ονησίφορος Ιορδάνους",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.479,
+  "row_confidence": 0.631,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Academic economist",
@@ -17043,9 +17277,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/iordanou_onisiforos/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lemesos/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lemesos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -17060,13 +17302,13 @@
   "name_gr": "Αναστασία Ανθούση",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.535,
+  "row_confidence": 0.687,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1977-01-01",
@@ -17121,9 +17363,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/anthousi_anastasia/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -17140,13 +17390,13 @@
   "name_gr": "Ανδρέας Κωνσταντίνου",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.485,
+  "row_confidence": 0.637,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1982-01-01",
@@ -17194,9 +17444,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/constantinou_andreas/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -17213,13 +17471,13 @@
   "name_gr": "Χαράλαμπος Πετρίδης",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.525,
+  "row_confidence": 0.677,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1974-10-19",
@@ -17274,9 +17532,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/petrides_charalambos/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -17292,13 +17558,13 @@
   "name_gr": "Χριστάκης Μελετιές",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.479,
+  "row_confidence": 0.631,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1962-01-01",
@@ -17346,9 +17612,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/meleties_xristakis/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -17363,13 +17637,13 @@
   "name_gr": "Χριστόφορος Χριστοφόρου",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.538,
+  "row_confidence": 0.69,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1968-06-05",
@@ -17424,9 +17698,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/christoforos_christoforou/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -17443,13 +17725,13 @@
   "name_gr": "Χρήστος Πάλλης",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.55,
+  "row_confidence": 0.692,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1967-03-20",
@@ -17507,12 +17789,14 @@
    },
    "website": {
     "value": "https://ekloges.disy.cy/pallis_xristos/",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=205",
-    "source_kind": "search_snippet"
+    "confidence": 0.945,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -17529,13 +17813,13 @@
   "name_gr": "Δημήτρης Δημητρίου",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.516,
+  "row_confidence": 0.664,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1981-05-04",
@@ -17590,9 +17874,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/dimitriou_dimitris/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -17607,13 +17899,13 @@
   "name_gr": "Έλενα Κούσιου",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.477,
+  "row_confidence": 0.617,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Δικηγόρος / Συνεταίρος στη Koushos Korfiotis Papacharalambous LLC",
@@ -17664,13 +17956,15 @@
     "source_kind": "llm_from_bio"
    },
    "website": {
-    "value": "https://elenakoushos.com",
-    "confidence": 0.5,
-    "source_url": "social_discovery_active:candidate=201",
-    "source_kind": "search_snippet"
+    "value": "https://ekloges.disy.cy/kousiou_elena/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -17686,13 +17980,13 @@
   "name_gr": "Γιώργος Χρυσάνθου",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.525,
+  "row_confidence": 0.677,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1986-04-25",
@@ -17747,9 +18041,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/chrysanthou_giorgos/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -17765,13 +18067,13 @@
   "name_gr": "Γιώργος Παμπορίδης",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.548,
+  "row_confidence": 0.688,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1969-01-01",
@@ -17828,13 +18130,15 @@
     "source_kind": "llm_from_bio"
    },
    "website": {
-    "value": "https://pamboridis2026.com",
-    "confidence": 0.5,
-    "source_url": "social_discovery_active:candidate=197",
-    "source_kind": "search_snippet"
+    "value": "https://ekloges.disy.cy/pamporides_georgios/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -17851,16 +18155,24 @@
   "name_gr": "Κωνσταντίνος Μούντουκκος",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.333,
+  "row_confidence": 0.486,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.7,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/mountoukkos_constantinos/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ]
  },
@@ -17870,13 +18182,13 @@
   "name_gr": "Μάριος Ηλία",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.422,
+  "row_confidence": 0.574,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Member of the Political Bureau of DISY",
@@ -17918,9 +18230,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/ilia_marios/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -17936,13 +18256,13 @@
   "name_gr": "Νεόφυτος Ζαμπάς",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.52,
+  "row_confidence": 0.66,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Αγγειοχειρουργός, κλινικός καθηγητής στο Πανεπιστήμιο Λευκωσίας",
@@ -18006,14 +18326,16 @@
     "lang": "gr"
    },
    "website": {
-    "value": "https://www.nzambas.cy/",
-    "confidence": 0.525,
-    "source_url": "social_discovery_active:candidate=207",
-    "source_kind": "search_snippet"
+    "value": "https://ekloges.disy.cy/zampas_neophytos/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
    "https://ekloges.disy.cy/zampas_neophytos/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -18030,13 +18352,13 @@
   "name_gr": "Πόλυς Κουρουσίδης",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.492,
+  "row_confidence": 0.631,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1979-01-01",
@@ -18086,13 +18408,15 @@
     "source_kind": "llm_from_bio"
    },
    "website": {
-    "value": "https://kourousides.cy",
-    "confidence": 0.525,
-    "source_url": "social_discovery_active:candidate=202",
-    "source_kind": "search_snippet"
+    "value": "https://ekloges.disy.cy/kourousides_polys/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -18107,13 +18431,13 @@
   "name_gr": "Σάββια Ορφανίδου",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.529,
+  "row_confidence": 0.67,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "age": {
     "value": "46",
@@ -18182,13 +18506,15 @@
     "source_kind": "search_snippet"
    },
    "website": {
-    "value": "https://saviaorphanidou.com",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=196",
-    "source_kind": "search_snippet"
+    "value": "https://ekloges.disy.cy/orphanidou_savia/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -18272,13 +18598,13 @@
   "name_gr": "Τίνα Παύλου",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.455,
+  "row_confidence": 0.594,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Κλινική Διευθύντρια, Αγία Σκέπη",
@@ -18323,14 +18649,42 @@
     "lang": "gr"
    },
    "website": {
-    "value": "https://www.tinapavlou2026.com",
-    "confidence": 0.525,
-    "source_url": "social_discovery_active:candidate=194",
-    "source_kind": "search_snippet"
+    "value": "https://ekloges.disy.cy/paulou_tina/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
+  ]
+ },
+ {
+  "id": 563,
+  "name_en": "Tsatsou Theodoros",
+  "name_gr": "Τσάτσου Θεόδωρος",
+  "party": "DISY",
+  "district": "NIC",
+  "row_confidence": 0.471,
+  "fields": {
+   "gender": {
+    "value": "M",
+    "confidence": 0.945,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/tsatsou_theodoros/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
+   }
+  },
+  "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana"
   ]
  },
  {
@@ -18339,13 +18693,13 @@
   "name_gr": "Ζαχαρίας Μανιταράς",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.482,
+  "row_confidence": 0.634,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Senior Official at KEVE (Cyprus Chamber of Commerce and Industry), Head of Tax Issues",
@@ -18394,9 +18748,17 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
+   },
+   "website": {
+    "value": "https://ekloges.disy.cy/manitaras_zaxarias/",
+    "confidence": 0.9,
+    "source_url": "https://ekloges.disy.cy/lefkosia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://ekloges.disy.cy/lefkosia/",
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -18413,13 +18775,13 @@
   "name_gr": "Χαράλαμπος Πάζαρος",
   "party": "DISY",
   "district": "PAF",
-  "row_confidence": 0.524,
+  "row_confidence": 0.634,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "age": {
     "value": "49",
@@ -18483,6 +18845,7 @@
    }
   },
   "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -18495,18 +18858,56 @@
   "age": 49
  },
  {
+  "id": 570,
+  "name_en": "Georgiou Giorgos",
+  "name_gr": "Γεωργίου Γιώργος",
+  "party": "DISY",
+  "district": "PAF",
+  "row_confidence": 0.429,
+  "fields": {
+   "gender": {
+    "value": "M",
+    "confidence": 0.9,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
+   }
+  },
+  "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana"
+  ]
+ },
+ {
+  "id": 571,
+  "name_en": "Karseras Konstantinos",
+  "name_gr": "Καρσεράς Κωνσταντίνος",
+  "party": "DISY",
+  "district": "PAF",
+  "row_confidence": 0.429,
+  "fields": {
+   "gender": {
+    "value": "M",
+    "confidence": 0.9,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
+   }
+  },
+  "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana"
+  ]
+ },
+ {
   "id": 244,
   "name_en": "Nikoletta Konstantinou",
   "name_gr": "Νικολέττα Κωνσταντίνου",
   "party": "DISY",
   "district": "PAF",
-  "row_confidence": 0.552,
+  "row_confidence": 0.662,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "age": {
     "value": "40",
@@ -18576,6 +18977,7 @@
    }
   },
   "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -18593,13 +18995,13 @@
   "name_gr": "Σωτήρης Κουππαρής",
   "party": "DISY",
   "district": "PAF",
-  "row_confidence": 0.479,
+  "row_confidence": 0.59,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "Mechanical Engineer / Aeronautical Engineer",
@@ -18651,6 +19053,7 @@
    }
   },
   "sources": [
+   "https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [

@@ -106,11 +106,11 @@ _NAME_EQUIVALENCE_GROUPS: tuple[tuple[str, ...], ...] = (
     ("stamatis", "stamos"),
     ("dimitrios", "dimitris", "ntimos", "takis", "mitsos", "dimitrakis"),
     ("ioannis", "giannis", "giannakis", "yiannis", "yiannakis"),
-    ("christos", "christakis"),
+    ("christos", "christakis", "xristos", "hristos", "chrystos"),
     ("eleni", "elena", "lena", "eleana"),
     ("antonios", "antonis", "tonis", "tonys"),
-    ("nikolaos", "nikos", "nikolas", "nikolakis"),
-    ("michail", "michalis", "michalakis", "michalos"),
+    ("nikolaos", "nikos", "nicos", "nikolas", "nicolas", "nikolakis"),
+    ("michail", "michalis", "michalakis", "michalos", "michael"),
     ("vasileios", "vasilis", "vasos", "vasilakis"),
     ("georgios", "giorgos", "yiorgos", "giorgakis"),
     ("andreas", "antreas", "antrikos"),
@@ -137,7 +137,12 @@ _FUZZY_COLLAPSE = str.maketrans({
     "h": "", "v": "b", "f": "p", "w": "v",
 })
 # Digraph collapses run before the char-level map.
+# Cypriot "Χατζη-" prefix (Turkish "hacı", pilgrim-to-Mecca) is transliterated
+# several ways — Chatzi/Hadji/Hatzi/Hadzi — so collapse them all to "z" before
+# the general digraph pass.
 _FUZZY_DIGRAPHS = [
+    ("chatz", "z"), ("hadji", "z"), ("hadj", "z"), ("hatz", "z"),
+    ("hadzi", "z"), ("hadz", "z"),
     ("ou", "u"), ("mp", "b"), ("mb", "b"), ("nt", "d"), ("ng", "g"),
     ("ph", "f"), ("th", "t"), ("ch", "c"), ("ks", "x"), ("tz", "z"),
     ("ps", "s"), ("kh", "c"), ("gh", "g"),

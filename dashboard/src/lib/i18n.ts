@@ -71,6 +71,8 @@ const EN = {
   sc_info3_title: 'Updates go live overnight',
   sc_info3_body:
     'Approved corrections are applied to the database at night. The dashboard refreshes from that database, so your fix should be visible the next day.',
+  sc_contact:
+    'Prefer email? Reach out at polismetrics365@gmail.com.',
   sc_footer:
     'This is a community effort. Please keep suggestions factual and — where possible — include a source (official party page, news article, Wikipedia, official MoI results).',
 
@@ -177,6 +179,8 @@ const GR: typeof EN = {
   sc_info3_title: 'Οι αλλαγές εφαρμόζονται τη νύχτα',
   sc_info3_body:
     'Οι εγκεκριμένες διορθώσεις εφαρμόζονται στη βάση δεδομένων τη νύχτα. Ο πίνακας ανανεώνεται από εκεί, οπότε η αλλαγή θα φαίνεται την επόμενη μέρα.',
+  sc_contact:
+    'Προτιμάτε email; Επικοινωνήστε στο polismetrics365@gmail.com.',
   sc_footer:
     'Αυτή είναι κοινοτική προσπάθεια. Παρακαλώ κρατήστε τις προτάσεις τεκμηριωμένες και — όπου γίνεται — προσθέστε πηγή (επίσημη σελίδα κόμματος, άρθρο, Wikipedia, επίσημα αποτελέσματα ΥΠ.ΕΣ.).',
 

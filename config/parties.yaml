@@ -14,13 +14,19 @@ parties:
     name_en: Democratic Rally
     website: https://disy.org.cy
     scraper: disy
-    # JS-rendered: the candidate list is hydrated client-side, so we fetch
-    # via Playwright (`js_render: true`) and hand the rendered DOM to the
-    # generic LLM extractor.
+    # The main party domain only hosts the nomination-process page. The
+    # full 56-candidate slate lives on the dedicated ekloges subdomain,
+    # which has per-district listing pages.
     enabled: true
     js_render: true
     seed_urls:
-      - https://disy.org.cy/vouleftikes2026/
+      - https://ekloges.disy.cy/psifodeltia/
+      - https://ekloges.disy.cy/lefkosia/
+      - https://ekloges.disy.cy/lemesos/
+      - https://ekloges.disy.cy/ammoxostos/
+      # Larnaca/Paphos/Kyrenia pages on ekloges.disy.cy are still empty
+      # templates; the consolidated offsite article lists all 56 by district.
+      - https://www.offsite.com.cy/eidiseis/politiki/aytoi-einai-oi-56-ypopsifioi-toy-disy-gia-tis-boyleytikes-2026-ta-onomata-ana
 
   - code: AKEL
     name_gr: ΑΚΕΛ - Αριστερά - Νέες Δυνάμεις

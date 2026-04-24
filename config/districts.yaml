@@ -2,7 +2,7 @@ districts:
   - code: NIC
     name_gr: Λευκωσία
     name_en: Nicosia
-    seats: 20
+    seats: 19
   - code: LIM
     name_gr: Λεμεσός
     name_en: Limassol
@@ -18,7 +18,7 @@ districts:
   - code: PAF
     name_gr: Πάφος
     name_en: Paphos
-    seats: 4
+    seats: 5
   - code: KYR
     name_gr: Κερύνεια
     name_en: Kyrenia

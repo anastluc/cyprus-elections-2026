@@ -8323,91 +8323,11 @@
   "name_gr": "Οδυσσέας Φ. Μιχαηλίδης",
   "party": "ALMA",
   "district": "NIC",
-  "row_confidence": 0.535,
+  "row_confidence": 0.767,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
-   },
-   "date_of_birth": {
-    "value": "1968-01-01",
-    "confidence": 0.6,
-    "source_url": "llm_extract:candidate=273",
-    "source_kind": "llm_from_bio"
-   },
-   "profession": {
-    "value": "Political movement leader / Visiting Professor",
-    "confidence": 0.6,
-    "source_url": "llm_extract:candidate=273",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "sector": {
-    "value": "public sector",
-    "confidence": 0.6,
-    "source_url": "llm_extract:candidate=273",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Education",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-21T11:44:00.826028",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "PhD in Civil Engineering, National Technical University of Athens (1997); Diploma (BSc & MSc) in Civil Engineering, National Technical University of Athens (1993)",
-    "confidence": 0.6,
-    "source_url": "llm_extract:candidate=273",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "career_previous": {
-    "value": "Auditor General of Cyprus, Visiting Professor of Economics at European University Cyprus (from October 2024)",
-    "confidence": 0.6,
-    "source_url": "llm_extract:candidate=273",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "bio_text": {
-    "value": "Ο Δρ. Οδυσσέας Φ. Μιχαηλίδης γεννήθηκε στη Λευκωσία το 1968 και αποφοίτησε με άριστα από το Λύκειο Ακροπόλεως το 1986. Σπούδασε στο Εθνικό Μετσόβιο Πολυτεχνείο, όπου έλαβε με άριστα το 1993 Δίπλωμα Πολιτικού Μηχανικού (BSc και MSc) και το 1997 PhD. Υπηρέτησε ως Γενικός Ελεγκτής της Κύπρου, ενώ από τον Οκτώβριο 2024 είναι επισκέπτης καθηγητής οικονομικών στο Ευρωπαϊκό Πανεπιστήμιο Κύπρου και τον Σεπτέμβριο 2025 ίδρυσε το πολιτικό Κίνημα Άλμα – Πολίτες για την Κύπρο, του οποίου είναι επικεφαλής.[5]",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=273",
-    "source_kind": "search_snippet",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Graduated with top honours in Civil Engineering (BSc & MSc) from the National Technical University of Athens in 1993.\", \"Earned a PhD from the National Technical University of Athens in 1997.\", \"Served as Auditor General of Cyprus.\", \"Founded the political movement ALMA – Citizens for Cyprus in September 2025.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
-    "source_kind": "llm_from_bio"
-   }
-  },
-  "sources": [
-   "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
-  ],
-  "highlights": [
-   "Graduated with top honours in Civil Engineering (BSc & MSc) from the National Technical University of Athens in 1993.",
-   "Earned a PhD from the National Technical University of Athens in 1997.",
-   "Served as Auditor General of Cyprus.",
-   "Founded the political movement ALMA – Citizens for Cyprus in September 2025."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-21T12:19:37.479242"
- },
- {
-  "id": 520,
-  "name_en": "Odysseas Michailidis",
-  "name_gr": "Οδυσσέας Μιχαηλίδης",
-  "party": "ALMA",
-  "district": "NIC",
-  "row_confidence": 0.75,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.9,
+    "confidence": 0.99,
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
    },
@@ -8431,6 +8351,13 @@
     "source_kind": "party_site",
     "lang": "en"
    },
+   "profession_cluster": {
+    "value": "Education",
+    "confidence": 0.7,
+    "source_url": "enrich_professions:2026-04-21T11:44:00.826028",
+    "source_kind": "llm_from_bio",
+    "lang": "en"
+   },
    "education": {
     "value": "Δίπλωμα Πολιτικού Μηχανικού (BSc και MSc), PhD - Εθνικό Μετσόβιο Πολυτεχνείο (1993, 1997)",
     "confidence": 0.9,
@@ -8438,12 +8365,25 @@
     "source_kind": "party_site",
     "lang": "gr"
    },
+   "career_previous": {
+    "value": "Auditor General of Cyprus, Visiting Professor of Economics at European University Cyprus (from October 2024)",
+    "confidence": 0.6,
+    "source_url": "llm_extract:candidate=273",
+    "source_kind": "llm_from_bio",
+    "lang": "en"
+   },
    "bio_text": {
     "value": "Γεννήθηκε στην Λευκωσία το 1968. Αποφοίτησε με άριστα από το Λύκειο Ακροπόλεως το 1986. Έλαβε Δίπλωμα Πολιτικού Μηχανικού (BSc και MSc) με άριστα από το ΕΜΠ το 1993 και αναγορεύθηκε διδάκτορας το 1997.",
     "confidence": 0.9,
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site",
     "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Graduated with top honours in Civil Engineering (BSc & MSc) from the National Technical University of Athens in 1993.\", \"Earned a PhD from the National Technical University of Athens in 1997.\", \"Served as Auditor General of Cyprus.\", \"Founded the political movement ALMA – Citizens for Cyprus in September 2025.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
+    "source_kind": "llm_from_bio"
    },
    "website": {
     "value": "https://almacy.org/ektelestiki-grammateia",
@@ -8453,8 +8393,16 @@
    }
   },
   "sources": [
-   "https://almacy.org/ekloges/"
-  ]
+   "https://almacy.org/ekloges/",
+   "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
+  ],
+  "highlights": [
+   "Graduated with top honours in Civil Engineering (BSc & MSc) from the National Technical University of Athens in 1993.",
+   "Earned a PhD from the National Technical University of Athens in 1997.",
+   "Served as Auditor General of Cyprus.",
+   "Founded the political movement ALMA – Citizens for Cyprus in September 2025."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-21T12:19:37.479242"
  },
  {
   "id": 533,
@@ -8832,948 +8780,6 @@
   "sources": [
    "https://almacy.org/ekloges/"
   ]
- },
- {
-  "id": 318,
-  "name_en": "areti dimosthenous",
-  "name_gr": "δημοσθενους αρετη",
-  "party": "DIKO",
-  "district": null,
-  "row_confidence": 0.54,
-  "fields": {
-   "gender": {
-    "value": "F",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "profession": {
-    "value": "θεολόγος - θρησκειολόγος",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "academia",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Education",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "κοινωνική θεολογία αθήνα, κανονικό δίκαιο/islam/θρησκειολογία μόναχο, διδακτορικό 1996, μεταδιδακτορική έρευνα daad 1995-1996",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "career_previous": {
-    "value": "πανεπιστημιακός, δίδαξε στα πανεπιστήμια shandong κίνα, haifa, μόναχο, βόσπορος, κύπρου, εκπα, εκλελεγμένο μέλος κεντρικής επιτροπής δηκο επί τάσσου παπαδόπουλου",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "bio_text": {
-    "value": "δρας αρετή δημοσθένους, θεολόγος-θρησκειολόγος, πανεπιστημιακός με διδακτορικό από μόναχο, βραβείο αριστείας bpw κύπρου 2007, βραβείο madame figaro γυναίκα της χρονιάς 2016",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Holds a doctorate from Munich in theology/religious studies.\", \"Received the BPW Cyprus Excellence Award in 2007.\", \"Received the Madame Figaro Woman of the Year Award in 2016.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
-    "source_kind": "llm_from_bio"
-   },
-   "facebook": {
-    "value": "https://www.facebook.com/profile.php?id=100063479057057",
-    "confidence": 0.5,
-    "source_url": "social_discovery_active:candidate=318",
-    "source_kind": "search_snippet"
-   },
-   "website": {
-    "value": "https://demosthenous.inisme.eu",
-    "confidence": 0.5,
-    "source_url": "social_discovery_active:candidate=318",
-    "source_kind": "search_snippet"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
-  ],
-  "highlights": [
-   "Holds a doctorate from Munich in theology/religious studies.",
-   "Received the BPW Cyprus Excellence Award in 2007.",
-   "Received the Madame Figaro Woman of the Year Award in 2016."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
- },
- {
-  "id": 317,
-  "name_en": "christos vakanas",
-  "name_gr": "βακανας χριστος",
-  "party": "DIKO",
-  "district": null,
-  "row_confidence": 0.516,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "profession": {
-    "value": "πολιτικός μηχανικός",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "academia",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Engineering",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "πολιτικός μηχανικός, the city university of new york, μεταπτυχιακές σπουδές με υποτροφία",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "career_previous": {
-    "value": "διευθυντής cyprus college λεμεσού 2010-2022, υπηρεσία στο european university cyprus, μέλος σχολικής εφορείας πολεμιδιών, μέλος δσκρατικής έκθεσης κύπρου",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "bio_text": {
-    "value": "σπούδασε πολιτικός μηχανικός στο the city university of new york, δίδαξε σε προπτυχιακούς φοιτητές, διετέλεσε διευθυντής cyprus college λεμεσού 2010-2022, νυμφευμένος με δύο κόρες",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Studied civil engineering at the City University of New York.\", \"Taught undergraduate students.\", \"Served as Director of Cyprus College Limassol from 2010 to 2022.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
-    "source_kind": "llm_from_bio"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
-  ],
-  "highlights": [
-   "Studied civil engineering at the City University of New York.",
-   "Taught undergraduate students.",
-   "Served as Director of Cyprus College Limassol from 2010 to 2022."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
- },
- {
-  "id": 325,
-  "name_en": "evanthia tsolaki",
-  "name_gr": "τσολακη eυανθια",
-  "party": "DIKO",
-  "district": null,
-  "row_confidence": 0.519,
-  "fields": {
-   "gender": {
-    "value": "F",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "profession": {
-    "value": "δικηγόρος - πρώην δημοτικός σύμβουλος λεμεσού",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "law",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Law",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "πτυχίο νομικής εκπα, mba aνοικτό πανεπιστήμιο κύπρου",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "career_previous": {
-    "value": "δημοτικός σύμβουλος λεμεσού 2002-2016, πρόεδρος επιτροπής κοινωνικής πρόνοιας δήμου λεμεσού 2007-2016, μέλος εκτελεστικού γραφείου δηκο, μέλος συμβουλίου επιτροπής κεφαλαιαγοράς κύπρου από 2019",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "bio_text": {
-    "value": "δικηγόρος, πρώην δημοτικός σύμβουλος λεμεσού τρεις θητείες 2002-2016, πρόεδρος επιτροπής κοινωνικής πρόνοιας, μέλος επιτροπής κεφαλαιαγοράς κύπρου",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Served as municipal councillor of Limassol for three terms, 2002–2016.\", \"Chaired the Social Welfare Committee during her time as municipal councillor.\", \"Member of the Cyprus Securities and Exchange Commission.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
-    "source_kind": "llm_from_bio"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
-  ],
-  "highlights": [
-   "Served as municipal councillor of Limassol for three terms, 2002–2016.",
-   "Chaired the Social Welfare Committee during her time as municipal councillor.",
-   "Member of the Cyprus Securities and Exchange Commission."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
- },
- {
-  "id": 319,
-  "name_en": "florentzos karagiannas",
-  "name_gr": "καραγιαννας φλωρεντζος",
-  "party": "DIKO",
-  "district": null,
-  "row_confidence": 0.574,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "date_of_birth": {
-    "value": "1971-01-01",
-    "confidence": 0.6,
-    "source_url": "llm_extract:candidate=319",
-    "source_kind": "llm_from_bio"
-   },
-   "profession": {
-    "value": "επιχειρηματίας - καθηγητής φυσικής αγωγής",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "business",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Business",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "πτυχίο τεφαα πανεπιστημίου αθηνών",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "career_previous": {
-    "value": "γενικός διευθυντής μεγάλων οργανισμών κύπρου και αθήνας, διευθυντής medichic center λεμεσού από 2013, πρόεδρος για 3η θητεία στον nautical club κερύνειας, στέλεχος blueheart foundation",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "bio_text": {
-    "value": "πολύτεκνος πατέρας, πρόσφυγας εξαμμοχώστου, γεννηθείς 1971, επιχειρηματίας και καθηγητής φυσικής αγωγής, 30 χρόνια στη λεμεσό",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Father of many children and refugee from Famagusta.\", \"Born in 1971.\", \"Has lived in Limassol for 30 years.\", \"Qualified physical education teacher.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
-    "source_kind": "llm_from_bio"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
-  ],
-  "highlights": [
-   "Father of many children and refugee from Famagusta.",
-   "Born in 1971.",
-   "Has lived in Limassol for 30 years.",
-   "Qualified physical education teacher."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
- },
- {
-  "id": 324,
-  "name_en": "georgios papadopoulos",
-  "name_gr": "παπαδοπουλος γεωργιος",
-  "party": "DIKO",
-  "district": null,
-  "row_confidence": 0.576,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "date_of_birth": {
-    "value": "1965-01-01",
-    "confidence": 0.6,
-    "source_url": "llm_extract:candidate=324",
-    "source_kind": "llm_from_bio"
-   },
-   "profession": {
-    "value": "επιχειρηματίας - πρώην βουλευτής λεμεσού",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "business",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Business",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "μάρκετινγκπανεπιστήμιο γλασκόβης",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "career_previous": {
-    "value": "βουλευτής λεμεσού κίνημα αλληλεγγύη 2016-2021, κοινοτάρχης αγίου νεκταρίου, πρόεδρος επαρχιακής γραμματείας αλληλεγγύη μέχρι 2016",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "bio_text": {
-    "value": "eλληνοκύπριος επιχειρηματίας και πολιτικός, γεννημένος 1965, σπούδασε μάρκετινγκγλασκόβη, πρώην βουλευτής λεμεσού 2016-2021 με κίνημα αλληλεγγύη",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Former MP for Limassol 2016-2021 with the Solidarity Movement.\", \"Studied marketing in Glasgow.\", \"Born in 1965.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
-    "source_kind": "llm_from_bio"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
-  ],
-  "highlights": [
-   "Former MP for Limassol 2016-2021 with the Solidarity Movement.",
-   "Studied marketing in Glasgow.",
-   "Born in 1965."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
- },
- {
-  "id": 326,
-  "name_en": "kostas choppas",
-  "name_gr": "χοππας κωστας",
-  "party": "DIKO",
-  "district": null,
-  "row_confidence": 0.516,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "profession": {
-    "value": "διευθυντής διοίκησης και οικονομικών τεπακκύπρου",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "academia",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Public sector",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "bsc st john university usa, msc χρηματοοικονομικά st john university usa, ma εκπαιδευτική διοίκηση πανεπιστήμιο κύπρου, phd στρατηγική διεύθυνση aνθρώπινου δυναμικού wolverhampton university uk, μετεκπαίδευση harvard usa",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "career_previous": {
-    "value": "διευθυντής διοίκησης και οικονομικών τεπακκύπρου από 2015, προϊστάμενος υπηρεσίας οικονομικών και aνθρώπινου δυναμικού τεπακκύπρου 2007-2015, διευθυντής aνθρώπινου δυναμικού european university cyprus 2001-2007, καθηγητής 1991-2001",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "bio_text": {
-    "value": "δρας κωστάς χόππας, διευθυντής διοίκησης και οικονομικών τεπακκύπρου από 2015, κάτοικος λεμεσού, νυμφευμένος πολύτεκνος πατέρας τεσσάρων αγοριών",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Director of Administration and Finance at TEPAK Cyprus since 2015.\", \"Resident of Limassol.\", \"Father of four sons.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
-    "source_kind": "llm_from_bio"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
-  ],
-  "highlights": [
-   "Director of Administration and Finance at TEPAK Cyprus since 2015.",
-   "Resident of Limassol.",
-   "Father of four sons."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
- },
- {
-  "id": 327,
-  "name_en": "marios chrysostomou",
-  "name_gr": "χρυσοστομου μαριος",
-  "party": "DIKO",
-  "district": null,
-  "row_confidence": 0.611,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "age": {
-    "value": "39",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "profession": {
-    "value": "νοσηλευτής",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "healthcare",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Medicine",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "πτυχίο νοσηλευτικής τεπακκύπρου",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "career_previous": {
-    "value": "νοσηλευτής από 2008, μέλος φιλανθρωπικής οργάνωσης funraising λεμεσός από 2014",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "bio_text": {
-    "value": "39 χρόνων, πατέρας τριών παιδιών, νοσηλευτής από 2008, εθελοντής, συνέβαλε στη δημιουργία κέντρου aσθενοφόρων στον σαϊττά",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Nurse since 2008.\", \"Father of three children.\", \"Volunteer who contributed to the establishment of an ambulance centre in Saitta.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
-    "source_kind": "llm_from_bio"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
-  ],
-  "highlights": [
-   "Nurse since 2008.",
-   "Father of three children.",
-   "Volunteer who contributed to the establishment of an ambulance centre in Saitta."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129",
-  "age": 39
- },
- {
-  "id": 322,
-  "name_en": "marios michail",
-  "name_gr": "μιχαηλμαριος",
-  "party": "DIKO",
-  "district": null,
-  "row_confidence": 0.519,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "profession": {
-    "value": "hλεκτρολόγος μηχανικός - επιχειρηματίας",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "business",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Engineering",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "πτυχίο hλεκτρολόγου μηχανικού atei πειραιά",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "career_previous": {
-    "value": "επιχειρηματίας βιομηχανίας eνέργειας και hλεκτρολογικής μηχανικής από 2008, δημοτικός σύμβουλος τραχωνίου κουρίου δηκο, πρόεδρος επιτροπής eνέργειας δήμου κουρίου",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "bio_text": {
-    "value": "απόφοιτος atei πειραιά, επιχειρηματίας από 2008, εκλεγμένος δημοτικός σύμβουλος τραχωνίου κουρίου, νυμφευμένος πατέρας τεσσάρων παιδιών",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Graduate of ATEI Piraeus.\", \"Entrepreneur since 2008.\", \"Elected municipal councillor of Trachoni-Kouria.\", \"Married father of four children.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
-    "source_kind": "llm_from_bio"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
-  ],
-  "highlights": [
-   "Graduate of ATEI Piraeus.",
-   "Entrepreneur since 2008.",
-   "Elected municipal councillor of Trachoni-Kouria.",
-   "Married father of four children."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
- },
- {
-  "id": 323,
-  "name_en": "ntinos nikolaidis",
-  "name_gr": "νικολαιδης νtινος",
-  "party": "DIKO",
-  "district": null,
-  "row_confidence": 0.521,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "profession": {
-    "value": "μηχανολόγος μηχανικός",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "engineering",
-    "confidence": 0.99,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Engineering",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "dipl.ing, msc μηχανολόγος μηχανικός γερμανία με κρατική υποτροφία, αποφοίτησε 1985, τίτλος euroing 1996",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "career_previous": {
-    "value": "αρχιμηχανικός κεντρικού σφαγείου κοφίνου 1986-2003, nda engineering λεμεσός, πρόεδρος π.e. λεμεσού etεκκύπρου 2003-2011 και 2023-2026, αντιπρόεδρος κσια, μέλος δσγσο",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "bio_text": {
-    "value": "γεννήθηκε στη λεμεσό, σπούδασε μηχανολογία γερμανία, μηχανολόγος μηχανικός με εμπειρία σε eνέργεια, περιβάλλον, aσφάλεια, νυμφευμένος με τρία παιδιά",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Born in Limassol.\", \"Studied mechanical engineering in Germany.\", \"Has experience in energy, environment, and safety sectors.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
-    "source_kind": "llm_from_bio"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
-  ],
-  "highlights": [
-   "Born in Limassol.",
-   "Studied mechanical engineering in Germany.",
-   "Has experience in energy, environment, and safety sectors."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
- },
- {
-  "id": 320,
-  "name_en": "panagis kourtoulou",
-  "name_gr": "κουρτουλου παναγης",
-  "party": "DIKO",
-  "district": null,
-  "row_confidence": 0.609,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "age": {
-    "value": "34",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "date_of_birth": {
-    "value": "1991-05-01",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "profession": {
-    "value": "στέλεχος naυτιλιακής εταιρείας",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "business",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Business",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "σπουδές naυτιλιακών cim λεμεσός, mba cim λεμεσός",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "career_previous": {
-    "value": "εργασία σε naυτιλιακή εταιρεία 7 χρόνια, εμπειρία forex και aκίνητα, εθελοντής 27o σύστημα naυτοπροσκόπων λεμεσού",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "bio_text": {
-    "value": "34 χρόνων, γεννημένος μάιο 1991 στο uk, μεγάλωσε στην κύπρο, καταγωγή από rizokarpasos και βαρώσι, οικογενειάρχης και πατέρας τριών παιδιών",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Born in the UK in May 1991, raised in Cyprus.\", \"Has family roots in Rizokarpasos and Varosha.\", \"Father of three children.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
-    "source_kind": "llm_from_bio"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
-  ],
-  "highlights": [
-   "Born in the UK in May 1991, raised in Cyprus.",
-   "Has family roots in Rizokarpasos and Varosha.",
-   "Father of three children."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129",
-  "age": 34
- },
- {
-  "id": 321,
-  "name_en": "panikos leonidou",
-  "name_gr": "λεωνιδου πανικος",
-  "party": "DIKO",
-  "district": null,
-  "row_confidence": 0.615,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "date_of_birth": {
-    "value": "1959-09-15",
-    "confidence": 0.99,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "profession": {
-    "value": "δικηγόρος - βουλευτής λεμεσού",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "law",
-    "confidence": 0.99,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Law",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "πτυχίο νομικής, δημόσιας διοίκησης και πολιτικών επιστημών εκπα, πτυχίο eλληνικού πολιτισμού απκυπρου, μεταπτυχιακός φοιτητής θεολογικής σχολής πανεπιστημίου λευκωσίας",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "career_previous": {
-    "value": "βουλευτής λεμεσού 2016-2021 και 2021-σήμερα, κοινοβουλευτικός εκπρόσωπος δηκο από 2018, δημοτικός σύμβουλος λεμεσού 1991 και 1996, μέλος δσαρχής λιμένων κύπρου 2003-2011, αντιπρόεδρος συμβουλίου τεπακκύπρου 2011-2016",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "bio_text": {
-    "value": "γεννήθηκε στην πάχνα 15 σεπτεμβρίου 1959, δικηγόρος, βουλευτής λεμεσού δύο θητείες, κοινοβουλευτικός εκπρόσωπος δηκο, νυμφευμένος με τρία παιδιά",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Born in Pachna on 15 September 1959.\", \"Served two terms as MP for Limassol.\", \"Served as parliamentary spokesperson of DIKO.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
-    "source_kind": "llm_from_bio"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
-  ],
-  "highlights": [
-   "Born in Pachna on 15 September 1959.",
-   "Served two terms as MP for Limassol.",
-   "Served as parliamentary spokesperson of DIKO."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
- },
- {
-  "id": 328,
-  "name_en": "pantelis chrysostomou",
-  "name_gr": "χρυσοστομου παντελης",
-  "party": "DIKO",
-  "district": null,
-  "row_confidence": 0.614,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "age": {
-    "value": "30",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site"
-   },
-   "profession": {
-    "value": "οικονομολόγος",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "business",
-    "confidence": 0.945,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Finance",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "education": {
-    "value": "πτυχίο οικονομικών επιστημών πανεπιστήμιο πατρών, μεταπτυχιακό διεθνείς σχέσεις/στρατηγική/aσφάλεια, mba",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "career_previous": {
-    "value": "πρόεδρος αναγέννησης πάτρας, αναπληρωτής πρόεδρος παγκύπριας οργάνωσης αποκατάστασης aναπήρων λεμεσού, μέλος κεντρικής επιτροπής δηκο λεμεσού, μέλος πεκκύπρου",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "bio_text": {
-    "value": "30 χρόνων, καταγωγή από δορά λεμεσού, οικονομολόγος με mba, άτομο με κινητική αναπηρία, aναπληρωτής πρόεδρος παγκύπριας οργάνωσης αποκατάστασης aναπήρων λεμεσού",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Deputy President of the Pancyprian Organisation for the Rehabilitation of the Disabled, Limassol branch.\", \"Has a mobility disability and is an advocate within the disability community.\", \"Holds an MBA in addition to an economics degree.\", \"Originally from Dora village, Limassol district.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
-    "source_kind": "llm_from_bio"
-   },
-   "website": {
-    "value": "https://pantelischrysostomou.com",
-    "confidence": 0.5,
-    "source_url": "social_discovery_active:candidate=328",
-    "source_kind": "search_snippet"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
-  ],
-  "highlights": [
-   "Deputy President of the Pancyprian Organisation for the Rehabilitation of the Disabled, Limassol branch.",
-   "Has a mobility disability and is an advocate within the disability community.",
-   "Holds an MBA in addition to an economics degree.",
-   "Originally from Dora village, Limassol district."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129",
-  "age": 30
  },
  {
   "id": 345,
@@ -10289,60 +9295,86 @@
   "name_gr": "Αρετή Δημοσθένους",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.442,
+  "row_confidence": 0.7,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 1.0,
+    "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
+    "source_kind": "party_site"
    },
    "profession": {
-    "value": "Academic, Theologian",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=249",
-    "source_kind": "search_snippet",
-    "lang": "en"
+    "value": "θεολόγος - θρησκειολόγος",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
    },
    "sector": {
-    "value": "education",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=249",
-    "source_kind": "search_snippet",
+    "value": "academia",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
     "lang": "en"
    },
    "profession_cluster": {
     "value": "Education",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-21T11:44:00.826028",
+    "confidence": 0.735,
+    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
     "source_kind": "llm_from_bio",
     "lang": "en"
    },
    "education": {
-    "value": "PhD in Theology (1996, with distinction) from University of Munich; studies in Social Theology (Athens), Canon Law, Islam and Religious Studies (Munich)",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=249",
-    "source_kind": "search_snippet",
-    "lang": "en"
+    "value": "κοινωνική θεολογία αθήνα, κανονικό δίκαιο/islam/θρησκειολογία μόναχο, διδακτορικό 1996, μεταδιδακτορική έρευνα daad 1995-1996",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
    },
    "career_previous": {
-    "value": "University lecturer at Shandong University (China), University of Haifa (Israel), University of Munich, Boğaziçi University (Istanbul), University of Cyprus, National and Kapodistrian University of Athens (EKPA)",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=249",
-    "source_kind": "search_snippet",
-    "lang": "en"
+    "value": "πανεπιστημιακός, δίδαξε στα πανεπιστήμια shandong κίνα, haifa, μόναχο, βόσπορος, κύπρου, εκπα, εκλελεγμένο μέλος κεντρικής επιτροπής δηκο επί τάσσου παπαδόπουλου",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
    },
    "bio_text": {
-    "value": "Αριστίνδην υποψήφια ΔΗΚΟ στη Λεμεσό",
-    "confidence": 0.7,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news",
+    "value": "δρας αρετή δημοσθένους, θεολόγος-θρησκειολόγος, πανεπιστημιακός με διδακτορικό από μόναχο, βραβείο αριστείας bpw κύπρου 2007, βραβείο madame figaro γυναίκα της χρονιάς 2016",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
     "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Holds a doctorate from Munich in theology/religious studies.\", \"Received the BPW Cyprus Excellence Award in 2007.\", \"Received the Madame Figaro Woman of the Year Award in 2016.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
+    "source_kind": "llm_from_bio"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/profile.php?id=100063479057057",
+    "confidence": 0.5,
+    "source_url": "social_discovery_active:candidate=318",
+    "source_kind": "search_snippet"
+   },
+   "website": {
+    "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%b4%cf%81-%ce%b4%ce%b7%ce%bc%ce%bf%cf%83%ce%b8%ce%b5%ce%bd%ce%bf%cf%85%cf%83-%cf%80-%ce%b1%cf%81%ce%b5%cf%84%ce%b7/",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://democraticparty.org.cy/elections/city/limassol/",
+   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
-  ]
+  ],
+  "highlights": [
+   "Holds a doctorate from Munich in theology/religious studies.",
+   "Received the BPW Cyprus Excellence Award in 2007.",
+   "Received the Madame Figaro Woman of the Year Award in 2016."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
  },
  {
   "id": 337,
@@ -10350,13 +9382,61 @@
   "name_gr": "ΧΟΠΠΑΣ ΚΩΣΤΑΣ",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.45,
+  "row_confidence": 0.675,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.9,
+    "confidence": 0.99,
     "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
     "source_kind": "party_site"
+   },
+   "profession": {
+    "value": "διευθυντής διοίκησης και οικονομικών τεπακκύπρου",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "sector": {
+    "value": "academia",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "en"
+   },
+   "profession_cluster": {
+    "value": "Public sector",
+    "confidence": 0.7,
+    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
+    "source_kind": "llm_from_bio",
+    "lang": "en"
+   },
+   "education": {
+    "value": "bsc st john university usa, msc χρηματοοικονομικά st john university usa, ma εκπαιδευτική διοίκηση πανεπιστήμιο κύπρου, phd στρατηγική διεύθυνση aνθρώπινου δυναμικού wolverhampton university uk, μετεκπαίδευση harvard usa",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "career_previous": {
+    "value": "διευθυντής διοίκησης και οικονομικών τεπακκύπρου από 2015, προϊστάμενος υπηρεσίας οικονομικών και aνθρώπινου δυναμικού τεπακκύπρου 2007-2015, διευθυντής aνθρώπινου δυναμικού european university cyprus 2001-2007, καθηγητής 1991-2001",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "bio_text": {
+    "value": "δρας κωστάς χόππας, διευθυντής διοίκησης και οικονομικών τεπακκύπρου από 2015, κάτοικος λεμεσού, νυμφευμένος πολύτεκνος πατέρας τεσσάρων αγοριών",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Director of Administration and Finance at TEPAK Cyprus since 2015.\", \"Resident of Limassol.\", \"Father of four sons.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
+    "source_kind": "llm_from_bio"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%b4%cf%81-%cf%87%ce%bf%cf%80%cf%80%ce%b1%cf%83-%ce%ba%cf%89%cf%83%cf%84%ce%b1%cf%83/",
@@ -10366,8 +9446,15 @@
    }
   },
   "sources": [
-   "https://democraticparty.org.cy/elections/city/limassol/"
-  ]
+   "https://democraticparty.org.cy/elections/city/limassol/",
+   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
+  ],
+  "highlights": [
+   "Director of Administration and Finance at TEPAK Cyprus since 2015.",
+   "Resident of Limassol.",
+   "Father of four sons."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
  },
  {
   "id": 250,
@@ -10375,55 +9462,61 @@
   "name_gr": "Χρίστος Βακανάς",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.574,
+  "row_confidence": 0.688,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.99,
+    "confidence": 1.0,
     "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
     "source_kind": "party_site"
    },
    "profession": {
-    "value": "Πολιτικός Μηχανικός",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=250",
-    "source_kind": "search_snippet",
+    "value": "πολιτικός μηχανικός",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
     "lang": "gr"
    },
    "sector": {
-    "value": "engineering",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=250",
-    "source_kind": "search_snippet",
+    "value": "academia",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
     "lang": "en"
    },
    "profession_cluster": {
     "value": "Engineering",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-21T11:44:00.826028",
+    "confidence": 0.735,
+    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
     "source_kind": "llm_from_bio",
     "lang": "en"
    },
    "education": {
-    "value": "Μεταπτυχιακό Πολιτικός Μηχανικός, The City University of New York",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=250",
-    "source_kind": "search_snippet",
+    "value": "πολιτικός μηχανικός, the city university of new york, μεταπτυχιακές σπουδές με υποτροφία",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
     "lang": "gr"
    },
    "career_previous": {
-    "value": "Μέλος Σχολικής Εφορείας Πολεμιδιών, Μέλος Διοικητικού Συμβουλίου Κρατικής Έκθεσης Κύπρου, Διεκδίκησε προεδρία ΕΟΑ Λεμεσού",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=250",
-    "source_kind": "search_snippet",
+    "value": "διευθυντής cyprus college λεμεσού 2010-2022, υπηρεσία στο european university cyprus, μέλος σχολικής εφορείας πολεμιδιών, μέλος δσκρατικής έκθεσης κύπρου",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
     "lang": "gr"
    },
    "bio_text": {
-    "value": "Αριστίνδην υποψήφιος ΔΗΚΟ στη Λεμεσό",
-    "confidence": 0.7,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news",
+    "value": "σπούδασε πολιτικός μηχανικός στο the city university of new york, δίδαξε σε προπτυχιακούς φοιτητές, διετέλεσε διευθυντής cyprus college λεμεσού 2010-2022, νυμφευμένος με δύο κόρες",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
     "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Studied civil engineering at the City University of New York.\", \"Taught undergraduate students.\", \"Served as Director of Cyprus College Limassol from 2010 to 2022.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
+    "source_kind": "llm_from_bio"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%b2%ce%b1%ce%ba%ce%b1%ce%bd%ce%b1%cf%83-%cf%87%cf%81%ce%b9%cf%83%cf%84%ce%bf%cf%83/",
@@ -10434,8 +9527,15 @@
   },
   "sources": [
    "https://democraticparty.org.cy/elections/city/limassol/",
+   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
-  ]
+  ],
+  "highlights": [
+   "Studied civil engineering at the City University of New York.",
+   "Taught undergraduate students.",
+   "Served as Director of Cyprus College Limassol from 2010 to 2022."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
  },
  {
   "id": 338,
@@ -10443,13 +9543,67 @@
   "name_gr": "ΧΡΥΣΟΣΤΟΜΟΥ ΜΑΡΙΟΣ",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.45,
+  "row_confidence": 0.769,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.9,
+    "confidence": 0.99,
     "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
     "source_kind": "party_site"
+   },
+   "age": {
+    "value": "39",
+    "confidence": 0.945,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site"
+   },
+   "profession": {
+    "value": "νοσηλευτής",
+    "confidence": 0.945,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "sector": {
+    "value": "healthcare",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "en"
+   },
+   "profession_cluster": {
+    "value": "Medicine",
+    "confidence": 0.7,
+    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
+    "source_kind": "llm_from_bio",
+    "lang": "en"
+   },
+   "education": {
+    "value": "πτυχίο νοσηλευτικής τεπακκύπρου",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "career_previous": {
+    "value": "νοσηλευτής από 2008, μέλος φιλανθρωπικής οργάνωσης funraising λεμεσός από 2014",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "bio_text": {
+    "value": "39 χρόνων, πατέρας τριών παιδιών, νοσηλευτής από 2008, εθελοντής, συνέβαλε στη δημιουργία κέντρου aσθενοφόρων στον σαϊττά",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Nurse since 2008.\", \"Father of three children.\", \"Volunteer who contributed to the establishment of an ambulance centre in Saitta.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
+    "source_kind": "llm_from_bio"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%cf%87%cf%81%cf%85%cf%83%ce%bf%cf%83%cf%84%ce%bf%ce%bc%ce%bf%cf%85-%ce%bc%ce%b1%cf%81%ce%b9%ce%bf%cf%83/",
@@ -10459,8 +9613,16 @@
    }
   },
   "sources": [
-   "https://democraticparty.org.cy/elections/city/limassol/"
-  ]
+   "https://democraticparty.org.cy/elections/city/limassol/",
+   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
+  ],
+  "highlights": [
+   "Nurse since 2008.",
+   "Father of three children.",
+   "Volunteer who contributed to the establishment of an ambulance centre in Saitta."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129",
+  "age": 39
  },
  {
   "id": 339,
@@ -10468,13 +9630,67 @@
   "name_gr": "ΧΡΥΣΟΣΤΟΜΟΥ ΠΑΝΤΕΛΗΣ",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.45,
+  "row_confidence": 0.761,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.9,
+    "confidence": 0.945,
     "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
     "source_kind": "party_site"
+   },
+   "age": {
+    "value": "30",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site"
+   },
+   "profession": {
+    "value": "οικονομολόγος",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "sector": {
+    "value": "business",
+    "confidence": 0.945,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "en"
+   },
+   "profession_cluster": {
+    "value": "Finance",
+    "confidence": 0.7,
+    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
+    "source_kind": "llm_from_bio",
+    "lang": "en"
+   },
+   "education": {
+    "value": "πτυχίο οικονομικών επιστημών πανεπιστήμιο πατρών, μεταπτυχιακό διεθνείς σχέσεις/στρατηγική/aσφάλεια, mba",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "career_previous": {
+    "value": "πρόεδρος αναγέννησης πάτρας, αναπληρωτής πρόεδρος παγκύπριας οργάνωσης αποκατάστασης aναπήρων λεμεσού, μέλος κεντρικής επιτροπής δηκο λεμεσού, μέλος πεκκύπρου",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "bio_text": {
+    "value": "30 χρόνων, καταγωγή από δορά λεμεσού, οικονομολόγος με mba, άτομο με κινητική αναπηρία, aναπληρωτής πρόεδρος παγκύπριας οργάνωσης αποκατάστασης aναπήρων λεμεσού",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Deputy President of the Pancyprian Organisation for the Rehabilitation of the Disabled, Limassol branch.\", \"Has a mobility disability and is an advocate within the disability community.\", \"Holds an MBA in addition to an economics degree.\", \"Originally from Dora village, Limassol district.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
+    "source_kind": "llm_from_bio"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%cf%87%cf%81%cf%85%cf%83%ce%bf%cf%83%cf%84%ce%bf%ce%bc%ce%bf%cf%85-%cf%80%ce%b1%ce%bd%cf%84%ce%b5%ce%bb%ce%b7%cf%83/",
@@ -10484,33 +9700,17 @@
    }
   },
   "sources": [
-   "https://democraticparty.org.cy/elections/city/limassol/"
-  ]
- },
- {
-  "id": 329,
-  "name_en": "Dimosthenous P. Areti",
-  "name_gr": "ΔΗΜΟΣΘΕΝΟΥΣ Π. ΑΡΕΤΗ",
-  "party": "DIKO",
-  "district": "LIM",
-  "row_confidence": 0.45,
-  "fields": {
-   "gender": {
-    "value": "F",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
-    "source_kind": "party_site"
-   },
-   "website": {
-    "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%b4%cf%81-%ce%b4%ce%b7%ce%bc%ce%bf%cf%83%ce%b8%ce%b5%ce%bd%ce%bf%cf%85%cf%83-%cf%80-%ce%b1%cf%81%ce%b5%cf%84%ce%b7/",
-    "confidence": 0.9,
-    "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
-    "source_kind": "party_site"
-   }
-  },
-  "sources": [
-   "https://democraticparty.org.cy/elections/city/limassol/"
-  ]
+   "https://democraticparty.org.cy/elections/city/limassol/",
+   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
+  ],
+  "highlights": [
+   "Deputy President of the Pancyprian Organisation for the Rehabilitation of the Disabled, Limassol branch.",
+   "Has a mobility disability and is an advocate within the disability community.",
+   "Holds an MBA in addition to an economics degree.",
+   "Originally from Dora village, Limassol district."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129",
+  "age": 30
  },
  {
   "id": 330,
@@ -10518,13 +9718,67 @@
   "name_gr": "ΚΑΡΑΓΙΑΝΝΑΣ ΦΛΩΡΕΝΤΖΟΣ",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.45,
+  "row_confidence": 0.732,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.9,
+    "confidence": 0.99,
     "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
     "source_kind": "party_site"
+   },
+   "date_of_birth": {
+    "value": "1971-01-01",
+    "confidence": 0.6,
+    "source_url": "llm_extract:candidate=319",
+    "source_kind": "llm_from_bio"
+   },
+   "profession": {
+    "value": "επιχειρηματίας - καθηγητής φυσικής αγωγής",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "sector": {
+    "value": "business",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "en"
+   },
+   "profession_cluster": {
+    "value": "Business",
+    "confidence": 0.7,
+    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
+    "source_kind": "llm_from_bio",
+    "lang": "en"
+   },
+   "education": {
+    "value": "πτυχίο τεφαα πανεπιστημίου αθηνών",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "career_previous": {
+    "value": "γενικός διευθυντής μεγάλων οργανισμών κύπρου και αθήνας, διευθυντής medichic center λεμεσού από 2013, πρόεδρος για 3η θητεία στον nautical club κερύνειας, στέλεχος blueheart foundation",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "bio_text": {
+    "value": "πολύτεκνος πατέρας, πρόσφυγας εξαμμοχώστου, γεννηθείς 1971, επιχειρηματίας και καθηγητής φυσικής αγωγής, 30 χρόνια στη λεμεσό",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Father of many children and refugee from Famagusta.\", \"Born in 1971.\", \"Has lived in Limassol for 30 years.\", \"Qualified physical education teacher.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
+    "source_kind": "llm_from_bio"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%ba%ce%b1%cf%81%ce%b1%ce%b3%ce%b9%ce%b1%ce%bd%ce%bd%ce%b1%cf%83-%cf%86%ce%bb%cf%89%cf%81%ce%b5%ce%bd%cf%84%ce%b6%ce%bf%cf%83/",
@@ -10534,8 +9788,16 @@
    }
   },
   "sources": [
-   "https://democraticparty.org.cy/elections/city/limassol/"
-  ]
+   "https://democraticparty.org.cy/elections/city/limassol/",
+   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
+  ],
+  "highlights": [
+   "Father of many children and refugee from Famagusta.",
+   "Born in 1971.",
+   "Has lived in Limassol for 30 years.",
+   "Qualified physical education teacher."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
  },
  {
   "id": 331,
@@ -10543,13 +9805,73 @@
   "name_gr": "ΚΟΥΡΤΟΥΛΟΥ ΠΑΝΑΓΗΣ",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.45,
+  "row_confidence": 0.767,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.9,
+    "confidence": 0.99,
     "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
     "source_kind": "party_site"
+   },
+   "age": {
+    "value": "34",
+    "confidence": 0.945,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site"
+   },
+   "date_of_birth": {
+    "value": "1991-05-01",
+    "confidence": 0.945,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site"
+   },
+   "profession": {
+    "value": "στέλεχος naυτιλιακής εταιρείας",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "sector": {
+    "value": "business",
+    "confidence": 0.945,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "en"
+   },
+   "profession_cluster": {
+    "value": "Business",
+    "confidence": 0.7,
+    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
+    "source_kind": "llm_from_bio",
+    "lang": "en"
+   },
+   "education": {
+    "value": "σπουδές naυτιλιακών cim λεμεσός, mba cim λεμεσός",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "career_previous": {
+    "value": "εργασία σε naυτιλιακή εταιρεία 7 χρόνια, εμπειρία forex και aκίνητα, εθελοντής 27o σύστημα naυτοπροσκόπων λεμεσού",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "bio_text": {
+    "value": "34 χρόνων, γεννημένος μάιο 1991 στο uk, μεγάλωσε στην κύπρο, καταγωγή από rizokarpasos και βαρώσι, οικογενειάρχης και πατέρας τριών παιδιών",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Born in the UK in May 1991, raised in Cyprus.\", \"Has family roots in Rizokarpasos and Varosha.\", \"Father of three children.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
+    "source_kind": "llm_from_bio"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%ba%ce%bf%cf%85%cf%81%cf%84%ce%bf%cf%85%ce%bb%ce%bf%cf%85-%cf%80%ce%b1%ce%bd%ce%b1%ce%b3%ce%b7%cf%83/",
@@ -10559,8 +9881,16 @@
    }
   },
   "sources": [
-   "https://democraticparty.org.cy/elections/city/limassol/"
-  ]
+   "https://democraticparty.org.cy/elections/city/limassol/",
+   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
+  ],
+  "highlights": [
+   "Born in the UK in May 1991, raised in Cyprus.",
+   "Has family roots in Rizokarpasos and Varosha.",
+   "Father of three children."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129",
+  "age": 34
  },
  {
   "id": 332,
@@ -10568,13 +9898,67 @@
   "name_gr": "ΛΕΩΝΙΔΟΥ ΠΑΝΙΚΟΣ",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.45,
+  "row_confidence": 0.774,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.9,
+    "confidence": 0.99,
     "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
     "source_kind": "party_site"
+   },
+   "date_of_birth": {
+    "value": "1959-09-15",
+    "confidence": 0.99,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site"
+   },
+   "profession": {
+    "value": "δικηγόρος - βουλευτής λεμεσού",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "sector": {
+    "value": "law",
+    "confidence": 0.99,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "en"
+   },
+   "profession_cluster": {
+    "value": "Law",
+    "confidence": 0.7,
+    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
+    "source_kind": "llm_from_bio",
+    "lang": "en"
+   },
+   "education": {
+    "value": "πτυχίο νομικής, δημόσιας διοίκησης και πολιτικών επιστημών εκπα, πτυχίο eλληνικού πολιτισμού απκυπρου, μεταπτυχιακός φοιτητής θεολογικής σχολής πανεπιστημίου λευκωσίας",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "career_previous": {
+    "value": "βουλευτής λεμεσού 2016-2021 και 2021-σήμερα, κοινοβουλευτικός εκπρόσωπος δηκο από 2018, δημοτικός σύμβουλος λεμεσού 1991 και 1996, μέλος δσαρχής λιμένων κύπρου 2003-2011, αντιπρόεδρος συμβουλίου τεπακκύπρου 2011-2016",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "bio_text": {
+    "value": "γεννήθηκε στην πάχνα 15 σεπτεμβρίου 1959, δικηγόρος, βουλευτής λεμεσού δύο θητείες, κοινοβουλευτικός εκπρόσωπος δηκο, νυμφευμένος με τρία παιδιά",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Born in Pachna on 15 September 1959.\", \"Served two terms as MP for Limassol.\", \"Served as parliamentary spokesperson of DIKO.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
+    "source_kind": "llm_from_bio"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%bb%ce%b5%cf%89%ce%bd%ce%b9%ce%b4%ce%bf%cf%85-%cf%80%ce%b1%ce%bd%ce%b9%ce%ba%ce%bf%cf%83/",
@@ -10584,8 +9968,15 @@
    }
   },
   "sources": [
-   "https://democraticparty.org.cy/elections/city/limassol/"
-  ]
+   "https://democraticparty.org.cy/elections/city/limassol/",
+   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
+  ],
+  "highlights": [
+   "Born in Pachna on 15 September 1959.",
+   "Served two terms as MP for Limassol.",
+   "Served as parliamentary spokesperson of DIKO."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
  },
  {
   "id": 333,
@@ -10593,13 +9984,61 @@
   "name_gr": "ΜΙΧΑΗΛ ΜΑΡΙΟΣ",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.45,
+  "row_confidence": 0.677,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.9,
+    "confidence": 0.99,
     "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
     "source_kind": "party_site"
+   },
+   "profession": {
+    "value": "hλεκτρολόγος μηχανικός - επιχειρηματίας",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "sector": {
+    "value": "business",
+    "confidence": 0.945,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "en"
+   },
+   "profession_cluster": {
+    "value": "Engineering",
+    "confidence": 0.7,
+    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
+    "source_kind": "llm_from_bio",
+    "lang": "en"
+   },
+   "education": {
+    "value": "πτυχίο hλεκτρολόγου μηχανικού atei πειραιά",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "career_previous": {
+    "value": "επιχειρηματίας βιομηχανίας eνέργειας και hλεκτρολογικής μηχανικής από 2008, δημοτικός σύμβουλος τραχωνίου κουρίου δηκο, πρόεδρος επιτροπής eνέργειας δήμου κουρίου",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "bio_text": {
+    "value": "απόφοιτος atei πειραιά, επιχειρηματίας από 2008, εκλεγμένος δημοτικός σύμβουλος τραχωνίου κουρίου, νυμφευμένος πατέρας τεσσάρων παιδιών",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Graduate of ATEI Piraeus.\", \"Entrepreneur since 2008.\", \"Elected municipal councillor of Trachoni-Kouria.\", \"Married father of four children.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
+    "source_kind": "llm_from_bio"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%bc%ce%b9%cf%87%ce%b1%ce%b7%ce%bb-%ce%bc%ce%b1%cf%81%ce%b9%ce%bf%cf%83/",
@@ -10609,8 +10048,16 @@
    }
   },
   "sources": [
-   "https://democraticparty.org.cy/elections/city/limassol/"
-  ]
+   "https://democraticparty.org.cy/elections/city/limassol/",
+   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
+  ],
+  "highlights": [
+   "Graduate of ATEI Piraeus.",
+   "Entrepreneur since 2008.",
+   "Elected municipal councillor of Trachoni-Kouria.",
+   "Married father of four children."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
  },
  {
   "id": 334,
@@ -10618,13 +10065,61 @@
   "name_gr": "ΝΙΚΟΛΑΙΔΗΣ ΝΤΙΝΟΣ",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.45,
+  "row_confidence": 0.679,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.9,
+    "confidence": 0.99,
     "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
     "source_kind": "party_site"
+   },
+   "profession": {
+    "value": "μηχανολόγος μηχανικός",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "sector": {
+    "value": "engineering",
+    "confidence": 0.99,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "en"
+   },
+   "profession_cluster": {
+    "value": "Engineering",
+    "confidence": 0.7,
+    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
+    "source_kind": "llm_from_bio",
+    "lang": "en"
+   },
+   "education": {
+    "value": "dipl.ing, msc μηχανολόγος μηχανικός γερμανία με κρατική υποτροφία, αποφοίτησε 1985, τίτλος euroing 1996",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "career_previous": {
+    "value": "αρχιμηχανικός κεντρικού σφαγείου κοφίνου 1986-2003, nda engineering λεμεσός, πρόεδρος π.e. λεμεσού etεκκύπρου 2003-2011 και 2023-2026, αντιπρόεδρος κσια, μέλος δσγσο",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "bio_text": {
+    "value": "γεννήθηκε στη λεμεσό, σπούδασε μηχανολογία γερμανία, μηχανολόγος μηχανικός με εμπειρία σε eνέργεια, περιβάλλον, aσφάλεια, νυμφευμένος με τρία παιδιά",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Born in Limassol.\", \"Studied mechanical engineering in Germany.\", \"Has experience in energy, environment, and safety sectors.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
+    "source_kind": "llm_from_bio"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%bd%ce%b9%ce%ba%ce%bf%ce%bb%ce%b1%ce%b9%ce%b4%ce%b7%cf%83-%ce%bd%cf%84%ce%b9%ce%bd%ce%bf%cf%83/",
@@ -10634,8 +10129,15 @@
    }
   },
   "sources": [
-   "https://democraticparty.org.cy/elections/city/limassol/"
-  ]
+   "https://democraticparty.org.cy/elections/city/limassol/",
+   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
+  ],
+  "highlights": [
+   "Born in Limassol.",
+   "Studied mechanical engineering in Germany.",
+   "Has experience in energy, environment, and safety sectors."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
  },
  {
   "id": 335,
@@ -10643,13 +10145,67 @@
   "name_gr": "ΠΑΠΑΔΟΠΟΥΛΟΣ ΓΕΩΡΓΙΟΣ",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.45,
+  "row_confidence": 0.734,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.9,
+    "confidence": 0.99,
     "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
     "source_kind": "party_site"
+   },
+   "date_of_birth": {
+    "value": "1965-01-01",
+    "confidence": 0.6,
+    "source_url": "llm_extract:candidate=324",
+    "source_kind": "llm_from_bio"
+   },
+   "profession": {
+    "value": "επιχειρηματίας - πρώην βουλευτής λεμεσού",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "sector": {
+    "value": "business",
+    "confidence": 0.945,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "en"
+   },
+   "profession_cluster": {
+    "value": "Business",
+    "confidence": 0.7,
+    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
+    "source_kind": "llm_from_bio",
+    "lang": "en"
+   },
+   "education": {
+    "value": "μάρκετινγκπανεπιστήμιο γλασκόβης",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "career_previous": {
+    "value": "βουλευτής λεμεσού κίνημα αλληλεγγύη 2016-2021, κοινοτάρχης αγίου νεκταρίου, πρόεδρος επαρχιακής γραμματείας αλληλεγγύη μέχρι 2016",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "bio_text": {
+    "value": "eλληνοκύπριος επιχειρηματίας και πολιτικός, γεννημένος 1965, σπούδασε μάρκετινγκγλασκόβη, πρώην βουλευτής λεμεσού 2016-2021 με κίνημα αλληλεγγύη",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Former MP for Limassol 2016-2021 with the Solidarity Movement.\", \"Studied marketing in Glasgow.\", \"Born in 1965.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
+    "source_kind": "llm_from_bio"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%cf%80%ce%b1%cf%80%ce%b1%ce%b4%ce%bf%cf%80%ce%bf%cf%85%ce%bb%ce%bf%cf%83-%ce%b3%ce%b5%cf%89%cf%81%ce%b3%ce%b9%ce%bf%cf%83/",
@@ -10659,8 +10215,15 @@
    }
   },
   "sources": [
-   "https://democraticparty.org.cy/elections/city/limassol/"
-  ]
+   "https://democraticparty.org.cy/elections/city/limassol/",
+   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
+  ],
+  "highlights": [
+   "Former MP for Limassol 2016-2021 with the Solidarity Movement.",
+   "Studied marketing in Glasgow.",
+   "Born in 1965."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
  },
  {
   "id": 336,
@@ -10668,13 +10231,61 @@
   "name_gr": "ΤΣΟΛΑΚΗ ΕΥΑΝΘΙΑ (ΕΥΗ)",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.45,
+  "row_confidence": 0.677,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.9,
+    "confidence": 0.99,
     "source_url": "https://democraticparty.org.cy/elections/city/limassol/",
     "source_kind": "party_site"
+   },
+   "profession": {
+    "value": "δικηγόρος - πρώην δημοτικός σύμβουλος λεμεσού",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "sector": {
+    "value": "law",
+    "confidence": 0.945,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "en"
+   },
+   "profession_cluster": {
+    "value": "Law",
+    "confidence": 0.7,
+    "source_url": "enrich_professions:2026-04-22T18:03:09.285605",
+    "source_kind": "llm_from_bio",
+    "lang": "en"
+   },
+   "education": {
+    "value": "πτυχίο νομικής εκπα, mba aνοικτό πανεπιστήμιο κύπρου",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "career_previous": {
+    "value": "δημοτικός σύμβουλος λεμεσού 2002-2016, πρόεδρος επιτροπής κοινωνικής πρόνοιας δήμου λεμεσού 2007-2016, μέλος εκτελεστικού γραφείου δηκο, μέλος συμβουλίου επιτροπής κεφαλαιαγοράς κύπρου από 2019",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "bio_text": {
+    "value": "δικηγόρος, πρώην δημοτικός σύμβουλος λεμεσού τρεις θητείες 2002-2016, πρόεδρος επιτροπής κοινωνικής πρόνοιας, μέλος επιτροπής κεφαλαιαγοράς κύπρου",
+    "confidence": 0.9,
+    "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
+    "source_kind": "party_site",
+    "lang": "gr"
+   },
+   "highlights": {
+    "value": "{\"items\": [\"Served as municipal councillor of Limassol for three terms, 2002–2016.\", \"Chaired the Social Welfare Committee during her time as municipal councillor.\", \"Member of the Cyprus Securities and Exchange Commission.\"], \"derived_from\": \"bio\"}",
+    "confidence": 0.5,
+    "source_url": "enrich_highlights:2026-04-22T18:03:09.313129",
+    "source_kind": "llm_from_bio"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%cf%84%cf%83%ce%bf%ce%bb%ce%b1%ce%ba%ce%b7-%ce%b5%cf%85%ce%b1%ce%bd%ce%b8%ce%b9%ce%b1-%ce%b5%cf%85%ce%b7/",
@@ -10684,8 +10295,15 @@
    }
   },
   "sources": [
-   "https://democraticparty.org.cy/elections/city/limassol/"
-  ]
+   "https://democraticparty.org.cy/elections/city/limassol/",
+   "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/"
+  ],
+  "highlights": [
+   "Served as municipal councillor of Limassol for three terms, 2002–2016.",
+   "Chaired the Social Welfare Committee during her time as municipal councillor.",
+   "Member of the Cyprus Securities and Exchange Commission."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-22T18:03:09.313129"
  },
  {
   "id": 300,
@@ -14351,83 +13969,11 @@
   "name_gr": "Σταύρος Ηλία Σταύρου",
   "party": "DIPA",
   "district": "LIM",
-  "row_confidence": 0.635,
+  "row_confidence": 0.699,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.945,
-    "source_url": "https://depa.cy/vouleftikes-ekloges-2026/%cf%85%cf%80%ce%bf%cf%88%ce%ae%cf%86%ce%b9%ce%bf%ce%b9-%ce%b2%ce%bf%cf%85%ce%bb%ce%b5%cf%85%cf%84%ce%ad%cf%82-%ce%bb%ce%b5%ce%bc%ce%b5%cf%83%ce%bf%cf%8d/",
-    "source_kind": "party_site"
-   },
-   "date_of_birth": {
-    "value": "1969-01-01",
-    "confidence": 0.63,
-    "source_url": "llm_extract:candidate=67",
-    "source_kind": "llm_from_bio"
-   },
-   "profession": {
-    "value": "Επιχειρηματίας",
-    "confidence": 0.9,
-    "source_url": "https://depa.cy/vouleftikes-ekloges-2026/%cf%85%cf%80%ce%bf%cf%88%ce%ae%cf%86%ce%b9%ce%bf%ce%b9-%ce%b2%ce%bf%cf%85%ce%bb%ce%b5%cf%85%cf%84%ce%ad%cf%82-%ce%bb%ce%b5%ce%bc%ce%b5%cf%83%ce%bf%cf%8d/",
-    "source_kind": "party_site",
-    "lang": "gr"
-   },
-   "sector": {
-    "value": "business",
-    "confidence": 0.99,
-    "source_url": "https://depa.cy/vouleftikes-ekloges-2026/%cf%85%cf%80%ce%bf%cf%88%ce%ae%cf%86%ce%b9%ce%bf%ce%b9-%ce%b2%ce%bf%cf%85%ce%bb%ce%b5%cf%85%cf%84%ce%ad%cf%82-%ce%bb%ce%b5%ce%bc%ce%b5%cf%83%ce%bf%cf%8d/",
-    "source_kind": "party_site",
-    "lang": "en"
-   },
-   "profession_cluster": {
-    "value": "Business",
-    "confidence": 0.7,
-    "source_url": "enrich_professions:2026-04-21T11:44:00.826028",
-    "source_kind": "llm_from_bio",
-    "lang": "en"
-   },
-   "bio_text": {
-    "value": "Γεννημένος το 1969 στη Λεμεσό, ο Σταύρος Ηλία Σταύρου είναι καταξιωμένος επιχειρηματίας με πάνω από 30 χρόνια εμπειρίας στην επιχειρηματική ανάπτυξη, στρατηγική, χρηματοοικονομικά και αεροπορία. Ιδρυτής και Γενικός Διευθυντής των S.E.S Holdings Ltd, SES JETS και F Beverages Ltd, με επιχειρήσεις σε πάνω από 45 χώρες. Παντρεμένος με τη Χαρίκλεια Στρούθου και πατέρας δύο παιδιών, κατεβαίνει ως αριστίνδην υποψήφιος βουλευτής Λεμεσού με τη ΔΗΠΑ στις εκλογές 2026 για να προσφέρει ρεαλιστικές λύσεις.",
-    "confidence": 0.45,
-    "source_url": "web_search:candidate=67",
-    "source_kind": "search_snippet",
-    "lang": "gr"
-   },
-   "highlights": {
-    "value": "{\"items\": [\"Born in 1969 in Limassol.\", \"Founder and CEO of S.E.S Holdings Ltd, SES JETS, and F Beverages Ltd.\", \"Operates businesses in over 45 countries.\", \"Has over 30 years of experience in business development, strategy, finance, and aviation.\"], \"derived_from\": \"bio\"}",
-    "confidence": 0.5,
-    "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
-    "source_kind": "llm_from_bio"
-   },
-   "website": {
-    "value": "https://stavrou.cy",
-    "confidence": 0.5,
-    "source_url": "social_discovery_active:candidate=67",
-    "source_kind": "search_snippet"
-   }
-  },
-  "sources": [
-   "https://depa.cy/vouleftikes-ekloges-2026/%cf%85%cf%80%ce%bf%cf%88%ce%ae%cf%86%ce%b9%ce%bf%ce%b9-%ce%b2%ce%bf%cf%85%ce%bb%ce%b5%cf%85%cf%84%ce%ad%cf%82-%ce%bb%ce%b5%ce%bc%ce%b5%cf%83%ce%bf%cf%8d/"
-  ],
-  "highlights": [
-   "Born in 1969 in Limassol.",
-   "Founder and CEO of S.E.S Holdings Ltd, SES JETS, and F Beverages Ltd.",
-   "Operates businesses in over 45 countries.",
-   "Has over 30 years of experience in business development, strategy, finance, and aviation."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-21T12:19:37.479242"
- },
- {
-  "id": 68,
-  "name_en": "Stavros Stavrou",
-  "name_gr": "Σταύρος Σταύρου",
-  "party": "DIPA",
-  "district": "LIM",
-  "row_confidence": 0.684,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.945,
+    "confidence": 1.0,
     "source_url": "https://depa.cy/vouleftikes-ekloges-2026/%cf%85%cf%80%ce%bf%cf%88%ce%ae%cf%86%ce%b9%ce%bf%ce%b9-%ce%b2%ce%bf%cf%85%ce%bb%ce%b5%cf%85%cf%84%ce%ad%cf%82-%ce%bb%ce%b5%ce%bc%ce%b5%cf%83%ce%bf%cf%8d/",
     "source_kind": "party_site"
    },
@@ -14458,7 +14004,7 @@
     "lang": "en"
    },
    "profession_cluster": {
-    "value": "Military/Police",
+    "value": "Business",
     "confidence": 0.7,
     "source_url": "enrich_professions:2026-04-21T11:44:00.826028",
     "source_kind": "llm_from_bio",
@@ -14486,7 +14032,7 @@
     "lang": "gr"
    },
    "highlights": {
-    "value": "{\"items\": [\"Former police officer.\", \"Born in 1990 in Famagusta District and raised in Ayia Napa.\"], \"derived_from\": \"bio\"}",
+    "value": "{\"items\": [\"Born in 1969 in Limassol.\", \"Founder and CEO of S.E.S Holdings Ltd, SES JETS, and F Beverages Ltd.\", \"Operates businesses in over 45 countries.\", \"Has over 30 years of experience in business development, strategy, finance, and aviation.\"], \"derived_from\": \"bio\"}",
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
@@ -14502,8 +14048,10 @@
    "https://depa.cy/vouleftikes-ekloges-2026/%cf%85%cf%80%ce%bf%cf%88%ce%ae%cf%86%ce%b9%ce%bf%ce%b9-%ce%b2%ce%bf%cf%85%ce%bb%ce%b5%cf%85%cf%84%ce%ad%cf%82-%ce%bb%ce%b5%ce%bc%ce%b5%cf%83%ce%bf%cf%8d/"
   ],
   "highlights": [
-   "Former police officer.",
-   "Born in 1990 in Famagusta District and raised in Ayia Napa."
+   "Born in 1969 in Limassol.",
+   "Founder and CEO of S.E.S Holdings Ltd, SES JETS, and F Beverages Ltd.",
+   "Operates businesses in over 45 countries.",
+   "Has over 30 years of experience in business development, strategy, finance, and aviation."
   ],
   "highlights_source": "enrich_highlights:2026-04-21T12:19:37.479242",
   "age": 36
@@ -15364,13 +14912,19 @@
   "name_gr": "Στέφανος Στεφάνου",
   "party": "DIPA",
   "district": "NIC",
-  "row_confidence": 0.579,
+  "row_confidence": 0.686,
   "fields": {
    "gender": {
     "value": "M",
     "confidence": 0.9,
     "source_url": "https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-lefkosias/",
     "source_kind": "party_site"
+   },
+   "date_of_birth": {
+    "value": "1965-01-21",
+    "confidence": 0.9,
+    "source_url": "wikidata:date_of_birth",
+    "source_kind": "wikidata"
    },
    "profession": {
     "value": "Φυσιοθεραπευτής",
@@ -15398,6 +14952,18 @@
     "confidence": 0.9,
     "source_url": "https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-lefkosias/",
     "source_kind": "party_site"
+   },
+   "wikipedia": {
+    "value": "https://en.wikipedia.org/wiki/Stefanos_Stefanou",
+    "confidence": 0.81,
+    "source_url": "https://en.wikipedia.org/wiki/Stefanos_Stefanou",
+    "source_kind": "wikipedia"
+   },
+   "wikidata_qid": {
+    "value": "Q12884748",
+    "confidence": 0.9,
+    "source_url": "wikidata:wikidata_qid",
+    "source_kind": "wikidata"
    }
   },
   "sources": [
@@ -21037,13 +20603,13 @@
   "name_gr": "Χατζηγεωργίου Λίνος",
   "party": "ELAM",
   "district": "FAM",
-  "row_confidence": 0.539,
+  "row_confidence": 0.671,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://elamcy.com/ypopsifioi/",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1997-05-14",
@@ -21098,32 +20664,6 @@
     "confidence": 0.5,
     "source_url": "enrich_highlights:2026-04-21T12:19:37.479242",
     "source_kind": "llm_from_bio"
-   }
-  },
-  "sources": [
-   "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
-  ],
-  "highlights": [
-   "Graduated from European University Cyprus Law School in 2020 with a thesis on 'Legal History of the Cyprus Problem'.",
-   "Serves as Deputy Spokesperson of ELAM.",
-   "Has roots from occupied Famagusta (Agia Zoni).",
-   "Participated in European Parliament elections as a candidate."
-  ],
-  "highlights_source": "enrich_highlights:2026-04-21T12:19:37.479242"
- },
- {
-  "id": 423,
-  "name_en": "Chatzigeorgiou Linos Ioannis",
-  "name_gr": "Χατζηγεωργίου Λίνος Ιωάννης",
-  "party": "ELAM",
-  "district": "FAM",
-  "row_confidence": 0.45,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.9,
-    "source_url": "https://elamcy.com/ypopsifioi/",
-    "source_kind": "party_site"
    },
    "website": {
     "value": "https://elamcy.com/chatzigeorgiou-linos-ioannis/",
@@ -21133,8 +20673,16 @@
    }
   },
   "sources": [
-   "https://elamcy.com/ypopsifioi/"
-  ]
+   "https://elamcy.com/ypopsifioi/",
+   "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
+  ],
+  "highlights": [
+   "Graduated from European University Cyprus Law School in 2020 with a thesis on 'Legal History of the Cyprus Problem'.",
+   "Serves as Deputy Spokesperson of ELAM.",
+   "Has roots from occupied Famagusta (Agia Zoni).",
+   "Participated in European Parliament elections as a candidate."
+  ],
+  "highlights_source": "enrich_highlights:2026-04-21T12:19:37.479242"
  },
  {
   "id": 422,
@@ -23217,37 +22765,18 @@
   ]
  },
  {
-  "id": 512,
-  "name_en": "Evi Stavri Chatzigianni",
-  "name_gr": "Σταυρή Χατζηγιάννη Εύη",
-  "party": "KOSP",
-  "district": "FAM",
-  "row_confidence": 0.429,
-  "fields": {
-   "gender": {
-    "value": "F",
-    "confidence": 0.9,
-    "source_url": "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
-    "source_kind": "party_site"
-   }
-  },
-  "sources": [
-   "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/"
-  ]
- },
- {
   "id": 296,
   "name_en": "Evi Stavri-Chatzigiannis",
   "name_gr": "Εύη Σταυρή-Χατζηγιάννη",
   "party": "KOSP",
   "district": "FAM",
-  "row_confidence": 0.539,
+  "row_confidence": 0.65,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
+    "source_kind": "party_site"
    },
    "date_of_birth": {
     "value": "1960-01-01",
@@ -23305,6 +22834,7 @@
    }
   },
   "sources": [
+   "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -23538,40 +23068,22 @@
   ]
  },
  {
-  "id": 503,
-  "name_en": "Konstantinos Christodoulidis",
-  "name_gr": "Χριστοδουλίδης Κωνσταντίνος",
-  "party": "KOSP",
-  "district": "KYR",
-  "row_confidence": 0.429,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.9,
-    "source_url": "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
-    "source_kind": "party_site"
-   }
-  },
-  "sources": [
-   "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/"
-  ]
- },
- {
   "id": 297,
   "name_en": "Ntinos Christodoulidis",
   "name_gr": "Ντίνος Χριστοδουλίδης",
   "party": "KOSP",
   "district": "KYR",
-  "row_confidence": 0.333,
+  "row_confidence": 0.444,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.7,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.945,
+    "source_url": "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
+    "source_kind": "party_site"
    }
   },
   "sources": [
+   "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ]
  },
@@ -24031,37 +23543,18 @@
   ]
  },
  {
-  "id": 494,
-  "name_en": "Stamatis Papavasiliou",
-  "name_gr": "Παπαβασιλείου Σταμάτης",
-  "party": "KOSP",
-  "district": "LIM",
-  "row_confidence": 0.429,
-  "fields": {
-   "gender": {
-    "value": "M",
-    "confidence": 0.9,
-    "source_url": "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
-    "source_kind": "party_site"
-   }
-  },
-  "sources": [
-   "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/"
-  ]
- },
- {
   "id": 294,
   "name_en": "Stamos Papavasiliou",
   "name_gr": "Στάμος Παπαβασιλείου",
   "party": "KOSP",
   "district": "LIM",
-  "row_confidence": 0.545,
+  "row_confidence": 0.656,
   "fields": {
    "gender": {
     "value": "M",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
+    "source_kind": "party_site"
    },
    "age": {
     "value": "32",
@@ -24119,6 +23612,7 @@
    }
   },
   "sources": [
+   "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -24265,25 +23759,6 @@
   "highlights_source": "enrich_highlights:2026-04-21T12:19:37.479242"
  },
  {
-  "id": 484,
-  "name_en": "Aikaterini Chatzistyli",
-  "name_gr": "Χατζηστυλλή Αικατερίνη",
-  "party": "KOSP",
-  "district": "NIC",
-  "row_confidence": 0.429,
-  "fields": {
-   "gender": {
-    "value": "F",
-    "confidence": 0.9,
-    "source_url": "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
-    "source_kind": "party_site"
-   }
-  },
-  "sources": [
-   "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/"
-  ]
- },
- {
   "id": 287,
   "name_en": "Alexia Sakadaki",
   "name_gr": "Αλεξία Σακαδάκη",
@@ -24427,13 +23902,13 @@
   "name_gr": "Έλενα Λυμπουρή-Κοζάκου",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.547,
+  "row_confidence": 0.658,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
+    "source_kind": "party_site"
    },
    "age": {
     "value": "49",
@@ -24503,6 +23978,7 @@
    }
   },
   "sources": [
+   "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [
@@ -24513,25 +23989,6 @@
   ],
   "highlights_source": "enrich_highlights:2026-04-21T12:19:37.479242",
   "age": 49
- },
- {
-  "id": 478,
-  "name_en": "Elena Lympoури Kozakou",
-  "name_gr": "Λυμπουρή Κοζάκου Έλενα",
-  "party": "KOSP",
-  "district": "NIC",
-  "row_confidence": 0.429,
-  "fields": {
-   "gender": {
-    "value": "F",
-    "confidence": 0.9,
-    "source_url": "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
-    "source_kind": "party_site"
-   }
-  },
-  "sources": [
-   "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/"
-  ]
  },
  {
   "id": 480,
@@ -24558,13 +24015,13 @@
   "name_gr": "Κατερίνα Χατζηστυλλή",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.465,
+  "row_confidence": 0.576,
   "fields": {
    "gender": {
     "value": "F",
-    "confidence": 0.735,
-    "source_url": "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata",
-    "source_kind": "news"
+    "confidence": 0.99,
+    "source_url": "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
+    "source_kind": "party_site"
    },
    "profession": {
     "value": "First Vice President of KOSP, Municipal Councillor",
@@ -24616,6 +24073,7 @@
    }
   },
   "sources": [
+   "https://cyprusgreens.org/oloklirothike-i-diadikasia-epikyrosis-toy-psifodeltioy-ton-oikologon-oi-56-ypopsifies-kai-ypopsifioi-ana-eparchia/",
    "https://www.offsite.com.cy/eidiseis/politiki/boyleytikes-117-ypopsifioi-mehri-stigmis-ola-ta-onomata"
   ],
   "highlights": [

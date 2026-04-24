@@ -2,53 +2,58 @@ import { useState } from 'react';
 import { SectionHeader } from '../components/SectionHeader';
 import { TimelineMatrix } from '../components/TimelineMatrix';
 import type { Dataset } from '../data/types';
+import { useT } from '../lib/i18n';
 
 type SortKey = 'first-year' | 'party' | 'total-votes' | 'name';
 
-const SORT_LABELS: Record<SortKey, string> = {
-  'first-year': 'First year running',
-  party: 'Party',
-  'total-votes': 'Total historical votes',
-  name: 'Name',
-};
-
 export function Timeline({ data }: { data: Dataset }) {
+  const t = useT();
   const [sort, setSort] = useState<SortKey>('first-year');
 
   const covered = new Set(
     data.history.filter((h) => h.candidate_id != null).map((h) => h.candidate_id!)
   );
 
+  const sortLabels: Record<SortKey, string> = {
+    'first-year': t('timeline_sort_first_year'),
+    party: t('timeline_sort_party'),
+    'total-votes': t('timeline_sort_votes'),
+    name: t('timeline_sort_name'),
+  };
+
   return (
     <div>
       <SectionHeader
-        eyebrow="Historical timeline"
-        title={`${covered.size} returning candidates`}
+        eyebrow={t('timeline_eyebrow')}
+        title={t('timeline_title')(covered.size)}
         subtitle={
           <>
-            Each row is a person currently on a 2026 slate who also appeared in a past
-            parliamentary election. ✓ = elected; ✗ = ran but lost. Cell colour maps to
-            the party they stood with <em>that year</em> (parties rebrand and merge).
-            Hover for vote counts and sources.
+            {t('timeline_subtitle_1')}
+            <em>{t('timeline_subtitle_2_em')}</em>
+            {t('timeline_subtitle_3')}
           </>
         }
         action={
           <div className="flex items-center gap-2 text-xs">
-            <span className="text-slate-500">Sort:</span>
+            <span className="text-slate-500">{t('timeline_sort')}</span>
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as SortKey)}
               className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-slate-200 outline-none"
             >
-              {Object.entries(SORT_LABELS).map(([k, v]) => (
+              {(Object.keys(sortLabels) as SortKey[]).map((k) => (
                 <option key={k} value={k}>
-                  {v}
+                  {sortLabels[k]}
                 </option>
               ))}
             </select>
           </div>
         }
       />
+
+      <div className="mb-4 rounded-2xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm text-amber-100">
+        {t('timeline_dev_banner')}
+      </div>
 
       <TimelineMatrix
         candidates={data.candidates}
@@ -57,11 +62,7 @@ export function Timeline({ data }: { data: Dataset }) {
       />
 
       <p className="mt-4 text-xs leading-relaxed text-slate-500">
-        Pre-2016 historical data is drawn from the Wikipedia records of each
-        parliamentary election — it is limited to elected MPs and occasional
-        high-profile candidates. The Cyprus Ministry of Interior results portal provides
-        per-candidate vote counts for 2016 and 2021 when available. Cells left empty mean
-        we do not have a record — not that the candidate did not run.
+        {t('timeline_footer')}
       </p>
     </div>
   );

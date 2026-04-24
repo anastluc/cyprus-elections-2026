@@ -12,17 +12,19 @@ import {
 import type { Dataset } from '../data/types';
 import { menCount, pct, womenCount } from '../lib/utils';
 import { useUI } from '../lib/store';
+import { useT } from '../lib/i18n';
 
 export function Demographics({ data }: { data: Dataset }) {
   const { stats } = data;
   const locale = useUI((s) => s.locale);
+  const t = useT();
   const total = stats.total_candidates;
   const women = womenCount(stats.by_gender);
   const men = menCount(stats.by_gender);
 
   const genderData = [
-    { id: 'Women', label: 'Women', value: women, color: '#f472b6' },
-    { id: 'Men', label: 'Men', value: men, color: '#60a5fa' },
+    { id: 'Women', label: t('women_label'), value: women, color: '#f472b6' },
+    { id: 'Men', label: t('men_label'), value: men, color: '#60a5fa' },
   ];
 
   const ageBars = stats.age_histogram.buckets.map((b) => ({
@@ -45,18 +47,18 @@ export function Demographics({ data }: { data: Dataset }) {
   return (
     <div>
       <SectionHeader
-        eyebrow="Demographics"
-        title="Who is standing?"
-        subtitle="Age, gender and geography across all 297 candidates. Age is only recorded for ~⅓ of the slate, so the histogram is indicative."
+        eyebrow={t('demo_eyebrow')}
+        title={t('demo_title')}
+        subtitle={t('demo_subtitle')}
       />
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-5">
         <div className="card lg:col-span-2">
           <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-            Gender
+            {t('demo_gender_eyebrow')}
           </div>
           <h3 className="mb-2 text-lg font-semibold text-white">
-            {pct(women, total)} women on the combined slate
+            {t('demo_gender_headline')(pct(women, total))}
           </h3>
           <div className="h-[260px]">
             <ResponsivePie
@@ -75,19 +77,19 @@ export function Demographics({ data }: { data: Dataset }) {
             />
           </div>
           <p className="mt-2 text-xs text-slate-400">
-            {women} women · {men} men. Party-level splits vary widely — see "Parties".
+            {t('demo_gender_caption')(women, men)}
           </p>
         </div>
 
         <div className="card lg:col-span-3">
           <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-            Age distribution
+            {t('demo_age_eyebrow')}
           </div>
           <h3 className="mb-2 text-lg font-semibold text-white">
-            Age histogram
+            {t('demo_age_title')}
             {stats.age_histogram.median ? (
               <span className="ml-2 text-sm font-normal text-slate-400">
-                · median {Math.round(stats.age_histogram.median)}yr
+                {t('demo_age_median_suffix')(Math.round(stats.age_histogram.median))}
               </span>
             ) : null}
           </h3>
@@ -107,7 +109,7 @@ export function Demographics({ data }: { data: Dataset }) {
             />
           </div>
           <p className="mt-2 text-xs text-slate-400">
-            n = {stats.age_histogram.n} candidates with published birth year.
+            {t('demo_age_n')(stats.age_histogram.n)}
           </p>
         </div>
       </div>
@@ -115,10 +117,10 @@ export function Demographics({ data }: { data: Dataset }) {
       <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-5">
         <div className="card lg:col-span-2">
           <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-            Geography
+            {t('demo_geo_eyebrow')}
           </div>
           <h3 className="mb-2 text-lg font-semibold text-white">
-            Candidates per district
+            {t('demo_geo_title')}
           </h3>
           <div className="h-[320px]">
             <ResponsiveBar
@@ -140,10 +142,10 @@ export function Demographics({ data }: { data: Dataset }) {
 
         <div className="card lg:col-span-3">
           <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-            Age by party
+            {t('demo_age_party_eyebrow')}
           </div>
           <h3 className="mb-2 text-lg font-semibold text-white">
-            Average candidate age per party
+            {t('demo_age_party_title')}
           </h3>
           <div className="h-[320px]">
             <ResponsiveBar
@@ -166,7 +168,7 @@ export function Demographics({ data }: { data: Dataset }) {
             />
           </div>
           <p className="mt-2 text-xs text-slate-400">
-            Only parties with at least one candidate with a known birth year are shown.
+            {t('demo_age_party_caption')}
           </p>
         </div>
       </div>

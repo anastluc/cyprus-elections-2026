@@ -7,13 +7,14 @@ import { districtLabel, PARTY_ORDER, partyLabel } from '../lib/theme';
 import type { Dataset } from '../data/types';
 import { useUI } from '../lib/store';
 import { hostOf } from '../lib/utils';
-import { translateName } from '../lib/i18n';
+import { translateName, useT } from '../lib/i18n';
 
 export function Highlights({ data }: { data: Dataset }) {
   const [party, setParty] = useState<string | null>(null);
   const [q, setQ] = useState('');
   const openProfile = useUI((s) => s.openProfile);
   const locale = useUI((s) => s.locale);
+  const t = useT();
 
   const cards = useMemo(() => {
     return data.candidates
@@ -37,15 +38,9 @@ export function Highlights({ data }: { data: Dataset }) {
   return (
     <div>
       <SectionHeader
-        eyebrow="Highlights"
-        title="Remarkable mentions"
-        subtitle={
-          <>
-            AI-extracted summaries of standout facts — published works, awards, past
-            elected roles, founded organisations — from each candidate's bio or CV.
-            Click any card to open the full profile.
-          </>
-        }
+        eyebrow={t('highlights_eyebrow')}
+        title={t('highlights_title')}
+        subtitle={t('highlights_subtitle')}
       />
 
       <div className="mb-6 flex flex-wrap items-center gap-2">

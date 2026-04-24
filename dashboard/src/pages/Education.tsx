@@ -3,27 +3,30 @@ import { GraduationCap } from 'lucide-react';
 import { SectionHeader } from '../components/SectionHeader';
 import type { Dataset } from '../data/types';
 import { useFilters, useUI } from '../lib/store';
+import { useT, type TKey } from '../lib/i18n';
+
+type LevelId = 'phd' | 'master' | 'bachelor' | 'diploma';
 
 // Greek/English tokens that anchor an education level. Order matters — PhD beats master beats bachelor.
-const LEVELS: { id: string; label: string; patterns: RegExp[] }[] = [
+const LEVELS: { id: LevelId; labelKey: TKey; patterns: RegExp[] }[] = [
   {
     id: 'phd',
-    label: 'PhD / Doctorate',
+    labelKey: 'edu_level_phd',
     patterns: [/διδακτορικ/i, /\bphd\b/i, /\bdoctorate\b/i, /\bdoctoral\b/i, /dphil/i],
   },
   {
     id: 'master',
-    label: "Master's",
+    labelKey: 'edu_level_master',
     patterns: [/μεταπτυχιακ/i, /\bmaster\b/i, /\bmba\b/i, /\bmsc\b/i, /\bma\b/i, /\bllm\b/i],
   },
   {
     id: 'bachelor',
-    label: "Bachelor's",
+    labelKey: 'edu_level_bachelor',
     patterns: [/πτυχίο/i, /πτυχιούχος/i, /προπτυχιακ/i, /\bbachelor\b/i, /\bbsc\b/i, /\bba\b/i, /\bllb\b/i],
   },
   {
     id: 'diploma',
-    label: 'Diploma / Other',
+    labelKey: 'edu_level_diploma',
     patterns: [/δίπλωμα/i, /\bdiploma\b/i, /σχολή/i, /academy/i, /τεχνικ/i],
   },
 ];
@@ -68,6 +71,7 @@ export function Education({ data }: { data: Dataset }) {
   const setFilters = useFilters((s) => s.setMany);
   const resetFilters = useFilters((s) => s.reset);
   const setSection = useUI((s) => s.setActiveSection);
+  const t = useT();
 
   function openExplorer(patch: { education?: string | null }) {
     resetFilters();
@@ -105,14 +109,15 @@ export function Education({ data }: { data: Dataset }) {
   return (
     <div>
       <SectionHeader
-        eyebrow="Education"
-        title="Where candidates studied"
+        eyebrow={t('edu_eyebrow')}
+        title={t('edu_title')}
         subtitle={
           <>
-            {coverage.withEd} of {coverage.total} candidates have an extracted education field. Highest
-            attained level is inferred from free-text — most common is{' '}
-            <span className="font-semibold text-brand-300">{topLevel?.label}</span>. Click any card to
-            open the Explorer filtered.
+            {t('edu_subtitle_prefix')(coverage.withEd, coverage.total)}
+            <span className="font-semibold text-brand-300">
+              {topLevel ? (t(topLevel.labelKey) as string) : ''}
+            </span>
+            {t('edu_subtitle_suffix')}
           </>
         }
       />
@@ -130,16 +135,16 @@ export function Education({ data }: { data: Dataset }) {
               <div className="flex items-start justify-between">
                 <div>
                   <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-                    Level
+                    {t('edu_level_header')}
                   </div>
-                  <div className="mt-1 text-lg font-semibold text-white">{l.label}</div>
+                  <div className="mt-1 text-lg font-semibold text-white">{t(l.labelKey) as string}</div>
                 </div>
                 <GraduationCap className="h-5 w-5 text-brand-300" />
               </div>
               <div className="mt-3 font-mono text-3xl font-bold text-white">{l.count}</div>
-              <div className="text-xs text-slate-400">candidates</div>
+              <div className="text-xs text-slate-400">{t('edu_candidates_label')}</div>
               <div className="mt-3 text-[10px] uppercase tracking-[0.18em] text-brand-300 opacity-0 transition group-hover:opacity-100">
-                Filter Explorer →
+                {t('edu_filter_explorer')}
               </div>
             </button>
           );
@@ -149,13 +154,13 @@ export function Education({ data }: { data: Dataset }) {
       <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
         <div className="card">
           <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-            Institutions
+            {t('edu_institutions_eyebrow')}
           </div>
           <h3 className="mb-3 text-lg font-semibold text-white">
-            Most-mentioned universities
+            {t('edu_institutions_title')}
           </h3>
           {universities.length === 0 ? (
-            <p className="text-sm text-slate-400">No university mentions extracted yet.</p>
+            <p className="text-sm text-slate-400">{t('edu_institutions_empty')}</p>
           ) : (
             <ul className="space-y-2">
               {universities.slice(0, 20).map(([name, count]) => (
@@ -176,20 +181,18 @@ export function Education({ data }: { data: Dataset }) {
 
         <div className="card">
           <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-            Coverage
+            {t('edu_coverage_eyebrow')}
           </div>
           <h3 className="mb-3 text-lg font-semibold text-white">
-            Data quality
+            {t('edu_quality_title')}
           </h3>
           <p className="text-sm text-slate-400">
-            Education is free text pulled from bios and CV text. Levels and institutions are
-            extracted with simple keyword matching here on the client; totals won't sum to candidate
-            counts because a candidate can hold multiple degrees or list multiple institutions.
+            {t('edu_quality_body')}
           </p>
           <div className="mt-4 grid grid-cols-2 gap-3 text-center">
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
               <div className="font-mono text-2xl text-white">{coverage.withEd}</div>
-              <div className="text-[11px] uppercase tracking-wider text-slate-500">with education</div>
+              <div className="text-[11px] uppercase tracking-wider text-slate-500">{t('edu_with_education')}</div>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
               <div className="font-mono text-2xl text-white">
@@ -197,7 +200,7 @@ export function Education({ data }: { data: Dataset }) {
                   ? `${((coverage.withEd / coverage.total) * 100).toFixed(0)}%`
                   : '—'}
               </div>
-              <div className="text-[11px] uppercase tracking-wider text-slate-500">coverage</div>
+              <div className="text-[11px] uppercase tracking-wider text-slate-500">{t('edu_coverage_label')}</div>
             </div>
           </div>
         </div>

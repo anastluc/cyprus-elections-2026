@@ -168,12 +168,6 @@ function SideNav({
           })}
         </nav>
       </div>
-      <div className="mt-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-xs text-slate-400">
-        <div className="mb-1 text-[10px] uppercase tracking-[0.18em] text-slate-500">
-          {t('sidebar_kbd_title')}
-        </div>
-        <p className="leading-relaxed">{t('sidebar_kbd_body')}</p>
-      </div>
     </aside>
   );
 }

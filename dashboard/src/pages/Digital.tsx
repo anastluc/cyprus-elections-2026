@@ -4,6 +4,7 @@ import { CoverageBar } from '../components/CoverageBar';
 import { NIVO_THEME, PARTY_ORDER, partyLabel } from '../lib/theme';
 import type { Dataset } from '../data/types';
 import { useFilters, useUI } from '../lib/store';
+import { useT } from '../lib/i18n';
 
 const PLATFORMS = ['facebook', 'twitter', 'instagram', 'linkedin', 'website', 'wikipedia'];
 const PLATFORM_COLOURS: Record<string, string> = {
@@ -22,6 +23,7 @@ export function Digital({ data }: { data: Dataset }) {
   const resetFilters = useFilters((s) => s.reset);
   const setSection = useUI((s) => s.setActiveSection);
   const locale = useUI((s) => s.locale);
+  const t = useT();
 
   function openExplorer(patch: { platform?: string | null; party?: string | null }) {
     resetFilters();
@@ -53,14 +55,23 @@ export function Digital({ data }: { data: Dataset }) {
   return (
     <div>
       <SectionHeader
-        eyebrow="Digital footprint"
-        title="Where candidates live online"
+        eyebrow={t('digital_eyebrow')}
+        title={t('digital_title')}
         subtitle={
           <>
-            Roughly <span className="font-semibold text-brand-300">{topPlatform?.percentage?.toFixed(0)}%</span> of
-            candidates have a public {topPlatform?.platform} — but only{' '}
-            <span className="font-semibold text-rose-300">{leastPlatform?.percentage?.toFixed(0)}%</span> maintain{' '}
-            {leastPlatform?.platform}. Coverage skews heavily by party.
+            {t('digital_subtitle_part1')}
+            <span className="font-semibold text-brand-300">
+              {t('digital_subtitle_part2')(
+                topPlatform?.percentage?.toFixed(0) ?? '0',
+                topPlatform?.platform ?? '',
+              )}
+            </span>
+            <span className="font-semibold text-rose-300">
+              {t('digital_subtitle_part3')(
+                leastPlatform?.percentage?.toFixed(0) ?? '0',
+                leastPlatform?.platform ?? '',
+              )}
+            </span>
           </>
         }
       />
@@ -68,10 +79,10 @@ export function Digital({ data }: { data: Dataset }) {
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-5">
         <div className="card lg:col-span-2">
           <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-            Coverage
+            {t('digital_coverage_eyebrow')}
           </div>
           <h3 className="mb-4 text-lg font-semibold text-white">
-            Share with a public handle
+            {t('digital_coverage_title')}
           </h3>
           <div className="space-y-4">
             {coverage.map((c) => (
@@ -90,15 +101,15 @@ export function Digital({ data }: { data: Dataset }) {
               </button>
             ))}
           </div>
-          <p className="mt-3 text-[11px] text-slate-500">Click a platform to open the Explorer filtered to candidates with that handle.</p>
+          <p className="mt-3 text-[11px] text-slate-500">{t('digital_coverage_caption')}</p>
         </div>
 
         <div className="card lg:col-span-3">
           <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-            Party × Platform
+            {t('digital_matrix_eyebrow')}
           </div>
           <h3 className="mb-2 text-lg font-semibold text-white">
-            Who's on what
+            {t('digital_matrix_title')}
           </h3>
           <div className="h-[420px]">
             <ResponsiveHeatMap
@@ -127,7 +138,7 @@ export function Digital({ data }: { data: Dataset }) {
             />
           </div>
           <p className="mt-2 text-xs text-slate-400">
-            Cells = candidates from a party with a known handle on the platform. Click to open the Explorer filtered.
+            {t('digital_matrix_caption')}
           </p>
         </div>
       </div>

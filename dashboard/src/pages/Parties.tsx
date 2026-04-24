@@ -13,6 +13,7 @@ import {
 import type { Dataset } from '../data/types';
 import { isFemale, pct } from '../lib/utils';
 import { useFilters, useUI } from '../lib/store';
+import { useT } from '../lib/i18n';
 
 export function Parties({ data }: { data: Dataset }) {
   const { stats, candidates } = data;
@@ -21,6 +22,7 @@ export function Parties({ data }: { data: Dataset }) {
   const resetFilters = useFilters((s) => s.reset);
   const setSection = useUI((s) => s.setActiveSection);
   const locale = useUI((s) => s.locale);
+  const t = useT();
 
   function openExplorer(patch: { party?: string | null; gender?: string | null; district?: string | null }) {
     resetFilters();
@@ -46,9 +48,9 @@ export function Parties({ data }: { data: Dataset }) {
   return (
     <div>
       <SectionHeader
-        eyebrow="Parties"
-        title="Inside the party slates"
-        subtitle="How each party is composed — by gender, age, and where in Cyprus their candidates are standing. Click any party card or bar to jump into the Explorer filtered."
+        eyebrow={t('parties_eyebrow')}
+        title={t('parties_title')}
+        subtitle={t('parties_subtitle')}
       />
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -75,22 +77,22 @@ export function Parties({ data }: { data: Dataset }) {
                   <div className="mt-2 font-mono text-3xl font-bold text-white">
                     {total}
                   </div>
-                  <div className="text-xs text-slate-400">candidates</div>
+                  <div className="text-xs text-slate-400">{t('parties_candidates_label')}</div>
                 </div>
                 <div className="text-right text-xs">
                   <div>
-                    <span className="text-pink-300">{pct(women, total)}</span> women
+                    <span className="text-pink-300">{pct(women, total)}</span> {t('parties_women_suffix')}
                   </div>
                   {avgAge ? (
                     <div className="mt-1 text-slate-400">
-                      avg age{' '}
+                      {t('parties_avg_age')}{' '}
                       <span className="text-slate-100">{Math.round(avgAge)}</span>
                     </div>
                   ) : null}
                 </div>
               </div>
               <div className="mt-3 flex items-center gap-2 text-[10px] uppercase tracking-[0.18em] text-brand-300 opacity-0 transition group-hover:opacity-100">
-                Click to explore →
+                {t('parties_click_explore')}
               </div>
             </button>
           );
@@ -100,10 +102,10 @@ export function Parties({ data }: { data: Dataset }) {
       <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
         <div className="card">
           <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-            Gender balance
+            {t('parties_gender_eyebrow')}
           </div>
           <h3 className="mb-2 text-lg font-semibold text-white">
-            Men vs women per party
+            {t('parties_gender_title')}
           </h3>
           <div className="h-[360px]">
             <ResponsiveBar
@@ -144,15 +146,15 @@ export function Parties({ data }: { data: Dataset }) {
               ]}
             />
           </div>
-          <p className="mt-2 text-[11px] text-slate-500">Click a segment to open the Explorer filtered by party + gender.</p>
+          <p className="mt-2 text-[11px] text-slate-500">{t('parties_gender_caption')}</p>
         </div>
 
         <div className="card">
           <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-            Geography × Party
+            {t('parties_heat_eyebrow')}
           </div>
           <h3 className="mb-2 text-lg font-semibold text-white">
-            District × party heatmap
+            {t('parties_heat_title')}
           </h3>
           <div className="h-[360px]">
             <ResponsiveHeatMap
@@ -186,7 +188,7 @@ export function Parties({ data }: { data: Dataset }) {
               }}
             />
           </div>
-          <p className="mt-2 text-[11px] text-slate-500">Click any cell to open the Explorer filtered by that party and district.</p>
+          <p className="mt-2 text-[11px] text-slate-500">{t('parties_heat_caption')}</p>
         </div>
       </div>
     </div>

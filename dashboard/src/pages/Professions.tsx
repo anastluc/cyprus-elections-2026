@@ -3,6 +3,7 @@ import { SectionHeader } from '../components/SectionHeader';
 import { CLUSTER_COLOURS, NIVO_THEME, clusterColour } from '../lib/theme';
 import type { Dataset } from '../data/types';
 import { useFilters, useUI } from '../lib/store';
+import { useT } from '../lib/i18n';
 
 export function Professions({ data }: { data: Dataset }) {
   const { stats, candidates } = data;
@@ -10,6 +11,7 @@ export function Professions({ data }: { data: Dataset }) {
   const setFilters = useFilters((s) => s.setMany);
   const resetFilters = useFilters((s) => s.reset);
   const setSection = useUI((s) => s.setActiveSection);
+  const t = useT();
 
   function openExplorer(patch: { cluster?: string | null; profession?: string | null }) {
     resetFilters();
@@ -49,18 +51,18 @@ export function Professions({ data }: { data: Dataset }) {
   return (
     <div>
       <SectionHeader
-        eyebrow="Professions"
-        title="What do candidates do for a living?"
-        subtitle="Free-text profession titles clustered by LLM into 15 categories. Click any tile, bar, or top-title to open the Explorer filtered."
+        eyebrow={t('prof_eyebrow')}
+        title={t('prof_title')}
+        subtitle={t('prof_subtitle')}
       />
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <div className="card lg:col-span-2">
           <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-            Treemap
+            {t('prof_treemap_eyebrow')}
           </div>
           <h3 className="mb-2 text-lg font-semibold text-white">
-            Clustered professions
+            {t('prof_treemap_title')}
           </h3>
           <div className="h-[480px]">
             <ResponsiveTreeMap
@@ -96,10 +98,10 @@ export function Professions({ data }: { data: Dataset }) {
         <div className="space-y-6">
           <div className="card">
             <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-              Cluster ranking
+              {t('prof_ranking_eyebrow')}
             </div>
             <h3 className="mb-3 text-lg font-semibold text-white">
-              Candidates per category
+              {t('prof_ranking_title')}
             </h3>
             <div className="space-y-2">
               {clusters.map(([name, count]) => (
@@ -130,10 +132,10 @@ export function Professions({ data }: { data: Dataset }) {
 
           <div className="card">
             <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-              Top 12 free-text titles
+              {t('prof_top_eyebrow')}
             </div>
             <h3 className="mb-3 text-lg font-semibold text-white">
-              Most common backgrounds
+              {t('prof_top_title')}
             </h3>
             <ul className="space-y-1.5 text-sm">
               {topProfessions.map(([title, count]) => (

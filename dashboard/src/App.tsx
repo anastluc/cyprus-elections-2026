@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import {
   Activity,
   Briefcase,
+  Compass,
   Database,
   Github,
   Globe2,
@@ -12,6 +13,7 @@ import {
   ShieldCheck,
   Sparkles,
   Timer,
+  TrendingUp,
   Users,
   Vote,
 } from 'lucide-react';
@@ -35,6 +37,8 @@ import { Explorer } from './pages/Explorer';
 import { DataQuality } from './pages/DataQuality';
 import { CandidateProfile } from './pages/CandidateProfile';
 import { SubmitCorrection } from './pages/SubmitCorrection';
+import { Predict } from './pages/Predict';
+import { Explore } from './pages/Explore';
 
 const NAV: { id: Section; labelKey: TKey; icon: typeof Activity }[] = [
   { id: 'overview', labelKey: 'nav_overview', icon: LayoutDashboard },
@@ -48,6 +52,8 @@ const NAV: { id: Section; labelKey: TKey; icon: typeof Activity }[] = [
   { id: 'explorer', labelKey: 'nav_explorer', icon: Database },
   { id: 'quality', labelKey: 'nav_quality', icon: ShieldCheck },
   { id: 'correction', labelKey: 'nav_correction', icon: MessageSquarePlus },
+  { id: 'predict', labelKey: 'nav_predict', icon: TrendingUp },
+  { id: 'explore', labelKey: 'nav_explore', icon: Compass },
 ];
 
 export default function App() {
@@ -64,6 +70,15 @@ export default function App() {
       .then(setData)
       .catch((e) => setError(String(e)));
   }, [setData, setError]);
+
+  // Auto-navigate to predict section when URL contains a prediction link
+  useEffect(() => {
+    const hash = window.location.hash;
+    const path = window.location.pathname;
+    if (hash.startsWith('#predict=') || /\/p\/[a-z0-9]+$/i.test(path)) {
+      setSection('predict');
+    }
+  }, [setSection]);
 
   if (error) {
     return (
@@ -102,6 +117,8 @@ export default function App() {
           <Panel active={section === 'quality'}><DataQuality data={data} /></Panel>
           <Panel active={section === 'profile'}><CandidateProfile data={data} /></Panel>
           <Panel active={section === 'correction'}><SubmitCorrection data={data} /></Panel>
+          <Panel active={section === 'predict'}><Predict data={data} /></Panel>
+          <Panel active={section === 'explore'}><Explore /></Panel>
           <Footer meta={data.meta} />
         </main>
       </div>
@@ -232,6 +249,12 @@ function TopHeader({ meta }: { meta: Dataset['meta'] }) {
           </div>
         </div>
         <div className="flex items-center gap-3">
+          <button
+            onClick={() => useUI.getState().setActiveSection('predict')}
+            className="predict-glow flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 via-fuchsia-600 to-rose-500 px-5 py-2 text-sm font-bold text-white shadow-lg transition hover:shadow-xl hover:brightness-110"
+          >
+            {t('predict_header_btn')}
+          </button>
           <div className="flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs text-brand-200">
             <Activity className="h-3.5 w-3.5 animate-pulse" />
             {t('header_countdown')(days)}

@@ -12,7 +12,9 @@ export type Section =
   | 'explorer'
   | 'quality'
   | 'profile'
-  | 'correction';
+  | 'correction'
+  | 'predict'
+  | 'explore';
 
 export interface FilterState {
   party: string | null;

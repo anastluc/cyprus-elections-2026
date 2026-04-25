@@ -7,6 +7,27 @@ plus optional Airtable mirror and CSV exports.
 
 Full plan: `/Users/la6387/.claude/plans/go-out-there-and-wise-knuth.md`.
 
+## Live dashboard
+
+[**polismetrics.com**](https://polismetrics.com) — public dashboard built on top of
+the exported data. Highlights:
+
+- **Overview / Highlights / Demographics / Professions / Education** —
+  aggregate views over candidates and parties.
+- **Interactive map** — Leaflet choropleth of Cyprus by district.
+- **Parties / Candidate profiles** — per-party breakdowns and individual
+  candidate pages with provenance.
+- **Predict** — drag sliders to set vote-share % per party, add bonus
+  predictions (turnout, over/under lines), submit and get a shareable card.
+  Predictions are stored in Firestore; a Brier-style scoring + leaderboard
+  ranks everyone after election night.
+- **Explore** — open-ended exploration of the candidate dataset.
+- **Submit correction** — per-page button so readers can flag bad data.
+
+Frontend lives in [`dashboard/`](dashboard/) (Vite + React + Tailwind, Firebase
+Hosting + Firestore). The dashboard reads `dashboard/public/data/*.json`,
+which is regenerated from SQLite via the export pipeline below.
+
 ## Quick start
 
 ```bash
@@ -95,18 +116,21 @@ Per-field: `source_trust × agreement_boost × plausibility`, tunable in
 row-weighted fields (name/party/district/age/education/career/social/...).
 Candidates with row confidence < 0.6 are flagged in `validation_report.md`.
 
-## Status (initial scaffold — M1)
+## Status
 
 Working:
 - Config, DB schema, state, polite fetch client with per-host rate limiting
   and disk cache.
-- Scrapers for **Volt** and **AKEL** (both read today's list).
+- Per-party scrapers for **DISY, AKEL, DIKO, DIPA, ELAM, EDEK, KOSP, Volt,
+  ALMA, Direct Democracy**, plus a news-aggregator fallback.
 - Merge with name-key dedup across GR/EN, heuristic gender from Greek
   first-name endings, materialized `candidate_current`.
 - Validation rules (age range, URL shapes, missing names) + row confidence +
   markdown report.
-- CSV exports (wide + detailed) and Airtable upsert (gated on env vars).
+- CSV exports (wide + detailed), Airtable upsert (gated on env vars), and
+  JSON exports that feed the live dashboard.
+- Live dashboard at [polismetrics.com](https://polismetrics.com) with the
+  Predict feature wired up to Firestore.
 
-To do: scrapers for DISY / DIKO / DIPA / ELAM / EDEK / KOSP / ALMA /
-Direct Democracy, news-aggregator fallback, enrichment (Wikipedia / Wikidata /
-web search / LinkedIn / LLM), official MoI scraper post-May-6.
+To do: enrichment (Wikipedia / Wikidata / web search / LinkedIn / LLM),
+official MoI scraper post-May-6 once nominations are submitted.

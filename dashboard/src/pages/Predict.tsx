@@ -1,12 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronUp, Trash2, Eye, RotateCcw } from 'lucide-react';
+import { RotateCcw } from 'lucide-react';
 import { SectionHeader } from '../components/SectionHeader';
 import { PredictionCard } from '../components/PredictionCard';
 import { PartyBadge } from '../components/PartyBadge';
-import { usePredictStore, decodePrediction, shareUrl } from '../data/predict-store';
+import { usePredictStore } from '../data/predict-store';
 import type { Prediction, OverUnder } from '../data/predict-store';
-import { PARTY_ORDER, partyColour, partyLabel, DISTRICT_ORDER, districtLabel, DISTRICT_SEATS } from '../lib/theme';
+import { PREDICT_PARTY_ORDER, partyColour } from '../lib/theme';
 import { useT } from '../lib/i18n';
 import { useUI } from '../lib/store';
 import type { Dataset } from '../data/types';
@@ -33,41 +32,62 @@ export function Predict({ data: _data }: { data: Dataset }) {
   const t = useT();
   const locale = useUI((s) => s.locale);
   const {
-    draft, shared, saved, advancedOpen,
+    draft, shared, sharedLoading,
     setDraftField, setDraftPartyPct, resetDraft, submitDraft,
-    setShared, toggleAdvanced, loadSaved, deleteSaved,
+    setShared, loadSharedById,
   } = usePredictStore();
 
   const [submitted, setSubmitted] = useState<Prediction | null>(null);
+  const [submitting, setSubmitting] = useState(false);
 
-  // On mount: load saved predictions + check URL hash for shared prediction
+  // On mount: check URL hash for shared prediction ID
   useEffect(() => {
-    loadSaved();
     const hash = window.location.hash;
     if (hash.startsWith('#predict=')) {
-      const decoded = decodePrediction(hash.slice('#predict='.length));
-      if (decoded) setShared(decoded);
+      const id = hash.slice('#predict='.length);
+      if (id) loadSharedById(id);
     }
-  }, [loadSaved, setShared]);
+    // Also check for /p/<id> path (production URLs)
+    const match = window.location.pathname.match(/\/p\/([a-z0-9]+)$/i);
+    if (match) {
+      loadSharedById(match[1]);
+    }
+  }, [loadSharedById]);
 
   // Compute total percentage
   const total = useMemo(() => {
     if (!draft.partyPcts) return 0;
-    return Object.values(draft.partyPcts).reduce((s, v) => s + (v || 0), 0);
+    // Only count active 2026 parties — defunct ones in stored drafts shouldn't
+    // contribute to the 100 % total.
+    return PREDICT_PARTY_ORDER.reduce((s, code) => s + (draft.partyPcts?.[code] || 0), 0);
   }, [draft.partyPcts]);
 
   const remaining = +(100 - total).toFixed(1);
   const isValid = Math.abs(remaining) <= 0.5;
 
-  const handleSubmit = () => {
-    const result = submitDraft();
+  const handleSubmit = async () => {
+    setSubmitting(true);
+    const result = await submitDraft();
+    setSubmitting(false);
     if (result) {
       setSubmitted(result);
       setShared(result);
+      // Update URL so the link is shareable
+      window.history.replaceState(null, '', `#predict=${result.id}`);
     }
   };
 
-  // ── Shared prediction view (read-only) ──
+  // ── Loading state ──
+  if (sharedLoading) {
+    return (
+      <div className="flex flex-col items-center justify-center gap-4 py-24">
+        <div className="h-12 w-12 animate-spin rounded-full border-2 border-brand-500/20 border-t-brand-400" />
+        <div className="text-sm text-slate-400">Loading prediction…</div>
+      </div>
+    );
+  }
+
+  // ── Shared prediction view (read-only — someone opened a link) ──
   if (shared && !submitted) {
     return (
       <div className="space-y-8">
@@ -110,7 +130,6 @@ export function Predict({ data: _data }: { data: Dataset }) {
         </button>
         <ScoringExplainer />
         <LeaderboardSection />
-        <SavedPredictions saved={saved} deleteSaved={deleteSaved} setShared={setShared} />
       </div>
     );
   }
@@ -145,11 +164,10 @@ export function Predict({ data: _data }: { data: Dataset }) {
           <TotalBadge remaining={remaining} isValid={isValid} />
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
-          {PARTY_ORDER.map((code) => (
+          {PREDICT_PARTY_ORDER.map((code) => (
             <PartySlider
               key={code}
               code={code}
-              locale={locale}
               value={draft.partyPcts?.[code] ?? 0}
               onChange={(v) => setDraftPartyPct(code, v)}
             />
@@ -160,34 +178,19 @@ export function Predict({ data: _data }: { data: Dataset }) {
       {/* Bonus predictions */}
       <div className="card">
         <h3 className="mb-4 text-lg font-bold text-white">{t('predict_bonus_title')}</h3>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div>
-            <label className="mb-1.5 block text-xs font-medium text-slate-400">
-              {t('predict_bonus_parties')}
-            </label>
-            <input
-              type="number"
-              min={1}
-              max={14}
-              value={draft.bonusParliamentParties ?? ''}
-              onChange={(e) => setDraftField('bonusParliamentParties', e.target.value ? +e.target.value : undefined as any)}
-              className="w-full rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-white outline-none focus:border-brand-500/50"
-            />
-          </div>
-          <div>
-            <label className="mb-1.5 block text-xs font-medium text-slate-400">
-              {t('predict_bonus_turnout')}
-            </label>
-            <input
-              type="number"
-              min={30}
-              max={100}
-              step={0.1}
-              value={draft.bonusTurnout ?? ''}
-              onChange={(e) => setDraftField('bonusTurnout', e.target.value ? +e.target.value : undefined as any)}
-              className="w-full rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-white outline-none focus:border-brand-500/50"
-            />
-          </div>
+        <div className="max-w-sm">
+          <label className="mb-1.5 block text-xs font-medium text-slate-400">
+            {t('predict_bonus_turnout')}
+          </label>
+          <input
+            type="number"
+            min={30}
+            max={100}
+            step={0.1}
+            value={draft.bonusTurnout ?? ''}
+            onChange={(e) => setDraftField('bonusTurnout', e.target.value ? +e.target.value : undefined as any)}
+            className="w-full rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-white outline-none focus:border-brand-500/50"
+          />
         </div>
 
         {/* Over / Under */}
@@ -211,114 +214,18 @@ export function Predict({ data: _data }: { data: Dataset }) {
         </div>
       </div>
 
-      {/* Advanced mode */}
-      <div className="card">
-        <button
-          onClick={toggleAdvanced}
-          className="flex w-full items-center justify-between text-left"
-        >
-          <h3 className="text-lg font-bold text-white">{t('predict_advanced_title')}</h3>
-          {advancedOpen ? (
-            <ChevronUp className="h-5 w-5 text-slate-400" />
-          ) : (
-            <ChevronDown className="h-5 w-5 text-slate-400" />
-          )}
-        </button>
-        <AnimatePresence>
-          {advancedOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="overflow-hidden"
-            >
-              <div className="mt-4 space-y-6">
-                {/* District-level percentages */}
-                <div>
-                  <h4 className="mb-3 text-sm font-semibold text-slate-300">
-                    {t('predict_advanced_district_title')}
-                  </h4>
-                  <div className="overflow-x-auto">
-                    <div className="text-[10px] text-slate-500 mb-2">
-                      Enter % for each party in each district. This is optional — leave blank to skip.
-                    </div>
-                    {DISTRICT_ORDER.map((dist) => (
-                      <div key={dist} className="mb-3">
-                        <div className="mb-1 text-xs font-medium text-slate-400">
-                          {districtLabel(dist, locale)} ({DISTRICT_SEATS[dist]} seats)
-                        </div>
-                        <div className="flex flex-wrap gap-1.5">
-                          {PARTY_ORDER.slice(0, 8).map((party) => (
-                            <input
-                              key={party}
-                              type="number"
-                              min={0}
-                              max={100}
-                              step={0.1}
-                              placeholder={partyLabel(party, locale)}
-                              className="w-[72px] rounded border border-white/10 bg-white/[0.03] px-1.5 py-1 text-[11px] text-white placeholder-slate-600 outline-none focus:border-brand-500/40"
-                              onChange={(e) => {
-                                const val = e.target.value ? +e.target.value : 0;
-                                const prev = draft.districtPcts ?? {};
-                                const distPcts = { ...prev, [dist]: { ...(prev[dist] ?? {}), [party]: val } };
-                                setDraftField('districtPcts', distPcts);
-                              }}
-                            />
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Elected MPs */}
-                <div>
-                  <h4 className="mb-3 text-sm font-semibold text-slate-300">
-                    {t('predict_advanced_mps_title')}
-                  </h4>
-                  {DISTRICT_ORDER.map((dist) => (
-                    <div key={dist} className="mb-3">
-                      <div className="mb-1 text-xs font-medium text-slate-400">
-                        {districtLabel(dist, locale)} — {DISTRICT_SEATS[dist]} seats
-                      </div>
-                      <div className="grid gap-1 sm:grid-cols-2 lg:grid-cols-3">
-                        {Array.from({ length: DISTRICT_SEATS[dist] }).map((_, i) => (
-                          <input
-                            key={i}
-                            type="text"
-                            placeholder={`${t('predict_advanced_mps_placeholder')}`}
-                            className="rounded border border-white/10 bg-white/[0.03] px-2 py-1 text-[11px] text-white placeholder-slate-600 outline-none focus:border-brand-500/40"
-                            onChange={(e) => {
-                              const prev = draft.electedMPs ?? {};
-                              const distMPs = [...(prev[dist] ?? [])];
-                              distMPs[i] = e.target.value;
-                              setDraftField('electedMPs', { ...prev, [dist]: distMPs });
-                            }}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-
       {/* Submit */}
       <div className="flex flex-wrap items-center gap-3">
         <button
-          disabled={!isValid}
+          disabled={!isValid || submitting}
           onClick={handleSubmit}
           className={`predict-glow rounded-2xl px-8 py-3.5 text-base font-bold transition ${
-            isValid
+            isValid && !submitting
               ? 'bg-gradient-to-r from-purple-600 via-fuchsia-600 to-rose-500 text-white shadow-lg hover:shadow-xl hover:brightness-110'
               : 'cursor-not-allowed bg-slate-800 text-slate-500'
           }`}
         >
-          {isValid ? t('predict_submit') : t('predict_submit_disabled')}
+          {submitting ? '⏳ Saving…' : isValid ? t('predict_submit') : t('predict_submit_disabled')}
         </button>
         <button
           onClick={resetDraft}
@@ -333,9 +240,6 @@ export function Predict({ data: _data }: { data: Dataset }) {
 
       {/* Leaderboard placeholder */}
       <LeaderboardSection />
-
-      {/* Saved predictions */}
-      <SavedPredictions saved={saved} deleteSaved={deleteSaved} setShared={(p) => { setShared(p); setSubmitted(p); }} />
     </div>
   );
 }
@@ -353,7 +257,7 @@ function TotalBadge({ remaining, isValid }: { remaining: number; isValid: boolea
   return <span className="rounded-full bg-rose-500/15 px-3 py-1 text-xs font-semibold text-rose-400">{(t('predict_over_100') as Function)(Math.abs(remaining).toFixed(1))}</span>;
 }
 
-function PartySlider({ code, locale, value, onChange }: { code: string; locale: 'en' | 'gr'; value: number; onChange: (v: number) => void }) {
+function PartySlider({ code, value, onChange }: { code: string; value: number; onChange: (v: number) => void }) {
   const color = partyColour(code);
   return (
     <div className="flex items-center gap-3 rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-2">
@@ -489,59 +393,6 @@ function LeaderboardSection() {
       <h3 className="mb-3 text-xl font-bold text-white">{t('predict_leaderboard_title')}</h3>
       <div className="flex items-center justify-center rounded-xl border border-dashed border-white/10 bg-white/[0.02] py-12 text-sm text-slate-500">
         {t('predict_leaderboard_coming')}
-      </div>
-    </div>
-  );
-}
-
-function SavedPredictions({
-  saved,
-  deleteSaved,
-  setShared,
-}: {
-  saved: Prediction[];
-  deleteSaved: (id: string) => void;
-  setShared: (p: Prediction) => void;
-}) {
-  const t = useT();
-  if (!saved.length) return null;
-
-  return (
-    <div className="card">
-      <h3 className="mb-4 text-lg font-bold text-white">{t('predict_my_predictions')}</h3>
-      <div className="space-y-2">
-        {saved.map((p) => {
-          const ts = new Date(p.timestamp);
-          return (
-            <div
-              key={p.id}
-              className="flex items-center justify-between rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-2.5"
-            >
-              <div>
-                <div className="text-sm font-medium text-white">{p.name}</div>
-                <div className="text-[11px] text-slate-500">
-                  {ts.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}
-                </div>
-              </div>
-              <div className="flex gap-1.5">
-                <button
-                  onClick={() => setShared(p)}
-                  className="rounded-lg border border-white/10 p-1.5 text-slate-400 transition hover:bg-white/[0.06] hover:text-white"
-                  title={t('predict_view') as string}
-                >
-                  <Eye className="h-3.5 w-3.5" />
-                </button>
-                <button
-                  onClick={() => deleteSaved(p.id)}
-                  className="rounded-lg border border-white/10 p-1.5 text-slate-400 transition hover:bg-rose-500/10 hover:text-rose-400"
-                  title={t('predict_delete') as string}
-                >
-                  <Trash2 className="h-3.5 w-3.5" />
-                </button>
-              </div>
-            </div>
-          );
-        })}
       </div>
     </div>
   );

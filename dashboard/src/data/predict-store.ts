@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { PARTY_ORDER } from '../lib/theme';
+import { savePredictionToFirebase, loadPredictionFromFirebase } from '../lib/firebase';
 
 /* ─── Types ─── */
 export interface OverUnder {
@@ -13,36 +14,27 @@ export interface Prediction {
   name: string;
   timestamp: string;
   partyPcts: Record<string, number>;
-  bonusParliamentParties?: number;
   bonusTurnout?: number;
   overUnders?: OverUnder[];
-  districtPcts?: Record<string, Record<string, number>>;
-  electedMPs?: Record<string, string[]>;
 }
 
 export interface PredictState {
   /** Currently-editing prediction (draft) */
   draft: Partial<Prediction>;
-  /** Prediction loaded from a shared URL (read-only view) */
+  /** Prediction loaded from a shared URL or Firebase (read-only view) */
   shared: Prediction | null;
-  /** All locally-saved predictions */
-  saved: Prediction[];
-  /** Whether the advanced mode panel is open */
-  advancedOpen: boolean;
+  /** Whether shared prediction is still loading from Firebase */
+  sharedLoading: boolean;
 
   setDraftField: <K extends keyof Prediction>(k: K, v: Prediction[K]) => void;
   setDraftPartyPct: (party: string, pct: number) => void;
   resetDraft: () => void;
-  submitDraft: () => Prediction | null;
+  submitDraft: () => Promise<Prediction | null>;
   setShared: (p: Prediction | null) => void;
-  toggleAdvanced: () => void;
-  loadSaved: () => void;
-  deleteSaved: (id: string) => void;
+  loadSharedById: (id: string) => Promise<void>;
 }
 
 /* ─── Helpers ─── */
-
-const LS_KEY = 'cy2026-predictions';
 
 function generateId(): string {
   return (
@@ -51,78 +43,57 @@ function generateId(): string {
   );
 }
 
-function readLS(): Prediction[] {
-  try {
-    const raw = localStorage.getItem(LS_KEY);
-    if (!raw) return [];
-    return JSON.parse(raw) as Prediction[];
-  } catch {
-    return [];
-  }
+const RANDOM_ADJ = [
+  'Bold', 'Curious', 'Lucky', 'Sneaky', 'Mighty', 'Witty', 'Sunny', 'Rapid',
+  'Calm', 'Brave', 'Clever', 'Swift', 'Silent', 'Wild', 'Sharp', 'Cosmic',
+];
+const RANDOM_NOUN = [
+  'Owl', 'Falcon', 'Mongoose', 'Lynx', 'Otter', 'Fox', 'Lion', 'Hawk',
+  'Wolf', 'Tiger', 'Heron', 'Moufflon', 'Dolphin', 'Raven', 'Panther', 'Stag',
+];
+
+function randomName(): string {
+  const a = RANDOM_ADJ[Math.floor(Math.random() * RANDOM_ADJ.length)];
+  const n = RANDOM_NOUN[Math.floor(Math.random() * RANDOM_NOUN.length)];
+  const num = Math.floor(Math.random() * 100);
+  return `${a} ${n} ${num}`;
 }
 
-function writeLS(predictions: Prediction[]) {
-  try {
-    localStorage.setItem(LS_KEY, JSON.stringify(predictions));
-  } catch {}
+function withTimeout<T>(p: Promise<T>, ms: number, label = 'operation'): Promise<T> {
+  return Promise.race([
+    p,
+    new Promise<T>((_, reject) =>
+      setTimeout(() => reject(new Error(`${label} timed out after ${ms}ms`)), ms),
+    ),
+  ]);
 }
+
+/* ─── Canonical URL ─── */
+const HOSTING_URL = 'https://cyprus-elections-2026.web.app';
 
 /**
- * Encode a prediction into a compact URL-safe string.
- * Format: base64url( JSON({ n, t, p, b, u, o }) )
- * where we use short keys to minimize URL length.
- */
-export function encodePrediction(p: Prediction): string {
-  const compact: Record<string, unknown> = {
-    n: p.name,
-    t: p.timestamp,
-    p: p.partyPcts,
-  };
-  if (p.bonusParliamentParties != null) compact.b = p.bonusParliamentParties;
-  if (p.bonusTurnout != null) compact.u = p.bonusTurnout;
-  if (p.overUnders?.length) compact.o = p.overUnders;
-  if (p.districtPcts && Object.keys(p.districtPcts).length)
-    compact.d = p.districtPcts;
-
-  const json = JSON.stringify(compact);
-  // Use base64url encoding
-  const b64 = btoa(unescape(encodeURIComponent(json)))
-    .replace(/\+/g, '-')
-    .replace(/\//g, '_')
-    .replace(/=+$/, '');
-  return b64;
-}
-
-/**
- * Decode a prediction from a URL hash.
- */
-export function decodePrediction(hash: string): Prediction | null {
-  try {
-    const b64 = hash.replace(/-/g, '+').replace(/_/g, '/');
-    const padded = b64 + '='.repeat((4 - (b64.length % 4)) % 4);
-    const json = decodeURIComponent(escape(atob(padded)));
-    const c = JSON.parse(json);
-    return {
-      id: generateId(),
-      name: c.n ?? 'Anonymous',
-      timestamp: c.t ?? new Date().toISOString(),
-      partyPcts: c.p ?? {},
-      bonusParliamentParties: c.b,
-      bonusTurnout: c.u,
-      overUnders: c.o,
-      districtPcts: c.d,
-    };
-  } catch {
-    return null;
-  }
-}
-
-/**
- * Build a full shareable URL for a prediction.
+ * Build a shareable URL for a prediction (uses Firebase document ID).
  */
 export function shareUrl(p: Prediction): string {
+  return `${HOSTING_URL}/p/${p.id}`;
+}
+
+/**
+ * Build a local dev-friendly URL (for testing).
+ */
+export function shareUrlLocal(p: Prediction): string {
   const base = window.location.origin + window.location.pathname;
-  return `${base}#predict=${encodePrediction(p)}`;
+  return `${base}#predict=${p.id}`;
+}
+
+/**
+ * Get the URL to use for sharing — production or local.
+ */
+export function getShareUrl(p: Prediction): string {
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    return shareUrlLocal(p);
+  }
+  return shareUrl(p);
 }
 
 /* ─── Default party percentages ─── */
@@ -136,8 +107,7 @@ function emptyPartyPcts(): Record<string, number> {
 export const usePredictStore = create<PredictState>((set, get) => ({
   draft: { partyPcts: emptyPartyPcts() },
   shared: null,
-  saved: [],
-  advancedOpen: false,
+  sharedLoading: false,
 
   setDraftField: (k, v) =>
     set((s) => ({ draft: { ...s.draft, [k]: v } })),
@@ -152,34 +122,65 @@ export const usePredictStore = create<PredictState>((set, get) => ({
 
   resetDraft: () => set({ draft: { partyPcts: emptyPartyPcts() } }),
 
-  submitDraft: () => {
-    const { draft, saved } = get();
+  submitDraft: async () => {
+    const { draft } = get();
     if (!draft.partyPcts) return null;
 
     const prediction: Prediction = {
       id: generateId(),
-      name: draft.name?.trim() || 'Anonymous',
+      name: draft.name?.trim() || randomName(),
       timestamp: new Date().toISOString(),
       partyPcts: draft.partyPcts,
-      bonusParliamentParties: draft.bonusParliamentParties,
       bonusTurnout: draft.bonusTurnout,
       overUnders: draft.overUnders,
-      districtPcts: draft.districtPcts,
-      electedMPs: draft.electedMPs,
     };
 
-    const next = [prediction, ...saved];
-    writeLS(next);
-    set({ saved: next, shared: prediction });
+    // Save to Firebase — with a hard timeout so the UI never hangs
+    // (Firestore can leave writes pending indefinitely if rules deny or the
+    // network is offline; we always want the local card to render.)
+    try {
+      await withTimeout(
+        savePredictionToFirebase(prediction.id, {
+          name: prediction.name,
+          timestamp: prediction.timestamp,
+          partyPcts: prediction.partyPcts,
+          bonusTurnout: prediction.bonusTurnout ?? null,
+          overUnders: prediction.overUnders ?? [],
+        }),
+        8000,
+        'savePrediction',
+      );
+    } catch (err) {
+      console.error('Failed to save prediction to Firebase:', err);
+      // Continue — the prediction still works locally
+    }
+
+    set({ shared: prediction });
     return prediction;
   },
 
   setShared: (shared) => set({ shared }),
-  toggleAdvanced: () => set((s) => ({ advancedOpen: !s.advancedOpen })),
-  loadSaved: () => set({ saved: readLS() }),
-  deleteSaved: (id) => {
-    const next = get().saved.filter((p) => p.id !== id);
-    writeLS(next);
-    set({ saved: next });
+
+  loadSharedById: async (id: string) => {
+    set({ sharedLoading: true });
+    try {
+      const data = await loadPredictionFromFirebase(id);
+      if (data) {
+        const prediction: Prediction = {
+          id,
+          name: (data.name as string) ?? 'Anonymous',
+          timestamp: (data.timestamp as string) ?? new Date().toISOString(),
+          partyPcts: (data.partyPcts as Record<string, number>) ?? {},
+          bonusTurnout: data.bonusTurnout as number | undefined,
+          overUnders: data.overUnders as OverUnder[] | undefined,
+        };
+        set({ shared: prediction, sharedLoading: false });
+      } else {
+        set({ sharedLoading: false });
+      }
+    } catch (err) {
+      console.error('Failed to load prediction from Firebase:', err);
+      set({ sharedLoading: false });
+    }
   },
 }));

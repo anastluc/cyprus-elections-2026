@@ -16,6 +16,7 @@ const EN = {
   nav_quality: 'Data quality',
   nav_correction: 'Submit correction',
   nav_predict: 'Predict',
+  nav_explore: 'Explore predictions',
   sidebar_label: 'Navigate',
 
   // Header
@@ -340,6 +341,7 @@ const EN = {
   predict_share_li: 'Share on LinkedIn',
   predict_share_copy: 'Copy link',
   predict_share_copied: 'Copied!',
+  predict_share_image_copied: 'Image + text copied — paste (⌘/Ctrl + V) once into the post: text fills the body, image attaches.',
   predict_card_title: 'My Prediction',
   predict_card_subtitle: 'Cyprus Parliamentary Elections 2026',
   predict_card_watermark: 'polismetrics.com',
@@ -350,6 +352,21 @@ const EN = {
   predict_shared_viewing: 'You are viewing a shared prediction by',
   predict_make_your_own: '← Make your own prediction',
   predict_header_btn: '🔮 Predict',
+
+  // Explore predictions page
+  explore_eyebrow: 'Community',
+  explore_title: 'Explore what others predict',
+  explore_subtitle:
+    'Browse predictions submitted by others. Sorted by submission date — newest first. Click any card to see the full prediction.',
+  explore_count: (n: number) => `${n} prediction${n === 1 ? '' : 's'}`,
+  explore_refresh: 'Refresh',
+  explore_error: 'Could not load predictions',
+  explore_empty: 'No predictions yet — be the first!',
+  explore_empty_inline: 'No predictions yet.',
+  explore_make_first: '🔮 Make the first prediction',
+  explore_open: 'View full prediction',
+  explore_no_picks: 'No party percentages set.',
+  explore_days_before: (n: number) => `${n}d before election`,
 };
 
 const GR: typeof EN = {
@@ -365,6 +382,7 @@ const GR: typeof EN = {
   nav_quality: 'Ποιότητα δεδομένων',
   nav_correction: 'Υποβολή διόρθωσης',
   nav_predict: 'Πρόβλεψη',
+  nav_explore: 'Εξερεύνηση προβλέψεων',
   sidebar_label: 'Πλοήγηση',
 
   header_eyebrow: 'Κύπρος · Βουλευτικές Εκλογές',
@@ -672,6 +690,7 @@ const GR: typeof EN = {
   predict_share_li: 'Κοινοποίηση στο LinkedIn',
   predict_share_copy: 'Αντιγραφή συνδέσμου',
   predict_share_copied: 'Αντιγράφηκε!',
+  predict_share_image_copied: 'Εικόνα + κείμενο αντιγράφηκαν — επικόλλησέ τα (⌘/Ctrl + V) στην ανάρτηση.',
   predict_card_title: 'Η Πρόβλεψή μου',
   predict_card_subtitle: 'Βουλευτικές Εκλογές Κύπρου 2026',
   predict_card_watermark: 'polismetrics.com',
@@ -682,6 +701,21 @@ const GR: typeof EN = {
   predict_shared_viewing: 'Βλέπεις μια κοινοποιημένη πρόβλεψη του/της',
   predict_make_your_own: '← Κάνε τη δική σου πρόβλεψη',
   predict_header_btn: '🔮 Πρόβλεψη',
+
+  // Explore predictions page
+  explore_eyebrow: 'Κοινότητα',
+  explore_title: 'Εξερεύνησε τι προβλέπουν οι άλλοι',
+  explore_subtitle:
+    'Δες τις προβλέψεις που έχουν υποβάλει άλλοι. Ταξινομημένες κατά ημερομηνία — οι πιο πρόσφατες πρώτες. Κάνε κλικ σε μια κάρτα για να δεις την πλήρη πρόβλεψη.',
+  explore_count: (n: number) => `${n} ${n === 1 ? 'πρόβλεψη' : 'προβλέψεις'}`,
+  explore_refresh: 'Ανανέωση',
+  explore_error: 'Αποτυχία φόρτωσης προβλέψεων',
+  explore_empty: 'Δεν υπάρχουν προβλέψεις ακόμη — γίνε ο πρώτος!',
+  explore_empty_inline: 'Δεν υπάρχουν προβλέψεις ακόμη.',
+  explore_make_first: '🔮 Κάνε την πρώτη πρόβλεψη',
+  explore_open: 'Δες την πλήρη πρόβλεψη',
+  explore_no_picks: 'Δεν έχουν δηλωθεί ποσοστά κομμάτων.',
+  explore_days_before: (n: number) => `${n}μ πριν τις εκλογές`,
 };
 
 const DICT: Record<Locale, typeof EN> = { en: EN, gr: GR };

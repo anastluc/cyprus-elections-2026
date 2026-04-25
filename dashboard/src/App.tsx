@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import {
   Activity,
   Briefcase,
+  Compass,
   Database,
   Github,
   Globe2,
@@ -37,6 +38,7 @@ import { DataQuality } from './pages/DataQuality';
 import { CandidateProfile } from './pages/CandidateProfile';
 import { SubmitCorrection } from './pages/SubmitCorrection';
 import { Predict } from './pages/Predict';
+import { Explore } from './pages/Explore';
 
 const NAV: { id: Section; labelKey: TKey; icon: typeof Activity }[] = [
   { id: 'overview', labelKey: 'nav_overview', icon: LayoutDashboard },
@@ -51,6 +53,7 @@ const NAV: { id: Section; labelKey: TKey; icon: typeof Activity }[] = [
   { id: 'quality', labelKey: 'nav_quality', icon: ShieldCheck },
   { id: 'correction', labelKey: 'nav_correction', icon: MessageSquarePlus },
   { id: 'predict', labelKey: 'nav_predict', icon: TrendingUp },
+  { id: 'explore', labelKey: 'nav_explore', icon: Compass },
 ];
 
 export default function App() {
@@ -67,6 +70,15 @@ export default function App() {
       .then(setData)
       .catch((e) => setError(String(e)));
   }, [setData, setError]);
+
+  // Auto-navigate to predict section when URL contains a prediction link
+  useEffect(() => {
+    const hash = window.location.hash;
+    const path = window.location.pathname;
+    if (hash.startsWith('#predict=') || /\/p\/[a-z0-9]+$/i.test(path)) {
+      setSection('predict');
+    }
+  }, [setSection]);
 
   if (error) {
     return (
@@ -106,6 +118,7 @@ export default function App() {
           <Panel active={section === 'profile'}><CandidateProfile data={data} /></Panel>
           <Panel active={section === 'correction'}><SubmitCorrection data={data} /></Panel>
           <Panel active={section === 'predict'}><Predict data={data} /></Panel>
+          <Panel active={section === 'explore'}><Explore /></Panel>
           <Footer meta={data.meta} />
         </main>
       </div>

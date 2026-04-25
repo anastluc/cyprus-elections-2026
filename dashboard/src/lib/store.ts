@@ -13,7 +13,8 @@ export type Section =
   | 'quality'
   | 'profile'
   | 'correction'
-  | 'predict';
+  | 'predict'
+  | 'explore';
 
 export interface FilterState {
   party: string | null;

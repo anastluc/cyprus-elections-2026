@@ -1,0 +1,37 @@
+rules_version = '2';
+
+// Predictions are write-once, public-read. Anyone can submit a prediction;
+// once submitted, it cannot be modified or deleted from the client. The
+// document ID is generated client-side (see predict-store.ts) and is
+// effectively unguessable, but the data itself is fully public.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /predictions/{id} {
+      allow read: if true;
+
+      allow create: if
+        // Document must not already exist (write-once).
+        !exists(/databases/$(database)/documents/predictions/$(id))
+        // Required fields with sane shapes/sizes.
+        && request.resource.data.keys().hasOnly(
+             ['name', 'timestamp', 'partyPcts', 'bonusTurnout', 'overUnders']
+           )
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 60
+        && request.resource.data.timestamp is string
+        && request.resource.data.partyPcts is map
+        // Cap payload to keep abuse cheap.
+        && request.resource.data.size() <= 20;
+
+      // Predictions are immutable from the client.
+      allow update, delete: if false;
+    }
+
+    // Default deny everything else.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

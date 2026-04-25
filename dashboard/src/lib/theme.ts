@@ -32,6 +32,40 @@ export const PARTY_LABELS: Record<string, string> = {
   IND: 'Independent',
 };
 
+export const PARTY_FULL_NAMES: Record<string, string> = {
+  AKEL: 'AKEL – Left – Social Alliance',
+  DISY: 'Democratic Rally',
+  DIKO: 'Democratic Party',
+  EDEK: 'Movement for Social Democracy',
+  ELAM: 'National Popular Front',
+  KOSP: "Movement of Ecologists – Citizens' Cooperation",
+  DIPA: 'Democratic Alignment',
+  VOLT: 'Volt Cyprus',
+  ALMA: 'ALMA – Citizens for Cyprus',
+  ADEM: 'ADEM',
+  EVROKO: 'European Party (defunct, 2005–2017)',
+  SP: 'Solidarity Movement (defunct)',
+  ALLIL: "Citizens' Alliance (defunct)",
+  IND: 'Independent candidate',
+};
+
+export const PARTY_FULL_NAMES_GR: Record<string, string> = {
+  AKEL: 'ΑΚΕΛ – Αριστερά – Νέες Δυνάμεις',
+  DISY: 'Δημοκρατικός Συναγερμός',
+  DIKO: 'Δημοκρατικό Κόμμα',
+  EDEK: 'Κίνημα Σοσιαλδημοκρατών ΕΔΕΚ',
+  ELAM: 'Εθνικό Λαϊκό Μέτωπο',
+  KOSP: 'Κίνημα Οικολόγων – Συνεργασία Πολιτών',
+  DIPA: 'Δημοκρατική Παράταξη',
+  VOLT: 'Volt Κύπρου',
+  ALMA: 'ΑΛΜΑ – Πολίτες για την Κύπρο',
+  ADEM: 'Άμεση Δημοκρατία',
+  EVROKO: 'Ευρωπαϊκό Κόμμα (ανενεργό, 2005–2017)',
+  SP: 'Κίνημα Αλληλεγγύη (ανενεργό)',
+  ALLIL: 'Συμμαχία Πολιτών (ανενεργό)',
+  IND: 'Ανεξάρτητος υποψήφιος',
+};
+
 export const PARTY_LABELS_GR: Record<string, string> = {
   AKEL: 'ΑΚΕΛ',
   DISY: 'ΔΗΣΥ',
@@ -64,6 +98,22 @@ export const PARTY_ORDER = [
   'SP',
   'ALLIL',
   'IND',
+];
+
+// Parties actually contesting the 2026 election (mirrors config/parties.yaml).
+// Used by the Predict page so users don't pick defunct parties (EVROKO, SP,
+// ALLIL) or "Independent" as a vote-share bucket.
+export const PREDICT_PARTY_ORDER = [
+  'AKEL',
+  'DISY',
+  'DIKO',
+  'ELAM',
+  'KOSP',
+  'DIPA',
+  'VOLT',
+  'ALMA',
+  'ADEM',
+  'EDEK',
 ];
 
 export const DISTRICT_LABELS: Record<string, string> = {
@@ -131,6 +181,13 @@ export function partyLabel(code: string, locale: 'en' | 'gr' = 'en'): string {
     return PARTY_LABELS_GR[code] ?? PARTY_LABELS[code] ?? code;
   }
   return PARTY_LABELS[code] ?? code;
+}
+
+export function partyFullName(code: string, locale: 'en' | 'gr' = 'en'): string {
+  if (locale === 'gr') {
+    return PARTY_FULL_NAMES_GR[code] ?? PARTY_FULL_NAMES[code] ?? partyLabel(code, 'gr');
+  }
+  return PARTY_FULL_NAMES[code] ?? partyLabel(code, 'en');
 }
 
 export function districtLabel(code: string, locale: 'en' | 'gr' = 'en'): string {

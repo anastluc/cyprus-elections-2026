@@ -17,6 +17,10 @@ import { isFemale, isMale } from '../lib/utils';
 import { useFilters, useUI } from '../lib/store';
 import { CorrectionCTA } from '../components/CorrectionCTA';
 import { translateName } from '../lib/i18n';
+import {
+  DataSource,
+  CANDIDATES_SOURCE_LINK,
+} from '../components/DataSource';
 
 const DISTRICTS = ['NIC', 'LIM', 'LAR', 'FAM', 'PAF', 'KYR'];
 const PLATFORM_OPTIONS = ['facebook', 'twitter', 'instagram', 'linkedin', 'website', 'wikipedia'];
@@ -301,7 +305,7 @@ export function Explorer({ data }: { data: Dataset }) {
               {table.getRowModel().rows.map((row) => (
                 <tr
                   key={row.id}
-                  onClick={() => openProfile(row.original.id)}
+                  onClick={() => openProfile(row.original.id, { name_en: row.original.name_en, name_gr: row.original.name_gr })}
                   className="cursor-pointer border-b border-white/5 transition hover:bg-white/[0.04]"
                 >
                   {row.getVisibleCells().map((cell) => (
@@ -322,6 +326,12 @@ export function Explorer({ data }: { data: Dataset }) {
       <div className="mt-6">
         <CorrectionCTA variant="card" />
       </div>
+
+      <DataSource
+        summary="Every row is a candidate record. Click a name to open the profile, where each individual field carries a per-value provenance pill linking to the source URL it was extracted from."
+        sources={[CANDIDATES_SOURCE_LINK]}
+        generatedAt={data.meta.generated_at}
+      />
     </div>
   );
 }

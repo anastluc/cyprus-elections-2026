@@ -5,6 +5,11 @@ import { CoverageBar } from '../components/CoverageBar';
 import { NIVO_THEME } from '../lib/theme';
 import type { Dataset } from '../data/types';
 import { CorrectionCTA } from '../components/CorrectionCTA';
+import {
+  DataSource,
+  STATS_SOURCE_LINK,
+  PIPELINE_SOURCE_LINK,
+} from '../components/DataSource';
 
 const KIND_COLOURS: Record<string, string> = {
   official: '#6366f1',
@@ -134,6 +139,12 @@ export function DataQuality({ data }: { data: Dataset }) {
       <div className="mt-6">
         <CorrectionCTA variant="card" />
       </div>
+
+      <DataSource
+        summary="Coverage, source-kind mix, and the row-confidence distribution come from the stats aggregate. The 'source kind' field on each candidate value is what these charts roll up."
+        sources={[STATS_SOURCE_LINK, PIPELINE_SOURCE_LINK]}
+        generatedAt={data.meta.generated_at}
+      />
     </div>
   );
 }

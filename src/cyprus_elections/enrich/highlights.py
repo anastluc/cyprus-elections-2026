@@ -14,7 +14,6 @@ from datetime import datetime
 from typing import Any
 
 from cyprus_elections.config import AppConfig
-from cyprus_elections.db import transaction
 from cyprus_elections.llm import LLMClient
 from cyprus_elections.state import set_status, should_skip
 
@@ -60,8 +59,11 @@ def _collect(conn: sqlite3.Connection) -> list[sqlite3.Row]:
                c.canonical_name_gr AS name_gr,
                c.party_code AS party_code,
                COALESCE(cv.best_value, '') AS cv_text,
+               cv.best_source_id AS cv_source_id,
                COALESCE(bio.best_value, '') AS bio_text,
-               COALESCE(car.best_value, '') AS career_previous
+               bio.best_source_id AS bio_source_id,
+               COALESCE(car.best_value, '') AS career_previous,
+               car.best_source_id AS career_source_id
           FROM candidates c
           LEFT JOIN candidate_current cv ON cv.candidate_id = c.id AND cv.field = 'cv_text'
           LEFT JOIN candidate_current bio ON bio.candidate_id = c.id AND bio.field = 'bio_text'
@@ -70,14 +72,16 @@ def _collect(conn: sqlite3.Connection) -> list[sqlite3.Row]:
     ).fetchall()
 
 
-def _pick_source(row: sqlite3.Row) -> tuple[str, str]:
+def _pick_source(row: sqlite3.Row) -> tuple[str, str, int | None]:
+    """Return (kind, text, underlying_source_id) — the source_id is the source
+    of the field whose text we're summarising, so highlights inherit a real URL."""
     if row["cv_text"].strip():
-        return "cv", row["cv_text"][:8000]
+        return "cv", row["cv_text"][:8000], row["cv_source_id"]
     if row["bio_text"].strip():
-        return "bio", row["bio_text"][:4000]
+        return "bio", row["bio_text"][:4000], row["bio_source_id"]
     if row["career_previous"].strip():
-        return "career", row["career_previous"][:2000]
-    return "", ""
+        return "career", row["career_previous"][:2000], row["career_source_id"]
+    return "", "", None
 
 
 def run(cfg: AppConfig, conn: sqlite3.Connection, *, restart: bool = False) -> dict[str, int]:
@@ -88,20 +92,6 @@ def run(cfg: AppConfig, conn: sqlite3.Connection, *, restart: bool = False) -> d
         return stats
 
     now = datetime.utcnow().isoformat()
-    with transaction(conn):
-        cur = conn.execute(
-            """INSERT INTO sources (kind, url, fetched_at, sha256, path)
-               VALUES ('llm_from_bio', ?, ?, NULL, NULL)
-               ON CONFLICT (kind, url, fetched_at) DO NOTHING
-               RETURNING id""",
-            (f"enrich_highlights:{now}", now),
-        ).fetchone()
-        if cur is None:
-            cur = conn.execute(
-                "SELECT id FROM sources WHERE kind='llm_from_bio' AND url=? AND fetched_at=?",
-                (f"enrich_highlights:{now}", now),
-            ).fetchone()
-    src_id = int(cur["id"])
 
     try:
         for cand in _collect(conn):
@@ -109,8 +99,8 @@ def run(cfg: AppConfig, conn: sqlite3.Connection, *, restart: bool = False) -> d
             if should_skip(conn, STAGE, key, restart=restart):
                 stats["skipped"] += 1
                 continue
-            kind, text = _pick_source(cand)
-            if not text.strip():
+            kind, text, underlying_src_id = _pick_source(cand)
+            if not text.strip() or underlying_src_id is None:
                 stats["no_text"] += 1
                 set_status(conn, STAGE, key, "ok")
                 conn.commit()
@@ -152,7 +142,7 @@ def run(cfg: AppConfig, conn: sqlite3.Connection, *, restart: bool = False) -> d
                 (
                     cand["id"],
                     json.dumps(payload, ensure_ascii=False),
-                    src_id,
+                    underlying_src_id,
                     now,
                     0.6 if kind == "cv" else 0.5,
                 ),

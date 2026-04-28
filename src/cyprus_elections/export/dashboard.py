@@ -98,6 +98,32 @@ def _extract_age(field: dict | None) -> int | None:
         return None
 
 
+def _age_from_dob(field: dict | None, today: datetime | None = None) -> int | None:
+    """Derive age from a date_of_birth field. Accepts ISO YYYY-MM-DD,
+    YYYY-MM, or just YYYY (year-only is common in scraped sources).
+    """
+    if not field:
+        return None
+    raw = (field.get("value") or "").strip()
+    if not raw:
+        return None
+    today = today or datetime.utcnow()
+    parts = raw.split("-")
+    try:
+        year = int(parts[0])
+    except ValueError:
+        return None
+    # Sanity-check: birth year must be within a plausible range
+    if year < 1900 or year > today.year:
+        return None
+    month = int(parts[1]) if len(parts) > 1 and parts[1].isdigit() else 1
+    day = int(parts[2]) if len(parts) > 2 and parts[2].isdigit() else 1
+    age = today.year - year - ((today.month, today.day) < (month, day))
+    if age < 0 or age > 130:
+        return None
+    return age
+
+
 def export(cfg: AppConfig, conn: sqlite3.Connection) -> Path:
     out_dir = cfg.root / DASHBOARD_DATA_DIR
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -129,6 +155,10 @@ def export(cfg: AppConfig, conn: sqlite3.Connection) -> Path:
             record["highlights"] = hl
             record["highlights_source"] = fields["highlights"].get("source_url")
         age = _extract_age(fields.get("age"))
+        if age is None:
+            age = _age_from_dob(fields.get("date_of_birth"))
+            if age is not None:
+                record["age_derived_from_dob"] = True
         if age is not None:
             record["age"] = age
         candidates.append(record)

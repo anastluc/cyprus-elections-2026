@@ -4,6 +4,11 @@ import { SectionHeader } from '../components/SectionHeader';
 import type { Dataset } from '../data/types';
 import { useFilters, useUI } from '../lib/store';
 import { useT, type TKey } from '../lib/i18n';
+import {
+  DataSource,
+  CANDIDATES_SOURCE_LINK,
+  PIPELINE_SOURCE_LINK,
+} from '../components/DataSource';
 
 type LevelId = 'phd' | 'master' | 'bachelor' | 'diploma';
 
@@ -205,6 +210,12 @@ export function Education({ data }: { data: Dataset }) {
           </div>
         </div>
       </div>
+
+      <DataSource
+        summary="Education levels are inferred client-side from each candidate's free-text education field via keyword matching (Greek and English patterns). The underlying field carries its own source on the candidate's profile."
+        sources={[CANDIDATES_SOURCE_LINK, PIPELINE_SOURCE_LINK]}
+        generatedAt={data.meta.generated_at}
+      />
     </div>
   );
 }

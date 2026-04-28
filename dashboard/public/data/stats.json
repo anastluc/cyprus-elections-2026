@@ -1,93 +1,93 @@
 {
   "total_candidates": 544,
   "coverage": {
-    "photo_url": {
-      "count": 57,
-      "percentage": 10.5
-    },
-    "sector": {
-      "count": 375,
-      "percentage": 68.9
-    },
-    "highlights": {
-      "count": 252,
-      "percentage": 46.3
-    },
-    "age": {
-      "count": 99,
-      "percentage": 18.2
-    },
-    "bio_text": {
-      "count": 346,
-      "percentage": 63.6
-    },
-    "instagram": {
-      "count": 52,
-      "percentage": 9.6
-    },
-    "date_of_birth": {
-      "count": 130,
-      "percentage": 23.9
-    },
-    "facebook": {
-      "count": 58,
-      "percentage": 10.7
-    },
-    "career_previous": {
-      "count": 263,
-      "percentage": 48.3
-    },
-    "profession": {
-      "count": 371,
-      "percentage": 68.2
-    },
-    "cv_url": {
-      "count": 4,
-      "percentage": 0.7
-    },
-    "website": {
-      "count": 255,
-      "percentage": 46.9
-    },
-    "twitter": {
-      "count": 31,
-      "percentage": 5.7
-    },
     "profession_cluster": {
       "count": 268,
       "percentage": 49.3
-    },
-    "gender": {
-      "count": 543,
-      "percentage": 99.8
-    },
-    "name_gr": {
-      "count": 0,
-      "percentage": 0.0
-    },
-    "linkedin": {
-      "count": 41,
-      "percentage": 7.5
-    },
-    "cv_text": {
-      "count": 2,
-      "percentage": 0.4
     },
     "name_en": {
       "count": 0,
       "percentage": 0.0
     },
     "education": {
-      "count": 187,
-      "percentage": 34.4
+      "count": 256,
+      "percentage": 47.1
+    },
+    "twitter": {
+      "count": 31,
+      "percentage": 5.7
+    },
+    "linkedin": {
+      "count": 41,
+      "percentage": 7.5
+    },
+    "wikidata_qid": {
+      "count": 6,
+      "percentage": 1.1
     },
     "wikipedia": {
       "count": 7,
       "percentage": 1.3
     },
-    "wikidata_qid": {
+    "cv_text": {
+      "count": 2,
+      "percentage": 0.4
+    },
+    "highlights": {
+      "count": 410,
+      "percentage": 75.4
+    },
+    "facebook": {
+      "count": 58,
+      "percentage": 10.7
+    },
+    "instagram": {
+      "count": 52,
+      "percentage": 9.6
+    },
+    "website": {
+      "count": 267,
+      "percentage": 49.1
+    },
+    "sector": {
+      "count": 461,
+      "percentage": 84.7
+    },
+    "photo_url": {
+      "count": 57,
+      "percentage": 10.5
+    },
+    "name_gr": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "age": {
+      "count": 142,
+      "percentage": 26.1
+    },
+    "cv_url": {
       "count": 6,
       "percentage": 1.1
+    },
+    "bio_text": {
+      "count": 483,
+      "percentage": 88.8
+    },
+    "career_previous": {
+      "count": 324,
+      "percentage": 59.6
+    },
+    "date_of_birth": {
+      "count": 177,
+      "percentage": 32.5
+    },
+    "gender": {
+      "count": 543,
+      "percentage": 99.8
+    },
+    "profession": {
+      "count": 445,
+      "percentage": 81.8
     }
   },
   "by_party": {
@@ -136,32 +136,32 @@
     "buckets": [
       {
         "range": "20–29",
-        "count": 11
+        "count": 16
       },
       {
         "range": "30–39",
-        "count": 29
+        "count": 57
       },
       {
         "range": "40–49",
-        "count": 31
+        "count": 75
       },
       {
         "range": "50–59",
-        "count": 17
+        "count": 48
       },
       {
         "range": "60–69",
-        "count": 10
+        "count": 37
       },
       {
         "range": "70–89",
-        "count": 1
+        "count": 9
       }
     ],
-    "median": 42,
-    "mean": 43.8,
-    "n": 99
+    "median": 46,
+    "mean": 47.0,
+    "n": 242
   },
   "digital_footprint": {
     "platforms": [
@@ -209,15 +209,18 @@
         "wikipedia": 1
       },
       "DISY": {
-        "website": 43,
+        "website": 46,
         "twitter": 1,
         "instagram": 2
+      },
+      "EDEK": {
+        "website": 2
       },
       "ELAM": {
         "website": 43
       },
       "KOSP": {
-        "website": 3,
+        "website": 4,
         "wikipedia": 1
       },
       "VOLT": {
@@ -225,7 +228,7 @@
         "instagram": 49,
         "linkedin": 40,
         "twitter": 26,
-        "website": 15,
+        "website": 21,
         "wikipedia": 3
       }
     },
@@ -243,14 +246,16 @@
     }
   },
   "avg_age_by_party": {
-    "ADEM": 53.7,
+    "ADEM": 45.8,
     "AKEL": 43.9,
-    "DIKO": 37.0,
-    "DIPA": 37.0,
-    "DISY": 44.3,
-    "ELAM": 42.9,
+    "ALMA": 50.8,
+    "DIKO": 49.1,
+    "DIPA": 47.4,
+    "DISY": 47.8,
+    "EDEK": 45.5,
+    "ELAM": 42.8,
     "KOSP": 49.2,
-    "VOLT": 46.6
+    "VOLT": 48.5
   },
   "district_party_matrix": {
     "ADEM": {
@@ -334,13 +339,13 @@
     }
   },
   "source_kinds": {
-    "party_site": 4404,
-    "llm_from_bio": 1740,
-    "search_snippet": 1278,
-    "news": 564,
+    "search_snippet": 5137,
+    "party_site": 4630,
+    "llm_from_bio": 1484,
+    "news": 567,
     "wikidata": 12,
     "wikipedia": 7,
-    "cv_doc": 2,
+    "cv_doc": 4,
     "curator": 1
   },
   "row_confidence_histogram": [

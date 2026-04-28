@@ -137,10 +137,13 @@ def run(cfg: AppConfig, conn: sqlite3.Connection, *, restart: bool = False,
                 f"Priority fields still missing for this person: {', '.join(missing)}."
             )
             try:
-                parsed = llm.chat_json(
+                parsed, citations = llm.chat_json_with_citations(
                     system=_SYSTEM,
                     user=query,
-                    cache_key=f"web_search|{cand['party_code']}|{name_for_search}|{search_model}|v2",
+                    # v3 cache key: bumped from v2 so cached responses (which
+                    # had no citations recorded) get re-fetched and we keep
+                    # the URLs the search model used.
+                    cache_key=f"web_search|{cand['party_code']}|{name_for_search}|{search_model}|v3",
                     json_schema=_SCHEMA,
                     model=search_model,
                 )
@@ -151,7 +154,7 @@ def run(cfg: AppConfig, conn: sqlite3.Connection, *, restart: bool = False,
                 stats["errors"] += 1
                 continue
 
-            if parsed and _persist(conn, cand["id"], parsed):
+            if parsed and _persist(conn, cand["id"], parsed, citations):
                 stats["enriched"] += 1
             set_status(conn, STAGE, key, "ok")
             conn.commit()
@@ -160,24 +163,61 @@ def run(cfg: AppConfig, conn: sqlite3.Connection, *, restart: bool = False,
     return stats
 
 
-def _persist(conn: sqlite3.Connection, candidate_id: int, parsed: dict) -> int:
+def _persist(
+    conn: sqlite3.Connection,
+    candidate_id: int,
+    parsed: dict,
+    citations: list[str],
+) -> int:
+    """Persist extracted fields, attaching them to a real citation URL when
+    one is available. Falls back to the legacy `web_search:candidate=N`
+    placeholder only when the search model returned no citations at all
+    (so old behaviour is preserved as a worst case)."""
     now = datetime.utcnow().isoformat()
-    url = f"web_search:candidate={candidate_id}"
     written = 0
     with transaction(conn):
-        cur = conn.execute(
-            """INSERT INTO sources (kind, url, fetched_at, sha256, path)
-               VALUES ('search_snippet', ?, ?, NULL, NULL)
-               ON CONFLICT (kind, url, fetched_at) DO NOTHING
-               RETURNING id""",
-            (url, now),
-        ).fetchone()
-        if cur is None:
+        # Register every citation URL as its own source row, then pick the
+        # first as the "primary" source for the extracted fields. The LLM
+        # doesn't tell us which citation backed which field, so attaching
+        # all fields to citation #1 is the closest honest approximation —
+        # but we still record the rest in `sources` so the candidate's
+        # "All sources" list surfaces them.
+        primary_src_id: int | None = None
+        for url in citations:
             cur = conn.execute(
-                "SELECT id FROM sources WHERE kind='search_snippet' AND url=? AND fetched_at=?",
+                """INSERT INTO sources (kind, url, fetched_at, sha256, path)
+                   VALUES ('search_snippet', ?, ?, NULL, NULL)
+                   ON CONFLICT (kind, url, fetched_at) DO NOTHING
+                   RETURNING id""",
                 (url, now),
             ).fetchone()
-        src_id = int(cur["id"])
+            if cur is None:
+                cur = conn.execute(
+                    "SELECT id FROM sources WHERE kind='search_snippet' AND url=? AND fetched_at=?",
+                    (url, now),
+                ).fetchone()
+            sid = int(cur["id"])
+            if primary_src_id is None:
+                primary_src_id = sid
+
+        if primary_src_id is None:
+            # No citations: fall back to the placeholder so the field
+            # attribution still has *some* row pointing at it.
+            placeholder = f"web_search:candidate={candidate_id}"
+            cur = conn.execute(
+                """INSERT INTO sources (kind, url, fetched_at, sha256, path)
+                   VALUES ('search_snippet', ?, ?, NULL, NULL)
+                   ON CONFLICT (kind, url, fetched_at) DO NOTHING
+                   RETURNING id""",
+                (placeholder, now),
+            ).fetchone()
+            if cur is None:
+                cur = conn.execute(
+                    "SELECT id FROM sources WHERE kind='search_snippet' AND url=? AND fetched_at=?",
+                    (placeholder, now),
+                ).fetchone()
+            primary_src_id = int(cur["id"])
+
         for field, value in parsed.items():
             if value in (None, ""):
                 continue
@@ -185,7 +225,7 @@ def _persist(conn: sqlite3.Connection, candidate_id: int, parsed: dict) -> int:
                 """INSERT OR IGNORE INTO field_values
                    (candidate_id, field, value, source_id, extracted_at, confidence)
                    VALUES (?, ?, ?, ?, ?, ?)""",
-                (candidate_id, field, str(value), src_id, now, 0.45),
+                (candidate_id, field, str(value), primary_src_id, now, 0.45),
             )
             written += 1
     return written

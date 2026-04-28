@@ -19,6 +19,8 @@ import {
 } from 'lucide-react';
 import { Disclaimer } from './components/Disclaimer';
 import { LocaleSwitch } from './components/LocaleSwitch';
+import { ThemeToggle } from './components/ThemeToggle';
+import { parseCandidatePath } from './lib/utils';
 import { loadDataset } from './data/load';
 import type { Dataset } from './data/types';
 import { cn } from './lib/utils';
@@ -79,6 +81,27 @@ export default function App() {
       setSection('predict');
     }
   }, [setSection]);
+
+  // Sync /candidate/{id}[-{slug}] URLs <→ profile state.
+  useEffect(() => {
+    function applyFromUrl() {
+      const id = parseCandidatePath(window.location.pathname);
+      const ui = useUI.getState();
+      if (id !== null) {
+        if (ui.profileCandidateId !== id) {
+          useUI.setState({ profileCandidateId: id, activeSection: 'profile' });
+        } else if (ui.activeSection !== 'profile') {
+          useUI.setState({ activeSection: 'profile' });
+        }
+      } else if (ui.profileCandidateId !== null && ui.activeSection === 'profile') {
+        // URL no longer points at a candidate but state still has one — clear it
+        useUI.setState({ profileCandidateId: null });
+      }
+    }
+    applyFromUrl();
+    window.addEventListener('popstate', applyFromUrl);
+    return () => window.removeEventListener('popstate', applyFromUrl);
+  }, []);
 
   if (error) {
     return (
@@ -268,6 +291,7 @@ function TopHeader({ meta }: { meta: Dataset['meta'] }) {
           >
             <Github className="h-4 w-4" />
           </a>
+          <ThemeToggle />
           <LocaleSwitch />
         </div>
       </div>

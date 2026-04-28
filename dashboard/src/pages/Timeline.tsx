@@ -3,6 +3,11 @@ import { SectionHeader } from '../components/SectionHeader';
 import { TimelineMatrix } from '../components/TimelineMatrix';
 import type { Dataset } from '../data/types';
 import { useT } from '../lib/i18n';
+import {
+  DataSource,
+  HISTORY_SOURCE_LINK,
+  CANDIDATES_SOURCE_LINK,
+} from '../components/DataSource';
 
 type SortKey = 'first-year' | 'party' | 'total-votes' | 'name';
 
@@ -64,6 +69,12 @@ export function Timeline({ data }: { data: Dataset }) {
       <p className="mt-4 text-xs leading-relaxed text-slate-500">
         {t('timeline_footer')}
       </p>
+
+      <DataSource
+        summary={`Past-cycle results come from the historical record below; each row carries its own source URL (Ministry of Interior or Wikipedia) — hover over a row in the matrix to see it. ${covered.size} of the 2026 candidates have been linked to historical entries.`}
+        sources={[HISTORY_SOURCE_LINK, CANDIDATES_SOURCE_LINK]}
+        generatedAt={data.meta.generated_at}
+      />
     </div>
   );
 }

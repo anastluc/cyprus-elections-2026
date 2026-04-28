@@ -51,6 +51,43 @@ export function menCount(g: Record<string, number>): number {
   return n;
 }
 
+/**
+ * Slugify a candidate name for use in URLs. Strips Greek diacritics, lowercases,
+ * collapses whitespace and non-alphanumerics to hyphens. Result is decorative —
+ * the leading numeric id is the actual identifier.
+ */
+export function candidateSlug(nameEn: string | undefined, nameGr: string | undefined): string {
+  const raw = (nameEn && nameEn.trim()) || (nameGr && nameGr.trim()) || '';
+  if (!raw) return '';
+  return raw
+    .normalize('NFD')
+    .replace(/\p{M}+/gu, '')
+    .replace(/[^a-zA-Z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .toLowerCase()
+    .slice(0, 60);
+}
+
+export function candidatePath(
+  id: number,
+  nameEn: string | undefined,
+  nameGr: string | undefined,
+): string {
+  const slug = candidateSlug(nameEn, nameGr);
+  return slug ? `/candidate/${id}-${slug}` : `/candidate/${id}`;
+}
+
+/**
+ * Parse a `/candidate/{id}` or `/candidate/{id}-{slug}` pathname.
+ * Returns the candidate id, or null if the path is not a candidate URL.
+ */
+export function parseCandidatePath(pathname: string): number | null {
+  const m = pathname.match(/\/candidate\/(\d+)(?:-[a-z0-9-]*)?\/?$/i);
+  if (!m) return null;
+  const id = Number.parseInt(m[1], 10);
+  return Number.isFinite(id) ? id : null;
+}
+
 export function parseHighlights(raw: string | undefined): string[] {
   if (!raw) return [];
   try {

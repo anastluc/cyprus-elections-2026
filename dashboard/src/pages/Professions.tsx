@@ -4,6 +4,11 @@ import { CLUSTER_COLOURS, NIVO_THEME, clusterColour } from '../lib/theme';
 import type { Dataset } from '../data/types';
 import { useFilters, useUI } from '../lib/store';
 import { useT } from '../lib/i18n';
+import {
+  DataSource,
+  CANDIDATES_SOURCE_LINK,
+  PIPELINE_SOURCE_LINK,
+} from '../components/DataSource';
 
 export function Professions({ data }: { data: Dataset }) {
   const { stats, candidates } = data;
@@ -154,6 +159,12 @@ export function Professions({ data }: { data: Dataset }) {
           </div>
         </div>
       </div>
+
+      <DataSource
+        summary="Profession and cluster labels are extracted per-candidate from biographies, official sources, and LLM classification. Click any item above to drill into the matching candidates in the Explorer; each candidate's profession field carries its own provenance pill."
+        sources={[CANDIDATES_SOURCE_LINK, PIPELINE_SOURCE_LINK]}
+        generatedAt={data.meta.generated_at}
+      />
     </div>
   );
 }

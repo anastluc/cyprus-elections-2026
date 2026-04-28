@@ -14,6 +14,11 @@ import type { Dataset } from '../data/types';
 import { isFemale, pct } from '../lib/utils';
 import { useFilters, useUI } from '../lib/store';
 import { useT } from '../lib/i18n';
+import {
+  DataSource,
+  CANDIDATES_SOURCE_LINK,
+  STATS_SOURCE_LINK,
+} from '../components/DataSource';
 
 export function Parties({ data }: { data: Dataset }) {
   const { stats, candidates } = data;
@@ -191,6 +196,12 @@ export function Parties({ data }: { data: Dataset }) {
           <p className="mt-2 text-[11px] text-slate-500">{t('parties_heat_caption')}</p>
         </div>
       </div>
+
+      <DataSource
+        summary="Party totals and the district × party heatmap are computed from the candidates dataset. Party affiliation comes from each candidate's official ballot record."
+        sources={[STATS_SOURCE_LINK, CANDIDATES_SOURCE_LINK]}
+        generatedAt={data.meta.generated_at}
+      />
     </div>
   );
 }

@@ -5,6 +5,12 @@ import { NIVO_THEME, PARTY_ORDER, partyLabel } from '../lib/theme';
 import type { Dataset } from '../data/types';
 import { useFilters, useUI } from '../lib/store';
 import { useT } from '../lib/i18n';
+import {
+  DataSource,
+  CANDIDATES_SOURCE_LINK,
+  STATS_SOURCE_LINK,
+  PIPELINE_SOURCE_LINK,
+} from '../components/DataSource';
 
 const PLATFORMS = ['facebook', 'twitter', 'instagram', 'linkedin', 'website', 'wikipedia'];
 const PLATFORM_COLOURS: Record<string, string> = {
@@ -142,6 +148,12 @@ export function Digital({ data }: { data: Dataset }) {
           </p>
         </div>
       </div>
+
+      <DataSource
+        summary="Social and digital footprint coverage is computed from candidates' platform fields, populated by automated discovery (bio scan, search snippets) plus official party sites."
+        sources={[STATS_SOURCE_LINK, CANDIDATES_SOURCE_LINK, PIPELINE_SOURCE_LINK]}
+        generatedAt={data.meta.generated_at}
+      />
     </div>
   );
 }

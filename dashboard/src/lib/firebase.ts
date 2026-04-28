@@ -12,12 +12,13 @@ import {
 } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBKEZQy8Yl1pPvXsUr9i7yGMRk1BmG_4gk',
-  authDomain: 'cyprus-elections-2026.firebaseapp.com',
-  projectId: 'cyprus-elections-2026',
-  storageBucket: 'cyprus-elections-2026.firebasestorage.app',
-  messagingSenderId: '1072903990680',
-  appId: '1:1072903990680:web:a0b4f0e2c0d1e2f3a4b5c6',
+  apiKey: "AIzaSyDmwj-BEeUpa-xaJQDz_4r3kfZMQhjDhF8",
+  authDomain: "cyprus-elections-2026.firebaseapp.com",
+  projectId: "cyprus-elections-2026",
+  storageBucket: "cyprus-elections-2026.firebasestorage.app",
+  messagingSenderId: "101847253943",
+  appId: "1:101847253943:web:6656487f5d66132df35e32",
+  measurementId: "G-64QSFCL8CJ"
 };
 
 const app = initializeApp(firebaseConfig);

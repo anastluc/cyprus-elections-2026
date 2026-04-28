@@ -13,6 +13,11 @@ import type { Dataset } from '../data/types';
 import { menCount, pct, womenCount } from '../lib/utils';
 import { useUI } from '../lib/store';
 import { useT } from '../lib/i18n';
+import {
+  DataSource,
+  CANDIDATES_SOURCE_LINK,
+  STATS_SOURCE_LINK,
+} from '../components/DataSource';
 
 export function Demographics({ data }: { data: Dataset }) {
   const { stats } = data;
@@ -172,6 +177,12 @@ export function Demographics({ data }: { data: Dataset }) {
           </p>
         </div>
       </div>
+
+      <DataSource
+        summary="Gender, age and district splits aggregated from candidate records. Each individual value is verifiable on the candidate's profile via its provenance pill."
+        sources={[STATS_SOURCE_LINK, CANDIDATES_SOURCE_LINK]}
+        generatedAt={data.meta.generated_at}
+      />
     </div>
   );
 }

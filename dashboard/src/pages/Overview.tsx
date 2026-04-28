@@ -3,6 +3,12 @@ import { Vote, Users, MapPin, Clock, Sparkles, BadgeCheck } from 'lucide-react';
 import { KPICard } from '../components/KPICard';
 import { SectionHeader } from '../components/SectionHeader';
 import { CyprusMap } from '../components/CyprusMap';
+import {
+  DataSource,
+  CANDIDATES_SOURCE_LINK,
+  STATS_SOURCE_LINK,
+  PIPELINE_SOURCE_LINK,
+} from '../components/DataSource';
 import { NIVO_THEME, partyColour, partyLabel, PARTY_ORDER } from '../lib/theme';
 import type { Dataset } from '../data/types';
 import { fmtInt, pct, womenCount } from '../lib/utils';
@@ -109,6 +115,12 @@ export function Overview({ data }: { data: Dataset }) {
           body={t('overview_story_twitter_body')}
         />
       </div>
+
+      <DataSource
+        summary={`KPIs and the party / district breakdowns are aggregates over ${total} candidate records. Each candidate field carries its own provenance — open a candidate profile to see per-value sources.`}
+        sources={[STATS_SOURCE_LINK, CANDIDATES_SOURCE_LINK, PIPELINE_SOURCE_LINK]}
+        generatedAt={data.meta.generated_at}
+      />
     </div>
   );
 }

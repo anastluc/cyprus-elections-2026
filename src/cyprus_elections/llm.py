@@ -63,22 +63,51 @@ class LLMClient:
         disk cache keyed by cache_key (defaults to the full prompt hash) so
         reruns are free.
         """
+        parsed, _ = self.chat_json_with_citations(
+            system=system,
+            user=user,
+            cache_key=cache_key,
+            json_schema=json_schema,
+            model=model,
+        )
+        return parsed
+
+    def chat_json_with_citations(
+        self,
+        *,
+        system: str,
+        user: str,
+        cache_key: str | None = None,
+        json_schema: dict | None = None,
+        model: str | None = None,
+    ) -> tuple[dict, list[str]]:
+        """Like chat_json but also returns the citation URLs from the response.
+
+        For models that return citations (Perplexity Sonar, etc.), the URLs
+        are extracted from `data["citations"]` (top-level) and from message
+        annotations and persisted alongside the parsed JSON in the cache.
+        """
         if not self.enabled:
             log.info("LLM disabled (no OPENROUTER_API_KEY); returning {}")
-            return {}
+            return {}, []
 
         model_used = model or self.model
         key = cache_key or (system + "|" + user + "|" + model_used)
         path = self._cache_path(key)
         if path.exists():
             try:
-                return json.loads(path.read_text(encoding="utf-8"))
+                cached = json.loads(path.read_text(encoding="utf-8"))
             except json.JSONDecodeError:
                 path.unlink(missing_ok=True)
+            else:
+                if isinstance(cached, dict) and "__payload" in cached:
+                    return cached["__payload"], list(cached.get("__citations", []))
+                # Legacy cache: parsed-only, no citations recorded.
+                return cached, []
 
         if self._calls >= self.cfg.llm.max_calls_per_run:
             log.warning("LLM call cap reached (%d); skipping", self.cfg.llm.max_calls_per_run)
-            return {}
+            return {}, []
 
         payload = {
             "model": model_used,
@@ -103,8 +132,16 @@ class LLMClient:
         except json.JSONDecodeError as e:
             raise LLMError(f"non-JSON response: {content[:400]}") from e
 
-        path.write_text(json.dumps(parsed, ensure_ascii=False, indent=2), encoding="utf-8")
-        return parsed
+        citations = _extract_citations(data)
+        path.write_text(
+            json.dumps(
+                {"__payload": parsed, "__citations": citations},
+                ensure_ascii=False,
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+        return parsed, citations
 
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=2, max=20), reraise=True)
     def _post(self, payload: dict) -> dict[str, Any]:
@@ -120,3 +157,48 @@ class LLMClient:
         if resp.status_code >= 400:
             raise LLMError(f"OpenRouter HTTP {resp.status_code}: {resp.text[:400]}")
         return resp.json()
+
+
+def _extract_citations(data: dict[str, Any]) -> list[str]:
+    """Pull citation URLs out of an OpenRouter response.
+
+    OpenRouter passes Perplexity Sonar citations through in two shapes:
+    `data["citations"]` (list of URLs) and per-message annotations
+    (`data["choices"][i]["message"]["annotations"]`, where each annotation
+    of type `url_citation` carries a `url` field). We accept both, dedupe,
+    and return only http(s) URLs in encounter order.
+    """
+    seen: set[str] = set()
+    out: list[str] = []
+
+    def _add(value: Any) -> None:
+        if not isinstance(value, str):
+            return
+        v = value.strip()
+        if not v or not v.lower().startswith(("http://", "https://")):
+            return
+        if v in seen:
+            return
+        seen.add(v)
+        out.append(v)
+
+    # Top-level citations (list of URLs or list of {url, ...} dicts)
+    for item in data.get("citations") or []:
+        if isinstance(item, str):
+            _add(item)
+        elif isinstance(item, dict):
+            _add(item.get("url"))
+
+    # Per-message annotations
+    for choice in data.get("choices") or []:
+        msg = choice.get("message") if isinstance(choice, dict) else None
+        if not isinstance(msg, dict):
+            continue
+        for ann in msg.get("annotations") or []:
+            if not isinstance(ann, dict):
+                continue
+            if ann.get("type") not in (None, "url_citation"):
+                continue
+            cite = ann.get("url_citation") if isinstance(ann.get("url_citation"), dict) else ann
+            _add(cite.get("url"))
+    return out

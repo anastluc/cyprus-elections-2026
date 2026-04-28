@@ -39,10 +39,13 @@ export function CandidateProfile({ data }: { data: Dataset }) {
   if (!candidate) {
     return (
       <div className="card">
-        <h2 className="text-lg font-semibold text-white">No candidate selected</h2>
+        <h2 className="text-lg font-semibold text-white">
+          {profileId !== null ? `Candidate #${profileId} not found` : 'No candidate selected'}
+        </h2>
         <p className="mt-2 text-sm text-slate-400">
-          Profiles open from the Highlights cards, Explorer rows, or any spot where you click a
-          candidate name.
+          {profileId !== null
+            ? 'The link may be out of date or the candidate was removed from the dataset.'
+            : 'Profiles open from the Highlights cards, Explorer rows, or any spot where you click a candidate name.'}
         </p>
       </div>
     );
@@ -212,19 +215,32 @@ export function CandidateProfile({ data }: { data: Dataset }) {
                 All sources
               </h2>
               <ul className="space-y-1 text-xs">
-                {candidate.sources.map((s, i) => (
-                  <li key={i}>
-                    <a
-                      href={s}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 break-all text-brand-300 hover:text-brand-200"
-                    >
-                      {s}
-                      <ExternalLink className="h-3 w-3 flex-none" />
-                    </a>
-                  </li>
-                ))}
+                {candidate.sources.map((s, i) => {
+                  const linkable = /^https?:\/\//i.test(s);
+                  if (!linkable) {
+                    return (
+                      <li key={i} className="break-all text-slate-400">
+                        {s}{' '}
+                        <span className="text-[10px] uppercase tracking-wide text-slate-500">
+                          (internal)
+                        </span>
+                      </li>
+                    );
+                  }
+                  return (
+                    <li key={i}>
+                      <a
+                        href={s}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 break-all text-brand-300 hover:text-brand-200"
+                      >
+                        {s}
+                        <ExternalLink className="h-3 w-3 flex-none" />
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ) : null}

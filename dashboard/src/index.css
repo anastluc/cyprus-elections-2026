@@ -22,9 +22,62 @@
   --color-ink-600: #1a2444;
 }
 
-:root {
+:root,
+[data-theme="dark"] {
   color-scheme: dark;
   --radius: 0.9rem;
+
+  --bg-base: #020617;
+  --bg-glow-1: rgba(99, 102, 241, 0.22);
+  --bg-glow-2: rgba(244, 63, 94, 0.18);
+
+  --surface-bg: rgba(255, 255, 255, 0.04);
+  --surface-bg-strong: rgba(255, 255, 255, 0.06);
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --surface-border-strong: rgba(255, 255, 255, 0.10);
+  --hairline: rgba(255, 255, 255, 0.12);
+
+  --text-strong: #ffffff;
+  --text-100: #f1f5f9;
+  --text-200: #e2e8f0;
+  --text-300: #cbd5e1;
+  --text-400: #94a3b8;
+  --text-500: #64748b;
+
+  --tint-soft: rgba(255, 255, 255, 0.05);
+  --tint-medium: rgba(255, 255, 255, 0.08);
+  --tint-strong: rgba(255, 255, 255, 0.10);
+
+  --tooltip-bg: rgba(11, 18, 36, 0.95);
+  --tooltip-text: #e2e8f0;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg-base: #f8fafc;
+  --bg-glow-1: rgba(99, 102, 241, 0.10);
+  --bg-glow-2: rgba(244, 63, 94, 0.08);
+
+  --surface-bg: rgba(255, 255, 255, 0.85);
+  --surface-bg-strong: rgba(255, 255, 255, 0.95);
+  --surface-border: rgba(15, 23, 42, 0.10);
+  --surface-border-strong: rgba(15, 23, 42, 0.14);
+  --hairline: rgba(15, 23, 42, 0.14);
+
+  --text-strong: #0f172a;
+  --text-100: #1e293b;
+  --text-200: #334155;
+  --text-300: #475569;
+  --text-400: #64748b;
+  --text-500: #94a3b8;
+
+  --tint-soft: rgba(15, 23, 42, 0.04);
+  --tint-medium: rgba(15, 23, 42, 0.06);
+  --tint-strong: rgba(15, 23, 42, 0.10);
+
+  --tooltip-bg: rgba(255, 255, 255, 0.98);
+  --tooltip-text: #0f172a;
 }
 
 html, body, #root {
@@ -33,11 +86,129 @@ html, body, #root {
 
 body {
   background:
-    radial-gradient(ellipse 80% 60% at 12% -10%, rgba(99, 102, 241, 0.22), transparent 60%),
-    radial-gradient(ellipse 70% 60% at 100% 110%, rgba(244, 63, 94, 0.18), transparent 60%),
-    #020617;
+    radial-gradient(ellipse 80% 60% at 12% -10%, var(--bg-glow-1), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 100% 110%, var(--bg-glow-2), transparent 60%),
+    var(--bg-base);
   background-attachment: fixed;
   font-feature-settings: "cv11", "ss01", "ss02";
+  color: var(--text-200);
+}
+
+/* Light-theme overrides for the most common Tailwind surface/text utilities.
+   This is a pragmatic theming layer — components use hardcoded slate/white
+   classes; remapping via these overrides is easier than refactoring each one. */
+[data-theme="light"] .text-white { color: var(--text-strong) !important; }
+[data-theme="light"] .text-slate-100 { color: var(--text-100) !important; }
+[data-theme="light"] .text-slate-200 { color: var(--text-200) !important; }
+[data-theme="light"] .text-slate-300 { color: var(--text-300) !important; }
+[data-theme="light"] .text-slate-400 { color: var(--text-400) !important; }
+[data-theme="light"] .text-slate-500 { color: var(--text-500) !important; }
+
+[data-theme="light"] .bg-white\/\[0\.03\],
+[data-theme="light"] .bg-white\/5 { background-color: var(--tint-soft) !important; }
+[data-theme="light"] .bg-white\/\[0\.04\] { background-color: var(--tint-soft) !important; }
+[data-theme="light"] .bg-white\/10 { background-color: var(--tint-medium) !important; }
+
+[data-theme="light"] .border-white\/5,
+[data-theme="light"] .border-white\/10 { border-color: var(--surface-border) !important; }
+[data-theme="light"] .border-white\/20 { border-color: var(--surface-border-strong) !important; }
+
+[data-theme="light"] .bg-slate-950\/85 { background-color: rgba(248, 250, 252, 0.92) !important; }
+[data-theme="light"] .border-t.border-white\/5,
+[data-theme="light"] .border-t.border-white\/10 { border-top-color: var(--surface-border) !important; }
+
+/* Hover states — keep them visible against light surfaces */
+[data-theme="light"] .hover\:bg-white\/5:hover,
+[data-theme="light"] .hover\:bg-white\/\[0\.04\]:hover { background-color: var(--tint-soft) !important; }
+[data-theme="light"] .hover\:bg-white\/10:hover { background-color: var(--tint-medium) !important; }
+
+/* Brand / accent text colors — the dark-mode tints are too pale on white */
+[data-theme="light"] .text-brand-100,
+[data-theme="light"] .text-brand-200,
+[data-theme="light"] .text-brand-300 { color: #4338ca !important; }
+[data-theme="light"] .text-brand-400 { color: #4f46e5 !important; }
+
+[data-theme="light"] .text-amber-100,
+[data-theme="light"] .text-amber-200,
+[data-theme="light"] .text-amber-300 { color: #92400e !important; }
+
+[data-theme="light"] .text-rose-100,
+[data-theme="light"] .text-rose-200 { color: #9f1239 !important; }
+
+[data-theme="light"] .text-emerald-200,
+[data-theme="light"] .text-emerald-300 { color: #047857 !important; }
+
+/* Gradient text — barely visible on white. Switch to a deeper gradient */
+[data-theme="light"] .gradient-text {
+  background: linear-gradient(110deg, #4338ca 0%, #be185d 50%, #b91c1c 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Disclaimer banner: amber-200 text on amber-500/15 bg is too light */
+[data-theme="light"] .from-amber-500\/15 { --tw-gradient-from: rgba(245, 158, 11, 0.20) !important; }
+[data-theme="light"] .via-rose-500\/10 { --tw-gradient-via: rgba(244, 63, 94, 0.15) !important; }
+[data-theme="light"] .to-indigo-500\/15 { --tw-gradient-to: rgba(99, 102, 241, 0.18) !important; }
+
+[data-theme="light"] .border-amber-400\/30 { border-color: rgba(180, 83, 9, 0.35) !important; }
+[data-theme="light"] .bg-amber-500\/10 { background-color: rgba(245, 158, 11, 0.18) !important; }
+[data-theme="light"] .bg-amber-500\/20 { background-color: rgba(245, 158, 11, 0.28) !important; }
+[data-theme="light"] .border-rose-500\/30 { border-color: rgba(159, 18, 57, 0.4) !important; }
+[data-theme="light"] .bg-rose-500\/10 { background-color: rgba(244, 63, 94, 0.12) !important; }
+
+/* Brand chips (countdown, KPI accents) */
+[data-theme="light"] .border-brand-500\/30 { border-color: rgba(67, 56, 202, 0.35) !important; }
+[data-theme="light"] .bg-brand-500\/10 { background-color: rgba(99, 102, 241, 0.12) !important; }
+[data-theme="light"] .bg-brand-400\/10 { background-color: rgba(99, 102, 241, 0.10) !important; }
+
+/* Sidebar / nav: hover/active gradient backgrounds */
+[data-theme="light"] .from-brand-500\/30 { --tw-gradient-from: rgba(67, 56, 202, 0.18) !important; }
+[data-theme="light"] .to-fuchsia-500\/10 { --tw-gradient-to: rgba(217, 70, 239, 0.14) !important; }
+
+/* Active sidebar item — was white text on a light gradient. Force dark text. */
+[data-theme="light"] aside button.bg-gradient-to-r.from-brand-500\/30 { color: #1e1b4b !important; }
+[data-theme="light"] aside button.bg-gradient-to-r .text-brand-200 { color: #4338ca !important; }
+
+/* Predict CTA: white text on purple gradient stays fine, but the glow shadow
+   needs softening so it doesn't bleed into white surroundings. */
+[data-theme="light"] .predict-glow {
+  filter: drop-shadow(0 6px 16px rgba(168, 85, 247, 0.28));
+  animation: none;
+}
+
+/* Predict-card panel uses translucent white-on-white in light mode */
+[data-theme="light"] .predict-card {
+  background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.06), rgba(244,63,94,0.06)),
+              rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(168, 85, 247, 0.35) !important;
+}
+
+/* Range slider track — white/8 is invisible on white */
+[data-theme="light"] input[type="range"].party-slider {
+  background: rgba(15, 23, 42, 0.10) !important;
+}
+
+/* KBD chips */
+[data-theme="light"] .bg-white\/\[0\.06\] { background-color: var(--tint-medium) !important; }
+
+/* Provenance pill: hover state */
+[data-theme="light"] .hover\:border-brand-400\/40:hover { border-color: rgba(67, 56, 202, 0.45) !important; }
+[data-theme="light"] .hover\:bg-brand-400\/10:hover { background-color: rgba(67, 56, 202, 0.10) !important; }
+[data-theme="light"] .hover\:text-brand-100:hover,
+[data-theme="light"] .hover\:text-brand-200:hover { color: #312e81 !important; }
+
+/* Various explicit slate utilities used as headings / values */
+[data-theme="light"] .text-slate-600 { color: #475569 !important; }
+[data-theme="light"] .text-slate-700 { color: #334155 !important; }
+
+/* "share-btn-copy" needs a darker label on its now-darker bg */
+[data-theme="light"] .share-btn-copy { color: #334155 !important; background: rgba(15,23,42,0.06) !important; }
+[data-theme="light"] .share-btn-copy:hover { background: rgba(15,23,42,0.10) !important; }
+
+/* Mobile bottom nav background */
+[data-theme="light"] .bg-slate-950\/85.backdrop-blur-md {
+  background-color: rgba(248, 250, 252, 0.92) !important;
 }
 
 *::-webkit-scrollbar { width: 10px; height: 10px; }
@@ -49,22 +220,22 @@ body {
 *::-webkit-scrollbar-thumb:hover { background: rgba(148, 163, 184, 0.45); }
 
 @utility glass {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-bg);
+  border: 1px solid var(--surface-border);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 @utility glass-strong {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface-bg-strong);
+  border: 1px solid var(--surface-border-strong);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
 @utility card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-bg);
+  border: 1px solid var(--surface-border);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 1rem;
@@ -75,16 +246,16 @@ body {
   display: inline-flex;
   align-items: center;
   border-radius: 0.375rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--surface-border-strong);
+  background: var(--tint-soft);
   padding: 0.125rem 0.375rem;
   font-family: var(--font-mono);
   font-size: 10px;
-  color: #cbd5e1;
+  color: var(--text-300);
 }
 
 .hairline {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12) 50%, transparent);
+  background: linear-gradient(90deg, transparent, var(--hairline) 50%, transparent);
   height: 1px;
 }
 

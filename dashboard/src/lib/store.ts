@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { candidatePath } from './utils';
 
 export type Section =
   | 'overview'
@@ -69,6 +70,7 @@ export const useFilters = create<FilterState>((set) => ({
 }));
 
 export type Locale = 'en' | 'gr';
+export type Theme = 'dark' | 'light';
 
 export interface UIState {
   disclaimerDismissed: boolean;
@@ -77,14 +79,18 @@ export interface UIState {
   activeSection: Section;
   setActiveSection: (s: Section) => void;
   profileCandidateId: number | null;
-  openProfile: (id: number) => void;
+  openProfile: (id: number, name?: { name_en?: string; name_gr?: string }) => void;
   closeProfile: () => void;
   locale: Locale;
   setLocale: (l: Locale) => void;
+  theme: Theme;
+  setTheme: (t: Theme) => void;
+  toggleTheme: () => void;
 }
 
 const DISCLAIMER_KEY = 'cy2026-disclaimer-dismissed';
 const LOCALE_KEY = 'cy2026-locale';
+const THEME_KEY = 'cy2026-theme';
 
 function initialLocale(): Locale {
   if (typeof window === 'undefined') return 'en';
@@ -92,6 +98,19 @@ function initialLocale(): Locale {
   if (stored === 'en' || stored === 'gr') return stored;
   const nav = window.navigator.language?.toLowerCase() ?? '';
   return nav.startsWith('el') ? 'gr' : 'en';
+}
+
+function initialTheme(): Theme {
+  if (typeof window === 'undefined') return 'dark';
+  const stored = window.localStorage.getItem(THEME_KEY);
+  if (stored === 'light' || stored === 'dark') return stored;
+  const prefersLight = window.matchMedia?.('(prefers-color-scheme: light)').matches;
+  return prefersLight ? 'light' : 'dark';
+}
+
+function applyTheme(theme: Theme) {
+  if (typeof document === 'undefined') return;
+  document.documentElement.dataset.theme = theme;
 }
 
 export const useUI = create<UIState>((set) => ({
@@ -113,14 +132,50 @@ export const useUI = create<UIState>((set) => ({
   activeSection: 'overview',
   setActiveSection: (activeSection) => set({ activeSection }),
   profileCandidateId: null,
-  openProfile: (profileCandidateId) =>
-    set({ profileCandidateId, activeSection: 'profile' }),
-  closeProfile: () => set({ profileCandidateId: null }),
+  openProfile: (profileCandidateId, name) => {
+    if (typeof window !== 'undefined') {
+      const target = candidatePath(profileCandidateId, name?.name_en, name?.name_gr);
+      if (window.location.pathname !== target) {
+        try {
+          window.history.pushState(null, '', target);
+        } catch {}
+      }
+    }
+    set({ profileCandidateId, activeSection: 'profile' });
+  },
+  closeProfile: () => {
+    if (typeof window !== 'undefined' && /^\/candidate\//i.test(window.location.pathname)) {
+      try {
+        window.history.pushState(null, '', '/');
+      } catch {}
+    }
+    set({ profileCandidateId: null });
+  },
   locale: initialLocale(),
   setLocale: (locale) => {
     try {
       window.localStorage.setItem(LOCALE_KEY, locale);
     } catch {}
     set({ locale });
+  },
+  theme: (() => {
+    const t = initialTheme();
+    applyTheme(t);
+    return t;
+  })(),
+  setTheme: (theme) => {
+    try {
+      window.localStorage.setItem(THEME_KEY, theme);
+    } catch {}
+    applyTheme(theme);
+    set({ theme });
+  },
+  toggleTheme: () => {
+    const next: Theme = useUI.getState().theme === 'dark' ? 'light' : 'dark';
+    try {
+      window.localStorage.setItem(THEME_KEY, next);
+    } catch {}
+    applyTheme(next);
+    set({ theme: next });
   },
 }));

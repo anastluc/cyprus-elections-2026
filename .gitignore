@@ -12,6 +12,7 @@ build/
 data/raw/**
 data/processed/**
 data/exports/**
+data/logs/**
 data/*.db
 data/*.db-journal
 data/*.db-wal
@@ -21,3 +22,6 @@ data/*.db-shm
 !data/exports/.gitkeep
 
 .certs
+
+# Local agent config
+.claude/

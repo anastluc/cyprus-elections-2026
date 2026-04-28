@@ -13,6 +13,7 @@ export const PARTY_COLOURS: Record<string, string> = {
   SP: '#718096',
   ALLIL: '#9f7aea',
   IND: '#a0aec0',
+  OTHER: '#94a3b8',
 };
 
 export const PARTY_LABELS: Record<string, string> = {
@@ -30,6 +31,7 @@ export const PARTY_LABELS: Record<string, string> = {
   SP: 'Sol. Mov.',
   ALLIL: 'Alliance',
   IND: 'Independent',
+  OTHER: 'Other',
 };
 
 export const PARTY_FULL_NAMES: Record<string, string> = {
@@ -47,6 +49,7 @@ export const PARTY_FULL_NAMES: Record<string, string> = {
   SP: 'Solidarity Movement (defunct)',
   ALLIL: "Citizens' Alliance (defunct)",
   IND: 'Independent candidate',
+  OTHER: 'Other parties / independents',
 };
 
 export const PARTY_FULL_NAMES_GR: Record<string, string> = {
@@ -64,6 +67,7 @@ export const PARTY_FULL_NAMES_GR: Record<string, string> = {
   SP: 'Κίνημα Αλληλεγγύη (ανενεργό)',
   ALLIL: 'Συμμαχία Πολιτών (ανενεργό)',
   IND: 'Ανεξάρτητος υποψήφιος',
+  OTHER: 'Άλλα κόμματα / ανεξάρτητοι',
 };
 
 export const PARTY_LABELS_GR: Record<string, string> = {
@@ -81,6 +85,7 @@ export const PARTY_LABELS_GR: Record<string, string> = {
   SP: 'Αλληλεγγύη',
   ALLIL: 'Συμμαχία',
   IND: 'Ανεξάρτητος',
+  OTHER: 'Άλλο',
 };
 
 export const PARTY_ORDER = [
@@ -100,9 +105,10 @@ export const PARTY_ORDER = [
   'IND',
 ];
 
-// Parties actually contesting the 2026 election (mirrors config/parties.yaml).
-// Used by the Predict page so users don't pick defunct parties (EVROKO, SP,
-// ALLIL) or "Independent" as a vote-share bucket.
+// Parties actually contesting the 2026 election (mirrors config/parties.yaml),
+// plus an "Other" bucket for independents / smaller parties so the slider
+// totals can reach 100 % without forcing users to dump residuals into a real
+// party. Used by the Predict page.
 export const PREDICT_PARTY_ORDER = [
   'AKEL',
   'DISY',
@@ -114,6 +120,7 @@ export const PREDICT_PARTY_ORDER = [
   'ALMA',
   'ADEM',
   'EDEK',
+  'OTHER',
 ];
 
 export const DISTRICT_LABELS: Record<string, string> = {
@@ -203,24 +210,24 @@ export function clusterColour(name: string): string {
 
 export const NIVO_THEME = {
   background: 'transparent',
-  text: { fill: '#cbd5e1', fontFamily: 'Inter, sans-serif', fontSize: 12 },
+  text: { fill: 'var(--text-300)', fontFamily: 'Inter, sans-serif', fontSize: 12 },
   axis: {
-    domain: { line: { stroke: 'rgba(255,255,255,0.08)' } },
+    domain: { line: { stroke: 'var(--surface-border)' } },
     ticks: {
-      line: { stroke: 'rgba(255,255,255,0.08)' },
-      text: { fill: '#94a3b8', fontSize: 11 },
+      line: { stroke: 'var(--surface-border)' },
+      text: { fill: 'var(--text-400)', fontSize: 11 },
     },
-    legend: { text: { fill: '#cbd5e1', fontSize: 12 } },
+    legend: { text: { fill: 'var(--text-300)', fontSize: 12 } },
   },
-  grid: { line: { stroke: 'rgba(255,255,255,0.05)' } },
-  legends: { text: { fill: '#cbd5e1' } },
+  grid: { line: { stroke: 'var(--tint-soft)' } },
+  legends: { text: { fill: 'var(--text-300)' } },
   tooltip: {
     container: {
-      background: 'rgba(11, 18, 36, 0.95)',
-      color: '#e2e8f0',
+      background: 'var(--tooltip-bg)',
+      color: 'var(--tooltip-text)',
       fontSize: 12,
       borderRadius: 10,
-      border: '1px solid rgba(255,255,255,0.08)',
+      border: '1px solid var(--surface-border)',
       padding: '8px 10px',
     },
   },

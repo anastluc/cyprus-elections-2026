@@ -13,6 +13,17 @@ export const PARTY_COLOURS: Record<string, string> = {
   SP: '#718096',
   ALLIL: '#9f7aea',
   IND: '#a0aec0',
+  // Minor 2026-only entrants (philenews 753 roster)
+  AGRO: '#a16207',
+  AKRO: '#991b1b',
+  DALL: '#0d9488',
+  DEK: '#4338ca',
+  ENPK: '#65a30d',
+  LAEL: '#7f1d1d',
+  PMLAK: '#b45309',
+  SIKOU: '#84cc16',
+  PRAS: '#166534',
+  INDEP: '#64748b',
   OTHER: '#94a3b8',
 };
 
@@ -31,6 +42,16 @@ export const PARTY_LABELS: Record<string, string> = {
   SP: 'Sol. Mov.',
   ALLIL: 'Alliance',
   IND: 'Independent',
+  AGRO: 'Agronomos',
+  AKRO: 'AKRO',
+  DALL: 'Dem. Change',
+  DEK: 'DEK',
+  ENPK: 'Hunters',
+  LAEL: 'LAEL',
+  PMLAK: 'Lakedaim.',
+  SIKOU: 'Stand Up',
+  PRAS: 'Greens CY',
+  INDEP: 'Independents',
   OTHER: 'Other',
 };
 
@@ -44,11 +65,21 @@ export const PARTY_FULL_NAMES: Record<string, string> = {
   DIPA: 'Democratic Alignment',
   VOLT: 'Volt Cyprus',
   ALMA: 'ALMA – Citizens for Cyprus',
-  ADEM: 'ADEM',
+  ADEM: 'Direct Democracy',
   EVROKO: 'European Party (defunct, 2005–2017)',
   SP: 'Solidarity Movement (defunct)',
   ALLIL: "Citizens' Alliance (defunct)",
   IND: 'Independent candidate',
+  AGRO: 'Agronomos – Agricultural Workers Party',
+  AKRO: 'AKRO – Left Resistance Communism',
+  DALL: 'Democratic Change',
+  DEK: 'Democratic National Movement (DEK)',
+  ENPK: 'Active Citizens – Movement of United Cypriot Hunters',
+  LAEL: 'Popular Struggle Freedom',
+  PMLAK: 'Patriotic Front "Lakedaimonioi"',
+  SIKOU: 'Sikou Pano (Stand Up)',
+  PRAS: 'The Green Party of Cyprus',
+  INDEP: 'Independent Candidates',
   OTHER: 'Other parties / independents',
 };
 
@@ -67,6 +98,16 @@ export const PARTY_FULL_NAMES_GR: Record<string, string> = {
   SP: 'Κίνημα Αλληλεγγύη (ανενεργό)',
   ALLIL: 'Συμμαχία Πολιτών (ανενεργό)',
   IND: 'Ανεξάρτητος υποψήφιος',
+  AGRO: 'Αγρονόμος Αγροτικό Εργατικό Κόμμα',
+  AKRO: 'ΑΚΡΟ – Αριστερή Αντίσταση Κομμουνισμός',
+  DALL: 'Δημοκρατική Αλλαγή',
+  DEK: 'Δημοκρατικό Εθνικό Κίνημα (ΔΕΚ)',
+  ENPK: 'Ενεργοί Πολίτες – Κίνημα Ενωμένων Κυπρίων Κυνηγών',
+  LAEL: 'Λαϊκός Αγώνας Ελευθερία',
+  PMLAK: 'Πατριωτικό Μέτωπο «Λακεδαιμόνιοι»',
+  SIKOU: 'Σήκου Πάνω',
+  PRAS: 'Το Πράσινο Κόμμα της Κύπρου',
+  INDEP: 'Ανεξάρτητοι Υποψήφιοι',
   OTHER: 'Άλλα κόμματα / ανεξάρτητοι',
 };
 
@@ -85,6 +126,16 @@ export const PARTY_LABELS_GR: Record<string, string> = {
   SP: 'Αλληλεγγύη',
   ALLIL: 'Συμμαχία',
   IND: 'Ανεξάρτητος',
+  AGRO: 'Αγρονόμος',
+  AKRO: 'ΑΚΡΟ',
+  DALL: 'ΔΑΛΛ',
+  DEK: 'ΔΕΚ',
+  ENPK: 'Κυνηγοί',
+  LAEL: 'ΛΑΕΛ',
+  PMLAK: 'Λακεδαιμ.',
+  SIKOU: 'Σήκου',
+  PRAS: 'Πράσινοι',
+  INDEP: 'Ανεξάρτητοι',
   OTHER: 'Άλλο',
 };
 
@@ -105,22 +156,35 @@ export const PARTY_ORDER = [
   'IND',
 ];
 
-// Parties actually contesting the 2026 election (mirrors config/parties.yaml),
-// plus an "Other" bucket for independents / smaller parties so the slider
-// totals can reach 100 % without forcing users to dump residuals into a real
-// party. Used by the Predict page.
+// Parties actually contesting the 2026 election (mirrors config/parties.yaml).
+// Includes every party on the philenews 753-candidate roster plus the
+// independents bucket — covers the full ballot so slider totals can reach
+// 100 % without an "Other" residual. Religious-group seats (Maronites,
+// Latins, Armenians) are elected separately and excluded. Used by Predict.
 export const PREDICT_PARTY_ORDER = [
+  // Established parliamentary parties
   'AKEL',
   'DISY',
   'DIKO',
   'ELAM',
   'KOSP',
   'DIPA',
+  'EDEK',
   'VOLT',
   'ALMA',
   'ADEM',
-  'EDEK',
-  'OTHER',
+  // 2026 minor entrants (philenews roster)
+  'AGRO',
+  'AKRO',
+  'DALL',
+  'DEK',
+  'ENPK',
+  'LAEL',
+  'PMLAK',
+  'SIKOU',
+  'PRAS',
+  // Independents
+  'INDEP',
 ];
 
 export const DISTRICT_LABELS: Record<string, string> = {

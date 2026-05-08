@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { PARTY_ORDER } from '../lib/theme';
+import { PREDICT_PARTY_ORDER } from '../lib/theme';
 import { savePredictionToFirebase, loadPredictionFromFirebase } from '../lib/firebase';
 
 /* ─── Types ─── */
@@ -99,7 +99,7 @@ export function getShareUrl(p: Prediction): string {
 /* ─── Default party percentages ─── */
 function emptyPartyPcts(): Record<string, number> {
   const pcts: Record<string, number> = {};
-  for (const code of PARTY_ORDER) pcts[code] = 0;
+  for (const code of PREDICT_PARTY_ORDER) pcts[code] = 0;
   return pcts;
 }
 

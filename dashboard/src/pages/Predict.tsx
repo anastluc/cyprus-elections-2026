@@ -163,7 +163,7 @@ export function Predict({ data: _data }: { data: Dataset }) {
           <h3 className="text-lg font-bold text-white">{t('predict_party_pcts_title')}</h3>
           <TotalBadge remaining={remaining} isValid={isValid} />
         </div>
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {PREDICT_PARTY_ORDER.map((code) => (
             <PartySlider
               key={code}
@@ -261,7 +261,7 @@ function PartySlider({ code, value, onChange }: { code: string; value: number; o
   const color = partyColour(code);
   return (
     <div className="flex items-center gap-3 rounded-xl border border-white/[0.06] bg-white/[0.02] px-3 py-2">
-      <div className="w-16 flex-none">
+      <div className="flex w-22 flex-none justify-start">
         <PartyBadge code={code} size="sm" />
       </div>
       <input

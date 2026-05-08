@@ -101,11 +101,10 @@ function initialLocale(): Locale {
 }
 
 function initialTheme(): Theme {
-  if (typeof window === 'undefined') return 'dark';
+  if (typeof window === 'undefined') return 'light';
   const stored = window.localStorage.getItem(THEME_KEY);
   if (stored === 'light' || stored === 'dark') return stored;
-  const prefersLight = window.matchMedia?.('(prefers-color-scheme: light)').matches;
-  return prefersLight ? 'light' : 'dark';
+  return 'light';
 }
 
 function applyTheme(theme: Theme) {

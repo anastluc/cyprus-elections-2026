@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-27T10:04:00.369252Z",
-  "total_candidates": 544,
-  "total_sources": 8717,
-  "last_ingest_at": "2026-04-27T09:14:36.485775",
+  "generated_at": "2026-05-08T21:16:54.908184Z",
+  "total_candidates": 801,
+  "total_sources": 10946,
+  "last_ingest_at": "2026-05-08T21:14:57.394387",
   "disclaimer": "Some of this data was collected and enriched using automated web scraping and AI language models. Individual values may be incomplete or inaccurate. Every field shows its source URL — please verify before citing.",
   "election_date": "2026-05-24",
   "field_order": [
@@ -29,14 +29,25 @@
   ],
   "party_codes": [
     "ADEM",
+    "AGRO",
     "AKEL",
+    "AKRO",
     "ALMA",
+    "DALL",
+    "DEK",
     "DIKO",
     "DIPA",
     "DISY",
     "EDEK",
     "ELAM",
+    "ENPK",
+    "INDEP",
     "KOSP",
+    "LAEL",
+    "PMLAK",
+    "PRAS",
+    "RELIG",
+    "SIKOU",
     "VOLT"
   ],
   "district_codes": [
@@ -87,6 +98,54 @@
     "ADEM": {
       "en": "Direct Democracy",
       "gr": "Άμεση Δημοκρατία"
+    },
+    "AGRO": {
+      "en": "Agronomos Agricultural Workers Party",
+      "gr": "Αγρονόμος Αγροτικό Εργατικό Κόμμα"
+    },
+    "AKRO": {
+      "en": "AKRO – Left Resistance Communism",
+      "gr": "ΑΚΡΟ – Αριστερή Αντίσταση Κομμουνισμός"
+    },
+    "DALL": {
+      "en": "Democratic Change",
+      "gr": "Δημοκρατική Αλλαγή"
+    },
+    "DEK": {
+      "en": "Democratic National Movement (DEK)",
+      "gr": "Δημοκρατικό Εθνικό Κίνημα (ΔΕΚ)"
+    },
+    "ENPK": {
+      "en": "Active Citizens – Movement of United Cypriot Hunters",
+      "gr": "Ενεργοί Πολίτες – Κίνημα Ενωμένων Κυπρίων Κυνηγών"
+    },
+    "LAEL": {
+      "en": "Popular Struggle Freedom",
+      "gr": "Λαϊκός Αγώνας Ελευθερία"
+    },
+    "PMLAK": {
+      "en": "Patriotic Front \"Lakedaimonioi\"",
+      "gr": "Πατριωτικό Μέτωπο «Λακεδαιμόνιοι»"
+    },
+    "SIKOU": {
+      "en": "Sikou Pano (Stand Up)",
+      "gr": "Σήκου Πάνω"
+    },
+    "PRAS": {
+      "en": "The Green Party of Cyprus",
+      "gr": "Το Πράσινο Κόμμα της Κύπρου"
+    },
+    "INDEP": {
+      "en": "Independent Candidates",
+      "gr": "Ανεξάρτητοι Υποψήφιοι"
+    },
+    "RELIG": {
+      "en": "Religious Groups (Maronites, Latins, Armenians)",
+      "gr": "Θρησκευτικές Ομάδες (Μαρωνίτες, Λατίνοι, Αρμένιοι)"
+    },
+    "PHILENEWS": {
+      "en": "Philenews — Official 753-candidate roster",
+      "gr": "Philenews — Επίσημη λίστα 753 υποψηφίων"
     },
     "NEWS": {
       "en": "News aggregators",

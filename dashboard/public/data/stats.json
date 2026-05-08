@@ -1,119 +1,131 @@
 {
-  "total_candidates": 544,
+  "total_candidates": 801,
   "coverage": {
-    "profession_cluster": {
-      "count": 268,
-      "percentage": 49.3
-    },
-    "name_en": {
-      "count": 0,
-      "percentage": 0.0
-    },
-    "education": {
-      "count": 256,
-      "percentage": 47.1
-    },
-    "twitter": {
-      "count": 31,
-      "percentage": 5.7
-    },
-    "linkedin": {
-      "count": 41,
-      "percentage": 7.5
-    },
-    "wikidata_qid": {
-      "count": 6,
-      "percentage": 1.1
-    },
-    "wikipedia": {
-      "count": 7,
-      "percentage": 1.3
-    },
-    "cv_text": {
-      "count": 2,
-      "percentage": 0.4
+    "gender": {
+      "count": 765,
+      "percentage": 95.5
     },
     "highlights": {
       "count": 410,
-      "percentage": 75.4
+      "percentage": 51.2
     },
-    "facebook": {
-      "count": 58,
-      "percentage": 10.7
+    "profession_cluster": {
+      "count": 268,
+      "percentage": 33.5
     },
     "instagram": {
       "count": 52,
-      "percentage": 9.6
+      "percentage": 6.5
     },
-    "website": {
-      "count": 267,
-      "percentage": 49.1
+    "age": {
+      "count": 142,
+      "percentage": 17.7
+    },
+    "profession": {
+      "count": 454,
+      "percentage": 56.7
     },
     "sector": {
       "count": 461,
-      "percentage": 84.7
-    },
-    "photo_url": {
-      "count": 57,
-      "percentage": 10.5
+      "percentage": 57.6
     },
     "name_gr": {
       "count": 0,
       "percentage": 0.0
     },
-    "age": {
-      "count": 142,
-      "percentage": 26.1
+    "wikipedia": {
+      "count": 7,
+      "percentage": 0.9
     },
-    "cv_url": {
-      "count": 6,
-      "percentage": 1.1
+    "facebook": {
+      "count": 58,
+      "percentage": 7.2
     },
-    "bio_text": {
-      "count": 483,
-      "percentage": 88.8
-    },
-    "career_previous": {
-      "count": 324,
-      "percentage": 59.6
+    "education": {
+      "count": 256,
+      "percentage": 32.0
     },
     "date_of_birth": {
       "count": 177,
-      "percentage": 32.5
+      "percentage": 22.1
     },
-    "gender": {
-      "count": 543,
-      "percentage": 99.8
+    "name_en": {
+      "count": 0,
+      "percentage": 0.0
     },
-    "profession": {
-      "count": 445,
-      "percentage": 81.8
+    "bio_text": {
+      "count": 796,
+      "percentage": 99.4
+    },
+    "photo_url": {
+      "count": 57,
+      "percentage": 7.1
+    },
+    "wikidata_qid": {
+      "count": 6,
+      "percentage": 0.7
+    },
+    "linkedin": {
+      "count": 41,
+      "percentage": 5.1
+    },
+    "career_previous": {
+      "count": 324,
+      "percentage": 40.4
+    },
+    "website": {
+      "count": 267,
+      "percentage": 33.3
+    },
+    "twitter": {
+      "count": 31,
+      "percentage": 3.9
+    },
+    "cv_text": {
+      "count": 2,
+      "percentage": 0.2
+    },
+    "cv_url": {
+      "count": 6,
+      "percentage": 0.7
     }
   },
   "by_party": {
-    "ADEM": 56,
-    "AKEL": 56,
-    "ALMA": 51,
-    "DIKO": 56,
-    "DIPA": 58,
-    "DISY": 57,
-    "EDEK": 50,
-    "ELAM": 47,
-    "KOSP": 57,
-    "VOLT": 56
+    "ADEM": 58,
+    "AGRO": 23,
+    "AKEL": 63,
+    "AKRO": 1,
+    "ALMA": 67,
+    "DALL": 7,
+    "DEK": 32,
+    "DIKO": 57,
+    "DIPA": 63,
+    "DISY": 58,
+    "EDEK": 60,
+    "ELAM": 58,
+    "ENPK": 55,
+    "INDEP": 9,
+    "KOSP": 61,
+    "LAEL": 1,
+    "PMLAK": 11,
+    "PRAS": 14,
+    "RELIG": 4,
+    "SIKOU": 41,
+    "VOLT": 58
   },
   "by_district": {
-    "FAM": 103,
-    "KYR": 29,
-    "LAR": 55,
-    "LIM": 120,
-    "NIC": 188,
-    "PAF": 49
+    "FAM": 148,
+    "KYR": 47,
+    "LAR": 79,
+    "LIM": 179,
+    "NIC": 273,
+    "PAF": 71,
+    "UNKNOWN": 4
   },
   "by_gender": {
-    "M": 372,
-    "F": 171,
-    "?": 1
+    "M": 444,
+    "F": 321,
+    "?": 36
   },
   "by_cluster": {
     "Law": 33,
@@ -174,14 +186,25 @@
     ],
     "parties": [
       "ADEM",
+      "AGRO",
       "AKEL",
+      "AKRO",
       "ALMA",
+      "DALL",
+      "DEK",
       "DIKO",
       "DIPA",
       "DISY",
       "EDEK",
       "ELAM",
+      "ENPK",
+      "INDEP",
       "KOSP",
+      "LAEL",
+      "PMLAK",
+      "PRAS",
+      "RELIG",
+      "SIKOU",
       "VOLT"
     ],
     "matrix": {
@@ -233,16 +256,27 @@
       }
     },
     "party_totals": {
-      "ADEM": 56,
-      "AKEL": 56,
-      "ALMA": 51,
-      "DIKO": 56,
-      "DIPA": 58,
-      "DISY": 57,
-      "EDEK": 50,
-      "ELAM": 47,
-      "KOSP": 57,
-      "VOLT": 56
+      "ADEM": 58,
+      "AGRO": 23,
+      "AKEL": 63,
+      "AKRO": 1,
+      "ALMA": 67,
+      "DALL": 7,
+      "DEK": 32,
+      "DIKO": 57,
+      "DIPA": 63,
+      "DISY": 58,
+      "EDEK": 60,
+      "ELAM": 58,
+      "ENPK": 55,
+      "INDEP": 9,
+      "KOSP": 61,
+      "LAEL": 1,
+      "PMLAK": 11,
+      "PRAS": 14,
+      "RELIG": 4,
+      "SIKOU": 41,
+      "VOLT": 58
     }
   },
   "avg_age_by_party": {
@@ -251,7 +285,7 @@
     "ALMA": 50.8,
     "DIKO": 49.1,
     "DIPA": 47.4,
-    "DISY": 47.8,
+    "DISY": 47.9,
     "EDEK": 45.5,
     "ELAM": 42.8,
     "KOSP": 49.2,
@@ -260,78 +294,147 @@
   "district_party_matrix": {
     "ADEM": {
       "FAM": 11,
-      "KYR": 3,
+      "KYR": 4,
       "LAR": 6,
       "LIM": 12,
       "NIC": 19,
-      "PAF": 5
+      "PAF": 6
+    },
+    "AGRO": {
+      "FAM": 2,
+      "KYR": 1,
+      "LAR": 2,
+      "LIM": 12,
+      "NIC": 4,
+      "PAF": 2
     },
     "AKEL": {
-      "FAM": 11,
+      "FAM": 12,
       "KYR": 3,
-      "LAR": 6,
-      "LIM": 12,
-      "NIC": 19,
+      "LAR": 7,
+      "LIM": 14,
+      "NIC": 22,
       "PAF": 5
     },
+    "AKRO": {
+      "NIC": 1
+    },
     "ALMA": {
-      "FAM": 5,
-      "KYR": 4,
-      "LAR": 7,
-      "LIM": 12,
-      "NIC": 19,
-      "PAF": 4
+      "FAM": 12,
+      "KYR": 5,
+      "LAR": 8,
+      "LIM": 15,
+      "NIC": 21,
+      "PAF": 6
+    },
+    "DALL": {
+      "FAM": 1,
+      "KYR": 1,
+      "LIM": 3,
+      "NIC": 2
+    },
+    "DEK": {
+      "FAM": 6,
+      "KYR": 2,
+      "LAR": 3,
+      "LIM": 7,
+      "NIC": 11,
+      "PAF": 3
     },
     "DIKO": {
       "FAM": 11,
       "KYR": 3,
       "LAR": 6,
       "LIM": 12,
-      "NIC": 19,
+      "NIC": 20,
       "PAF": 5
     },
     "DIPA": {
-      "FAM": 12,
+      "FAM": 13,
       "KYR": 3,
       "LAR": 6,
-      "LIM": 12,
-      "NIC": 20,
-      "PAF": 5
+      "LIM": 14,
+      "NIC": 21,
+      "PAF": 6
     },
     "DISY": {
       "FAM": 11,
       "KYR": 3,
       "LAR": 6,
-      "LIM": 13,
+      "LIM": 14,
       "NIC": 19,
       "PAF": 5
     },
     "EDEK": {
-      "FAM": 11,
-      "KYR": 3,
-      "LIM": 12,
-      "NIC": 19,
+      "FAM": 12,
+      "KYR": 4,
+      "LAR": 6,
+      "LIM": 13,
+      "NIC": 20,
       "PAF": 5
     },
     "ELAM": {
-      "FAM": 9,
-      "KYR": 1,
-      "LAR": 6,
-      "LIM": 10,
-      "NIC": 16,
-      "PAF": 5
-    },
-    "KOSP": {
       "FAM": 11,
       "KYR": 3,
       "LAR": 6,
-      "LIM": 13,
+      "LIM": 12,
+      "NIC": 21,
+      "PAF": 5
+    },
+    "ENPK": {
+      "FAM": 11,
+      "KYR": 3,
+      "LAR": 6,
+      "LIM": 11,
       "NIC": 19,
       "PAF": 5
     },
+    "INDEP": {
+      "LIM": 3,
+      "NIC": 4,
+      "PAF": 2
+    },
+    "KOSP": {
+      "FAM": 12,
+      "KYR": 4,
+      "LAR": 6,
+      "LIM": 14,
+      "NIC": 20,
+      "PAF": 5
+    },
+    "LAEL": {
+      "FAM": 1
+    },
+    "PMLAK": {
+      "FAM": 1,
+      "KYR": 1,
+      "LAR": 1,
+      "LIM": 2,
+      "NIC": 5,
+      "PAF": 1
+    },
+    "PRAS": {
+      "FAM": 1,
+      "KYR": 1,
+      "LAR": 1,
+      "LIM": 1,
+      "NIC": 9,
+      "PAF": 1
+    },
+    "RELIG": {
+      "UNKNOWN": 4
+    },
+    "SIKOU": {
+      "FAM": 8,
+      "KYR": 2,
+      "LAR": 3,
+      "LIM": 8,
+      "NIC": 16,
+      "PAF": 4
+    },
     "VOLT": {
-      "FAM": 11,
-      "KYR": 3,
+      "FAM": 12,
+      "KYR": 4,
       "LAR": 6,
       "LIM": 12,
       "NIC": 19,
@@ -341,8 +444,8 @@
   "source_kinds": {
     "search_snippet": 5137,
     "party_site": 4630,
+    "news": 4268,
     "llm_from_bio": 1484,
-    "news": 567,
     "wikidata": 12,
     "wikipedia": 7,
     "cv_doc": 4,
@@ -352,17 +455,17 @@
     {
       "label": "low",
       "range": "0.0–0.3",
-      "count": 0
+      "count": 4
     },
     {
       "label": "mid",
       "range": "0.3–0.6",
-      "count": 336
+      "count": 498
     },
     {
       "label": "good",
       "range": "0.6–0.85",
-      "count": 208
+      "count": 299
     },
     {
       "label": "high",

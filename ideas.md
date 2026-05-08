@@ -4,7 +4,7 @@ Have a big "Predict button" on the top that takes you to the Predict page
 
 There you are prompted to give the percentage results of each party
 
-A histogram is created that has a timestamp and a name and can be shared to social media (facebook, X, Linkedin, ) and a permanent link to this prediction. Target is for people to be able to claim (after the elections) here "I told you so"
+A histogram is created that has a timestamp and a name and can be shared to social media (facebook, X, Linkedin, ..) and a permanent link to this prediction. Target is for people to be able to claim (after the elections) here "I told you so"
 
 Leaderboard (after the election results):
 

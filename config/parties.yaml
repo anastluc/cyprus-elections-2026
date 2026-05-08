@@ -136,6 +136,113 @@ parties:
     seed_urls:
       - https://www.offsite.com.cy/eidiseis/politiki/amesi-dimokratia-aytoi-einai-oi-56-ypopsifioi-boyleytes-gia-tis-ekloges
 
+  # New parties / minor combinations that appeared in the official 2026
+  # nomination filing (philenews 753-candidate roster, 6 May 2026). They have
+  # no party website seed URLs — their candidate lists are populated solely
+  # from PHILENEWS below. Listed here so merge can route raw_records to a
+  # known party_code and the dashboard can resolve a label.
+
+  - code: AGRO
+    name_gr: Αγρονόμος Αγροτικό Εργατικό Κόμμα
+    name_en: Agronomos Agricultural Workers Party
+    website: null
+    scraper: noop
+    enabled: true
+    seed_urls: []
+
+  - code: AKRO
+    name_gr: ΑΚΡΟ – Αριστερή Αντίσταση Κομμουνισμός
+    name_en: AKRO – Left Resistance Communism
+    website: null
+    scraper: noop
+    enabled: true
+    seed_urls: []
+
+  - code: DALL
+    name_gr: Δημοκρατική Αλλαγή
+    name_en: Democratic Change
+    website: null
+    scraper: noop
+    enabled: true
+    seed_urls: []
+
+  - code: DEK
+    name_gr: Δημοκρατικό Εθνικό Κίνημα (ΔΕΚ)
+    name_en: Democratic National Movement (DEK)
+    website: null
+    scraper: noop
+    enabled: true
+    seed_urls: []
+
+  - code: ENPK
+    name_gr: Ενεργοί Πολίτες – Κίνημα Ενωμένων Κυπρίων Κυνηγών
+    name_en: Active Citizens – Movement of United Cypriot Hunters
+    website: null
+    scraper: noop
+    enabled: true
+    seed_urls: []
+
+  - code: LAEL
+    name_gr: Λαϊκός Αγώνας Ελευθερία
+    name_en: Popular Struggle Freedom
+    website: null
+    scraper: noop
+    enabled: true
+    seed_urls: []
+
+  - code: PMLAK
+    name_gr: Πατριωτικό Μέτωπο «Λακεδαιμόνιοι»
+    name_en: Patriotic Front "Lakedaimonioi"
+    website: null
+    scraper: noop
+    enabled: true
+    seed_urls: []
+
+  - code: SIKOU
+    name_gr: Σήκου Πάνω
+    name_en: Sikou Pano (Stand Up)
+    website: null
+    scraper: noop
+    enabled: true
+    seed_urls: []
+
+  - code: PRAS
+    name_gr: Το Πράσινο Κόμμα της Κύπρου
+    name_en: The Green Party of Cyprus
+    website: null
+    scraper: noop
+    enabled: true
+    seed_urls: []
+
+  - code: INDEP
+    name_gr: Ανεξάρτητοι Υποψήφιοι
+    name_en: Independent Candidates
+    website: null
+    scraper: noop
+    enabled: true
+    seed_urls: []
+
+  - code: RELIG
+    name_gr: Θρησκευτικές Ομάδες (Μαρωνίτες, Λατίνοι, Αρμένιοι)
+    name_en: Religious Groups (Maronites, Latins, Armenians)
+    website: null
+    scraper: noop
+    enabled: true
+    seed_urls: []
+
+  # Authoritative aggregator: philenews published the full 753-candidate
+  # roster on 6 May 2026 the day after nomination filing closed. This is the
+  # canonical seed for *every* party_code; existing party-site scrapers add
+  # bios/photos/social on top.
+  - code: PHILENEWS
+    name_gr: Philenews — Επίσημη λίστα 753 υποψηφίων
+    name_en: Philenews — Official 753-candidate roster
+    website: https://www.philenews.com
+    scraper: philenews_full
+    enabled: true
+    seed_urls:
+      - https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/
+
   # Pseudo-party covering anyone we miss: a news aggregator that LLM-extracts
   # candidates across parties. Trust is lower (source_kind=news) so party-site
   # values still win in merge.

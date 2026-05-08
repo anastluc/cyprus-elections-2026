@@ -31,7 +31,13 @@ def register(code: str):
 def load_all() -> None:
     """Import every scraper module so its @register runs."""
     # Importing here keeps load_all() import-cheap unless called explicitly.
-    from cyprus_elections.scrapers import akel, llm_generic, volt  # noqa: F401
+    from cyprus_elections.scrapers import (  # noqa: F401
+        akel,
+        llm_generic,
+        noop,
+        philenews_full,
+        volt,
+    )
 
     # Optional future modules — guarded so missing ones don't crash.
     for name in ("official_moi",):

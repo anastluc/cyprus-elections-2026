@@ -207,36 +207,21 @@ def parse_text(text: str) -> list[dict]:
     return out
 
 
-_DISTRICT_LABELS = {
-    "NIC": "Λευκωσία (Nicosia)",
-    "LIM": "Λεμεσός (Limassol)",
-    "LAR": "Λάρνακα (Larnaca)",
-    "PAF": "Πάφος (Paphos)",
-    "FAM": "Αμμόχωστος (Famagusta)",
-    "KYR": "Κερύνεια (Kyrenia)",
-}
-
-
-def _bio_for(item: dict, source_url: str, party_label: str) -> str:
-    """Synoptic-plus-full source description, surfaced in the candidate page."""
-    district_label = _DISTRICT_LABELS.get(item["district_code"], "—")
-    section = item.get("section")
-    section_line = f"\nΕνότητα: {section}" if section else ""
-    return (
-        "Πηγή: Philenews — Επίσημη λίστα 753 υποψηφίων (6 Μαΐου 2026).\n"
-        f"Συνοπτικά: {item['name_gr']} — {party_label} — {district_label}.{section_line}\n"
-        f"Πλήρης πηγή: {source_url}"
-    )
-
-
 class PhilenewsFullScraper:
-    """Deterministic parser for the philenews 753-candidate roster."""
+    """Deterministic parser for the philenews 753-candidate roster.
+
+    Only emits identity fields (name/party/district) plus the "Independent
+    candidate" hint where applicable. No bio_text — the article only
+    publishes a name list per district per party, so writing a synoptic
+    "Source: philenews" line as the bio would clobber real CVs at merge
+    time. Source provenance is preserved via the raw_record's source_url
+    and is surfaced in the dashboard's per-candidate `sources` array.
+    """
 
     async def discover(
         self, cfg: AppConfig, party: PartyConfig, client: PoliteClient
     ) -> list[RawCandidate]:
         results: list[RawCandidate] = []
-        party_label = {p.code: p.name_gr for p in cfg.parties}
         for url in party.seed_urls:
             try:
                 res = await client.get(
@@ -249,8 +234,6 @@ class PhilenewsFullScraper:
             rows = parse_text(text)
             log.info("philenews_full: parsed %d candidates from %s", len(rows), url)
             for item in rows:
-                label = party_label.get(item["party_code"], item["party_code"])
-                bio = _bio_for(item, url, label)
                 fields: dict = {}
                 if item.get("section") == "Independents":
                     fields["profession"] = "Independent candidate"
@@ -262,7 +245,7 @@ class PhilenewsFullScraper:
                         district_code=item["district_code"],
                         name_gr=item["name_gr"],
                         name_en=None,
-                        bio_text=bio,
+                        bio_text=None,
                         fields=fields,
                     )
                 )

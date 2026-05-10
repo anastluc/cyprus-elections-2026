@@ -20,7 +20,7 @@ llm:
   api_key_env: OPENROUTER_API_KEY
   search_model_env: OPENROUTER_SEARCH_MODEL
   temperature: 0.0
-  max_calls_per_run: 500
+  max_calls_per_run: 1500
   cache_dir: data/raw/enrichment/llm
 
 linkedin:

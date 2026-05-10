@@ -10,6 +10,7 @@ from rich.table import Table
 from cyprus_elections import ingest as ingest_mod
 from cyprus_elections import merge as merge_mod
 from cyprus_elections import validate as validate_mod
+from cyprus_elections.enrich import cv_full as enrich_cv_full
 from cyprus_elections.enrich import cv_text as enrich_cv_text
 from cyprus_elections.enrich import highlights as enrich_highlights
 from cyprus_elections.enrich import llm_extract as enrich_llm_extract
@@ -118,6 +119,8 @@ def enrich(
             stats = enrich_wikipedia.run(cfg, conn, restart=restart)
         elif source == "llm_extract":
             stats = enrich_llm_extract.run(cfg, conn, restart=restart)
+        elif source == "cv_full":
+            stats = enrich_cv_full.run(cfg, conn, restart=restart)
         elif source == "social":
             stats = enrich_social.run(cfg, conn, restart=restart)
         elif source == "web_search":

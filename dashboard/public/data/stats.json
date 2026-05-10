@@ -1,43 +1,23 @@
 {
   "total_candidates": 757,
   "coverage": {
-    "cv_text": {
-      "count": 4,
-      "percentage": 0.5
-    },
-    "website": {
+    "education": {
       "count": 258,
       "percentage": 34.1
     },
-    "photo_url": {
-      "count": 54,
-      "percentage": 7.1
-    },
-    "linkedin": {
-      "count": 40,
-      "percentage": 5.3
-    },
-    "instagram": {
-      "count": 49,
-      "percentage": 6.5
-    },
-    "name_gr": {
+    "name_en": {
       "count": 0,
       "percentage": 0.0
+    },
+    "cv_text": {
+      "count": 4,
+      "percentage": 0.5
     },
     "age": {
       "count": 124,
       "percentage": 16.4
     },
-    "wikidata_qid": {
-      "count": 6,
-      "percentage": 0.8
-    },
-    "bio_text": {
-      "count": 534,
-      "percentage": 70.5
-    },
-    "name_en": {
+    "name_gr": {
       "count": 0,
       "percentage": 0.0
     },
@@ -45,49 +25,69 @@
       "count": 329,
       "percentage": 43.5
     },
-    "gender": {
-      "count": 753,
-      "percentage": 99.5
-    },
     "profession": {
       "count": 484,
       "percentage": 63.9
-    },
-    "date_of_birth": {
-      "count": 177,
-      "percentage": 23.4
-    },
-    "wikipedia": {
-      "count": 7,
-      "percentage": 0.9
     },
     "cv_url": {
       "count": 6,
       "percentage": 0.8
     },
-    "twitter": {
-      "count": 28,
-      "percentage": 3.7
-    },
-    "education": {
-      "count": 258,
-      "percentage": 34.1
-    },
-    "profession_cluster": {
-      "count": 511,
-      "percentage": 67.5
+    "wikipedia": {
+      "count": 7,
+      "percentage": 0.9
     },
     "highlights": {
       "count": 378,
       "percentage": 49.9
     },
+    "linkedin": {
+      "count": 40,
+      "percentage": 5.3
+    },
+    "twitter": {
+      "count": 28,
+      "percentage": 3.7
+    },
+    "gender": {
+      "count": 753,
+      "percentage": 99.5
+    },
+    "wikidata_qid": {
+      "count": 6,
+      "percentage": 0.8
+    },
+    "instagram": {
+      "count": 49,
+      "percentage": 6.5
+    },
+    "bio_text": {
+      "count": 757,
+      "percentage": 100.0
+    },
+    "photo_url": {
+      "count": 54,
+      "percentage": 7.1
+    },
     "facebook": {
       "count": 56,
       "percentage": 7.4
     },
+    "website": {
+      "count": 258,
+      "percentage": 34.1
+    },
+    "date_of_birth": {
+      "count": 177,
+      "percentage": 23.4
+    },
     "sector": {
       "count": 506,
       "percentage": 66.8
+    },
+    "profession_cluster": {
+      "count": 511,
+      "percentage": 67.5
     }
   },
   "by_party": {
@@ -457,12 +457,12 @@
     }
   },
   "source_kinds": {
-    "party_site": 4379,
-    "news": 3698,
-    "llm_from_bio": 2278,
-    "search_snippet": 2129,
+    "party_site": 4538,
+    "news": 3755,
+    "search_snippet": 2479,
+    "llm_from_bio": 2281,
+    "wikipedia": 23,
     "wikidata": 12,
-    "wikipedia": 9,
     "cv_doc": 4
   },
   "row_confidence_histogram": [

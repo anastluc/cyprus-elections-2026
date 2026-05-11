@@ -73,12 +73,17 @@ export default function App() {
       .catch((e) => setError(String(e)));
   }, [setData, setError]);
 
-  // Auto-navigate to predict section when URL contains a prediction link
+  // Auto-navigate to a section when URL contains a deep-link hash:
+  // - #predict=<id>          → Predict page (legacy prediction-share)
+  // - /p/<slug>              → Predict page
+  // - #explorer[?…filters]   → Explorer page (filter-state permalink)
   useEffect(() => {
     const hash = window.location.hash;
     const path = window.location.pathname;
     if (hash.startsWith('#predict=') || /\/p\/[a-z0-9]+$/i.test(path)) {
       setSection('predict');
+    } else if (hash.startsWith('#explorer')) {
+      setSection('explorer');
     }
   }, [setSection]);
 

@@ -1,93 +1,93 @@
 {
   "total_candidates": 757,
   "coverage": {
-    "education": {
-      "count": 258,
-      "percentage": 34.1
+    "instagram": {
+      "count": 173,
+      "percentage": 22.9
     },
-    "name_en": {
-      "count": 0,
-      "percentage": 0.0
-    },
-    "cv_text": {
-      "count": 4,
-      "percentage": 0.5
-    },
-    "age": {
-      "count": 124,
-      "percentage": 16.4
-    },
-    "name_gr": {
-      "count": 0,
-      "percentage": 0.0
-    },
-    "career_previous": {
-      "count": 329,
-      "percentage": 43.5
-    },
-    "profession": {
-      "count": 484,
-      "percentage": 63.9
+    "facebook": {
+      "count": 159,
+      "percentage": 21.0
     },
     "cv_url": {
       "count": 6,
       "percentage": 0.8
     },
-    "wikipedia": {
-      "count": 7,
-      "percentage": 0.9
-    },
-    "highlights": {
-      "count": 378,
-      "percentage": 49.9
-    },
-    "linkedin": {
-      "count": 40,
-      "percentage": 5.3
-    },
-    "twitter": {
-      "count": 28,
-      "percentage": 3.7
-    },
-    "gender": {
-      "count": 753,
-      "percentage": 99.5
-    },
-    "wikidata_qid": {
-      "count": 6,
-      "percentage": 0.8
-    },
-    "instagram": {
-      "count": 49,
-      "percentage": 6.5
-    },
-    "bio_text": {
-      "count": 757,
-      "percentage": 100.0
-    },
-    "photo_url": {
-      "count": 54,
-      "percentage": 7.1
-    },
-    "facebook": {
-      "count": 56,
-      "percentage": 7.4
-    },
-    "website": {
+    "education": {
       "count": 258,
       "percentage": 34.1
-    },
-    "date_of_birth": {
-      "count": 177,
-      "percentage": 23.4
     },
     "sector": {
       "count": 506,
       "percentage": 66.8
     },
+    "twitter": {
+      "count": 120,
+      "percentage": 15.9
+    },
+    "age": {
+      "count": 124,
+      "percentage": 16.4
+    },
+    "career_previous": {
+      "count": 329,
+      "percentage": 43.5
+    },
+    "linkedin": {
+      "count": 50,
+      "percentage": 6.6
+    },
+    "wikidata_qid": {
+      "count": 6,
+      "percentage": 0.8
+    },
+    "cv_text": {
+      "count": 4,
+      "percentage": 0.5
+    },
+    "gender": {
+      "count": 753,
+      "percentage": 99.5
+    },
+    "highlights": {
+      "count": 378,
+      "percentage": 49.9
+    },
+    "date_of_birth": {
+      "count": 177,
+      "percentage": 23.4
+    },
+    "website": {
+      "count": 258,
+      "percentage": 34.1
+    },
+    "profession": {
+      "count": 484,
+      "percentage": 63.9
+    },
     "profession_cluster": {
       "count": 511,
       "percentage": 67.5
+    },
+    "photo_url": {
+      "count": 54,
+      "percentage": 7.1
+    },
+    "name_en": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "bio_text": {
+      "count": 757,
+      "percentage": 100.0
+    },
+    "name_gr": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "wikipedia": {
+      "count": 7,
+      "percentage": 0.9
     }
   },
   "by_party": {
@@ -209,57 +209,128 @@
     ],
     "matrix": {
       "ADEM": {
-        "website": 1
+        "facebook": 11,
+        "twitter": 10,
+        "instagram": 9,
+        "website": 1,
+        "linkedin": 2
       },
       "AGRO": {
-        "website": 1
+        "website": 1,
+        "facebook": 1,
+        "twitter": 1,
+        "instagram": 1
       },
       "AKEL": {
+        "facebook": 20,
+        "instagram": 20,
         "website": 6,
-        "facebook": 4,
-        "instagram": 1,
-        "linkedin": 1,
-        "twitter": 1,
+        "linkedin": 4,
+        "twitter": 4,
         "wikipedia": 1
+      },
+      "AKRO": {
+        "facebook": 1,
+        "twitter": 1,
+        "instagram": 1
       },
       "ALMA": {
         "website": 41,
-        "twitter": 1
+        "twitter": 7,
+        "instagram": 15,
+        "facebook": 6,
+        "linkedin": 1
+      },
+      "DALL": {
+        "facebook": 1,
+        "twitter": 1,
+        "instagram": 1
+      },
+      "DEK": {
+        "facebook": 4,
+        "twitter": 3,
+        "instagram": 2
       },
       "DIKO": {
-        "website": 45
+        "website": 45,
+        "facebook": 9,
+        "twitter": 8,
+        "instagram": 8
       },
       "DIPA": {
         "website": 52,
+        "facebook": 5,
+        "twitter": 5,
+        "instagram": 5,
         "wikipedia": 1
       },
       "DISY": {
         "website": 45,
-        "twitter": 1,
-        "instagram": 1
+        "facebook": 17,
+        "twitter": 15,
+        "instagram": 20,
+        "linkedin": 2
       },
       "EDEK": {
+        "facebook": 4,
+        "twitter": 4,
+        "instagram": 4,
         "website": 4
       },
       "ELAM": {
         "website": 40,
+        "twitter": 5,
+        "instagram": 8,
+        "linkedin": 1,
+        "facebook": 2,
         "wikipedia": 1
       },
       "ENPK": {
+        "facebook": 6,
+        "twitter": 3,
+        "instagram": 5,
         "website": 2
       },
+      "INDEP": {
+        "facebook": 3,
+        "twitter": 3,
+        "instagram": 1
+      },
       "KOSP": {
+        "facebook": 9,
+        "twitter": 12,
+        "instagram": 16,
         "website": 4,
         "wikipedia": 1
+      },
+      "LAEL": {
+        "facebook": 1,
+        "twitter": 1,
+        "instagram": 1
       },
       "PMLAK": {
         "website": 1
       },
+      "PRAS": {
+        "facebook": 2,
+        "twitter": 2,
+        "instagram": 2
+      },
+      "RELIG": {
+        "facebook": 1,
+        "twitter": 1,
+        "instagram": 4
+      },
+      "SIKOU": {
+        "facebook": 4,
+        "twitter": 4,
+        "instagram": 3
+      },
       "VOLT": {
         "facebook": 52,
         "instagram": 47,
-        "linkedin": 39,
-        "twitter": 25,
+        "linkedin": 40,
+        "twitter": 30,
         "website": 16,
         "wikipedia": 3
       }
@@ -459,7 +530,7 @@
   "source_kinds": {
     "party_site": 4538,
     "news": 3755,
-    "search_snippet": 2479,
+    "search_snippet": 2808,
     "llm_from_bio": 2281,
     "wikipedia": 23,
     "wikidata": 12,
@@ -474,12 +545,12 @@
     {
       "label": "mid",
       "range": "0.3–0.6",
-      "count": 480
+      "count": 461
     },
     {
       "label": "good",
       "range": "0.6–0.85",
-      "count": 274
+      "count": 293
     },
     {
       "label": "high",

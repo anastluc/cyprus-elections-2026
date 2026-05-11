@@ -5,7 +5,7 @@
   "name_gr": "Αναστάσιος (Τάσος) Αναστασίου",
   "party": "ADEM",
   "district": "FAM",
-  "row_confidence": 0.444,
+  "row_confidence": 0.504,
   "fields": {
    "gender": {
     "value": "M",
@@ -19,6 +19,24 @@
     "source_url": "https://depa.cy/elections/%CE%B1%CE%BD%CE%B1%CF%83%CF%84%CE%AC%CF%83%CE%B9%CE%BF%CF%82-%CE%B1%CE%BD%CE%B1%CF%83%CF%84%CE%B1%CF%83%CE%AF%CE%BF%CF%85/",
     "source_kind": "news",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/depa.org.cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1006",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/depa_2018",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1006",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/depa.org.cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1006",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -244,7 +262,7 @@
   "name_gr": "Νταϊάνα Κωνσταντινίδη",
   "party": "ADEM",
   "district": "FAM",
-  "row_confidence": 0.533,
+  "row_confidence": 0.594,
   "fields": {
    "gender": {
     "value": "F",
@@ -282,6 +300,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/politisnewspaper",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=996",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/politis_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=996",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/politisnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=996",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -329,7 +365,7 @@
   "name_gr": "Στυλιανός Παπαχριστοφόρου",
   "party": "ADEM",
   "district": "FAM",
-  "row_confidence": 0.444,
+  "row_confidence": 0.504,
   "fields": {
    "gender": {
     "value": "M",
@@ -349,6 +385,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/depa.org.cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=998",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/depa_2018",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=998",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/depa.org.cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=998",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -478,7 +532,7 @@
   "name_gr": "Φοίβος Δουκανάρης",
   "party": "ADEM",
   "district": "LAR",
-  "row_confidence": 0.531,
+  "row_confidence": 0.592,
   "fields": {
    "gender": {
     "value": "M",
@@ -522,6 +576,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/inbusinesscyprus",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1008",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/inbusiness_",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1008",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1008",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -771,7 +843,7 @@
   "name_gr": "Αβραάμ Θεμιστοκλέους",
   "party": "ADEM",
   "district": "LIM",
-  "row_confidence": 0.591,
+  "row_confidence": 0.651,
   "fields": {
    "gender": {
     "value": "M",
@@ -821,6 +893,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/reportercy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=988",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=988",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=988",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -898,7 +988,7 @@
   "name_gr": "Δημήτρης Σούγλης",
   "party": "ADEM",
   "district": "LIM",
-  "row_confidence": 0.65,
+  "row_confidence": 0.691,
   "fields": {
    "gender": {
     "value": "M",
@@ -960,6 +1050,18 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/politisnewspaper",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=984",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/politis_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=984",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -1021,7 +1123,7 @@
   "name_gr": "Γιάννης Τσίτσης",
   "party": "ADEM",
   "district": "LIM",
-  "row_confidence": 0.578,
+  "row_confidence": 0.639,
   "fields": {
    "gender": {
     "value": "M",
@@ -1065,6 +1167,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/tsitsis.yiannis",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=986",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=986",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=986",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://tsitsis.com",
@@ -1645,7 +1765,7 @@
   "name_gr": "Λάμπρος Ιωάννου",
   "party": "ADEM",
   "district": "NIC",
-  "row_confidence": 0.444,
+  "row_confidence": 0.504,
   "fields": {
    "gender": {
     "value": "M",
@@ -1659,6 +1779,24 @@
     "source_url": "https://lamprosioannou.com",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/LamprosI",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=979",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/lampros_io",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=979",
+    "source_kind": "search_snippet"
+   },
+   "linkedin": {
+    "value": "https://www.linkedin.com/in/lamprosioannou",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=979",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -1942,7 +2080,7 @@
   "name_gr": "Νίκος Λουκά (Λουκάνικος)",
   "party": "ADEM",
   "district": "NIC",
-  "row_confidence": 0.529,
+  "row_confidence": 0.59,
   "fields": {
    "gender": {
     "value": "M",
@@ -1986,6 +2124,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/reportercy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=967",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=967",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=967",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -2070,7 +2226,7 @@
   "name_gr": "Δημήτρης Μπάρος",
   "party": "ADEM",
   "district": "PAF",
-  "row_confidence": 0.619,
+  "row_confidence": 0.679,
   "fields": {
    "gender": {
     "value": "M",
@@ -2126,6 +2282,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/SkalaTimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1013",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/SkalaTimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1013",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/skalatimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1013",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -2173,7 +2347,7 @@
   "name_gr": "Φειδίας Στόκκος",
   "party": "ADEM",
   "district": "PAF",
-  "row_confidence": 0.446,
+  "row_confidence": 0.506,
   "fields": {
    "gender": {
     "value": "M",
@@ -2193,6 +2367,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/nomismacomcy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1015",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/NomismaComCy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1015",
+    "source_kind": "search_snippet"
+   },
+   "linkedin": {
+    "value": "https://www.linkedin.com/in/nomisma-news-752190210",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1015",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -3000,7 +3192,7 @@
   "name_gr": "ΚΩΝΣΤΑΝΤΙΝΟΥ Κώστας",
   "party": "AGRO",
   "district": "NIC",
-  "row_confidence": 0.457,
+  "row_confidence": 0.518,
   "fields": {
    "gender": {
     "value": "M",
@@ -3038,6 +3230,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/SkalaTimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1377",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/SkalaTimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1377",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/skalatimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1377",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -3342,7 +3552,7 @@
   "name_gr": "ΓΑΒΡΙΗΛ Γιαννάκης",
   "party": "AKEL",
   "district": "FAM",
-  "row_confidence": 0.607,
+  "row_confidence": 0.648,
   "fields": {
    "gender": {
     "value": "M",
@@ -3398,6 +3608,18 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/Yiannakis.Gavriel.AM",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=860",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/yiannakis.gavriel.am",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=860",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -3419,7 +3641,7 @@
   "name_gr": "ΧΑΤΖΗΓΕΩΡΓΙΟΥ Σταύρος",
   "party": "AKEL",
   "district": "FAM",
-  "row_confidence": 0.609,
+  "row_confidence": 0.649,
   "fields": {
    "gender": {
     "value": "M",
@@ -3475,6 +3697,18 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/stavros.hadjigeorgiou",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=870",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/stavros_hadjigeorgiou",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=870",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -3837,7 +4071,7 @@
   "name_gr": "ΠΑΡΑΣΚΕΥΑ Κωνσταντίνα",
   "party": "AKEL",
   "district": "FAM",
-  "row_confidence": 0.659,
+  "row_confidence": 0.7,
   "fields": {
    "gender": {
     "value": "F",
@@ -3887,6 +4121,18 @@
     "source_url": "https://akel2026.cy/ypopsifioi/ammochostos/paraskeva-konstantina/",
     "source_kind": "party_site",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/konstantina.paraskeua",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=868",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/tantiparaskeva",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=868",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://akel2026.cy/ypopsifioi/ammochostos/paraskeva-konstantina/",
@@ -4252,7 +4498,7 @@
   "name_gr": "Χαραλάμπους Φωτεινή",
   "party": "AKEL",
   "district": "LAR",
-  "row_confidence": 0.671,
+  "row_confidence": 0.731,
   "fields": {
    "gender": {
     "value": "F",
@@ -4308,6 +4554,24 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/fotini.charalambous.771",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=875",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/fotinichara",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=875",
+    "source_kind": "search_snippet"
+   },
+   "linkedin": {
+    "value": "https://www.linkedin.com/in/nomisma-news-752190210",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=875",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -4330,7 +4594,7 @@
   "name_gr": "Χριστοδούλου Πωλίνα",
   "party": "AKEL",
   "district": "LAR",
-  "row_confidence": 0.636,
+  "row_confidence": 0.676,
   "fields": {
    "gender": {
     "value": "F",
@@ -4380,6 +4644,18 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/polina.christodoulou.904",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=876",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/polinaxristodoulou",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=876",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -4490,7 +4766,7 @@
   "name_gr": "Στυλιανού Μάριος",
   "party": "AKEL",
   "district": "LAR",
-  "row_confidence": 0.677,
+  "row_confidence": 0.718,
   "fields": {
    "gender": {
     "value": "M",
@@ -4540,6 +4816,18 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/profile.php",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=873",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/stylianoumarios79",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=873",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -4660,7 +4948,7 @@
   "name_gr": "ΑΧΙΛΛΕΩΣ Αχιλλέας",
   "party": "AKEL",
   "district": "LIM",
-  "row_confidence": 0.676,
+  "row_confidence": 0.757,
   "fields": {
    "gender": {
     "value": "M",
@@ -4710,6 +4998,30 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/achilleas.achilleos",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=848",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/AchilleasAchill",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=848",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/achilleasach",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=848",
+    "source_kind": "search_snippet"
+   },
+   "linkedin": {
+    "value": "https://www.linkedin.com/in/achilleasach",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=848",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://achilleas.cy",
@@ -5022,7 +5334,7 @@
   "name_gr": "ΓΕΩΡΓΙΟΥ Αντώνης",
   "party": "AKEL",
   "district": "LIM",
-  "row_confidence": 0.671,
+  "row_confidence": 0.692,
   "fields": {
    "gender": {
     "value": "M",
@@ -5078,6 +5390,12 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/antonis.georgiou.1232760",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=850",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -5487,7 +5805,7 @@
   "name_gr": "ΣΤΕΛΙΟΥ ΝΙΚΟΛΑΟΥ Μέλανη",
   "party": "AKEL",
   "district": "LIM",
-  "row_confidence": 0.48,
+  "row_confidence": 0.5,
   "fields": {
    "gender": {
     "value": "F",
@@ -5537,6 +5855,12 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/phileleftheros",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1472",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -5617,7 +5941,7 @@
   "name_gr": "ΑΡΓΥΡΙΔΗΣ Μάριος",
   "party": "AKEL",
   "district": "NIC",
-  "row_confidence": 0.609,
+  "row_confidence": 0.649,
   "fields": {
    "gender": {
     "value": "M",
@@ -5667,6 +5991,18 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/gipedo.politis",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=831",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/GipedoPolitis",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=831",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -5688,7 +6024,7 @@
   "name_gr": "ΧΑΤΖΗΠΑΥΛΟΥ – ΛΙΑΣΗ Αυγή",
   "party": "AKEL",
   "district": "NIC",
-  "row_confidence": 0.437,
+  "row_confidence": 0.457,
   "fields": {
    "gender": {
     "value": "F",
@@ -5726,6 +6062,12 @@
     "source_url": "https://akel2026.cy/ypopsifioi/lefkosia/chatzipavlou-avgi/",
     "source_kind": "party_site",
     "lang": "gr"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/phileleftheros",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1380",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -5825,7 +6167,7 @@
   "name_gr": "ΧΡΥΣΑΝΘΟΥ Κωνσταντίνα",
   "party": "AKEL",
   "district": "NIC",
-  "row_confidence": 0.649,
+  "row_confidence": 0.689,
   "fields": {
    "gender": {
     "value": "F",
@@ -5881,6 +6223,18 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/profile.php",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=846",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/constantinachrys",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=846",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -6207,7 +6561,7 @@
   "name_gr": "ΚΩΝΣΤΑΝΤΙΝΟΥ Χριστίνα",
   "party": "AKEL",
   "district": "NIC",
-  "row_confidence": 0.437,
+  "row_confidence": 0.498,
   "fields": {
    "gender": {
     "value": "F",
@@ -6251,6 +6605,24 @@
     "source_url": "https://akel2026.cy/ypopsifioi/lefkosia/konstantinou-christina/",
     "source_kind": "party_site",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/christina.constantinou.52",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1378",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/politis_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1378",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/chr.ist1naconstantinou",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1378",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -6266,7 +6638,7 @@
   "name_gr": "ΚΩΝΣΤΑΝΤΙΝΟΥ Κωνσταντίνος",
   "party": "AKEL",
   "district": "NIC",
-  "row_confidence": 0.616,
+  "row_confidence": 0.657,
   "fields": {
    "gender": {
     "value": "M",
@@ -6311,6 +6683,18 @@
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/ninostories",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=836",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/constantinos24h",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=836",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://akel2026.cy/ypopsifioi/lefkosia/konstantinou-konstantinos/",
     "confidence": 0.5,
@@ -6337,7 +6721,7 @@
   "name_gr": "ΚΟΥΛΑΣ Σεβήρος",
   "party": "AKEL",
   "district": "NIC",
-  "row_confidence": 0.667,
+  "row_confidence": 0.708,
   "fields": {
    "gender": {
     "value": "M",
@@ -6393,6 +6777,18 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/seviros.koulas",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=835",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/seviros_koulas",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=835",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -6505,7 +6901,7 @@
   "name_gr": "ΤΡΙΜΙΘΙΩΤΗ Μαριλένα",
   "party": "AKEL",
   "district": "NIC",
-  "row_confidence": 0.61,
+  "row_confidence": 0.65,
   "fields": {
    "gender": {
     "value": "F",
@@ -6549,6 +6945,18 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/marilena.trimithiotou",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=841",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/trimithiot",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=841",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -6636,7 +7044,7 @@
   "name_gr": "ΠΟΛΥΚΑΡΠΟΥ Χάρης",
   "party": "AKEL",
   "district": "NIC",
-  "row_confidence": 0.382,
+  "row_confidence": 0.402,
   "fields": {
    "gender": {
     "value": "F",
@@ -6668,6 +7076,12 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/phileleftheros",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1379",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -6681,7 +7095,7 @@
   "name_gr": "ΣΤΕΦΑΝΟΥ Στέφανος",
   "party": "AKEL",
   "district": "NIC",
-  "row_confidence": 0.626,
+  "row_confidence": 0.646,
   "fields": {
    "gender": {
     "value": "M",
@@ -6738,6 +7152,12 @@
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
    },
+   "instagram": {
+    "value": "https://www.instagram.com/cyprusmail_official",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=829",
+    "source_kind": "search_snippet"
+   },
    "wikipedia": {
     "value": "https://en.wikipedia.org/wiki/Stefanos_Stefanou",
     "confidence": 0.81,
@@ -6772,7 +7192,7 @@
   "name_gr": "ΘΩΜΑ Θωμάς",
   "party": "AKEL",
   "district": "NIC",
-  "row_confidence": 0.607,
+  "row_confidence": 0.648,
   "fields": {
    "gender": {
     "value": "M",
@@ -6822,6 +7242,18 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/thomasmaria.thoma",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=834",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/thom_thoma",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=834",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -6843,7 +7275,7 @@
   "name_gr": "ΧΑΡΑΛΑΜΠΟΥΣ Βάκης",
   "party": "AKEL",
   "district": "NIC",
-  "row_confidence": 0.69,
+  "row_confidence": 0.71,
   "fields": {
    "gender": {
     "value": "M",
@@ -6904,6 +7336,12 @@
     "value": "https://www.facebook.com/vakis.charalambous",
     "confidence": 0.5,
     "source_url": "social_discovery_active:candidate=842",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/vakis.ch",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=842",
     "source_kind": "search_snippet"
    },
    "website": {
@@ -7089,7 +7527,7 @@
   "name_gr": "ΣΑΒΒΙΔΗΣ Νίκος",
   "party": "AKEL",
   "district": "PAF",
-  "row_confidence": 0.61,
+  "row_confidence": 0.63,
   "fields": {
    "gender": {
     "value": "M",
@@ -7133,6 +7571,12 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "linkedin": {
+    "value": "https://www.linkedin.com/in/nomisma-news-752190210",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=879",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -7228,7 +7672,7 @@
   "name_gr": "ΘΕΟΦΑΝΟΥΣ Μαριέλλα",
   "party": "AKEL",
   "district": "PAF",
-  "row_confidence": 0.651,
+  "row_confidence": 0.692,
   "fields": {
    "gender": {
     "value": "F",
@@ -7284,6 +7728,18 @@
     "confidence": 0.5,
     "source_url": "https://akel.org.cy/akel-left-social-alliance-candidate-list-for-the-parliamentary-elections-in-may-2026/?lang=en",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/profile.php",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=877",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/mariellatheophanous",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=877",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -7306,7 +7762,7 @@
   "name_gr": "ΝΤΕ ΠΕΤΡΟ Τσελεστίνα",
   "party": "AKRO",
   "district": "NIC",
-  "row_confidence": 0.393,
+  "row_confidence": 0.454,
   "fields": {
    "gender": {
     "value": "F",
@@ -7338,6 +7794,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/reportercy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1381",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1381",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1381",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -7619,7 +8093,7 @@
   "name_gr": "Μαρία Φιλίππου",
   "party": "ALMA",
   "district": "FAM",
-  "row_confidence": 0.681,
+  "row_confidence": 0.722,
   "fields": {
    "gender": {
     "value": "F",
@@ -7665,6 +8139,18 @@
     "confidence": 0.5,
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
+   },
+   "twitter": {
+    "value": "https://x.com/thema_sports",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1354",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/themasports",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1354",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://mariaphilippou.almacy.org/2026/03/blog-post.html",
@@ -7852,7 +8338,7 @@
   "name_gr": "ΧΡΙΣΤΟΔΟΥΛΟΥ Νίκη (Νικολέττα)",
   "party": "ALMA",
   "district": "KYR",
-  "row_confidence": 0.394,
+  "row_confidence": 0.414,
   "fields": {
    "gender": {
     "value": "F",
@@ -7884,6 +8370,12 @@
     "source_url": "https://www.politis.com.cy/politis-news/politiki/982645/alma-anakoinwthikan-akomi-10-ipopsifioi-voyleftes-poioi-inai",
     "source_kind": "news",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/sigmalivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1609",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -8143,7 +8635,7 @@
   "name_gr": "Μαρία Λοΐζου",
   "party": "ALMA",
   "district": "LAR",
-  "row_confidence": 0.531,
+  "row_confidence": 0.552,
   "fields": {
    "gender": {
     "value": "F",
@@ -8176,6 +8668,12 @@
     "source_kind": "party_site",
     "lang": "gr"
    },
+   "instagram": {
+    "value": "https://www.instagram.com/politisnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1356",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://marialoizou.almacy.org/2026/04/blog-post.html",
     "confidence": 0.9,
@@ -8196,7 +8694,7 @@
   "name_gr": "Μαρία Πελιβανίδη",
   "party": "ALMA",
   "district": "LAR",
-  "row_confidence": 0.685,
+  "row_confidence": 0.745,
   "fields": {
    "gender": {
     "value": "F",
@@ -8244,6 +8742,24 @@
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/maria.pelivanide",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1357",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/pelivanidium",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1357",
+    "source_kind": "search_snippet"
+   },
+   "linkedin": {
+    "value": "https://www.linkedin.com/in/m-pelivanidi",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1357",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://mariapelivanidi.com",
     "confidence": 0.945,
@@ -8267,7 +8783,7 @@
   "name_gr": "Πέτρος Ζαρούνας",
   "party": "ALMA",
   "district": "LAR",
-  "row_confidence": 0.616,
+  "row_confidence": 0.656,
   "fields": {
    "gender": {
     "value": "M",
@@ -8308,6 +8824,18 @@
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
    },
+   "twitter": {
+    "value": "https://x.com/SkalaTimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1106",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/skalatimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1106",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "http://petroszarounas.almacy.org/2025/12/blog-post.html",
     "confidence": 0.9,
@@ -8333,7 +8861,7 @@
   "name_gr": "Στέλιος Λιπέρης",
   "party": "ALMA",
   "district": "LAR",
-  "row_confidence": 0.561,
+  "row_confidence": 0.602,
   "fields": {
    "gender": {
     "value": "M",
@@ -8359,6 +8887,18 @@
     "confidence": 0.5,
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
+   },
+   "twitter": {
+    "value": "https://x.com/tothemaonline",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1355",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/tothemaonline",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1355",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://steliosliperis.almacy.org/2026/04/blog-post.html",
@@ -8719,7 +9259,7 @@
   "name_gr": "Δρ Ανδρέας Χειμωνίδης",
   "party": "ALMA",
   "district": "LIM",
-  "row_confidence": 0.631,
+  "row_confidence": 0.652,
   "fields": {
    "gender": {
     "value": "M",
@@ -8765,6 +9305,12 @@
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
    },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1350",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://andreascheimonidis.almacy.org/2026/01/blog-post.html",
     "confidence": 0.9,
@@ -8790,7 +9336,7 @@
   "name_gr": "Μιχάλης Παρασκευάς",
   "party": "ALMA",
   "district": "LIM",
-  "row_confidence": 0.65,
+  "row_confidence": 0.69,
   "fields": {
    "gender": {
     "value": "M",
@@ -8841,10 +9387,22 @@
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/paraskevamichalis",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1345",
+    "source_kind": "search_snippet"
+   },
    "twitter": {
     "value": "@osr55blog",
     "confidence": 0.5,
     "source_url": "social_discovery_active:candidate=1345",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/michalisparaskevaslawyer",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1345",
     "source_kind": "search_snippet"
    },
    "website": {
@@ -9090,7 +9648,7 @@
   "name_gr": "Αναστασία Κυπριανού",
   "party": "ALMA",
   "district": "NIC",
-  "row_confidence": 0.553,
+  "row_confidence": 0.573,
   "fields": {
    "gender": {
     "value": "F",
@@ -9116,6 +9674,12 @@
     "confidence": 0.5,
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/politisnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1331",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://anastasiakyprianou.almacy.org/2026/04/blog-post.html",
@@ -9143,7 +9707,7 @@
   "name_gr": "Ανδρούλλα Καμιναρά",
   "party": "ALMA",
   "district": "NIC",
-  "row_confidence": 0.616,
+  "row_confidence": 0.676,
   "fields": {
    "gender": {
     "value": "F",
@@ -9190,6 +9754,24 @@
     "confidence": 0.5,
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/profile.php",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1099",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/AKaminara",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1099",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/offsitenews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1099",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://kaminara.com/",
@@ -9350,7 +9932,7 @@
   "name_gr": "Γεωργία (Γιούλα) Πιτσιάλη",
   "party": "ALMA",
   "district": "NIC",
-  "row_confidence": 0.744,
+  "row_confidence": 0.784,
   "fields": {
    "gender": {
     "value": "F",
@@ -9413,6 +9995,18 @@
     "confidence": 0.5,
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
+   },
+   "twitter": {
+    "value": "https://x.com/VouliTv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1102",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/axiom_themes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1102",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://yioulapitsiali.almacy.org/2025/12/blog-post.html",
@@ -9609,7 +10203,7 @@
   "name_gr": "ΚΟΚΚΙΝΟΥ Παρασκευή (Βούλα)",
   "party": "ALMA",
   "district": "NIC",
-  "row_confidence": 0.437,
+  "row_confidence": 0.457,
   "fields": {
    "gender": {
     "value": "F",
@@ -9659,6 +10253,12 @@
     "source_url": "https://www.sigmalive.com/news/all/1309656/alma-anakinose-akomi-tesseris-neoys-ipopsifioys-voyleftes",
     "source_kind": "news",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/sigmalivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1383",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -9809,7 +10409,7 @@
   "name_gr": "Μάριος Στυλιανού",
   "party": "ALMA",
   "district": "NIC",
-  "row_confidence": 0.786,
+  "row_confidence": 0.807,
   "fields": {
    "gender": {
     "value": "M",
@@ -9862,6 +10462,12 @@
     "confidence": 0.5,
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/offsitenews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1103",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "http://mariosstylianou.almacy.org/2025/12/blog-post.html",
@@ -10047,7 +10653,7 @@
   "name_gr": "Μιχάλης Παντελίδης",
   "party": "ALMA",
   "district": "NIC",
-  "row_confidence": 0.686,
+  "row_confidence": 0.706,
   "fields": {
    "gender": {
     "value": "M",
@@ -10093,6 +10699,12 @@
     "confidence": 0.5,
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/politisnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1335",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://michalispantelidis.almacy.org/",
@@ -10183,7 +10795,7 @@
   "name_gr": "Οδυσσέας Φ. Μιχαηλίδης",
   "party": "ALMA",
   "district": "NIC",
-  "row_confidence": 0.78,
+  "row_confidence": 0.801,
   "fields": {
    "gender": {
     "value": "M",
@@ -10242,6 +10854,12 @@
     "confidence": 0.5,
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/offsitenews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1098",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://almacy.org/ektelestiki-grammateia",
@@ -10326,7 +10944,7 @@
   "name_gr": "Σταύρια Παναγίδου",
   "party": "ALMA",
   "district": "NIC",
-  "row_confidence": 0.673,
+  "row_confidence": 0.693,
   "fields": {
    "gender": {
     "value": "F",
@@ -10380,6 +10998,12 @@
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
    },
+   "instagram": {
+    "value": "https://www.instagram.com/skalatimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1101",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "http://stavriapanayidou.almacy.org/2025/12/blog-post.html",
     "confidence": 0.9,
@@ -10432,7 +11056,7 @@
   "name_gr": "Ελλάδα Καλαϊτσίδου",
   "party": "ALMA",
   "district": "PAF",
-  "row_confidence": 0.686,
+  "row_confidence": 0.746,
   "fields": {
    "gender": {
     "value": "F",
@@ -10485,6 +11109,24 @@
     "confidence": 0.5,
     "source_url": "https://almacy.org/ekloges/",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/politisnewspaper",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1361",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/politis_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1361",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/politisnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1361",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://elladakalaitsidou.almacy.org/2026/03/blog-post.html",
@@ -10905,7 +11547,7 @@
   "name_gr": "ΚΛΗΡΙΔΗΣ Χρίστος",
   "party": "DALL",
   "district": "NIC",
-  "row_confidence": 0.394,
+  "row_confidence": 0.455,
   "fields": {
    "gender": {
     "value": "M",
@@ -10937,6 +11579,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/sigmalivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1384",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1384",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1384",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -11080,7 +11740,7 @@
   "name_gr": "ΠΑΥΛΙΔΟΥ Βερόνικα",
   "party": "DEK",
   "district": "FAM",
-  "row_confidence": 0.33,
+  "row_confidence": 0.35,
   "fields": {
    "gender": {
     "value": "F",
@@ -11094,6 +11754,12 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/ecosmoscy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1580",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -11394,7 +12060,7 @@
   "name_gr": "ΘΕΜΙΣΤΟΚΛΕΟΥΣ Ανδρέας",
   "party": "DEK",
   "district": "LIM",
-  "row_confidence": 0.393,
+  "row_confidence": 0.454,
   "fields": {
    "gender": {
     "value": "M",
@@ -11432,6 +12098,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/politisnewspaper",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1481",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/politis_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1481",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/politisnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1481",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -11743,7 +12427,7 @@
   "name_gr": "ΣΑΒΒΙΔΗΣ Αλέξιος",
   "party": "DEK",
   "district": "NIC",
-  "row_confidence": 0.437,
+  "row_confidence": 0.498,
   "fields": {
    "gender": {
     "value": "M",
@@ -11787,6 +12471,24 @@
     "source_url": "https://www.politis.com.cy/politis-news/politiki/977803/me-piksida-ton-logho-toy-theou-thetei-ksana-ipopsifiotita-o-aleksios-savvidis",
     "source_kind": "news",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/politisnewspaper",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1394",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/politis_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1394",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/politisnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1394",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -11826,7 +12528,7 @@
   "name_gr": "ΧΑΡΑΛΑΜΠΙΔΗΣ Μάριος",
   "party": "DEK",
   "district": "PAF",
-  "row_confidence": 0.394,
+  "row_confidence": 0.435,
   "fields": {
    "gender": {
     "value": "M",
@@ -11858,6 +12560,18 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/cyprus.political.tv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1549",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/VouliTv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1549",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -12084,7 +12798,7 @@
   "name_gr": "ΓΙΑΚΟΥΜΗ ΜΙΧΑΛΗΣ",
   "party": "DIKO",
   "district": "FAM",
-  "row_confidence": 0.615,
+  "row_confidence": 0.676,
   "fields": {
    "gender": {
     "value": "M",
@@ -12140,6 +12854,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/CYParliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1158",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/CYParliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1158",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/cyparliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1158",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/giakoumi-michalis/",
@@ -12313,7 +13045,7 @@
   "name_gr": "ΚΟΥΛΙΑΣ ΖΑΧΑΡΙΑΣ",
   "party": "DIKO",
   "district": "FAM",
-  "row_confidence": 0.617,
+  "row_confidence": 0.678,
   "fields": {
    "gender": {
     "value": "M",
@@ -12375,6 +13107,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/sigmalivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1162",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1162",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1162",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/koulias-zacharias/",
@@ -12933,7 +13683,7 @@
   "name_gr": "ΔΗΜΗΤΡΙΟΥ ΔΗΜΗΤΡΗΣ",
   "party": "DIKO",
   "district": "LAR",
-  "row_confidence": 0.594,
+  "row_confidence": 0.654,
   "fields": {
    "gender": {
     "value": "M",
@@ -12989,6 +13739,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/cyprus.political.tv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1152",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/VouliTv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1152",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/axiom_themes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1152",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -13496,7 +14264,7 @@
   "name_gr": "καραγιαννας φλωρεντζος",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.748,
+  "row_confidence": 0.808,
   "fields": {
    "gender": {
     "value": "M",
@@ -13556,6 +14324,24 @@
     "confidence": 0.5,
     "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/ant1livenews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1142",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/Ant1Live",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1142",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/ant1livenews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1142",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%ba%ce%b1%cf%81%ce%b1%ce%b3%ce%b9%ce%b1%ce%bd%ce%bd%ce%b1%cf%83-%cf%86%ce%bb%cf%89%cf%81%ce%b5%ce%bd%cf%84%ce%b6%ce%bf%cf%83/",
@@ -13932,7 +14718,7 @@
   "name_gr": "νικολαιδης νtινος",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.693,
+  "row_confidence": 0.753,
   "fields": {
    "gender": {
     "value": "M",
@@ -13986,6 +14772,24 @@
     "confidence": 0.5,
     "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/reportercy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1146",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1146",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1146",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%bd%ce%b9%ce%ba%ce%bf%ce%bb%ce%b1%ce%b9%ce%b4%ce%b7%cf%83-%ce%bd%cf%84%ce%b9%ce%bd%ce%bf%cf%83/",
@@ -14108,7 +14912,7 @@
   "name_gr": "λεωνιδου πανικος",
   "party": "DIKO",
   "district": "LIM",
-  "row_confidence": 0.786,
+  "row_confidence": 0.847,
   "fields": {
    "gender": {
     "value": "M",
@@ -14174,6 +14978,24 @@
     "confidence": 0.5,
     "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-maioy-2026-ypopsifioi-dimokratikoy-kommatos-gia-tin-eparchia-lemesoy/",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/CYParliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1144",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/CYParliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1144",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/cyparliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1144",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%bb%ce%b5%cf%89%ce%bd%ce%b9%ce%b4%ce%bf%cf%85-%cf%80%ce%b1%ce%bd%ce%b9%ce%ba%ce%bf%cf%83/",
@@ -14459,7 +15281,7 @@
   "name_gr": "Σάββα Αγγελική",
   "party": "DIKO",
   "district": "NIC",
-  "row_confidence": 0.703,
+  "row_confidence": 0.764,
   "fields": {
    "gender": {
     "value": "F",
@@ -14513,6 +15335,24 @@
     "confidence": 0.5,
     "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-2026-ypopsifioi-voyleytes-diko-stin-eparchia-leykosias/",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/cyprustimescom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1137",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/cyprus_times",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1137",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/cyprustimesnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1137",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%cf%83%ce%b1%ce%b2%ce%b2%ce%b1-%ce%b1%ce%b3%ce%b3%ce%b5%ce%bb%ce%b9%ce%ba%ce%b7/",
@@ -14617,7 +15457,7 @@
   "name_gr": "Ερωτοκρίτου Χριστιάνα",
   "party": "DIKO",
   "district": "NIC",
-  "row_confidence": 0.699,
+  "row_confidence": 0.74,
   "fields": {
    "gender": {
     "value": "F",
@@ -14677,6 +15517,18 @@
     "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-2026-ypopsifioi-voyleytes-diko-stin-eparchia-leykosias/",
     "source_kind": "party_site"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/CYParliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1127",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/CYParliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1127",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%ce%b5%cf%81%cf%89%cf%84%ce%bf%ce%ba%cf%81%ce%b9%cf%84%ce%bf%cf%85-%cf%87%cf%81%ce%b9%cf%83%cf%84%ce%b9%ce%b1%ce%bd%ce%b1/",
     "confidence": 0.9,
@@ -14706,7 +15558,7 @@
   "name_gr": "Παπαπέτρου Χρίστος",
   "party": "DIKO",
   "district": "NIC",
-  "row_confidence": 0.67,
+  "row_confidence": 0.711,
   "fields": {
    "gender": {
     "value": "M",
@@ -14759,6 +15611,18 @@
     "confidence": 0.5,
     "source_url": "https://democraticparty.org.cy/voyleytikes-ekloges-2026-ypopsifioi-voyleytes-diko-stin-eparchia-leykosias/",
     "source_kind": "party_site"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/christos.papapetrou.7",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1135",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/chris_pap28",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1135",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://democraticparty.org.cy/elections/ypopsifioi/%cf%80%ce%b1%cf%80%ce%b1%cf%80%ce%b5%cf%84%cf%81%ce%bf%cf%85-%cf%87%cf%81%ce%b9%cf%83%cf%84%ce%bf%cf%83/",
@@ -17063,7 +17927,7 @@
   "name_gr": "Μιχάλης Σκορδής",
   "party": "DIPA",
   "district": "KYR",
-  "row_confidence": 0.686,
+  "row_confidence": 0.746,
   "fields": {
    "gender": {
     "value": "M",
@@ -17122,6 +17986,24 @@
     "source_url": "https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-kerinias/%ce%bc%ce%b9%cf%87%ce%ac%ce%bb%ce%b7%cf%82-%cf%83%ce%ba%ce%bf%cf%81%ce%b4%ce%ae%cf%82/",
     "source_kind": "party_site",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/reportercy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=900",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=900",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=900",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-kerinias/%ce%bc%ce%b9%cf%87%ce%ac%ce%bb%ce%b7%cf%82-%cf%83%ce%ba%ce%bf%cf%81%ce%b4%ce%ae%cf%82/",
@@ -17367,7 +18249,7 @@
   "name_gr": "Δέσποινα Παπαδοπούλου",
   "party": "DIPA",
   "district": "LAR",
-  "row_confidence": 0.713,
+  "row_confidence": 0.774,
   "fields": {
    "gender": {
     "value": "F",
@@ -17419,6 +18301,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/SkalaTimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=907",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/SkalaTimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=907",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/skalatimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=907",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-larnakas/%ce%b4%ce%ad%cf%83%cf%80%ce%bf%ce%b9%ce%bd%ce%b1-%cf%80%ce%b1%cf%80%ce%b1%ce%b4%ce%bf%cf%80%ce%bf%cf%8d%ce%bb%ce%bf%cf%85/",
@@ -18532,7 +19432,7 @@
   "name_gr": "Αλέκος Τρυφωνίδης",
   "party": "DIPA",
   "district": "NIC",
-  "row_confidence": 0.701,
+  "row_confidence": 0.762,
   "fields": {
    "gender": {
     "value": "M",
@@ -18585,6 +19485,24 @@
     "source_url": "https://www.parliament.cy/el/general-information/composition/members-of-the-house/biographical-notes/tryfonidis-alekos",
     "source_kind": "news",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/CYParliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=886",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/CYParliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=886",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/cyparliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=886",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-lefkosias/%ce%b1%ce%bb%ce%ad%ce%ba%ce%bf%cf%82-%cf%84%cf%81%cf%85%cf%86%cf%89%ce%bd%ce%af%ce%b4%ce%b7%cf%82/",
@@ -19720,7 +20638,7 @@
   "name_gr": "Στέφανος Στεφάνου",
   "party": "DIPA",
   "district": "NIC",
-  "row_confidence": 0.705,
+  "row_confidence": 0.766,
   "fields": {
    "gender": {
     "value": "M",
@@ -19773,6 +20691,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/AKEL1926",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1189",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/AKEL1926",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1189",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/AKEL1926",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1189",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://depa.cy/vouleftikes-ekloges-2026/ipopsifioi-vouleftes-lefkosias/%cf%83%cf%84%ce%ad%cf%86%ce%b1%ce%bd%ce%bf%cf%82-%cf%83%cf%84%ce%b5%cf%86%ce%ac%ce%bd%ce%bf%cf%85/",
@@ -20023,7 +20959,7 @@
   "name_gr": "ΧΑΡΙΛΑΟΥ Χαρούλα",
   "party": "DIPA",
   "district": "PAF",
-  "row_confidence": 0.437,
+  "row_confidence": 0.498,
   "fields": {
    "gender": {
     "value": "F",
@@ -20061,6 +20997,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/SkalaTimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1546",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/SkalaTimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1546",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/skalatimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1546",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -20402,7 +21356,7 @@
   "name_gr": "Δημήτρης Κουμής",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.64,
+  "row_confidence": 0.66,
   "fields": {
    "gender": {
     "value": "M",
@@ -20453,6 +21407,12 @@
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/famagusta.news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1054",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://ekloges.disy.cy/koumi-dimitris/",
     "confidence": 0.9,
@@ -20483,7 +21443,7 @@
   "name_gr": "Γιώργος Χατζηγεωργίου",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.64,
+  "row_confidence": 0.721,
   "fields": {
    "gender": {
     "value": "M",
@@ -20540,6 +21500,30 @@
     "source_url": "https://ekloges.disy.cy/hadjigeorgiou-giorgos/",
     "source_kind": "search_snippet"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/giorgos.chatzigeorgiou.cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1053",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/GChatzigeorgiou",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1053",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/giorgos_hadjigeorgiou",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1053",
+    "source_kind": "search_snippet"
+   },
+   "linkedin": {
+    "value": "https://www.linkedin.com/in/georgios-chatzigeorgiou-172119110",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1053",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://ekloges.disy.cy/hadjigeorgiou-giorgos/",
     "confidence": 0.9,
@@ -20568,7 +21552,7 @@
   "name_gr": "Γιώργος Κάρουλας",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.675,
+  "row_confidence": 0.736,
   "fields": {
    "gender": {
     "value": "M",
@@ -20627,6 +21611,24 @@
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/disy1976",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1051",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/DISY1976",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1051",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/disy1976",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1051",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://ekloges.disy.cy/karoullas_giorgos/",
     "confidence": 0.9,
@@ -20655,7 +21657,7 @@
   "name_gr": "Γιώργος Λυσανδρίδης",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.633,
+  "row_confidence": 0.653,
   "fields": {
    "gender": {
     "value": "M",
@@ -20705,6 +21707,12 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "linkedin": {
+    "value": "https://www.linkedin.com/in/lysandrides",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1055",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://ekloges.disy.cy/lysandrides_giorgos/",
@@ -20963,7 +21971,7 @@
   "name_gr": "Πάρις Μάρκου",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.597,
+  "row_confidence": 0.658,
   "fields": {
    "gender": {
     "value": "M",
@@ -21008,6 +22016,24 @@
     "source_kind": "news",
     "lang": "gr"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/reportercy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1061",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1061",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1061",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://ekloges.disy.cy/markou-paris/",
     "confidence": 0.9,
@@ -21029,7 +22055,7 @@
   "name_gr": "Παύλος Λιασίδης",
   "party": "DISY",
   "district": "FAM",
-  "row_confidence": 0.597,
+  "row_confidence": 0.658,
   "fields": {
    "gender": {
     "value": "M",
@@ -21079,6 +22105,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/cyprus.political.tv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1059",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/VouliTv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1059",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/axiom_themes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1059",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://ekloges.disy.cy/liasides_paulos/",
@@ -21198,7 +22242,7 @@
   "name_gr": "Ρίτα Σούπερμαν",
   "party": "DISY",
   "district": "KYR",
-  "row_confidence": 0.644,
+  "row_confidence": 0.705,
   "fields": {
    "gender": {
     "value": "F",
@@ -21250,6 +22294,24 @@
     "source_url": "https://www.parliament.cy/el/general-information/composition/members-of-the-house/biographical-notes/superman-theodorou-rita",
     "source_kind": "party_site",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/CYParliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1062",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/CYParliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1062",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/cyparliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1062",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -21346,7 +22408,7 @@
   "name_gr": "Άντρεα Μανώλη",
   "party": "DISY",
   "district": "LAR",
-  "row_confidence": 0.459,
+  "row_confidence": 0.519,
   "fields": {
    "gender": {
     "value": "F",
@@ -21360,6 +22422,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/OffsiteNewsOfficial",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1067",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/OffsiteCyNews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1067",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/offsitenews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1067",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -21374,7 +22454,7 @@
   "name_gr": "Αννίτα Δημητρίου",
   "party": "DISY",
   "district": "LAR",
-  "row_confidence": 0.585,
+  "row_confidence": 0.625,
   "fields": {
    "gender": {
     "value": "F",
@@ -21420,10 +22500,22 @@
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/disy1976",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1065",
+    "source_kind": "search_snippet"
+   },
    "twitter": {
     "value": "https://twitter.com/AnnitaDemetriou",
     "confidence": 0.5,
     "source_url": "social_discovery_active:candidate=1065",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/disy1976",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1065",
     "source_kind": "search_snippet"
    }
   },
@@ -21980,7 +23072,7 @@
   "name_gr": "Φωτεινή Τσιρίδου",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.577,
+  "row_confidence": 0.638,
   "fields": {
    "gender": {
     "value": "F",
@@ -22024,6 +23116,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/disy1976",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1039",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/DISY1976",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1039",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/phileleftheros",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1039",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://ekloges.disy.cy/tsiridou_foteini/",
@@ -22190,7 +23300,7 @@
   "name_gr": "Μιχαηλίδης Ανδρέας",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.588,
+  "row_confidence": 0.608,
   "fields": {
    "gender": {
     "value": "M",
@@ -22246,6 +23356,12 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/phileleftheros",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1369",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://ekloges.disy.cy/michaelides_andreas/",
@@ -22487,7 +23603,7 @@
   "name_gr": "ΤΣΙΑΚΚΙΡΟΣ Λευτέρης",
   "party": "DISY",
   "district": "LIM",
-  "row_confidence": 0.33,
+  "row_confidence": 0.35,
   "fields": {
    "gender": {
     "value": "M",
@@ -22501,6 +23617,12 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/phileleftheros",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1488",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -22513,7 +23635,7 @@
   "name_gr": "ΔΗΜΗΤΡΙΟΥ Σ. Δημήτρης (Τέως Υπαρχηγός Αστυνομίας)",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.504,
+  "row_confidence": 0.564,
   "fields": {
    "age": {
     "value": "62",
@@ -22581,6 +23703,24 @@
     "confidence": 0.9,
     "source_url": "https://www.cna.org.cy/Handlers/SSP/Attachments.ashx?doc=9038528&fname=WrX7FccIBPNZrkfKKRIrDwfLaWzHB1y2Hiq5MujbOl4b%2BteTvDk1GHiY1ceQsyX3Js8zF2pMWg0yTjC%2FiC4IGYEYDAiWOLq7kgkqF1WrGeOdBMyiYCWU0g%3D%3D",
     "source_kind": "cv_doc"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/demetris.demetriou.7505",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1630",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/ddemetriou1963",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1630",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/demetris.demetriou.7505",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1630",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://demetrisdemetriou.com/index.php",
@@ -23207,7 +24347,7 @@
   "name_gr": "Έλενα Κούσιου",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.62,
+  "row_confidence": 0.68,
   "fields": {
    "gender": {
     "value": "F",
@@ -23257,6 +24397,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/politisnewspaper",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1028",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/politis_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1028",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/politisnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1028",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://ekloges.disy.cy/kousiou_elena/",
@@ -23372,7 +24530,7 @@
   "name_gr": "Γιώργος Παμπορίδης",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.691,
+  "row_confidence": 0.752,
   "fields": {
    "gender": {
     "value": "M",
@@ -23428,6 +24586,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/profile.php",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1024",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/GPamboridis",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1024",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/georgepamboridis",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1024",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://ekloges.disy.cy/pamporides_georgios/",
@@ -23538,7 +24714,7 @@
   "name_gr": "Μάριος Ηλία",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.618,
+  "row_confidence": 0.639,
   "fields": {
    "gender": {
     "value": "M",
@@ -23589,6 +24765,12 @@
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
    },
+   "instagram": {
+    "value": "https://www.instagram.com/phileleftheros",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1031",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://ekloges.disy.cy/ilia_marios/",
     "confidence": 0.9,
@@ -23617,7 +24799,7 @@
   "name_gr": "Νεόφυτος Ζαμπάς",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.663,
+  "row_confidence": 0.723,
   "fields": {
    "gender": {
     "value": "M",
@@ -23673,6 +24855,24 @@
     "confidence": 0.9,
     "source_url": "https://ekloges.disy.cy/zampas_neophytos/",
     "source_kind": "cv_doc"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/profile.php",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1034",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/neophytos_neo",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1034",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/neophytos.zambas",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1034",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://ekloges.disy.cy/zampas_neophytos/",
@@ -23786,7 +24986,7 @@
   "name_gr": "Σάββια Ορφανίδου",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.577,
+  "row_confidence": 0.638,
   "fields": {
    "gender": {
     "value": "F",
@@ -23831,6 +25031,24 @@
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/OffsiteNewsOfficial",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1023",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/OffsiteCyNews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1023",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/offsitenews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1023",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://ekloges.disy.cy/orphanidou_savia/",
     "confidence": 0.9,
@@ -23859,7 +25077,7 @@
   "name_gr": "Τίνα Παύλου",
   "party": "DISY",
   "district": "NIC",
-  "row_confidence": 0.554,
+  "row_confidence": 0.615,
   "fields": {
    "gender": {
     "value": "F",
@@ -23897,6 +25115,24 @@
     "source_url": "https://ekloges.disy.cy/paulou_tina/",
     "source_kind": "party_site",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/politisnewspaper",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1021",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/politis_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1021",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/politisnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1021",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://ekloges.disy.cy/paulou_tina/",
@@ -24233,7 +25469,7 @@
   "name_gr": "Καρσεράς Κωνσταντίνος",
   "party": "DISY",
   "district": "PAF",
-  "row_confidence": 0.564,
+  "row_confidence": 0.624,
   "fields": {
    "gender": {
     "value": "M",
@@ -24284,6 +25520,24 @@
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/sigmalivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1373",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1373",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1373",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://ekloges.disy.cy/karseras-konstantinos/",
     "confidence": 0.45,
@@ -24312,7 +25566,7 @@
   "name_gr": "Νικολέττα Κωνσταντίνου",
   "party": "DISY",
   "district": "PAF",
-  "row_confidence": 0.676,
+  "row_confidence": 0.716,
   "fields": {
    "gender": {
     "value": "F",
@@ -24374,6 +25628,18 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/nicoletta.constantinou.5",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1071",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/nicoletta_con",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1071",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://nikolettakonstantinou.cy",
@@ -24474,7 +25740,7 @@
   "name_gr": "Ανδρέου Γιώργος",
   "party": "EDEK",
   "district": "FAM",
-  "row_confidence": 0.555,
+  "row_confidence": 0.616,
   "fields": {
    "gender": {
     "value": "M",
@@ -24519,6 +25785,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/larnakaonline",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1271",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/larnakaonline",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1271",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/larnakaonline",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1271",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -25281,7 +26565,7 @@
   "name_gr": "ΧΑΡΑΛΑΜΠΟΥΣ Χαράλαμπος",
   "party": "EDEK",
   "district": "LAR",
-  "row_confidence": 0.393,
+  "row_confidence": 0.454,
   "fields": {
    "gender": {
     "value": "M",
@@ -25313,6 +26597,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/sigmalivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1529",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1529",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1529",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -26182,7 +27484,7 @@
   "name_gr": "Χαννίδης Μάριος",
   "party": "EDEK",
   "district": "NIC",
-  "row_confidence": 0.593,
+  "row_confidence": 0.653,
   "fields": {
    "gender": {
     "value": "M",
@@ -26229,6 +27531,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/marioshannides",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1249",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/MariosHannides",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1249",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/marioshannides",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1249",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://marioshannides.com",
@@ -26590,7 +27910,7 @@
   "name_gr": "Ηλία Μάριος",
   "party": "EDEK",
   "district": "NIC",
-  "row_confidence": 0.583,
+  "row_confidence": 0.644,
   "fields": {
    "gender": {
     "value": "M",
@@ -26636,6 +27956,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/sigmalivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1238",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1238",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1238",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://www.iliamarios.com",
@@ -27885,7 +29223,7 @@
   "name_gr": "Κωνσταντίνου Αλέξιος Δρ.",
   "party": "ELAM",
   "district": "FAM",
-  "row_confidence": 0.572,
+  "row_confidence": 0.633,
   "fields": {
    "gender": {
     "value": "M",
@@ -27936,6 +29274,24 @@
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
    },
+   "twitter": {
+    "value": "https://x.com/AlexiosConstant",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1232",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/alexis.constantinou2026",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1232",
+    "source_kind": "search_snippet"
+   },
+   "linkedin": {
+    "value": "https://www.linkedin.com/in/alexis-constantinou-205503147",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1232",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://elamcy.com/konstantinou-aleksios-dr/",
     "confidence": 0.9,
@@ -27963,7 +29319,7 @@
   "name_gr": "Κορύτσα Μαρία",
   "party": "ELAM",
   "district": "FAM",
-  "row_confidence": 0.487,
+  "row_confidence": 0.507,
   "fields": {
    "gender": {
     "value": "F",
@@ -27977,6 +29333,12 @@
     "source_url": "https://www.alphanews.live/politics/maria-korytsa-ypopsifia-sto-psifodeltio-tou-elam-gia-tin-ammochosto/",
     "source_kind": "news",
     "lang": "gr"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/offsitenews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1089",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://elamcy.com/korytsa-maria/",
@@ -28109,7 +29471,7 @@
   "name_gr": "Παπαγιάννης Λίνος",
   "party": "ELAM",
   "district": "FAM",
-  "row_confidence": 0.634,
+  "row_confidence": 0.654,
   "fields": {
    "gender": {
     "value": "M",
@@ -28159,6 +29521,12 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "twitter": {
+    "value": "https://x.com/qwerty14117587",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1086",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://elamcy.com/papagiannis-linos/",
@@ -28433,7 +29801,7 @@
   "name_gr": "Αλαμάνγκος Βαλεντίνος",
   "party": "ELAM",
   "district": "LAR",
-  "row_confidence": 0.574,
+  "row_confidence": 0.615,
   "fields": {
    "gender": {
     "value": "M",
@@ -28490,6 +29858,18 @@
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
    },
+   "twitter": {
+    "value": "https://x.com/SkalaTimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1226",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/skalatimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1226",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://elamcy.com/alamangkos-valentinos/",
     "confidence": 0.9,
@@ -28518,7 +29898,7 @@
   "name_gr": "Χριστοδούλου Άντρη",
   "party": "ELAM",
   "district": "LAR",
-  "row_confidence": 0.467,
+  "row_confidence": 0.508,
   "fields": {
    "gender": {
     "value": "F",
@@ -28538,6 +29918,18 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "twitter": {
+    "value": "https://x.com/cyprus_times",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1228",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/cyprustimesnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1228",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://elamcy.com/christodoulou-antri/",
@@ -28650,7 +30042,7 @@
   "name_gr": "Κάδης Ανδρέας",
   "party": "ELAM",
   "district": "LAR",
-  "row_confidence": 0.625,
+  "row_confidence": 0.665,
   "fields": {
    "gender": {
     "value": "M",
@@ -28700,6 +30092,18 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "twitter": {
+    "value": "https://x.com/SkalaTimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1092",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/skalatimes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1092",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://elamcy.com/kadis-antreas/",
@@ -29109,7 +30513,7 @@
   "name_gr": "Χαμπούλας Ευγένιος",
   "party": "ELAM",
   "district": "LIM",
-  "row_confidence": 0.434,
+  "row_confidence": 0.454,
   "fields": {
    "gender": {
     "value": "M",
@@ -29153,6 +30557,12 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/hamboullas2026",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1083",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -29394,7 +30804,7 @@
   "name_gr": "Παμπόσκης Κωνσταντίνος",
   "party": "ELAM",
   "district": "LIM",
-  "row_confidence": 0.487,
+  "row_confidence": 0.507,
   "fields": {
    "gender": {
     "value": "M",
@@ -29408,6 +30818,12 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/offsitenews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1085",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://elamcy.com/pamposkis-konstantinos/",
@@ -29764,7 +31180,7 @@
   "name_gr": "Χατζησυμεού Παναγιώτης",
   "party": "ELAM",
   "district": "NIC",
-  "row_confidence": 0.486,
+  "row_confidence": 0.507,
   "fields": {
    "gender": {
     "value": "M",
@@ -29778,6 +31194,12 @@
     "source_url": "https://elamcy.com/chatzisymeou-panagiotis/",
     "source_kind": "party_site",
     "lang": "gr"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/offsitenews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1077",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://elamcy.com/chatzisymeou-panagiotis/",
@@ -30822,7 +32244,7 @@
   "name_gr": "Γρηγορίου Χαράλαμπος",
   "party": "ELAM",
   "district": "PAF",
-  "row_confidence": 0.546,
+  "row_confidence": 0.587,
   "fields": {
    "gender": {
     "value": "M",
@@ -30878,6 +32300,18 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/OffsiteNewsOfficial",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1095",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/offsitenews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1095",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -31513,7 +32947,7 @@
   "name_gr": "ΣΤΑΥΡΟΥ Σταύρος",
   "party": "ENPK",
   "district": "KYR",
-  "row_confidence": 0.393,
+  "row_confidence": 0.454,
   "fields": {
    "gender": {
     "value": "M",
@@ -31551,6 +32985,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/depa.org.cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1620",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/depa_2018",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1620",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/depa.org.cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1620",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -31993,7 +33445,7 @@
   "name_gr": "ΤΤΟΠΠΟΥΖΗΣ Πρόδρομος",
   "party": "ENPK",
   "district": "LIM",
-  "row_confidence": 0.405,
+  "row_confidence": 0.446,
   "fields": {
    "gender": {
     "value": "M",
@@ -32031,6 +33483,18 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/limassolmunicipalitypage",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1500",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/limassolmunicipality",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1500",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://www.limassol.org.cy/el/Prodromos-Topouzis",
@@ -32102,7 +33566,7 @@
   "name_gr": "ΧΑΤΖΗΠΑΝΑΓΗ Αρτέμης",
   "party": "ENPK",
   "district": "NIC",
-  "row_confidence": 0.373,
+  "row_confidence": 0.434,
   "fields": {
    "gender": {
     "value": "F",
@@ -32122,6 +33586,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/simerini.news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1423",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/simerini_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1423",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/simerini_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1423",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -32215,7 +33697,7 @@
   "name_gr": "ΚΩΝΣΤΑΝΤΙΝΙΔΟΥ Γεωργία",
   "party": "ENPK",
   "district": "NIC",
-  "row_confidence": 0.437,
+  "row_confidence": 0.478,
   "fields": {
    "gender": {
     "value": "F",
@@ -32259,6 +33741,18 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/KPMGGreece",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1412",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/kpmggreece",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1412",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -32395,7 +33889,7 @@
   "name_gr": "ΠΑΥΛΟΥ Παύλος",
   "party": "ENPK",
   "district": "NIC",
-  "row_confidence": 0.448,
+  "row_confidence": 0.508,
   "fields": {
    "gender": {
     "value": "M",
@@ -32433,6 +33927,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/reportercy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1417",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1417",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1417",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://depa.cy/elections/%CF%80%CE%B1%CF%8D%CE%BB%CE%BF%CF%82-%CF%80%CE%B1%CF%8D%CE%BB%CE%BF%CF%85/",
@@ -32582,7 +34094,7 @@
   "name_gr": "ΒΡΑΧΙΜΗ Αδάμος",
   "party": "ENPK",
   "district": "NIC",
-  "row_confidence": 0.436,
+  "row_confidence": 0.456,
   "fields": {
    "gender": {
     "value": "M",
@@ -32620,6 +34132,12 @@
     "source_url": "https://cyprushunters.com.cy/2021/04/28/%CF%85%CF%80%CE%BF%CF%88%CE%AE%CF%86%CE%B9%CE%BF%CE%B9-%CE%B2%CE%BF%CF%85%CE%BB%CE%B5%CF%85%CF%84%CE%AD%CF%82-%CE%B1%CE%BC%CE%BC%CE%BF%CF%87%CF%8E%CF%83%CF%84%CE%BF%CF%85-%CE%B5%CE%BD%CE%B5%CF%81/",
     "source_kind": "party_site",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/cyprushunters",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1406",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -33034,7 +34552,7 @@
   "name_gr": "Μαυρομμάτης Κωνσταντίνος",
   "party": "INDEP",
   "district": "NIC",
-  "row_confidence": 0.44,
+  "row_confidence": 0.48,
   "fields": {
    "gender": {
     "value": "M",
@@ -33067,6 +34585,18 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/politisnewspaper",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1457",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/politis_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1457",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -33080,7 +34610,7 @@
   "name_gr": "Τενίζης Μάριος",
   "party": "INDEP",
   "district": "NIC",
-  "row_confidence": 0.418,
+  "row_confidence": 0.459,
   "fields": {
    "gender": {
     "value": "M",
@@ -33113,6 +34643,18 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/aftodioikisi.com.cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1458",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/aftodioikisicy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1458",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -33126,7 +34668,7 @@
   "name_gr": "Ανδρέας Ευστρατίου",
   "party": "INDEP",
   "district": "PAF",
-  "row_confidence": 0.418,
+  "row_confidence": 0.479,
   "fields": {
    "gender": {
     "value": "M",
@@ -33159,6 +34701,24 @@
     "source_url": "https://en.wikipedia.org/wiki/Andreas_Efstratiou",
     "source_kind": "wikipedia",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/sigmalivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1562",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1562",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1562",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -33392,7 +34952,7 @@
   "name_gr": "Παράσχου Μιχάλης",
   "party": "KOSP",
   "district": "FAM",
-  "row_confidence": 0.508,
+  "row_confidence": 0.528,
   "fields": {
    "gender": {
     "value": "M",
@@ -33424,6 +34984,12 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "en"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/ecosmoscy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1316",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -33596,7 +35162,7 @@
   "name_gr": "ΣΤΑΥΡΗ ΧΑΤΖΗΓΙΑΝΝΗ Ευάνθη (Εύη)",
   "party": "KOSP",
   "district": "FAM",
-  "row_confidence": 0.437,
+  "row_confidence": 0.498,
   "fields": {
    "gender": {
     "value": "F",
@@ -33634,6 +35200,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/reportercy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1596",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1596",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1596",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -33776,7 +35360,7 @@
   "name_gr": "Ηρακλέους Χαράλαμπος",
   "party": "KOSP",
   "district": "LAR",
-  "row_confidence": 0.444,
+  "row_confidence": 0.504,
   "fields": {
    "gender": {
     "value": "M",
@@ -33790,6 +35374,24 @@
     "source_url": "https://www.reporter.com.cy/article/1397014/to-kinima-oikologn-anakoinose-anakoinose-alloys-treis-ypopsifioys-ga-tis-boyleftikes",
     "source_kind": "news",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/reportercy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1322",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1322",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1322",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -33804,7 +35406,7 @@
   "name_gr": "Ιωσηφίδης Χρίστος",
   "party": "KOSP",
   "district": "LAR",
-  "row_confidence": 0.467,
+  "row_confidence": 0.508,
   "fields": {
    "gender": {
     "value": "M",
@@ -33836,6 +35438,18 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "twitter": {
+    "value": "https://x.com/cyprus_times",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1323",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/cyprustimesnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1323",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -33936,7 +35550,7 @@
   "name_gr": "Παράσχου Λίζα",
   "party": "KOSP",
   "district": "LAR",
-  "row_confidence": 0.51,
+  "row_confidence": 0.571,
   "fields": {
    "gender": {
     "value": "F",
@@ -33974,6 +35588,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/cyprus.political.tv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1324",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/VouliTv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1324",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/axiom_themes",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1324",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -34230,7 +35862,7 @@
   "name_gr": "Κρίδη Μαρία",
   "party": "KOSP",
   "district": "LIM",
-  "row_confidence": 0.51,
+  "row_confidence": 0.571,
   "fields": {
    "gender": {
     "value": "F",
@@ -34274,6 +35906,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/cyprus.political.tv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1299",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/VouliTv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1299",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/vouli.tv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1299",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -34445,7 +36095,7 @@
   "name_gr": "Στάμος Παπαβασιλείου",
   "party": "KOSP",
   "district": "LIM",
-  "row_confidence": 0.661,
+  "row_confidence": 0.722,
   "fields": {
    "gender": {
     "value": "M",
@@ -34501,6 +36151,24 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/sigmalivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1119",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1119",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1119",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -34799,7 +36467,7 @@
   "name_gr": "Χρίστου Ανδρέας",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.508,
+  "row_confidence": 0.528,
   "fields": {
    "gender": {
     "value": "M",
@@ -34831,6 +36499,12 @@
     "source_url": "https://cyprusgreens.org/project/christoy-andreas/",
     "source_kind": "party_site",
     "lang": "gr"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/lawandtheatre",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1295",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -34962,7 +36636,7 @@
   "name_gr": "Έλενα Λυμπουρή-Κοζάκου",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.674,
+  "row_confidence": 0.694,
   "fields": {
    "gender": {
     "value": "F",
@@ -35019,6 +36693,12 @@
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/ElenaLimbouriK",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1111",
+    "source_kind": "search_snippet"
+   },
    "website": {
     "value": "https://elenalimbouri.com",
     "confidence": 0.5,
@@ -35048,7 +36728,7 @@
   "name_gr": "Κατερίνα Χατζηστυλλή",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.589,
+  "row_confidence": 0.629,
   "fields": {
    "gender": {
     "value": "F",
@@ -35098,6 +36778,18 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "twitter": {
+    "value": "https://x.com/aftodioikisicy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1110",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/aftodioikisi",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1110",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -35120,7 +36812,7 @@
   "name_gr": "Κυριάκος Τσιμίλλης",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.668,
+  "row_confidence": 0.709,
   "fields": {
    "gender": {
     "value": "M",
@@ -35182,6 +36874,18 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1113",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1113",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -35206,7 +36910,7 @@
   "name_gr": "Κολά Μαρία",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.596,
+  "row_confidence": 0.616,
   "fields": {
    "gender": {
     "value": "F",
@@ -35268,6 +36972,12 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/filosofoui",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1288",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -35440,7 +37150,7 @@
   "name_gr": "Νικολέττα Λουκά",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.622,
+  "row_confidence": 0.662,
   "fields": {
    "gender": {
     "value": "F",
@@ -35490,6 +37200,18 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1109",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1109",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://cyprusgreens.org/candidate/loyka-nikoletta/",
@@ -35545,7 +37267,7 @@
   "name_gr": "Oz Karahan",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.679,
+  "row_confidence": 0.7,
   "fields": {
    "gender": {
     "value": "M",
@@ -35596,6 +37318,12 @@
     "source_kind": "wikipedia",
     "lang": "en"
    },
+   "facebook": {
+    "value": "https://www.facebook.com/OffsiteNewsOfficial",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1107",
+    "source_kind": "search_snippet"
+   },
    "wikipedia": {
     "value": "https://en.wikipedia.org/wiki/Oz_Karahan",
     "confidence": 0.9,
@@ -35624,7 +37352,7 @@
   "name_gr": "Ταλιώτης Παναγιώτης",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.51,
+  "row_confidence": 0.55,
   "fields": {
    "gender": {
     "value": "M",
@@ -35662,6 +37390,18 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1292",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/panayiotistaliotis",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1292",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -35682,7 +37422,7 @@
   "name_gr": "Δημητρίου Σταυρούλα",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.553,
+  "row_confidence": 0.593,
   "fields": {
    "gender": {
     "value": "F",
@@ -35726,6 +37466,18 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1286",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1286",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -35750,7 +37502,7 @@
   "name_gr": "Πετρίδου Στέλλα",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.51,
+  "row_confidence": 0.53,
   "fields": {
    "gender": {
     "value": "F",
@@ -35794,6 +37546,12 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/s.petridou",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1291",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -35896,7 +37654,7 @@
   "name_gr": "Χρήστου Βιργινία",
   "party": "KOSP",
   "district": "NIC",
-  "row_confidence": 0.553,
+  "row_confidence": 0.573,
   "fields": {
    "gender": {
     "value": "F",
@@ -35946,6 +37704,12 @@
     "confidence": 0.5,
     "source_url": "https://www.philenews.com/politiki/article/1716677/vouleftikes-ekloges-afti-ine-i-753-ipopsifii-ola-ta-onomata-ana-komma-ke-eparchia/",
     "source_kind": "news"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/virginia__christou",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1294",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -35967,7 +37731,7 @@
   "name_gr": "Ευλαβής Ανδρέας",
   "party": "KOSP",
   "district": "PAF",
-  "row_confidence": 0.531,
+  "row_confidence": 0.592,
   "fields": {
    "gender": {
     "value": "M",
@@ -35999,6 +37763,24 @@
     "source_url": "https://cyprusgreens.org/project/eylavis-andreas/",
     "source_kind": "party_site",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/cyprustimescom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1305",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/cyprus_times",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1305",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/cyprustimesnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1305",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -36163,7 +37945,7 @@
   "name_gr": "ΑΠΟΣΤΟΛΟΥ Απόστολος",
   "party": "LAEL",
   "district": "FAM",
-  "row_confidence": 0.393,
+  "row_confidence": 0.454,
   "fields": {
    "gender": {
     "value": "M",
@@ -36195,6 +37977,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/cyprus.political.tv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1597",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/VouliTv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1597",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/vouli.tv",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1597",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -36669,7 +38469,7 @@
   "name_gr": "ΑΝΔΡΕΟΥ Κυριάκος",
   "party": "PRAS",
   "district": "NIC",
-  "row_confidence": 0.393,
+  "row_confidence": 0.454,
   "fields": {
    "gender": {
     "value": "M",
@@ -36701,6 +38501,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/politisnewspaper",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1446",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/politis_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1446",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/politisnews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1446",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -36778,7 +38596,7 @@
   "name_gr": "ΜΑΚΡΗΣ Κώστας",
   "party": "PRAS",
   "district": "NIC",
-  "row_confidence": 0.33,
+  "row_confidence": 0.391,
   "fields": {
    "gender": {
     "value": "M",
@@ -36792,6 +38610,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/sigmalivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1450",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1450",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1450",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -36960,7 +38796,7 @@
   "name_gr": "Αντωνέλλα Λύδια Μαντοβάνη",
   "party": "RELIG",
   "district": null,
-  "row_confidence": 0.218,
+  "row_confidence": 0.279,
   "fields": {
    "gender": {
     "value": "F",
@@ -36974,6 +38810,24 @@
     "source_url": "https://www.parliament.cy/el/general-information/composition/representatives-of-the-religious-groups/mantovani-antonella",
     "source_kind": "party_site",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/CYParliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1628",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/CYParliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1628",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/cyparliament",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1628",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -36988,7 +38842,7 @@
   "name_gr": "Μάριος Μαυρίδης",
   "party": "RELIG",
   "district": null,
-  "row_confidence": 0.337,
+  "row_confidence": 0.357,
   "fields": {
    "gender": {
     "value": "M",
@@ -37032,6 +38886,12 @@
     "source_url": "https://el.wikipedia.org/wiki/%CE%9C%CE%AC%CF%81%CE%B9%CE%BF%CF%82_%CE%9C%CE%B1%CF%85%CF%81%CE%AF%CE%B4%CE%B7%CF%82",
     "source_kind": "wikipedia",
     "lang": "gr"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/phileleftheros",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1626",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -37048,7 +38908,7 @@
   "name_gr": "Πέτρος Νακούζη",
   "party": "RELIG",
   "district": null,
-  "row_confidence": 0.218,
+  "row_confidence": 0.238,
   "fields": {
    "gender": {
     "value": "M",
@@ -37062,6 +38922,12 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/phileleftheros",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1627",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -37074,7 +38940,7 @@
   "name_gr": "Βαρτκές Μαχτεσιάν",
   "party": "RELIG",
   "district": null,
-  "row_confidence": 0.2,
+  "row_confidence": 0.22,
   "fields": {
    "bio_text": {
     "value": "Vartkes Mahdessian was born in Nicosia, Cyprus on 13 November 1950. After graduating from the Melikian-Ouzounian School and the English School in 1970, he received his Business Administration diploma from Hatfield Polytechnic and then a master's degree in management in 1974. He is a businessman in Nicosia, Cyprus, managing two companies in Cyprus and the United Arab Emirates. In the early 1990s he was the coach of AYMA's football team and also served for some years as the club's Chairman. Between 1998-2004 he was a member of the Board of Management of the English School, while in 1999 he was elected a member of the Diocesan Council of the Armenian Prelature of Cyprus; he held that position until 2006 and, since he was elected as Representative, he is an ex officio member of the Council. On 21 May 2006, he was elected Representative of the Armenian community, after receiving 52,60% of the votes (899) against Dr. Vahakn Atamyan. He was re-elected on 22 May 2011, after securing 67,67% of the votes (1.105) against Dr. Antranik Ashdjian. On 3 September 2011, Vartkes Mahdessian was decorated with the Mekhitar Kosh medal by the President of Armenia, Serzh Sargsyan.",
@@ -37082,6 +38948,12 @@
     "source_url": "https://en.wikipedia.org/wiki/Vartkes_Mahdessian",
     "source_kind": "wikipedia",
     "lang": "en"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/phileleftheros",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1629",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -37408,7 +39280,7 @@
   "name_gr": "ΧΡΙΣΤΟΥ Σωτήρης",
   "party": "SIKOU",
   "district": "LAR",
-  "row_confidence": 0.393,
+  "row_confidence": 0.433,
   "fields": {
    "gender": {
     "value": "M",
@@ -37440,6 +39312,18 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/sigmalivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1539",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1539",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -37727,7 +39611,7 @@
   "name_gr": "ΦΙΛΙΠ ΤΟΡΝΑΡΙΤΟΥ Ραμόνα",
   "party": "SIKOU",
   "district": "NIC",
-  "row_confidence": 0.393,
+  "row_confidence": 0.454,
   "fields": {
    "gender": {
     "value": "F",
@@ -37759,6 +39643,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/reportercy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1444",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1444",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/embed.js",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1444",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -38058,7 +39960,7 @@
   "name_gr": "ΤΟΡΝΑΡΙΤΗΣ Χριστόφορος",
   "party": "SIKOU",
   "district": "NIC",
-  "row_confidence": 0.351,
+  "row_confidence": 0.412,
   "fields": {
    "gender": {
     "value": "M",
@@ -38084,6 +39986,24 @@
     "source_url": "cv_full:candidate-bio",
     "source_kind": "search_snippet",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/incynews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1442",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/incynews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1442",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/incynews",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1442",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -38175,7 +40095,7 @@
   "name_gr": "ΞΙΝΑΡΗΣ Στέφανος",
   "party": "SIKOU",
   "district": "PAF",
-  "row_confidence": 0.33,
+  "row_confidence": 0.391,
   "fields": {
    "gender": {
     "value": "M",
@@ -38189,6 +40109,24 @@
     "source_url": "https://www.sigmalive.com/news/politics/1292505/anakinose-kathodo-stis-voyleftikes-to-patriotiko-metopo-lakedaimonioi",
     "source_kind": "news",
     "lang": "gr"
+   },
+   "facebook": {
+    "value": "https://www.facebook.com/omegalivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1558",
+    "source_kind": "search_snippet"
+   },
+   "twitter": {
+    "value": "https://x.com/OMEGAlivecy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1558",
+    "source_kind": "search_snippet"
+   },
+   "instagram": {
+    "value": "https://www.instagram.com/omegalive_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=1558",
+    "source_kind": "search_snippet"
    }
   },
   "sources": [
@@ -38677,7 +40615,7 @@
   "name_gr": "Ιόλη Παραλίκη Κυθραιώτου",
   "party": "VOLT",
   "district": "FAM",
-  "row_confidence": 0.65,
+  "row_confidence": 0.67,
   "fields": {
    "gender": {
     "value": "F",
@@ -38740,6 +40678,12 @@
     "confidence": 0.9,
     "source_url": "https://voltcyprus.org/people/ypopsifioi-vouleftes-volt-2026",
     "source_kind": "party_site"
+   },
+   "twitter": {
+    "value": "https://x.com/sigmalivecom",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=945",
+    "source_kind": "search_snippet"
    },
    "instagram": {
     "value": "https://www.instagram.com/kythreotou/",
@@ -39324,7 +41268,7 @@
   "name_gr": "Νατάσα Ιωάννου",
   "party": "VOLT",
   "district": "KYR",
-  "row_confidence": 0.751,
+  "row_confidence": 0.772,
   "fields": {
    "gender": {
     "value": "F",
@@ -39393,6 +41337,12 @@
     "confidence": 0.9,
     "source_url": "https://voltcyprus.org/people/ypopsifioi-vouleftes-volt-2026",
     "source_kind": "party_site"
+   },
+   "twitter": {
+    "value": "https://x.com/politis_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=962",
+    "source_kind": "search_snippet"
    },
    "instagram": {
     "value": "https://www.instagram.com/tash_ioannou",
@@ -40290,7 +42240,7 @@
   "name_gr": "Ανδρέας Σουτζιής",
   "party": "VOLT",
   "district": "LIM",
-  "row_confidence": 0.727,
+  "row_confidence": 0.747,
   "fields": {
    "gender": {
     "value": "M",
@@ -40359,6 +42309,12 @@
     "confidence": 0.9,
     "source_url": "https://voltcyprus.org/people/ypopsifioi-vouleftes-volt-2026",
     "source_kind": "party_site"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=936",
+    "source_kind": "search_snippet"
    },
    "instagram": {
     "value": "https://www.instagram.com/andreas_soudjis_1964/",
@@ -41222,7 +43178,7 @@
   "name_gr": "Πενέλοπε Βάσκες Χατζηλύρα",
   "party": "VOLT",
   "district": "LIM",
-  "row_confidence": 0.723,
+  "row_confidence": 0.743,
   "fields": {
    "gender": {
     "value": "F",
@@ -41291,6 +43247,12 @@
     "confidence": 0.9,
     "source_url": "https://voltcyprus.org/people/ypopsifioi-vouleftes-volt-2026",
     "source_kind": "party_site"
+   },
+   "twitter": {
+    "value": "https://x.com/politis_news",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=929",
+    "source_kind": "search_snippet"
    },
    "instagram": {
     "value": "https://www.instagram.com/penelopeforcyprus/",
@@ -41432,7 +43394,7 @@
   "name_gr": "Αλεξάνδρα Ατταλίδου",
   "party": "VOLT",
   "district": "NIC",
-  "row_confidence": 0.779,
+  "row_confidence": 0.799,
   "fields": {
    "gender": {
     "value": "F",
@@ -41501,6 +43463,12 @@
     "confidence": 0.9,
     "source_url": "https://voltcyprus.org/people/ypopsifioi-vouleftes-volt-2026",
     "source_kind": "party_site"
+   },
+   "twitter": {
+    "value": "https://x.com/Reporter_cy",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=910",
+    "source_kind": "search_snippet"
    },
    "instagram": {
     "value": "https://www.instagram.com/alexandra_attalides/",
@@ -41652,7 +43620,7 @@
   "name_gr": "Ανδρομάχη Σοφοκλέους",
   "party": "VOLT",
   "district": "NIC",
-  "row_confidence": 0.698,
+  "row_confidence": 0.718,
   "fields": {
    "gender": {
     "value": "F",
@@ -41727,6 +43695,12 @@
     "confidence": 0.9,
     "source_url": "https://voltcyprus.org/people/ypopsifioi-vouleftes-volt-2026",
     "source_kind": "party_site"
+   },
+   "linkedin": {
+    "value": "https://www.linkedin.com/in/andromachi-sophocleous-3870bab5",
+    "confidence": 0.85,
+    "source_url": "social_from_citations:candidate=923",
+    "source_kind": "search_snippet"
    },
    "website": {
     "value": "https://www.andromachis.com",

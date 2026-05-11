@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Fuse from 'fuse.js';
 import {
   createColumnHelper,
@@ -8,13 +8,13 @@ import {
   type SortingState,
   useReactTable,
 } from '@tanstack/react-table';
-import { ArrowUpDown, X, ExternalLink } from 'lucide-react';
+import { ArrowUpDown, X, ExternalLink, Link2, Check } from 'lucide-react';
 import { SectionHeader } from '../components/SectionHeader';
 import { PartyBadge } from '../components/PartyBadge';
 import { districtLabel, PARTY_ORDER, partyLabel } from '../lib/theme';
 import type { Candidate, Dataset } from '../data/types';
 import { isFemale, isMale } from '../lib/utils';
-import { useFilters, useUI } from '../lib/store';
+import { useFilters, useUI, type FilterState } from '../lib/store';
 import { CorrectionCTA } from '../components/CorrectionCTA';
 import { translateName } from '../lib/i18n';
 import {
@@ -24,6 +24,47 @@ import {
 
 const DISTRICTS = ['NIC', 'LIM', 'LAR', 'FAM', 'PAF', 'KYR'];
 const PLATFORM_OPTIONS = ['facebook', 'twitter', 'instagram', 'linkedin', 'website', 'wikipedia'];
+
+// URL-state helpers for shareable permalinks. Filters live in the location
+// hash so deep-links survive refresh and can be pasted into chats.
+type FiltersSnapshot = {
+  party: string | null;
+  district: string | null;
+  gender: string | null;
+  cluster: string | null;
+  profession: string | null;
+  education: string | null;
+  platform: string | null;
+  search: string;
+};
+
+const FILTER_PARAMS: (keyof FiltersSnapshot)[] = [
+  'party', 'district', 'gender', 'cluster',
+  'profession', 'education', 'platform', 'search',
+];
+
+function snapshotToQuery(s: FiltersSnapshot): string {
+  const p = new URLSearchParams();
+  for (const k of FILTER_PARAMS) {
+    const v = s[k];
+    if (v) p.set(k, v);
+  }
+  return p.toString();
+}
+
+function readFiltersFromHash(): Partial<FiltersSnapshot> {
+  const hash = window.location.hash.replace(/^#/, '');
+  // Expect "explorer?party=DISY&district=NIC"; tolerate the "?".
+  const qStart = hash.indexOf('?');
+  if (qStart === -1) return {};
+  const params = new URLSearchParams(hash.slice(qStart + 1));
+  const out: Partial<FiltersSnapshot> = {};
+  for (const k of FILTER_PARAMS) {
+    const v = params.get(k);
+    if (v !== null) (out as Record<string, unknown>)[k] = v || null;
+  }
+  return out;
+}
 
 export function Explorer({ data }: { data: Dataset }) {
   const filters = useFilters();
@@ -44,6 +85,7 @@ export function Explorer({ data }: { data: Dataset }) {
     setEducation,
     setPlatform,
     setSearch,
+    setMany,
     reset,
   } = filters;
 
@@ -53,6 +95,43 @@ export function Explorer({ data }: { data: Dataset }) {
     const t = setTimeout(() => setSearch(localSearch), 150);
     return () => clearTimeout(t);
   }, [localSearch, setSearch]);
+
+  // ─── Permalinks ─────────────────────────────────────────────────────
+  // On first mount, hydrate filter state from the URL hash if present.
+  const hydrated = useRef(false);
+  useEffect(() => {
+    if (hydrated.current) return;
+    hydrated.current = true;
+    const fromUrl = readFiltersFromHash();
+    if (Object.keys(fromUrl).length > 0) setMany(fromUrl as Partial<FilterState>);
+  }, [setMany]);
+
+  // Whenever filters change, replace the hash. We use replaceState rather
+  // than pushState so we don't pollute the browser back-stack as the user
+  // tweaks filters; the final state is the one that becomes shareable.
+  useEffect(() => {
+    if (!hydrated.current) return;
+    const q = snapshotToQuery({
+      party, district, gender, cluster, profession, education, platform, search,
+    });
+    const newHash = q ? `#explorer?${q}` : '#explorer';
+    if (window.location.hash !== newHash) {
+      window.history.replaceState(null, '', newHash || window.location.pathname);
+    }
+  }, [party, district, gender, cluster, profession, education, platform, search]);
+
+  const [copied, setCopied] = useState(false);
+  const copyShareLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      // Clipboard API can fail under non-HTTPS or denied perms — surface
+      // the URL via a prompt() as a fallback.
+      window.prompt('Copy link:', window.location.href);
+    }
+  };
 
   const openProfile = useUI((s) => s.openProfile);
   const locale = useUI((s) => s.locale);
@@ -192,15 +271,29 @@ export function Explorer({ data }: { data: Dataset }) {
         title="Every candidate, every field"
         subtitle="Click any row to open the full profile. Filters mirror the ones applied from other tabs."
         action={
-          activeFilters.length > 0 ? (
+          <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"
-              onClick={reset}
+              onClick={copyShareLink}
+              title="Copy a shareable link to this filtered view"
               className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300 transition hover:border-white/20 hover:bg-white/10"
             >
-              Clear filters <X className="h-3 w-3" />
+              {copied ? (
+                <>Copied <Check className="h-3 w-3 text-emerald-300" /></>
+              ) : (
+                <>Share view <Link2 className="h-3 w-3" /></>
+              )}
             </button>
-          ) : null
+            {activeFilters.length > 0 ? (
+              <button
+                type="button"
+                onClick={reset}
+                className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300 transition hover:border-white/20 hover:bg-white/10"
+              >
+                Clear filters <X className="h-3 w-3" />
+              </button>
+            ) : null}
+          </div>
         }
       />
 

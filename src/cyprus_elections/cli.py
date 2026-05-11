@@ -16,6 +16,7 @@ from cyprus_elections.enrich import highlights as enrich_highlights
 from cyprus_elections.enrich import llm_extract as enrich_llm_extract
 from cyprus_elections.enrich import professions as enrich_professions
 from cyprus_elections.enrich import social_discovery as enrich_social
+from cyprus_elections.enrich import social_from_citations as enrich_social_citations
 from cyprus_elections.enrich import web_search as enrich_web_search
 from cyprus_elections.enrich import wikipedia as enrich_wikipedia
 from cyprus_elections.config import load_config
@@ -123,6 +124,8 @@ def enrich(
             stats = enrich_cv_full.run(cfg, conn, restart=restart)
         elif source == "social":
             stats = enrich_social.run(cfg, conn, restart=restart)
+        elif source == "social_citations":
+            stats = enrich_social_citations.run(cfg, conn, restart=restart)
         elif source == "web_search":
             stats = enrich_web_search.run(cfg, conn, restart=restart)
         elif source == "social_active":

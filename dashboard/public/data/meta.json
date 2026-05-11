@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-10T17:50:36.899200Z",
+  "generated_at": "2026-05-11T12:02:15.880678Z",
   "total_candidates": 757,
-  "total_sources": 22124,
-  "last_ingest_at": "2026-05-10T17:50:05.770131",
+  "total_sources": 22840,
+  "last_ingest_at": "2026-05-11T11:58:09.601134",
   "disclaimer": "Some of this data was collected and enriched using automated web scraping and AI language models. Individual values may be incomplete or inaccurate. Every field shows its source URL — please verify before citing.",
   "election_date": "2026-05-24",
   "field_order": [

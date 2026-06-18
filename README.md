@@ -9,8 +9,12 @@ Full plan: `/Users/la6387/.claude/plans/go-out-there-and-wise-knuth.md`.
 
 ## Live dashboard
 
-[**polismetrics.com**](https://polismetrics.com) — public dashboard built on top of
-the exported data. Highlights:
+*   **Production Deployment:** [cyprus-elections-2026.web.app](https://cyprus-elections-2026.web.app/)
+*   **Custom Domain:** [polismetrics.com](https://polismetrics.com)
+
+![Cyprus Elections 2026 Dashboard Screenshot](screenshot.png)
+
+Public dashboard built on top of the exported data. Highlights:
 
 - **Overview / Highlights / Demographics / Professions / Education** —
   aggregate views over candidates and parties.
